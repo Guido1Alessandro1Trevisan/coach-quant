@@ -1,0 +1,17 @@
+{
+  "problem name": "Matrix Shuffle Magic",
+  "problem text": "Suppose $A$ is a $2 \\times 2$ matrix with each element $ij$ independently drawn from $A_{ij} \\sim \\text{Bernoulli}(0.5)$. Determine $\\mathbb{E}[\\text{det}(A-A^T)]$.",
+  "problem solution": "Initially note that $A$ and $A^T$ share identical diagonal elements, thus making them zero. Consequently, if $A = [A_{ij}]_{i,j = 1,2}$, then $\\text{det}(A-A^T) = 0 - (A_{12} - A_{21})(A_{21} - A_{12}) = (A_{12} - A_{21})^2$. Therefore, our task reduces to finding $\\mathbb{E}[(A_{12} - A_{21})^2]$, given $A_{12},A_{21} \\sim \\text{Bernoulli}(0.5)$. The expression $(A_{12} - A_{21})^2 = 1$ holds when $A_{12} \\neq A_{21}$, making the result either $1$ or $-1$, with a probability of $\\frac{1}{2}$. Conversely, if they are equal, then $(A_{12} - A_{21})^2 = 0$, also with a probability of $\\frac{1}{2}$. Hence, $\\mathbb{E}[\\text{det}(A-A^T)] = \\mathbb{E}[(A_{12} - A_{21})^2] = \\frac{0 + 1}{2} = \\frac{1}{2}$.",
+  "valid answer": "Valid Answers: $1/2$",
+  "problem tags": [
+    "Expected Value",
+    "Linear Algebra",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Initially note that $A$ and $A^T$ share identical diagonal elements, thus making them zero.",
+  "problem firm": [
+    "Worldquant"
+  ],
+  "question id": "10864068517818958280"
+}

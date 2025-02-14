@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Bet Dilemma",
+  "problem text": "A spirit rolls a fair die with $6$ faces. You have the option to wager on whether the result is even or odd. For each $4$ wagered on an even outcome, you will get back $6$ if your prediction is correct. Likewise, for each $6$ wagered on an odd result, you will receive $9$ if you are right. To play with the best strategy, how much should you stake on this game?",
+  "problem solution": "Assume we place a bet of $x$ units on an even result and $y$ on an odd result. Thus, the total amount wagered is $4x+6y$. The expected gain from this game is $0.5 \\cdot 6x + 0.5 \\cdot 9y = 3x + 4.5y = \\frac{3}{4} \\cdot (4x + 6y)$. Consequently, our anticipated return is $\\frac{3}{4}$ of our wager, indicating that we should not engage in this game as the expected value is 0.",
+  "valid answer": "Valid Answers: $0$",
+  "problem tags": [
+    "Games",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Calculate the expected value when $x$ units are wagered on an even outcome and $y$ on an odd outcome.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "14376761429021780883"
+}

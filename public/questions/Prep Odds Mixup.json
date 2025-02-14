@@ -1,0 +1,16 @@
+{
+  "problem name": "Prep Odds Mixup",
+  "problem text": "$45\\%$ of students do not utilize QuantEssential, $25\\%$ are extensive prep users, and $30\\%$ are mild prep users. If extensive prep users have twice the probability of receiving an offer compared to mild prep users, and mild prep users have twice the probability compared to non-users, what is the probability that someone who received an offer was an extensive prep user of QuantEssential?",
+  "problem solution": "Since this is a conditional probability problem where information is provided to find a related value, we will apply Bayes' theorem. We need to calculate $\\mathbb{P}[\\text{Extensive\\ User} | \\text{Offer}]$. According to Bayes, this is equal to $\\mathbb{P}[\\text{Offer} | \\text{Extensive\\ User}] \\cdot \\mathbb{P}[\\text{Extensive\\ User}]/\\mathbb{P}[\\text{Offer}]$. The problem doesn't provide exact probabilities for receiving an offer based on QuantEssential usage, only comparative data. We can still make use of this information. Let $p$ represent the probability that a non-user receives an offer. Thus, the probability for a mild user getting an offer is $2p$, and for an extensive user, it's $4p$. The Bayes formula therefore becomes $4p\\cdot0.25/(4p\\cdot0.25+2p\\cdot0.3+p\\cdot0.45) = \\dfrac{20}{41}$.",
+  "valid answer": "Valid Answers: $20/41$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "We aim to adjust the $probability$ of an event given $new$ $information$. Which $theorem$ would assist us in this situation?",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "81242927340078788697"
+}

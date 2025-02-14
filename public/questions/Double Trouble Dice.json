@@ -1,0 +1,17 @@
+{
+  "problem name": "Double Trouble Dice",
+  "problem text": "You possess a fair $6$-sided die and you roll it. You can opt to retain your roll and gain the rolled value in dollars. Alternatively, you have the option to roll again; however, if the total of your two rolls is at least $7$, you incur a cost equal to your initial roll. If the total of both rolls is less than $7$, you receive the total of the two rolled values in dollars. Assuming you play optimally, what is the expected value of your payout?",
+  "problem solution": "Consider the first roll's value. Upon rolling a $1$, there is a probability of $\\dfrac{1}{6}$ to lose $1$ (if a $6$ is rolled next). Otherwise, the total becomes $2,3,\\dots,6$, each with probability $\\dfrac{1}{6}$. Thus, the expected gain if you roll again is $\\dfrac{1}{6} \\cdot (-1) + \\dfrac{2+3+4+5+6}{6} = \\dfrac{19}{6} > 1$. This suggests rolling again if you get a $1$. For a roll of $2$, you lose $2$ with probability $\\dfrac{1}{3}$ (if you roll a $5$ or $6$). Otherwise, you gain $3,4,5,$ or $6$ with equal probability $\\dfrac{1}{6}$. The expected value when rolling again is $\\dfrac{1}{3} \\cdot (-2) + \\dfrac{3+4+5+6}{6} = \\dfrac{7}{3} > 2$. Hence, rolling is advisable. With a roll of $3$, there's a $\\dfrac{1}{2}$ chance of losing $3$ (rolling $4$ or greater). Otherwise, you receive $4,5,$ or $6$ each with probability $\\dfrac{1}{6}$. Thus, the expected outcome of rolling again is $\\dfrac{1}{2} \\cdot (-3) + \\dfrac{4 + 5 + 6}{6} = 1 < 3$. Consequently, for any roll of $3$ or more, it's better not to roll again. This infers the expected value with this strategy is $\\dfrac{\\frac{19}{6} + \\frac{14}{6} + 3 + 4 + 5 + 6}{6} = \\dfrac{47}{12}$.",
+  "valid answer": "Valid Answers: $47/12$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the outcome based on the die's initial roll and calculate the expected payoff if rolling again in each scenario.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "01141811820925231562"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Flip Fortune",
+  "problem text": "Consider a game where you have a fair $6$-sided die. You earn the number shown on the top face with each roll. If you roll an odd number, the game concludes. If the roll is an even number, you toss a fair coin. Should the coin display tails, the game stops. If it shows heads, you roll again and repeat the coin toss. What is the expected amount you will earn from this game?",
+  "problem solution": "Let $T$ represent the total winnings and $X_1$ be the result of your initial roll. Note that our future possibilities depend on whether $X_1$ is odd or even, so we must condition on the parity of $X_1$. Specifically, $\\mathbb{E}[T] = \\mathbb{E}[\\mathbb{E}[T \\mid X_1]]$. If $X_1$ is odd, the game finishes, with an expected payoff of $\\dfrac{1+3+5}{3} = 3$. For an even $X_1$, the expected payout from this initial roll is $4$, followed by a coin flip. With a probability of $\\dfrac{1}{2}$, you roll the die once more, so for an even $X_1$, the expected payout is $4 + \\dfrac{1}{2}\\mathbb{E}[T]$, since with a probability of $\\dfrac{1}{2}$, the process continues. Therefore, by LOTE, $\\mathbb{E}[T] = \\dfrac{1}{2} \\cdot 3 + \\dfrac{1}{2}\\left(4 + \\dfrac{1}{2}\\mathbb{E}[T]\\right)$. Solving this equation for $\\mathbb{E}[T]$ results in $\\mathbb{E}[T] = \\dfrac{14}{3}$.",
+  "valid answer": "Valid Answers: $14/3$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the parity of the first roll.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "13503626289810000968"
+}

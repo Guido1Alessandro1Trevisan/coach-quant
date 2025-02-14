@@ -1,0 +1,17 @@
+{
+  "problem name": "Clock Hand Tango",
+  "problem text": "Right when the clock strikes midnight, the hour hand and minute hand overlap exactly. Determine the earliest subsequent time at which they coincide once again on the clock face.",
+  "problem solution": "We label $t$ as the number of minutes after 12:00. The minute hand travels $6$ degrees per minute, while the hour hand covers $0.5$ degrees per minute. We say the hands coincide when their angular positions are the same. At 12:00, both hands are at $0$ degrees. After $t$ minutes, the minute hand is at $$6t$$ degrees, and the hour hand is at $$0.5t$$ degrees. Coincidence means these angles must match up to a full rotation of the clock (i.e., possibly adding $360$ degrees $k$ times, but for the first meeting $k=0$ is replaced by $k=1$ to capture the next overlap). In formal terms, the condition for simultaneity is: $$6t = 0.5t + 360k.$$ Rearranging to solve for $$t$$, we get: $$6t - 0.5t = 360k \\implies 5.5t = 360k \\implies t = \\frac{360k}{5.5} = \\frac{720k}{11}.$$ Since we want the first meeting after midnight, we set $k=1\\!,$ giving us $$t = \\frac{720}{11}\\text{ minutes} \\approx 65.4545\\text{ minutes}.$$ Converting to minutes and seconds, we see that $$\\frac{720}{11}\\text{ minutes}$$ is $1$ hour, $5$ minutes, and $\\frac{5}{11}\\text{ of a minute}$. $\\frac{5}{11}$ of a minute is about $27.2727$ seconds, so the first meeting occurs at approximately $1{:}05{:}27.27\\!.$",
+  "valid answer": "Valid Answers: 65.4545 minutes after midnight, 1:05:27.27",
+  "problem tags": [
+    "Geometry",
+    "Time",
+    "Clock"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the angular speeds of each hand and when their angles differ by multiples of 360 degrees.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "97484625566636423921"
+}

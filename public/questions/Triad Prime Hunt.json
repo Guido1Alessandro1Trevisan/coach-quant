@@ -1,0 +1,15 @@
+{
+  "problem name": "Triad Prime Hunt",
+  "problem text": "Consider three integers in the sequence $a$, $a+k$, and $a+2k$ for integers $a$ and $k$. Their product is a prime number. Determine $a^2 + k^2$. Remember that prime numbers are defined as positive.",
+  "problem solution": "To achieve a prime product from the three integers, two of them must be $-1$ and $1$. If not, multiplying two integers greater than one will not result in a prime. The gap between these integers is $2$. Therefore, we choose $-3$ as the third integer to ensure the product remains positive. Confirming, we get $-3 \\cdot -1 \\cdot 1 = 3$, which is indeed a prime. This configuration gives $a = -3$ and $k = 2$, hence the result is $9 + 4 = 13$.",
+  "valid answer": "Valid Answers: $13$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "What values must two of the integers take for their product to remain prime?",
+  "problem firm": [
+    "Belvedere Trading"
+  ],
+  "question id": "11722867937953227245"
+}

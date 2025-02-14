@@ -1,0 +1,16 @@
+{
+  "problem name": "Bullet Logic Roulette",
+  "problem text": "You and a companion are engaged in a game of Russian Roulette. The revolver has six chambers, with two bullets placed next to each other. At the start, the cylinder is spun randomly. Your companion takes the first turn and survives. You then decide whether to spin the cylinder again or leave it as is before your turn. What is the probability difference in your survival between choosing to spin and not to spin the cylinder?",
+  "problem solution": "By choosing to spin the cylinder, your survival probability is $\\frac{4}{6}$. If you decide against spinning, your survival probability becomes $\\frac{3}{4}$. To analyze this, label the chambers $1-6$, with chambers $5$ and $6$ containing the two bullets, without loss of generality. Since your companion survives, he must have fired chambers $1$, $2$, $3$, or $4$. Out of these $4$ outcomes, only one results in your demise (if chamber $4$ was fired, the next chamber is a bullet); thus, the survival probability without spinning is $\\frac{3}{4}$, and the difference in probabilities is: $\\frac{3}{4} - \\frac{2}{3} = \\frac{1}{12}$.",
+  "valid answer": "Valid Answers: $1/12$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Examine each scenario on its own. Determine the survival probability without spinning the cylinder, given that your companion survives.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "87671038501564826073"
+}

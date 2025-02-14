@@ -1,0 +1,21 @@
+{
+  "problem name": "Threshold Quest",
+  "problem text": "Consider $U \\sim \\text{Unif}(0,1)$ and $X_1, X_2, \\dots \\sim \\text{Unif}(0,1)$ as independent and identically distributed variables. Let $N = \\text{min}\\{n \\in \\mathbb{N} : X_n > U\\}$. Determine $\\mathbb{E}[N]$. Input $-1$ if the result is infinite.",
+  "problem solution": "Solution not available",
+  "valid answer": "Valid Answers: $-1$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Expected Value",
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "It looks like you gave an instruction without any content needing format adjustment. Could you supply the text for formatting?",
+  "problem firm": [
+    "Citadel",
+    "Drw",
+    "Goldman Sachs",
+    "Hudson River Trading"
+  ],
+  "question id": "24952296901897256963"
+}

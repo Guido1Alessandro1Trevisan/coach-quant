@@ -1,0 +1,20 @@
+{
+  "problem name": "Absolute Expectation Twist",
+  "problem text": "Consider $X \\sim N(0,1)$ and $Y \\sim N(0,4)$, which are independent variables. Determine $\\mathbb{E}[|Y - X|]$. The solution will be expressed as $\\left(\\frac{K}{\\pi}\\right)^b$, where $b$ and $K$ are rational numbers. Calculate the product $bK$.",
+  "problem solution": "Given the independence of $X$ and $Y$, the difference $Y - X$ follows $N(0,5)$. Let $W = Y - X \\sim N(0,5)$, and evaluate $\\mathbb{E}[|W|]$. Recognizing that $W = \\sqrt{5}Z$, where $Z \\sim N(0,1)$, we need to compute $\\sqrt{5} \\mathbb{E}[|Z|]$. This can be calculated using LOTUS for a general $Z \\sim N(0,\\sigma^2)$, with the same computation: The transition from line $1$ to line $2$ uses the symmetry of the integrand with respect to $0$. From line $2$ to line $3$, a $u-$substitution is employed to find the indefinite integral. Specifically, since $\\sigma = \\sqrt{5}$, as $\\sigma^2 = 5$, the result is $\\sqrt{\\dfrac{10}{\\pi}}$. Thus, $bK = 0.5 \\cdot 10 = 5$.",
+  "valid answer": "Valid Answers: $5$",
+  "problem tags": [
+    "Expected Value",
+    "Continuous Random Variables",
+    "Calculus",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Because $X$ and $Y$ are independent, $Y - X \\sim N(0,5)$. Define $W = Y - X \\sim N(0,5)$, allowing us to compute $\\mathbb{E}[|W|]$. Since $W = \\sqrt{5}Z$, where $Z \\sim N(0,1)$, we essentially need to find $\\sqrt{5} \\mathbb{E}[|Z|]$.",
+  "problem firm": [
+    "Citadel",
+    "Drw",
+    "Goldman Sachs"
+  ],
+  "question id": "34717231749871901986"
+}

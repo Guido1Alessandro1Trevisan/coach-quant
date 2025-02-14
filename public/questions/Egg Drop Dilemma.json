@@ -1,0 +1,18 @@
+{
+  "problem name": "Egg Drop Dilemma",
+  "problem text": "You possess two uniform eggs and a building with 100 stories. The specific floor where the eggs will shatter is unknown. If an egg is dropped from a floor below level $X$, it remains intact; otherwise, it will break. What is the fewest number of drops needed to ascertain $X$ in the most pessimistic scenario?",
+  "problem solution": "Let's assume we develop a plan that uses a maximum of $N$ drops. Initially, for the first egg, we can attempt dropping it from the $N$-th floor. Should the egg break, we proceed with the second egg starting from the first floor and go one floor at a time until it breaks. This results in a maximum of $N-1$ floors to check. If the egg does not break from the $N$-th floor, we still have $N-1$ drops left. Now, we can only advance by $(N-1)$ floors for the first egg, since the second egg can cover only $(N-2)$ floors if the first egg breaks. If the egg survives a drop from the $(2N-1)$-th floor, $N-2$ drops remain. Thus, we can only increase by $N-2$ floors for the first egg, as the second egg can cover $N-3$ floors if the first egg fails. This reveals a pattern in the number of floors we can examine with the two eggs. The total number of floors we can cover with up to $N$ drops is: $N+(N-1) + \\ldots + 1 \\geq 100$. $\\frac{N(N+1)}{2} \\geq 100$. $N = 14$. Consequently, the minimum number of drops required in the worst-case scenario to identify floor $X$ is $14$ drops.",
+  "valid answer": "Valid Answers: $14$",
+  "problem tags": [
+    "Games",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Tip #1: Binary search is not applicable here, keep in mind you only have $2$ eggs. Tip #2: Consider a strategy with $N$ maximum drops. If the first egg is used once, the second egg can check $N-1$ floors. If the first egg is used twice, the second egg can inspect $N-2$ floors.",
+  "problem firm": [
+    "Akuna Capital",
+    "Transmarket Group",
+    "Worldquant"
+  ],
+  "question id": "33116686841615960536"
+}

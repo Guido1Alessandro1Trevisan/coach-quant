@@ -1,0 +1,17 @@
+{
+  "problem name": "Drill or Gamble",
+  "problem text": "A drilling enterprise needs to decide on whether to proceed with drilling for oil at a particular location. The cost to drill is $350,000$ which must be paid in advance. Subsequently, the company will find out if the site contains oil. In the presence of oil, the company will earn $1,400,000$ in income. If there's no oil, there will be no income. Let $p$ represent the likelihood of oil being present at this location. What is the smallest $p$ value that makes drilling a rational decision for the company?",
+  "problem solution": "No solution found",
+  "valid answer": "Valid Answers: $\\frac{1}{4}$",
+  "problem tags": [
+    "Games",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Identify the potential outcomes and the profit linked to each outcome.",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "68564789373239440399"
+}

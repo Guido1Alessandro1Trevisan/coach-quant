@@ -1,0 +1,16 @@
+{
+  "problem name": "Circle Trio Gamble",
+  "problem text": "Three distinct points are chosen at random along the circumference of a circle. Determine the probability that all three lie on a single semicircle (a 180-degree arc).",
+  "problem solution": "First, fix the position of one point arbitrarily (call it A). Since the circle is symmetric, we can place A anywhere without affecting the probability. Denote the remaining two randomly placed points by B and C, with angles measured from A around the circle. Suppose B is at an angle $$\\theta$$ from A, where $$0 \\leq \\theta < 2\\pi$$, and C is at an angle $$\\phi$$, also between 0 and 2\\pi. We will compute the proportion of all possible placements of B and C for which A, B, and C fit into some semicircle.\n\nBecause of symmetry, let us take $$0 < \\theta < \\pi$$ (this covers half the possibilities, but yields the same probability outcome as if $$\\theta\\geq\\pi$$). For a fixed $$\\theta\\), the set of all possible angles $$\\phi$$ such that A, B, and C lie in a single semicircle has total length $$(\\pi + \\theta)$$ on the circle of circumference $$2\\pi$$. This is because C must lie within the semicircle that starts at A and extends $$\\pi$$ degrees (and includes B), or within the semicircle that starts at B and extends another $$\\pi$$ degrees to include A.\n\nHence, for a given $$\\theta$$ in $$(0, \\pi)$$, the probability that C lies in the required region is $$\\dfrac{\\pi + \\theta}{2\\pi}$$. Since $$\\theta$$ itself is uniformly distributed over $$(0, \\pi)$$, we take the average:\n$$\n\\dfrac{1}{\\pi} \\int_{0}^{\\pi} \\dfrac{\\pi + \\theta}{2\\pi} \\, d\\theta \\,.\n$$\n\nWe calculate:\n$$\n\\dfrac{1}{\\pi} \\int_{0}^{\\pi} \\dfrac{\\pi + \\theta}{2\\pi} \\, d\\theta \n= \\dfrac{1}{2\\pi^2} \\int_{0}^{\\pi} (\\pi + \\theta) \\, d\\theta \n= \\dfrac{1}{2\\pi^2} \\Bigl[\\pi\\theta + \\dfrac{\\theta^2}{2}\\Bigr]_{0}^{\\pi} \n= \\dfrac{1}{2\\pi^2} \\Bigl(\\pi^2 + \\dfrac{\\pi^2}{2}\\Bigr) \n= \\dfrac{3}{4}\\,.\n$$\n\nTherefore, the probability that three random points on a circle lie on some semicircle is $$\\dfrac{3}{4}$$.",
+  "valid answer": "Valid Answers: $\\frac{3}{4}$",
+  "problem tags": [
+    "Geometry",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Begin by fixing one point to remove symmetry, then consider how to place the other two.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "00540867399458965673"
+}

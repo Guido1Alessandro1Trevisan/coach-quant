@@ -1,0 +1,18 @@
+{
+  "problem name": "Dice Showdown",
+  "problem text": "Consider a standard $40$-sided die and a standard $60$-sided die. If both dice are rolled, determine the likelihood that the number on the $60$-sided die is strictly greater than the number on the $40$-sided die.",
+  "problem solution": "The strategy involves considering whether the $60$-sided die results in a number greater than $40$ or is in the set $1,2,\\dots,40$. If it exceeds $40$, the $60$-sided die certainly wins with a probability of $1$. This circumstance happens with a probability of $\\dfrac{1}{3}$. If it falls within $1,2,\\dots,40$, it is akin to rolling two equal-sided dice. Thus, we must determine the likelihood that the $60$-sided die shows a strictly higher number. Given the outcome is in the set $1,2,\\dots,40$, either die has an equal chance to show a larger number. Therefore, we subtract the probability of them being equal and divide by $2$. The probability of equality is $\\dfrac{1}{40}$, since for a fixed first die value, there is $1$ of $40$ equally probable outcomes for the second die to match the first. Hence, there is a $\\dfrac{39}{40}$ likelihood they differ. If different, either die is equally likely to be larger, so the probability that the $60$-sided die is larger is $\\dfrac{39}{80}$. Thus, the overall probability is $\\dfrac{1}{3} \\cdot 1 + \\dfrac{2}{3} \\cdot \\dfrac{39}{80} = \\dfrac{79}{120}$.",
+  "valid answer": "Valid Answers: $\\frac{79}{120}$",
+  "problem tags": [
+    "Conditional Probability",
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider whether the $60$-sided die shows a value $> 40$ or is in the interval $1$ to $40$.",
+  "problem firm": [
+    "Belvedere Trading",
+    "Drw"
+  ],
+  "question id": "18927943209021837443"
+}

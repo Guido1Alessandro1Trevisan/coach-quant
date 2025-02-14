@@ -1,0 +1,16 @@
+{
+  "problem name": "Flip of Fate",
+  "problem text": "Two players, A and B, consecutively flip fair coins beginning with A. The first individual to get a head is declared the winner. If B ultimately emerged as the winner, determine the probability that B's victory occurred on B's very first toss.",
+  "problem solution": "We first calculate the probability that B wins at any time. Let A's chance of getting a head on any toss be $$\\frac{1}{2}$$. If A flips tails (with probability $$\\frac{1}{2}$$), then B flips. The probability that B eventually wins is found by letting $$p_A$$ be the probability that A eventually wins. By symmetry of the repeated coin toss situation, we have the recursive expression $$p_A = \\frac{1}{2} + \\left(\\frac{1}{2} \\cdot \\frac{1}{2}\\right)p_A,$$ because there is a $$\\frac{1}{2}$$ chance that A wins immediately, and if both A and B flip tails (probability $$\\frac{1}{2}\\cdot\\frac{1}{2}$$), the game restarts. Solving this for $$p_A$$ yields $$p_A = \\frac{2}{3},$$ so B's probability of eventually winning is $$\\frac{1}{3}.$$ Now, to win on B's first attempt, A must flip tails (probability $$\\frac{1}{2}$$) and then B must flip heads (probability $$\\frac{1}{2}$$). Thus, the unconditional probability of B winning on the first try is $$\\frac{1}{2} \\cdot \\frac{1}{2} = \\frac{1}{4}.$$ We then condition on the event that B is the eventual winner: $$\\text{Probability of B winning on first try given B eventually wins} = \\frac{\\frac{1}{4}}{\\frac{1}{3}} = \\frac{3}{4}.$$",
+  "valid answer": "Valid Answers: $$\\frac{3}{4}$$",
+  "problem tags": [
+    "Probability",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Condition on B eventually winning and track the probability of winning at each stage.",
+  "problem firm": [
+    "IMC"
+  ],
+  "question id": "04446609342910945685"
+}

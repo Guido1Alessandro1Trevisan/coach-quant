@@ -1,0 +1,17 @@
+{
+  "problem name": "Dicey Dilemmas",
+  "problem text": "Imagine a game where you roll a die repeatedly until landing a $5$ or a $6$. If a $5$ appears, you collect the total of all previous rolls (excluding the $5$). If a $6$ appears, you earn nothing. You may also choose to cash out at any time with the total of your rolls so far. Assuming you play optimally, what is your expected payout? Round your result to two decimal places.",
+  "problem solution": "The optimal plan is to continue rolling until reaching a total of at least $k$ and stop otherwise. Our task is to determine such a $k$. This requires identifying the point where you are indifferent between rolling again and cashing out. If your current total is $k$, there is a $\\frac{1}{6}$ probability of rolling a $6$ and getting $0$. With $\\frac{1}{6}$ probability, you roll a $5$ and get $k$. Otherwise, your total rises by an average of $\\frac{5}{2}$, as you roll a number from $1$ to $4$ uniformly. We need to identify $k$ such that $$\\dfrac{1}{6} \\cdot 0 + \\dfrac{1}{6} \\cdot k + \\dfrac{2}{3} \\cdot \\left(k + \\frac{5}{2}\\right) = k$$This equation equates the expected payout if rolling again with that if stopping. Solving gives $k = 10$. To find the game's expected payout, we use recursion. The maximum sum under this strategy is $13$, achieved by rolling again on $9$ and getting a $4$. Let $E_k$ be the expected payout with a current sum of $k$. We know $E_{13} = 13$, $E_{12} = 12$, $E_{11} = 11$, and $E_{10} = 10$. For $k < 10$, you can cash out $k$ with a $\\frac{1}{6}$ chance (rolling a $5$), cash out $0$ with a $\\frac{1}{6}$ chance (rolling a $6$), or have an expected payout of $E_{k+1}, E_{k+2}, E_{k+3}, E_{k+4}$ each with $\\frac{1}{6}$ chance. Thus, for $k < 10$, $E_k = \\dfrac{k + E_{k+1} + E_{k+2} + E_{k+3} + E_{k+4}}{6}$We seek $E_0$, starting from $0$. By working backwards to $0$, $E_0 \\approx 3.03$.",
+  "valid answer": "Valid Answers: $3.03$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Games",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "The best approach is to stop after accumulating at least $k$ and continue otherwise. Find this $k$ by determining when you are indifferent between rolling again or cashing out. Then, use recursion to calculate the expected payout.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "47842369840878360948"
+}

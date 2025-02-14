@@ -1,0 +1,15 @@
+{
+  "problem name": "Timewarp Call Option",
+  "problem text": "Consider an at-the-money call option with expiration $T = 1000$ years on a stock $S$ with an initial price of $190$. Determine the value of this option at time $0$ using the Black-Scholes model. Do not use computational tools.",
+  "problem solution": "Approach this result from an intuitive perspective. If $T = 1000$, the option effectively mirrors the behavior of the underlying asset. This can also be corroborated using the Black-Scholes model, setting $K = S_0$ and $t \\rightarrow \\infty$.",
+  "valid answer": "Valid Answers: $190$",
+  "problem tags": [
+    "Finance"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Think about how an option behaves when it is deep-in-the-money. What does it resemble?",
+  "problem firm": [
+    "Akuna Capital"
+  ],
+  "question id": "27947727357089083508"
+}

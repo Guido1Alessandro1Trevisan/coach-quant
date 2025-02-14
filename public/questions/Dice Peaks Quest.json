@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Peaks Quest",
+  "problem text": "We have a fair 100-sided die and may roll it up to 20 times. We seek the expected outcome if we take the maximum roll observed among these attempts.",
+  "problem solution": "First, let X be the maximum value obtained in n=20 independent rolls of a 100-sided die, whose faces are labeled 1 through 100. Since each roll is equally likely to produce any integer from 1 to 100, the probability that all n rolls are less than k is $$(\\frac{k-1}{100})^{20}$$ for any integer 1 \\le k \\le 100. Therefore, the probability that the maximum value X is at least k is $$1 - (\\frac{k-1}{100})^{20}.$$ It follows that the expected maximum E[X] can be computed by summation: $$\\text{E}[X] = \\sum_{k=1}^{100}\\Big[1 - (\\frac{k-1}{100})^{20}\\Big].$$ Equivalently, one can rewrite E[X] as $$\\sum_{k=1}^{100} k \\Big[\\big(\\frac{k}{100}\\big)^{20} - \\big(\\frac{k-1}{100}\\big)^{20}\\Big].$$ Either formula produces the same exact result. By evaluating the summation or approximating it by an integral, one finds that the expected maximum is about 95.24. This answers the question of what the expected value is when rolling a 100-sided die up to 20 times and keeping the best outcome. The reasoning follows from the theory of order statistics and the properties of i.i.d. uniform discrete random variables, where each roll contributes to the overall distribution of the maximum.",
+  "valid answer": "Valid Answers: approximately 95.24",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the form of the distribution for the maximum of multiple i.i.d. rolls.",
+  "problem firm": [
+    "Akuna"
+  ],
+  "question id": "89231017544728424012"
+}

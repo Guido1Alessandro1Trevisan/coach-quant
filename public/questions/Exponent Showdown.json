@@ -1,0 +1,16 @@
+{
+  "problem name": "Exponent Showdown",
+  "problem text": "Consider two expressions: $$e^\\pi$$ and $$\\pi^e$$. Investigate which one is larger and explain the reasoning in detail.",
+  "problem solution": "First, observe that to compare two positive numbers, say $$a$$ and $$b$$, it suffices to compare their natural logarithms, because the natural logarithm is strictly increasing. We want to determine whether $$e^\\pi > \\pi^e$$ or not. Take natural logarithms of both expressions: comparing $$\\ln\\bigl(e^\\pi\\bigr)=\\pi\\cdot\\ln e=\\pi$$ and $$\\ln\\bigl(\\pi^e\\bigr)=e\\cdot\\ln\\pi$$ is equivalent to comparing $$\\pi$$ and $$e\\cdot\\ln\\pi.$$ Thus our task becomes determining whether $$\\pi>e\\cdot\\ln\\pi.$$ A more systematic approach is to define the function $$f(x)=\\dfrac{\\ln x}{x}$$ for real numbers $$x>0.$$ Then note that $$e^\\pi>\\pi^e$$ is the same as $$\\pi\\ln e> e\\ln\\pi,$$ or equivalently, $$\\dfrac{\\ln\\pi}{\\pi}<\\dfrac{\\ln e}{e},$$ which means $$f(\\pi)<f(e).$$ We calculate the derivative: $$f'(x)=\\dfrac{\\dfrac{1}{x}\\cdot x-\\ln x\\cdot1}{x^2}=\\dfrac{1-\\ln x}{x^2}.$$ Since the critical point occurs at $$x=e,$$ and for $$0<x<e,$$ $$\\ln x<1,$$ implying $$f'(x)>0,$$ while for $$x>e,$$ $$\\ln x>1,$$ implying $$f'(x)<0.$$ Hence, the function $$f(x)$$ increases on $$(0,e)$$ and decreases on $$(e,\\infty).$$ Because $$e<\\pi,$$ we see that $$f(\\pi)<f(e),$$ meaning $$\\dfrac{\\ln\\pi}{\\pi}<\\dfrac{\\ln e}{e}.$$ Equivalently, $$e^\\pi>\\pi^e.$$ Therefore, the larger quantity is $$e^\\pi.$$",
+  "valid answer": "Valid Answers: e^\\pi is larger than \\pi^e",
+  "problem tags": [
+    "drw"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Take natural logarithms and compare the resulting expressions, or consider the function f(x)=(ln x)/x.",
+  "problem firm": [
+    "Maple Analytics",
+    "Quantum Strategies"
+  ],
+  "question id": "02901331638508905946"
+}

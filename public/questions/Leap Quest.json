@@ -1,0 +1,17 @@
+{
+  "problem name": "Leap Quest",
+  "problem text": "A rabbit begins on the ground in front of a staircase with $10$ steps. The rabbit can jump up a number of steps greater than $1$ in each leap. Specifically, this implies the rabbit is unable to ascend a single step at a time. How many unique routes are available for the rabbit to move from the ground to the $10$th step at the top of the staircase?",
+  "problem solution": "Let's establish a recurrence relation to simplify this task. Define $h_n$ as the count of unique routes to the summit of an $n$ step staircase. We can base this on the size of the initial leap. The initial leap can range from $2$ to $n$, inclusive. If the rabbit leaps $k$ steps first, it must navigate a unique path through the remaining $n-k$ steps. Therefore, you can conceptualize the problem as stair $k$ being the new starting point and the top being $n-k$. This implies that $h_n = h_{n-2} + h_{n-3} + h_{n-4} + \\dots + h_{1} + h_0$. However, let's examine the remaining terms $h_{n-3} + h_{n-4} + \\dots + h_1 + h_0$. This resembles a situation where we start from step $1$ (instead of the ground) and must leap more than one step with each move. Since step $3$ is the first available step to leap onto, the rabbit can then jump to any step that is at least $3$. Thus, the remaining terms here are simply $h_{n-1}$, as starting from step $1$, the rabbit must discover a path through the remaining $n-1$ steps to reach the top. Our recurrence relation now becomes $h_n = h_{n-1} + h_{n-2}$. Our initial conditions are $h_1 = 0$ and $h_2 = 1$, which can simply be counted directly. We now observe that this is just the Fibonacci sequence shifted by $1$ index, as $F_0 = 0$ and $F_1 = 1$, so we deduce that $h_n = F_{n-1}$. Specifically, this implies that $h_{10} = F_9 = 34$.",
+  "valid answer": "Valid Answers: $34$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $h_n$ as the count of unique routes to the top of an $n$ step staircase. Base your analysis on the size of the initial leap.",
+  "problem firm": [
+    "Five Rings",
+    "Goldman Sachs"
+  ],
+  "question id": "82259225180086759541"
+}

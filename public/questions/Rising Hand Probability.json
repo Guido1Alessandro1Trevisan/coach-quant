@@ -1,0 +1,16 @@
+{
+  "problem name": "Rising Hand Probability",
+  "problem text": "In front of you is a deck with $100$ cards, each labeled with a unique number from $1$ to $100$. You draw one card at a time, four times in total, without putting any card back. What is the chance that the sequence of cards drawn is in increasing order?",
+  "problem solution": "Rather than considering the process as selecting cards one by one, consider it as choosing $4$ cards from the $100$ simultaneously. Because each number is distinct, there is precisely $1$ way for these numbers to be in increasing sequence among the $4!$ possible arrangements. Therefore, the probability is $\\dfrac{1}{4!} = \\dfrac{1}{24}$.",
+  "valid answer": "Valid Answers: [ $20/\\text{mo}$ billed annually to Invest in your future today, $30/\\text{mo}$ billed monthly to try it out and see if it’s worth it ]",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider drawing all four cards at the same time instead of individually. What is the probability that they are ordered in your hand?",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "21072845678319074903"
+}

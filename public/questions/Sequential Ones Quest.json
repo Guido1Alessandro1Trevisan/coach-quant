@@ -1,0 +1,16 @@
+{
+  "problem name": "Sequential Ones Quest",
+  "problem text": "You throw a die $5$ times and note the results. What is the chance of getting at least $3$ sequential $1$s in those $5$ throws?",
+  "problem solution": "This problem is simple enough to solve by counting the successful scenarios. Initially, let's analyze the cases with 3 sequential ones. These scenarios are: $$ (111xx), (111x1), (x111x), (xx111), (1x111) $$. Next, consider the cases with 4 sequential ones: $$ (1111x), (x1111) $$. Finally, there is a single scenario for 5 sequential ones: $$ (11111) $$. Now, let's compute the probability for each of these scenarios and add them up. The probability of rolling 3 ones and 2 other numbers is $$ \\left(\\frac{1}{6}\\right)^3 \\cdot \\left(\\frac{5}{6}\\right)^2 $$. Similarly, the probability for 4 ones and 1 other number is $$ \\left(\\frac{1}{6}\\right)^4 \\cdot \\left(\\frac{5}{6}\\right) $$. Lastly, the probability for all ones is $$ \\left(\\frac{1}{6}\\right)^5 $$. There are 5 possible sequences for 3 ones, 2 sequences for 4 ones, and 1 sequence for 5 ones. Therefore, our final computation is: $$ 5 \\cdot \\left(\\frac{1}{6}\\right)^3 \\cdot \\left(\\frac{5}{6}\\right)^2 + 2 \\cdot \\left(\\frac{1}{6}\\right)^4 \\cdot \\left(\\frac{5}{6}\\right) + \\left(\\frac{1}{6}\\right)^5 = \\frac{1}{81} $$",
+  "valid answer": "Valid Answers: $1/81$",
+  "problem tags": [
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Utilize basic methods such as combinations and probabilities of a fair die to find the answer.",
+  "problem firm": [
+    "Transmarket Group"
+  ],
+  "question id": "20875218304494882619"
+}

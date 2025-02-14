@@ -1,0 +1,17 @@
+{
+  "problem name": "Fair Spread",
+  "problem text": "Consider a continuous random variable X which is equally likely to take any real value between 1 and 2. Determine the variance of X.",
+  "problem solution": "First, recall that for a uniform distribution over an interval [$$a$$, $$b$$], the variance is given by $$\\dfrac{(b - a)^2}{12}$$. Since here $$a = 1$$ and $$b = 2$$, we substitute these into the variance formula to obtain: $$Var(X) = \\dfrac{(2 - 1)^2}{12} = \\dfrac{1}{12}.$$ Below is a more detailed derivation: We compute the mean $$E(X)$$ by integrating: $$E(X) = \\int_{1}^{2} x \\cdot f(x) dx = \\int_{1}^{2} x \\cdot 1 dx = \\left[ \\dfrac{x^2}{2} \\right]_{1}^{2} = \\dfrac{2^2}{2} - \\dfrac{1^2}{2} = \\dfrac{4}{2} - \\dfrac{1}{2} = \\dfrac{3}{2}.$$ Next, we find $$E(X^2)$$: $$E(X^2) = \\int_{1}^{2} x^2 \\cdot 1 dx = \\left[ \\dfrac{x^3}{3} \\right]_{1}^{2} = \\dfrac{2^3}{3} - \\dfrac{1^3}{3} = \\dfrac{8}{3} - \\dfrac{1}{3} = \\dfrac{7}{3}.$$ Hence, the variance $$Var(X)$$ is $$E(X^2) - [E(X)]^2 = \\dfrac{7}{3} - \\left( \\dfrac{3}{2} \\right)^2 = \\dfrac{7}{3} - \\dfrac{9}{4} = \\dfrac{28}{12} - \\dfrac{27}{12} = \\dfrac{1}{12}.$$",
+  "valid answer": "Valid Answers: $1/12$",
+  "problem tags": [
+    "Probability",
+    "Statistics",
+    "Distribution"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Compute the first and second moments of X (i.e., E(X) and E(X^2)) and use Var(X) = E(X^2) - (E(X))^2.",
+  "problem firm": [
+    "HRT"
+  ],
+  "question id": "97500052847465400855"
+}

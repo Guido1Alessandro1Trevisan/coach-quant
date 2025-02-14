@@ -1,0 +1,16 @@
+{
+  "problem name": "Painted Cubes Quest",
+  "problem text": "A large cube, measuring 10 units on each edge, is composed of 1-by-1-by-1 smaller cubes. The massive cube is dipped in paint so that all external surfaces are covered. Determine the number of little cubes that end up with paint on at least one face.",
+  "problem solution": "First, note that the total number of 1-by-1-by-1 cubes is $10^3 = 1000$. Those that remain unpainted are precisely the ones fully contained inside the cube, which forms an 8-by-8-by-8 cube (since we remove one outer layer of cubes on each side). Hence, the number of cubes without any paint is $8^3 = 512$. It follows that the number of cubes that do have paint on at least one face is $1000 - 512 = 488$. More formally, if $n=10$ and $n-2=8$, for any $n\\times n\\times n$ cube made of unit cubes, the interior region consists of $(n-2)^3$ cubes. Thus, the complement, which is everything in the outermost layers collectively, is $n^3 - (n-2)^3$. Substituting $n=10$ yields $10^3 - 8^3 = 1000 - 512 = 488$.",
+  "valid answer": "Valid Answers: $488$",
+  "problem tags": [
+    "Geometry",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Calculate how many little cubes are entirely inside, removed from all painted faces.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "85568477299282724865"
+}

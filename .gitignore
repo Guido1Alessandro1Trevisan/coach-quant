@@ -1,0 +1,21 @@
+node_modules
+.next
+
+.env
+
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# IDE-specific files
+.vscode/
+
+# Compiled output (if applicable)
+dist/

@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Dilemma Dee",
+  "problem text": "Envision a game involving a standard 100-sided die labeled from 1 to 100. You roll the die and observe the number that appears. You can then either keep that rolled value in dollars or pay $1 to discard it and roll the die again, this time keeping the second result, no matter what it is. What is the fair price you would pay to play this game if you deploy the optimal strategy?",
+  "problem solution": "We approach by considering a 'threshold strategy': choose an integer $$T$$ so that if the first roll is at least $$T$$, we accept it, but if it is below $$T$$, we pay $$1$$ to roll again and collect the second result. We then solve for the optimal threshold $$T$$ by examining the expected payoff. Let $$X$$ be a uniform random variable representing the first roll, where $$X\\in\\{1,2,\\dots,100\\}.$$ If we keep the roll when $$X\\ge T$$, the expected value of that roll (conditional on being at least $$T$$) is the average of all integers from $$T$$ to $$100$$, which is $$\\frac{T + 100}{2}.$$ If we roll below $$T$$ (with probability $$\\frac{T-1}{100}$$), we pay $$1$$ and take a second roll, whose expected outcome is $$50.5$$ (the average of numbers from $$1$$ to $$100$$). Accounting for the $$1$$ cost, the net from rerolling is $$50.5 - 1 = 49.5.$$ Hence, if we let $$P(R \\ge T) = \\frac{101 - T}{100}$$ and $$P(R < T) = \\frac{T - 1}{100},$$ the expected payoff under threshold $$T$$ is: $$\\Big(\\frac{101 - T}{100}\\Big)\\Big(\\frac{T + 100}{2}\\Big) + \\Big(\\frac{T - 1}{100}\\Big)(49.5).$$ We test integer values of $$T$$ from 1 to 100 to maximize this expression. One finds that $$T=50$$ yields the highest expected value, which is approximately $$62.505.$$ Thus, the fair price to pay for this game (i.e., its expected value under the optimal strategy) is about $$62.505.$$",
+  "valid answer": "Valid Answers: approximately 62.505",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Try deciding on a cutoff roll: if your first roll is above a certain level, keep it; otherwise pay $1 and try again.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "96504571047485194804"
+}

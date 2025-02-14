@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Gamble Quest",
+  "problem text": "A gambling venue presents a game using a standard six-sided die where you receive a payout equal to the number shown. If the die shows a $1$, $2$, or $3$, the game concludes, and you are paid. Otherwise, you add this number to your current sum and roll again. What is the game's expected value?",
+  "problem solution": "The payout depends on the initial roll, so the Law of Total Expectation applies. Let $x$ represent the game's expected value. There is a $\\frac{1}{2}$ chance of rolling a $1$, $2$, or $3$ (averaging $2$). The remaining $\\frac{1}{2}$ chance is for a roll of $4$, $5$, or $6$ (averaging $5$), which you add to your total, effectively restarting with an expected value of $x$. Therefore, the equation is: $x = \\frac{1}{2} \\times (2) + \\frac{1}{2} \\times (x + 5)$ $x = 7$",
+  "valid answer": "Valid Answers: $7$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Your total payout is influenced by the result of the initial dice roll. What are the possible results, their probabilities, and how can the Law of Total Expectation be applied?",
+  "problem firm": [
+    "Drw"
+  ],
+  "question id": "81892844826391643482"
+}

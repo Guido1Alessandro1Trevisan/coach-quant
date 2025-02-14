@@ -1,0 +1,16 @@
+{
+  "problem name": "Major Mystery",
+  "problem text": "At a nearby college, $30\\%$ of the students are English majors, $45\\%$ are History majors, and $15\\%$ are pursuing both majors. What percentage of students are not majoring in either English or History?",
+  "problem solution": "To find the percentage of students who are only majoring in English, we subtract the percentage of double majors from the English majors. Thus, $15\\%$ of students are solely English majors. Similarly, $30\\%$ of students are solely History majors. By summing up the percentages of single majors and double majors, we find that $60\\%$ of students major in either English or History. Consequently, $40\\%$ are not majoring in either subject.",
+  "valid answer": "Valid Answers: $[ 40, 0.4 ]$",
+  "problem tags": [
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "To calculate the percentage of students majoring only in English, subtract the percentage of double majors from the English major percentage. Alternatively, apply the inclusion-exclusion principle.",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "07075015974312087923"
+}

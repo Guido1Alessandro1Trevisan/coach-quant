@@ -1,0 +1,17 @@
+{
+  "problem name": "Dicey Dilemma",
+  "problem text": "Suppose you are given the choice: either roll one fair six-sided die and square the outcome, or roll two fair six-sided dice and multiply their results. Which of these two approaches leads to a larger expected value? Provide a thorough justification for your conclusion.",
+  "problem solution": "We begin by defining random variables X and Y, each uniformly distributed over the set $\\{1,2,3,4,5,6\\}$. Assume X and Y are independent and identically distributed (iid). We analyze each scenario: 1. One Die Squared Define X as the outcome of a single die roll. We need $E(X^2)$. Recall the variance identity $Var(X) = E(X^2) - [E(X)]^2$. Hence, $E(X^2) = Var(X) + [E(X)]^2$. Since X is uniform over {1,2,3,4,5,6}, we compute: E(X) = $\\frac{1+2+3+4+5+6}{6}$ = 3.5, E(X^2) = $\\frac{1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2}{6}$ = $\\frac{91}{6}$ = 15.1666.... Thus the expected value of squaring the outcome of one die is E(X^2) = 15.1666.... 2. Two Dice Product Now define random variables X and Y, where you roll two dice and consider the product XY. Because X and Y are iid, we have: $E(XY) = E(X)E(Y) = (3.5)(3.5) = 12.25$. 3. Comparison We see that $E(X^2) = 15.1666... > 12.25 = E(XY)$. Hence, rolling a single die and squaring its outcome yields a larger expected value than rolling two dice and multiplying their results. Conclusion Choosing to roll one die and square the outcome provides a higher expected value, approximately $15.17$, compared to about $12.25$ for rolling two dice and taking their product.",
+  "valid answer": "Rolling one die and squaring the outcome yields the higher expected value.",
+  "problem tags": [
+    "Probability",
+    "Dice",
+    "Expectation"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Compare $E(X^2)$ of one die with $E(XY)$ of two dice by using $E(X^2) = \\operatorname{Var}(X) + [E(X)]^2$ and $E(XY) = E(X)E(Y)$ when X, Y are iid.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "03244220291361765224"
+}

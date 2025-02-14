@@ -1,0 +1,17 @@
+{
+  "problem name": "Triple Six Quest",
+  "problem text": "We roll a fair six-sided die five times and are interested in the chance that exactly three of the outcomes show a face value of six. What is the probability of this event?",
+  "problem solution": "First, we recognize that each roll of a fair six-sided die is independent and has a probability of $\\frac{1}{6}$ of landing on 6, and $\\frac{5}{6}$ otherwise. We let $X$ be the random variable denoting the number of sixes in the five rolls. Since each roll is a Bernoulli trial with success probability $\\frac{1}{6}$, $X$ follows a binomial distribution with parameters $n=5$ and $p=\\frac{1}{6}$. The probability that $X$ takes the value $k$ is given by $$\\binom{n}{k}\\left(\\frac{1}{6}\\right)^k\\left(\\frac{5}{6}\\right)^{n-k}$$. Here, we want $k=3$. Plugging in $n=5$ and $k=3$, the probability is $$\\binom{5}{3}\\left(\\frac{1}{6}\\right)^3\\left(\\frac{5}{6}\\right)^2$$. We compute: $$\\binom{5}{3} = 10,\\quad \\left(\\frac{1}{6}\\right)^3 = \\frac{1}{216},\\quad \\left(\\frac{5}{6}\\right)^2 = \\frac{25}{36}$$. Multiply these factors: $$10\\times\\frac{1}{216}\\times\\frac{25}{36} = \\frac{250}{7776} = \\frac{125}{3888}\\approx 0.0321.$$ Thus, the probability of rolling exactly three sixes in five rolls is $$\\frac{125}{3888}\\approx 0.0321.$$",
+  "valid answer": "Valid Answers: 125/3888, or approximately 0.0321",
+  "problem tags": [
+    "Binomial Probability",
+    "Basic Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think in terms of a sequence of successes and failures, where success is rolling a six with probability 1/6.",
+  "problem firm": [
+    "Nuance Methods",
+    "Gamma Solutions"
+  ],
+  "question id": "68396004461341643296"
+}

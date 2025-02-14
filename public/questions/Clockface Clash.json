@@ -1,0 +1,20 @@
+{
+  "problem name": "Clockface Clash",
+  "problem text": "Find the degree measure of the angle created by the hour and minute hands at $9:45$ PM on a standard clock.",
+  "problem solution": "At $9:45$ PM, the minute hand is directed at $9$. The hour hand has moved $\\dfrac{3}{4}$ of the way from the $9$ to the $10$, as $\\dfrac{3}{4}$ of an hour has elapsed. Therefore, the angle between the hands equals $\\dfrac{3}{4}$ of the distance from $9$ to $10$ on the clock. With $12$ equal sections and a complete circle being $360$ degrees, there are $30$ degrees between each number. Thus, the angle is $\\dfrac{3}{4} \\cdot 30 = 22.5$.",
+  "valid answer": "Valid Answers: $22.5$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Where does the minute hand point on the clock? How far into an hour is $45$ minutes?",
+  "problem firm": [
+    "Akuna Capital",
+    "Belvedere Trading",
+    "Drw",
+    "Jane Street",
+    "Old Mission",
+    "Optiver"
+  ],
+  "question id": "89297481352324886133"
+}

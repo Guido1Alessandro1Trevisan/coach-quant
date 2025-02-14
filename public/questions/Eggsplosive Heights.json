@@ -1,0 +1,18 @@
+{
+  "problem name": "Eggsplosive Heights",
+  "problem text": "You're in a tall structure consisting of $n$ levels with $3$ identical eggs at your disposal. If you release an egg from below story $X$, it will remain intact; otherwise, it will shatter. From level $(1-n)$ onward, the eggs will break when dropped. What is the greatest possible value of $n$ such that you need at most $9$ drops to pinpoint $X$ in the worst case?",
+  "problem solution": "In solving Egg Drop, the aim was to maintain a constant worst-case scenario by adjusting the height incrementally at each step, starting with larger jumps and then making smaller ones as you go higher. Specifically, with no more than $d$ drops and $2$ eggs, you could completely test $\\dfrac{d(d+1)}{2}$ levels. In this challenge, we have $3$ eggs available, but once one breaks, it reduces to the $2$ egg scenario. Therefore, instead of making linearly decreasing jumps (as done in the two-egg scenario), we will make jumps that reduce by the maximum increment possible in the two-egg scenario. This way, after the first egg shatters, we can explore everything within the range using the $2$ egg method. Thus, we need to find an initial point where, if the egg breaks at floor $X$ on the first attempt, we can inspect the lower floors in $9-1=8$ attempts. From Egg Drop, we know that we can inspect a maximum of $\\dfrac{8 \\cdot 9}{2} = 36$ levels in $8$ attempts, so our initial drop should be from floor $37$. In the worst-case scenario (where it doesn't break), we must increment such that if it breaks on the next attempt, we can examine the remaining space between $37$ and the subsequent floor in $9-2=7$ attempts. Again, from Egg Drop, we can check $\\dfrac{8 \\cdot 7}{2} = 28$ levels with $7$ attempts, so we should drop the next egg from floor $66$ so we can cover floors $38-65$ ($28$ levels) in the remaining $7$ attempts. A pattern emerges which can be generalized: with $k$ attempts left, increment by $\\dfrac{k(k+1)}{2} + 1$ levels. Thus, the next drop would be from floor $66 + 21 + 1 = 88$, then from $88 + 15 + 1 = 104$, with subsequent drops at floors $115, 122, 126,$ and $128$. If it breaks at $128$ but not at $126$, check $127$ to determine which of the two it breaks on. If it doesn't break at $128$, try $129$ to check if it breaks. If it does, we've found our answer. If it doesn't, it must break at a higher level. From this, the maximum height of the building is $n = 130$, since if it doesn't break at $129$, it must break at $130$. The number of floors cannot exceed $130$ because, if it breaks above $130$, we won't have enough eggs to find the value in the worst-case scenario. Hence, $n = 130$ is the solution.",
+  "valid answer": "Valid Answers: $130$",
+  "problem tags": [
+    "Games",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "In Egg Drop, a simpler version of this task, the strategy was to take larger jumps at the initial floors so you could test every floor in a specified range. Specifically, with up to $d$ drops and $2$ eggs, you could fully test $\\dfrac{d(d+1)}{2}$ stories. The key here is that once one egg breaks, the problem simplifies to the two-egg scenario in egg drop. Therefore, instead of linearly decreasing jumps (as in the two-egg case), make jumps that reduce by the maximum increment of the two-egg scenario.",
+  "problem firm": [
+    "Akuna Capital",
+    "Transmarket Group",
+    "Worldquant"
+  ],
+  "question id": "99506152529407135170"
+}

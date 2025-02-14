@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Dollar Dilemma",
+  "problem text": "Pick any integer between 1 and 6, then a standard six-sided die is rolled. If the result is greater than or equal to your chosen number, you earn that many dollars. Otherwise, you earn nothing. What is the fair price to pay for this game?",
+  "problem solution": "Let $$n$$ be your chosen integer ($$1 \\le n \\le 6$$). The probability that the die roll is at least $$n$$ is $$\\frac{7-n}{6}$$, so the expected value of choosing $$n$$ is $$n \\times \\frac{7-n}{6}.$$ We compute this for each $$n$$ from 1 to 6: for $$n=3$$, $$3 \\times \\frac{7-3}{6} = 3 \\times \\frac{4}{6} = 2$$; for $$n=4$$, $$4 \\times \\frac{7-4}{6} = 4 \\times \\frac{3}{6} = 2.$$ These are the maximum values. Thus, the optimal strategy is to choose 3 or 4, yielding an expected payoff of 2. Consequently, the fair price of the game is 2 dollars.",
+  "valid answer": "Valid Answers: $2",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Check each possible choice for n and compute its expected value to find which is largest.",
+  "problem firm": [
+    "SIG"
+  ],
+  "question id": "73836469013794113905"
+}

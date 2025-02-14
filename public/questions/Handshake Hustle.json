@@ -1,0 +1,15 @@
+{
+  "problem name": "Handshake Hustle",
+  "problem text": "In a gathering of $100$ attendees, each individual exchanges handshakes with every other attendee exactly once. What is the total number of handshakes?",
+  "problem solution": "There are several ways to approach this problem. The quickest way is to recognize that $\\binom{100}{2}$ accurately represents this scenario as it calculates how many unique pairs of people can be formed from the $100$. This gives the result of $4950$. Alternatively, consider a smaller example. Begin with $1$ person. Each time a new individual arrives at the event, they must shake hands with all the existing attendees. Thus, the total handshakes correspond to the sum of integers from $1$ to $99$. This can be seen as $49$ groups of $100$ in this sum plus an additional $50$, leading to a total of $4950$.",
+  "valid answer": "Valid Answers: $4950$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider a smaller example first or identify a mathematical operation that accurately represents this scenario.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "72188899910516074794"
+}

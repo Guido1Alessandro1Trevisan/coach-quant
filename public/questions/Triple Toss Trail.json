@@ -1,0 +1,19 @@
+{
+  "problem name": "Triple Toss Trail",
+  "problem text": "A fair coin is tossed $5$ times. Determine the probability of getting precisely $3$ heads in a row at some point during the $5$ tosses.",
+  "problem solution": "Observe that the sequence can appear as $HHH--$, $-HHH-$, or $--HHH$. In the first format, the initial dash must be $T$ to prevent the sequence from extending. The second dash can be either side, providing 2 possibilities. For the second format, both dashes need to be tails since $HHH$ is next to both dashes, resulting in just one scenario. In the final sequence, the second dash must be $T$ to prevent extension. The first dash may be either side, giving 2 options as well. Consequently, there are 5 sequences for this outcome, leading to a probability of $\\dfrac{5}{32}$.",
+  "valid answer": "Valid Answers: $5/32$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "What are the possible configurations in this scenario?",
+  "problem firm": [
+    "Jane Street",
+    "Old Mission",
+    "Sig",
+    "Transmarket Group"
+  ],
+  "question id": "01799631408493185512"
+}

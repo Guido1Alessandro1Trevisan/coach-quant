@@ -1,0 +1,17 @@
+{
+  "problem name": "Triad Transport Twist",
+  "problem text": "Suppose there are six different cities. Between every pair of cities, there is exactly one of two possible types of transportation. Show that among these six cities, it is inevitable to find three cities all connected by the same type of transportation, thus forming a three-city cycle.",
+  "problem solution": "We will use a classic result in graph theory known as Ramsey's theorem. Label the six cities as points in a complete graph of six nodes, where each edge (representing the connection between two cities) is colored according to one of two given modes of transportation. We need to prove that there is always a monochromatic triangle (a cycle of length 3) among these six nodes.\\n\\nFormally, Ramsey's theorem in this case states that $$R(3,3) = 6$$. This means that if each edge of a complete graph on 6 vertices is colored in one of two colors, there must be a monochromatic triangle.\\n\\nHere is a direct approach to see why such a triangle must appear:\\n\\n1. Pick any city, call it A. Since there are 5 edges connecting A to the other 5 cities, by the pigeonhole principle, at least 3 of those edges must be of the same color. Let us label those 3 connected cities as B, C, and D, such that each edge from A to B, A to C, and A to D is of the same mode of transportation.\\n2. Now examine the edges between B, C, and D themselves. There are 3 edges (one between B and C, one between C and D, and one between D and B). If at least one of those edges is the same color as the edges leading from A, then we have a 3-city cycle of that color immediately (for instance, A-B-C if the edge between B and C matches the color from A to B and A to C).\\n3. If none of the edges among B, C, and D match the color from A, it means all three edges among B, C, and D are of the other color. Therefore, B, C, and D form a monochromatic triangle of this second color.\\n\\nIn every possible coloring, a monochromatic triangle (and thus a three-city cycle of the same mode of transportation) necessarily appears. Hence, with two modes of travel and six cities, there is always a guaranteed triple of cities that are mutually connected by the same mode of transportation.",
+  "valid answer": "Yes, there must be a three-city cycle of the same transportation type.",
+  "problem tags": [
+    "Combinatorics",
+    "Graph Theory",
+    "Ramsey Theory"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Try selecting a single city and notice that at least three of its connections share the same color. Then consider how those three connected cities must be joined.",
+  "problem firm": [
+    "Akuna Capital"
+  ],
+  "question id": "46148353346785688287"
+}

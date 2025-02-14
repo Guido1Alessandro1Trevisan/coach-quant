@@ -1,0 +1,16 @@
+{
+  "problem name": "Bus Wait Paradox",
+  "problem text": "In a tranquil hamlet, a lone bus stop is served by exactly two bus lines. You arrive at the stop at the same moment that one of these buses is present. Can you determine how long, on average, you must wait until another bus (from either line) arrives?",
+  "problem solution": "We begin by noting that the problem does not specify the two buses' schedules or arrival processes. Consequently, in order to derive a meaningful result, we must impose an assumption about how these buses operate. A common mathematical model is that each bus line arrives according to a memoryless (Poisson) process, with independent rates $$\\lambda_1$$ and $$\\lambda_2$$ (arrivals per unit time). A Poisson process is often used to approximate a random arrival pattern for buses when the traveler has no knowledge of a precise timetable and arrivals are assumed to be independent. Suppose we label these two independent processes by A and B, arriving with rates $$\\lambda_1$$ and $$\\lambda_2$$ respectively. Then the superposition (i.e., the combination) of A and B is itself a Poisson process with rate $$\\lambda_1 + \\lambda_2$$. This means that from the moment you see a bus depart, the expected waiting time for the next bus from either line is governed by the exponential distribution with parameter $$\\lambda_1 + \\lambda_2$$. The memoryless property ensures that having just observed one bus's arrival does not affect the clock for future arrivals. Thus, using standard results from the exponential distribution, the expected waiting time until the next bus is simply $$\\dfrac{1}{\\lambda_1 + \\lambda_2}.$$ If, instead, the bus arrivals followed a deterministic schedule rather than a Poisson process, a more elaborate calculation involving scheduled offsets and intervals would be needed. Without additional details on the timetable, however, the general answer can only be given in terms of this Poisson rate model or remains indeterminate if no model is assumed. Mathematically, under Poisson arrivals, the expected wait for the next bus from either line is $$\\dfrac{1}{\\lambda_1 + \\lambda_2}.$$",
+  "valid answer": "Valid Answers: The expected wait depends on the distribution of bus arrivals. Under independent Poisson processes with rates $$\\lambda_1$$ and $$\\lambda_2$$, the answer is $$\\dfrac{1}{\\lambda_1 + \\lambda_2}.$$",
+  "problem tags": [
+    "Probability",
+    "Poisson Process"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider modeling each bus line's arrival as a Poisson process and recall that the sum of independent Poisson processes is still Poisson with a rate equal to the sum of their rates.",
+  "problem firm": [
+    "Bank of America"
+  ],
+  "question id": "67045891429736184669"
+}

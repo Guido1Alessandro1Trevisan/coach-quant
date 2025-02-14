@@ -1,0 +1,17 @@
+{
+  "problem name": "Interval Tango",
+  "problem text": "Suppose two real numbers x and y are selected randomly and independently from a uniform distribution on the interval [0, 60]. What is the expected value of the absolute difference |x - y|, and what is its variance?",
+  "problem solution": "Let X and Y be iid uniform(0,60) random variables. Define Z = |X - Y|. We wish to compute E(Z) and var(Z). First, note that Z ranges from 0 to 60. The probability density function (pdf) of Z is given by $$f_Z(z) = \\frac{2(60 - z)}{60^2},\\quad 0 \\le z \\le 60.$$ We confirm this by noting that the difference X - Y follows a triangular distribution on [-60, 60], and taking its absolute value yields the above pdf for Z. Next, to find E(Z), we compute $$E(Z) = \\int_{0}^{60} z f_Z(z) \\;dz = \\int_{0}^{60} z \\;\\frac{2(60 - z)}{60^2}\\;dz.$$ We simplify inside the integrand, set up the integral, and evaluate: $$\\int_{0}^{60} z(60 - z)\\;dz = \\int_{0}^{60} (60z - z^2)\\;dz = 60\\int_{0}^{60} z \\;dz - \\int_{0}^{60} z^2 \\;dz = 60\\left(\\frac{60^2}{2}\\right) - \\left(\\frac{60^3}{3}\\right) = 60\\cdot 1800 - 72000 = 108000 - 72000 = 36000.$$ Multiplying by the factor \\( \\frac{2}{60^2} \\) yields $$E(Z) = \\frac{2}{60^2} \\times 36000 = \\frac{72000}{3600} = 20.$$ Therefore, E(|X - Y|) = 20. For var(Z), we use var(Z) = E(Z^2) - [E(Z)]^2. First compute E(Z^2): $$E(Z^2) = \\int_{0}^{60} z^2 f_Z(z)\\;dz = \\int_{0}^{60} z^2\\frac{2(60-z)}{60^2}\\;dz.$$ We expand and evaluate: $$\\int_{0}^{60} z^2(60 - z) \\;dz = \\int_{0}^{60} (60z^2 - z^3)\\;dz = 60\\int_{0}^{60} z^2 \\;dz - \\int_{0}^{60} z^3 \\;dz = 60 \\left(\\frac{60^3}{3}\\right) - \\left(\\frac{60^4}{4}\\right) = 60\\cdot 72000 - 3240000 = 4320000 - 3240000 = 1080000.$$ Multiplying by \\(\\frac{2}{60^2}\\) gives $$E(Z^2) = \\frac{2}{60^2} \\times 1080000 = \\frac{2160000}{3600} = 600.$$ The variance then is $$\\mathrm{var}(Z) = E(Z^2) - [E(Z)]^2 = 600 - (20)^2 = 600 - 400 = 200.$$ Hence the final results are $$E(|X - Y|) = 20 \\quad\\text{and}\\quad \\mathrm{var}(|X - Y|) = 200.$$",
+  "valid answer": "Valid Answers: E(|X-Y|) = 20, var(|X-Y|) = 200",
+  "problem tags": [
+    "Statistics",
+    "Probability",
+    "Uniform Distribution"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the distribution of the difference X - Y and use that to derive the distribution of |X - Y|. Then compute the necessary integrals for expectation and variance.",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "91386615052813655246"
+}

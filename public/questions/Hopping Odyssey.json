@@ -1,0 +1,16 @@
+{
+  "problem name": "Hopping Odyssey",
+  "problem text": "A rabbit begins at the base of a staircase with $10$ steps. The rabbit is able to leap an odd number of steps with each move. Determine the total number of unique ways the rabbit can reach the top of the staircase (i.e. the top of the $10$th step).",
+  "problem solution": "Let $$ o_n $$ denote the number of unique ways the rabbit can ascend a staircase with $$ n $$ steps. Consider the first leap size. The rabbit can leap $$ 1,3,5,\\dots, \\alpha $$, where $$ \\alpha = n $$ if $$ n $$ is odd, and $$ n-1 $$ if $$ n $$ is even. Thus, $$ \\alpha $$ is the largest odd number not exceeding $$ n $$. By considering this, we have $$ o_n = o_1 + o_3 + \\dots + o_{\\alpha} $$. Now, examine the series $$ o_3 + \\dots + o_{\\alpha} $$. If the rabbit started from the second step, this sum would be produced, as the rabbit can leap $$ 1,3,5,\\dots, \\alpha - 1 $$ steps from step $$ 2 $$. These match the terms in the sum when starting at step $$ 2 $$. Hence, $$ o_2 = o_3 + \\dots + o_{\\alpha} $$ and the recurrence relation updates to $$ o_n = o_{n-1} + o_{n-2} $$. The initial values are $$ o_1 = o_2 = 1 $$, which are easily verified. These correspond to the initial terms and the recurrence of the Fibonacci sequence, so $$ o_n = F_n $$. Specifically, $$ o_{10} = F_{10} = 55 $$.",
+  "valid answer": "Valid Answers: $55$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Let $o_n$ represent the number of unique paths that the rabbit can take to ascend a staircase with height $n$. Consider the first leap size.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "76030720217961361128"
+}

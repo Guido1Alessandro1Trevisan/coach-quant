@@ -1,0 +1,16 @@
+{
+  "problem name": "Twin Birthrate Apex",
+  "problem text": "Define $b(n)$ as the expected count of unique birthdays (days in the year on which precisely one individual has a birthday) among $n$ individuals. There exist two integer values of $n$ that achieve the highest $b(n)$. Compute the sum of these two values.",
+  "problem solution": "Consider $X_1, X_2, \\dots, X_N$ as indicators for the event where the $i$th individual, $1 \\leq i \\leq N$, has a unique birthday distinct from the other $N-1$ individuals. Consequently, $T = X_1 + \\dots + X_N$ represents the count of unique birthdays in a year. Therefore, $b(N) = \\mathbb{E}[T] = N \\mathbb{E}[X_1]$ due to the linearity of expectation and the equal likelihood of each person having a unique birthday from others. The value $\\mathbb{E}[X_1]$ denotes the probability that person $1$ has a unique birthday. Assign a fixed birthday to person $1$. Consequently, the remaining $N-1$ individuals must have birthdays on the remaining $364$ days, so the probability of this is $\\left(\\dfrac{364}{365}\\right)^{N-1}$. Thus, $b(N) = \\mathbb{E}[T] = N \\cdot \\left(\\dfrac{364}{365}\\right)^{N-1}$. The problem suggests that two integer values of $n$ result in the same $b(n)$. Notice that $b(n)$ initially increases and later decreases. Thus, these two $n$ values are consecutive. We need to identify an $n'$ where $b(n') = b(n'+1)$. Our solution would then be $n' + (n'+1) = 2n' + 1$. Solving $b(n') = b(n' + 1)$ gives $n' \\cdot \\left(\\dfrac{364}{365}\\right)^{n' - 1} = (n' + 1) \\left(\\dfrac{364}{365}\\right)^{n'} \\iff n' = \\dfrac{364}{365}n' + \\dfrac{364}{365} \\iff n' = 364$. Thus, the final answer is $2 \\cdot 364 + 1 = 729$.",
+  "valid answer": "Valid Answers: $729$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Let $X_i$ denote the indicator that person $i$ has a birthday distinct from the others.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "61146926839103546829"
+}

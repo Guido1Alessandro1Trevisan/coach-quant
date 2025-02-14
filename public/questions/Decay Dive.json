@@ -1,0 +1,16 @@
+{
+  "problem name": "Decay Dive",
+  "problem text": "Determine which three digits are the first to appear immediately after the decimal point when raising 0.99 to the 100th power.",
+  "problem solution": "We aim to evaluate $$0.99^{100}$$ and identify its first three decimal digits. To handle this expression more elegantly, we convert it into exponential form using the natural logarithm. Note that for any positive real number $$a$$, we have: $$a^{b} = e^{b \\ln(a)}.$$ Thus, we rewrite: $$0.99^{100} = e^{100 \\ln(0.99)}.$$ Next, we approximate \\(\\ln(0.99)\\). A Taylor expansion for $$\\ln(1 - x)$$ (with \\(x = 0.01\\)) around $$x = 0$$ is: $$\\ln(1 - x) = -x - \\dfrac{x^2}{2} - \\dfrac{x^3}{3} - \\dots.$$ Substituting \\(x = 0.01\\), we get: $$\\ln(0.99) = \\ln(1 - 0.01) \\approx -0.01 - \\dfrac{(0.01)^2}{2} = -0.01 - 0.00005 = -0.01005,$$ with higher-order terms being even smaller. Multiply by 100: $$100 \\times (-0.01005) = -1.005.$$ Therefore, $$0.99^{100} = e^{-1.005}.$$ An exponential approximation gives \\(e^{-1.005} \\approx 0.366\\). Consequently, the number is approximately 0.366..., and the first three digits after the decimal point are 366.",
+  "valid answer": "366",
+  "problem tags": [
+    "Exponent",
+    "Approximation"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Use the natural logarithm to transform the power and then approximate using expansions for small values of x.",
+  "problem firm": [
+    "Citi"
+  ],
+  "question id": "66766404915783407350"
+}

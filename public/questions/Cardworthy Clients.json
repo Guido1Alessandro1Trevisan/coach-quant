@@ -1,0 +1,16 @@
+{
+  "problem name": "Cardworthy Clients",
+  "problem text": "Two quant companies experience client arrivals modeled by separate Poisson processes. The rates for these processes are $6$ and $10$ respectively. Clients provide excellent feedback with probabilities $\\dfrac{1}{6}$ and $\\dfrac{1}{5}$ for each company, independently. Clients who leave excellent feedback receive a thank you card. Determine the expected duration between clients who receive thank you cards.",
+  "problem solution": "We start by applying Poisson thinning to observe that the stream of clients receiving thank you cards from either company remains a Poisson process. For each company, the respective rates become $6 \\cdot \\dfrac{1}{6} = 1$ and $10 \\cdot \\dfrac{1}{5} = 2$. Thus, the intervals between clients receiving thank you cards for each company follow IID $\\text{Exp}(1)$ and $\\text{Exp}(2)$ distributions, respectively. The interval between any clients receiving thank you cards is $\\text{min}\\{X_1,X_2\\}$, where $X_i \\sim \\text{Exp}(i)$, as the company with the shorter interval between clients receiving thank you cards dictates the timing. Therefore, for any $t > 0$, from properties of the exponential random variable, $\\mathbb{P}[\\text{min}\\{X_1,X_2\\} > t] = \\mathbb{P}[X_1 > t]\\mathbb{P}[X_2 > t] = e^{-t} \\cdot e^{-2t} = e^{-3t}$. Hence, $\\text{min}\\{X_1,X_2\\} \\sim \\text{Exp}(3)$. Specifically, this implies the expected value is $\\dfrac{1}{3}$, which is our result.",
+  "valid answer": "Valid Answers: $1/3$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Employ Poisson thinning to observe that the stream of clients receiving thank you cards from either company is also a Poisson process. What are the rates for each? How can this be related to the frequency of clients receiving thank you cards?",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "01361087969868606592"
+}

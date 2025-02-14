@@ -1,0 +1,16 @@
+{
+  "problem name": "Divisor Hunt",
+  "problem text": "It is known that the integer 20 possesses exactly 6 positive divisors. Using this as a reference point, find the total number of positive divisors of 2160.",
+  "problem solution": "First, recall that for any positive integer, its total count of positive divisors can be determined from its prime factorization. If an integer n has the prime factorization $$n = p_{1}^{a_{1}}\\times p_{2}^{a_{2}}\\times\\cdots\\times p_{k}^{a_{k}}$$ then the total number of positive divisors of n is given by $$(a_{1} + 1)(a_{2} + 1)\\cdots(a_{k} + 1).$$ We are provided with the fact that 20 has 6 positive divisors. Indeed, $$20 = 2^{2}\\\\times 5^{1},$$ which yields $$(2+1)(1+1) = 3\\times2 = 6.$$ Next, we apply the same idea to 2160. Factorizing 2160 gives $$2160 = 2^{4}\\\\times 3^{3}\\\\times 5^{1}.$$ Therefore, its total divisor count is $$(4+1)(3+1)(1+1) = 5\\times4\\times2 = 40.$$ Consequently, 2160 has 40 positive divisors in total.",
+  "valid answer": "Valid Answers: 40",
+  "problem tags": [
+    "Number Theory",
+    "Divisors"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Use prime factorization to compute the product of (exponent+1) terms.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "21158465262294744224"
+}

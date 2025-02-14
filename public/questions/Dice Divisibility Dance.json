@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Divisibility Dance",
+  "problem text": "In front of us are $100$ fair dice, each with $100$ sides, and we roll them all simultaneously. What is the likelihood that the total of the numbers showing is divisible by $100$?",
+  "problem solution": "Regardless of the total from any $99$ of the dice, there is precisely one number on the $100$th die that results in a sum divisible by $100$. For instance, if the first $99$ dice show a total of $3075$, only a $25$ on the final die will make the sum divisible by $100$. Therefore, the probability is $\\dfrac{1}{100}$.",
+  "valid answer": "Valid Answers: $1/100$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Don't be misled by the quantity of $dice$! There's a more straightforward approach to this problem than enumerating possibilities.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "77292749318990763629"
+}

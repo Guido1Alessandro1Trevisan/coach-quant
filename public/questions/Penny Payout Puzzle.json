@@ -1,0 +1,15 @@
+{
+  "problem name": "Penny Payout Puzzle",
+  "problem text": "You have $100$ pennies. You can organize these pennies into any number of stacks and place any number of pennies in each stack. Your earnings are the product of the number of pennies in all the stacks. For instance, if you create three stacks with $10, 20,$ and $70$ pennies, your payout is $10 \\cdot 20 \\cdot 70 = 14000$. The best arrangement of the pennies will result in a payout of $a \\cdot b^c$, where $a$ and $b$ are coprime. Determine $abc$.",
+  "problem solution": "We aim to maximize the product. Thus, if we consider the number of coins in each stack as a side length, we want to increase our value as much as possible. A cube provides maximum volume here, which is the product of the side lengths, so we want to form a cube or get as close as possible. Let's begin with $10$ stacks of $10$, since $100 = 10 \\cdot 10$. If each stack of $10$ is divided into two stacks of $5$, the product increases, as each stack of $10$ now contributes $5 \\cdot 5 = 25$ to our total instead of $10$. This results in $5$ stacks of $20$. However, since $5 = 3+2$ and $3 \\cdot 2 = 6 > 5$, further division is beneficial. We should now aim for as many stacks of $3$ as possible. This results in $33$ stacks of $3$ with one penny left. This isn't ideal, since removing one stack of $3$ and combining it with the single penny gives $4 \\cdot 3^{32} > 3 \\cdot 3^{32} = 3^{33}$. Since $4$ cannot be further optimally divided, our solution is $4 \\cdot 3^{32}$, leading to the answer $4 \\cdot 3 \\cdot 32 = 384$.",
+  "valid answer": "Valid Answers: $384$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "The stacks should be roughly equal in size. Consider starting with $10$ stacks of $10$.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "57661542577598675572"
+}

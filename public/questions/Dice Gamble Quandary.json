@@ -1,0 +1,15 @@
+{
+  "problem name": "Dice Gamble Quandary",
+  "problem text": "You toss a pair of unbiased dice. If both dice show $6$, you earn $ \\$\\100 $. If one die shows a $6$ and the other does not, you incur a loss of $\\$x$. For any other result, you keep rolling both dice until you achieve either double $6$s or a combination of a $6$ and a different number. Determine the highest possible value of $x$ such that the expected value of the game is non-negative.",
+  "problem solution": "First, we calculate the probability for each possible scenario. Getting double $6$s has a probability of $\\left(\\frac{1}{6}\\right)^2 = \\frac{1}{36}$. To find the number of scenarios with a $6$ and another number, note that there are $10$ combinations ($1$-$5$ on the first die and $6$ on the second, or vice versa). This scenario thus has a probability of $\\frac{10}{36}$. Since other results lead to repeating these scenarios, we focus on the relevant probabilities. Normalize by dividing the probability of our desired outcome by the sum of the non-repeating event probabilities. This updates the probability of double $6$s to $\\dfrac{\\frac{1}{36}}{\\left(\\frac{1}{36} + \\frac{10}{36}\\right)} = \\frac{1}{11}$. Hence, the probability of ending with a $6$ and a non-$6$ is $\\frac{10}{11}$. To find $x$, use the equation $100\\cdot\\frac{1}{11} - x\\cdot\\frac{10}{11}$, which should be non-negative. Thus $\\frac{100}{11} \\geq \\frac{10x}{11}$. Therefore, the maximum $x$ is $10$.",
+  "valid answer": "Valid Answers: $10$",
+  "problem tags": [
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Does re-rolling the dice alter the comparative probabilities of your outcomes?",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "29670738085515070896"
+}

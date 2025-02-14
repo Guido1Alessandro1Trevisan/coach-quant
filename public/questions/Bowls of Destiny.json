@@ -1,0 +1,16 @@
+{
+  "problem name": "Bowls of Destiny",
+  "problem text": "You have three bowls in front of you. One contains $2$ blue balls, another contains $2$ red balls, and the third contains $1$ red ball and $1$ blue ball. You choose one bowl randomly and observe that you picked a blue ball from it. You then return the ball and draw again from the same bowl. Determine the likelihood that you draw a blue ball again.",
+  "problem solution": "Define $BB$ as the event of drawing two blue balls and $B$ as the event of the initial ball being blue. Let $U_1$ denote the bowl with two blue balls, $U_2$ denote the bowl with two red balls, and $U_3$ denote the bowl with one red and one blue ball. We are interested in $\\mathbb{P}[BB \\mid B] = \\dfrac{\\mathbb{P}[BB]}{\\mathbb{P}[B]}$. The equality follows since $BB \\subseteq B$. To evaluate each probability, we consider the bowl selected. Specifically, $\\mathbb{P}[B] = \\mathbb{P}[B \\mid U_1]\\mathbb{P}[U_1] + \\mathbb{P}[B \\mid U_2]\\mathbb{P}[U_2] + \\mathbb{P}[B \\mid U_3]\\mathbb{P}[U_3]$. Since each bowl is chosen with equal probability, $\\mathbb{P}[U_1] = \\mathbb{P}[U_2] = \\mathbb{P}[U_3] = \\dfrac{1}{3}$. Moreover, we find $\\mathbb{P}[B \\mid U_1] = 1, \\mathbb{P}[B \\mid U_2] = 0,$ and $\\mathbb{P}[B \\mid U_3] = \\dfrac{1}{2}$ based on the distribution of blue balls in each bowl. As the ball is replaced between draws, to compute $\\mathbb{P}[BB \\mid U_i]$, we square $\\mathbb{P}[B \\mid U_i]$. Thus, $\\mathbb{P}[B] = \\dfrac{1 + 1/2 + 0}{3} = \\dfrac{1}{2}$ and $\\mathbb{P}[BB] = \\dfrac{1 + 1/4 + 0}{3} = \\dfrac{5}{12}$. Consequently, the probability is $\\mathbb{P}[BB \\mid B] = \\dfrac{5/12}{1/2} = \\dfrac{5}{6}$.",
+  "valid answer": "Valid Answers: $5/6$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Define $BB$ as the event of drawing two blue balls and $B$ as the event of the initial ball being blue. Let $U_1$ denote the bowl with two blue balls, $U_2$ denote the bowl with two red balls, and $U_3$ denote the bowl with one red and one blue ball. We are interested in $\\mathbb{P}[BB \\mid B] = \\dfrac{\\mathbb{P}[BB]}{\\mathbb{P}[B]}$. Consider the bowl you are using.",
+  "problem firm": [
+    "Hudson River Trading"
+  ],
+  "question id": "10922990511380285610"
+}

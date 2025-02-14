@@ -1,0 +1,16 @@
+{
+  "problem name": "Win Margin Battle",
+  "problem text": "Two players are engaged in a table tennis match, and the score now stands at 10-10. The game cannot conclude until one participant obtains a 2-point lead. If I have a 40% chance of securing each point independently, what is the probability that I will eventually win by the necessary 2-point margin?",
+  "problem solution": "To solve this, let $$W$$ be the probability that I win from a tied score requiring a 2-point difference. My chance of winning each point is $$p = 0.4$$ and my opponent's chance is $$q = 0.6$$. I can win immediately if I capture two consecutive points (which has probability $$p^2$$). Alternatively, if each of us wins one point (with probability $$2pq$$), we return to the same tied position, leaving my chance of eventual victory as $$W\\!$$ again. Hence, we get the equation $$W = p^2 + 2pq\\,W.$$ Solving for $$W$$ yields: $$W - 2pq\\,W = p^2,$$ so $$W(1 - 2pq) = p^2,$$ which implies $$W = \\frac{p^2}{1 - 2pq}.$$ Substituting $$p = 0.4$$ (and thus $$q = 0.6$$), we obtain $$W = \\frac{0.4^2}{1 - 2\\times 0.4\\times 0.6} = \\frac{0.16}{0.52} = \\frac{4}{13} \\approx 0.3077.$$ Thus, my probability of eventually winning is $$\\frac{4}{13}.$$",
+  "valid answer": "Valid Answers: 4/13, 0.3077",
+  "problem tags": [
+    "Probability",
+    "Series"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "After each pair of points, you might in effect reset to the same scenario. Set up a recurrence and solve for the probability of eventually winning.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "69508603668088249308"
+}

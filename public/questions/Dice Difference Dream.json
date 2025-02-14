@@ -1,0 +1,19 @@
+{
+  "problem name": "Dice Difference Dream",
+  "problem text": "Suppose $X$ and $Y$ represent the top faces from two independent rolls of fair $30$-sided dice, with each side numbered from $1$ to $30$. Determine $\\mathbb{E}[|X-Y|]$.",
+  "problem solution": "Define $Z = |X-Y|$. We aim to find the PMF of $Z$ directly. There are $30^2 = 900$ total possible results for the dice rolls. For a specific $k$, we need to calculate the number of outcomes where $Z = k$. If the absolute difference is exactly $k$, the rolls are $(i,i+k)$ for some valid $i$. What values can $i$ take? Specifically, $i$ must be at least $1$, as that is the lowest die value. The maximum $i$ is $30-k$, which would make the pair $(30-k,30)$. We can assign these values to either of the $2$ dice, resulting in $2(30-k)$ outcomes that correspond to $Z=k$. Thus, $\\mathbb{E}[Z] = \\displaystyle \\sum_{k=0}^{29} k \\cdot \\dfrac{2(30-k)}{900} = \\dfrac{1}{450} \\sum_{k=1}^{29} 30k - k^2 = \\dfrac{1}{450}\\left(\\dfrac{30(29)(30)}{2} - \\dfrac{29(30)(59)}{6}\\right) = \\dfrac{899}{90}$.",
+  "valid answer": "Valid Answers: $899/90$",
+  "problem tags": [
+    "Combinatorics",
+    "Expected Value",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Set $Z = |X-Y|$. Directly calculate the PMF of $Z$. If the absolute difference is exactly $k$, how would the dice rolls appear? How can this help you determine the probability $P[Z=k]$?",
+  "problem firm": [
+    "Drw",
+    "Jane Street"
+  ],
+  "question id": "26968739836471135683"
+}

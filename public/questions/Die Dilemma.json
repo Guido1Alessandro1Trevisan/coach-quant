@@ -1,0 +1,17 @@
+{
+  "problem name": "Die Dilemma",
+  "problem text": "A participant tosses a regular fair $6$-sided die. If a $6$ appears, the session concludes and the participant gains nothing. If a $6$ is not rolled, the participant can choose to stop and take $k$, where $k$ is the value shown on the last roll. Alternatively, the participant can opt to roll again following the same rules. Assuming the participant uses the best strategy, what is their expected gain?",
+  "problem solution": "Logically, if the player avoids rolling a $6$, the expected value of the roll is $3$. The total of the remaining die faces is $15$, which are spread over $5$ faces. Thus, the player should accept any value that is at least $3$ and re-roll any amount less than $3$. Let $e_3$ denote the expected gain with this approach. We have that $e_3 = \\dfrac{1}{3} \\cdot e_3 + \\dfrac{1}{2} \\cdot 4$. This occurs because with a probability of $1/3$, the participant rolls $1$ or $2$, and the game effectively restarts. With a probability of $1/2$, the participant gets $3$, $4$, or $5$, which has an expected value of $4$. Solving this yields $e_3 = 3$, which is the best strategy. It can also be demonstrated that if you re-roll any number less than $4$, the expected gain remains the same. This is intuitive since at $3$, you are indifferent between keeping the roll or rolling again.",
+  "valid answer": "Valid Answers: $3$",
+  "problem tags": [
+    "Games",
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "If the participant does not roll a $6$, what is the expected value of their die roll in this case? When should the participant decide to roll again?",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "86309547355034619741"
+}

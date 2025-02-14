@@ -1,0 +1,17 @@
+{
+  "problem name": "Sum Threshold Quest",
+  "problem text": "Consider $X_1, X_2, \\dots$ as IID Unif$(0,1)$ random variables, and let $N = \\text{min}\\{n : X_1 + \\dots + X_n > \\ln(2)\\}$. Determine $\\mathbb{E}[N]$.",
+  "problem solution": "Let's broaden this problem. For $0 < x < 1$ (the reason for this constraint will be clarified later), define $m(x) = \\mathbb{E}[N_x]$, where $N_x = \\min\\{n : X_1 + \\dots + X_n > x\\}$. Using the Law of Total Expectation, $\\mathbb{E}[N_x] = \\mathbb{E}[\\mathbb{E}[N_x \\mid X_1]]$. If $X_1 > x$, it requires $1$ step, occurring with probability $1-x$. When $X_1 \\leq x$, a remaining sum of $x - X_1$ must be exceeded. Thus, our expectation becomes $1+m(x-X_1)$ in this scenario. We integrate over all $X_1$ values from $0$ to $x$ using the Law of Total Expectation. The resulting expression is $m(x) = (1-x) \\cdot 1 + \\int_0^x (1 + m(x-y))dy = 1 + \\int_0^x m(x-y)dy$. Performing a $u$-substitution $u = x - y$ provides the revised integral equation $m(x) = 1 + \\int_0^x m(u)du$. Assuming $m(x)$ is differentiable, differentiate both sides and apply the fundamental theorem of calculus to derive $m'(x) = m(x)$. The standard solution to this differential equation is $m(x) = Ce^x$. An initial condition is required for a specific solution. A suitable initial condition is $m(0) = 1$, since with probability $1$, our first random variable exceeds $0$, requiring exactly $1$ random variable to surpass $0$. This initial condition leads to $C = 1$ and $m(x) = e^x$.\\n\\nNote that the equation holds for $0 < x < 1$. This is because within $0 < x < 1$, $x$ can be surpassed with one random variable. However, for $x > 1$, the RHS changes to $m(x) - m(x-1)$. It's a useful exercise to confirm this. Since $\\ln(2) < 1$, the above is not pertinent for this problem, so $m(\\ln(2)) = e^{\\ln(2)} = 2$.",
+  "valid answer": "Valid Answers: $2$",
+  "problem tags": [
+    "Expected Value",
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "For $0 < x < 1$, define $m(x) = \\mathbb{E}[N_x]$, where $N_x = \\text{min}\\{n : X_1 + \\dots + X_n > x\\}$. Utilize the Law of Total Expectation by conditioning on $X_1$.",
+  "problem firm": [
+    "Akuna Capital"
+  ],
+  "question id": "59867451588642507300"
+}

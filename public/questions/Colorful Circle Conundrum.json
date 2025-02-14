@@ -1,0 +1,17 @@
+{
+  "problem name": "Colorful Circle Conundrum",
+  "problem text": "Select a random angle $\\theta_1 \\sim \\text{Unif}(0, 2\\pi)$. Paint the arc on the unit circle that spans $\\theta_1$ radians in red, beginning from $(1, 0)$ and moving in a counterclockwise direction. Next, randomly choose two angles $\\theta_2, \\alpha \\sim \\text{Unif}(0, 2\\pi)$ IID. Paint an arc of length $\\theta_2$ radians in blue, starting at a position $\\beta$ radians counterclockwise from the origin. The areas where the blue and red arcs overlap become purple. Assuming there is at least one purple section, calculate the probability that there is precisely one purple section.",
+  "problem solution": "According to the conclusion in Circular Slice I, the likelihood that the two arcs don't intersect is $\\frac{1}{6}$. Hence, the probability they do intersect (i.e., overlap at least once) is $\\frac{5}{6}$. We now need to determine the probability of exactly one intersection. Given that the probability they don't intersect is $\\frac{1}{6}$, we must find the probability of intersections at specific locations, such as the endpoints at $0$ radians and $\\theta_1$ radians. As with Circular Slice I, we adjust these values and consider them as $\\text{Unif}(0,1)$ random variables rather than $\\text{Unif}(0,2\\pi)$ random variables. For an intersection at the initial endpoint, we need $\\alpha < \\theta_1$, indicating the blue arc commences within the red section. For an intersection at the opposite endpoint, at proportion $1$ of the circle, we require $\\alpha + \\theta_2 > 1$, allowing the blue arc to wrap around to the origin point $(1,0)$. Therefore, to ascertain the probability of two intersections, we need $\\mathbb{P}[\\theta_1 > \\alpha, \\theta_2 > 1 - \\alpha]$. Similar to the prior problem, we will condition on the value of $\\beta$ to calculate this probability. This implies that $$\\mathbb{P}[\\theta_1 > \\alpha, \\theta_2 > 1 - \\alpha] = \\displaystyle \\int_0^1 \\mathbb{P}[\\theta_1 > \\alpha, \\theta_2 > 1 - \\alpha \\mid \\alpha = x]f_{\\alpha}(x)dx $$ Calculating the interior probability results in $\\mathbb{P}[\\theta_1 > x,\\theta_2 > 1-x] = \\mathbb{P}[\\theta_1 > x]\\mathbb{P}[\\theta_2 > 1-x] = x(1-x)$. Consequently, the integral evaluates to $\\displaystyle \\int_0^1 x(1-x)dx = \\frac{1}{6}$. Combining all prior results, the probability of exactly one purple section is $1 - \\frac{1}{6} - \\frac{1}{6} = \\frac{2}{3}$, thus by using conditional probability, given there was at least one purple section, the probability of exactly one is $\\frac{\\frac{2}{3}}{\\frac{5}{6}} = \\frac{4}{5}$.",
+  "valid answer": "Valid Answers: $4/5$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Express the conditions needed in terms of the random variables. Use the independence of $\\theta_1$ and $\\theta_2$, and condition on $\\alpha$.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "10599772448630983748"
+}

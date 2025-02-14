@@ -1,0 +1,16 @@
+{
+  "problem name": "Handshake Puzzle",
+  "problem text": "You and your partner invite eight additional pairs to a gathering. Initially, each person greets all the people they know with a handshake, but nobody ever shakes their own hand or their spouse’s. Afterwards, you ask every guest (excluding yourself) how many hands they shook, and you find that each of these guests reports a different number of handshakes. Determine the number of handshakes your spouse made.",
+  "problem solution": "First, observe that there are $$9$$ couples total, hence $$18$$ people. You do not count your own handshakes, so you collect handshake numbers from the other $$17$$ individuals. Since every number of handshakes reported is distinct, the only possibility is that these $$17$$ people occupy all the integers from $$0$$ through $$16$$ exactly once. Next, note that if one member of a couple has handshake number $$k$$, the other member of that couple must complement this to $$16$$, since the maximum number of people one can shake (excluding oneself and one’s spouse) is $$16$$. That forces the members of each couple to appear in the pairs $$(0,16), (1,15), (2,14), \\ldots, (7,9),$$ which uses up all handshake counts except $$8$$. The lone unpaired handshake number $$8$$ must therefore belong to your spouse, as your spouse cannot form a complementary pair with you (because your own handshake count has not been included in the distinct list). Consequently, your spouse shook $$8$$ hands.",
+  "valid answer": "Valid Answers: $$8$$",
+  "problem tags": [
+    "Combinatorics",
+    "Logic"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Attempt pairing up the possible handshake values among couples so that each pair sums to $$16$$.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "68558071413864370441"
+}

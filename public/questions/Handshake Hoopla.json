@@ -1,0 +1,16 @@
+{
+  "problem name": "Handshake Hoopla",
+  "problem text": "Imagine 10 individuals seated around a circle. Suppose each pair of distinct people is required to shake hands exactly once. Determine the total number of handshakes that occur.",
+  "problem solution": "We aim to count the total number of distinct pairs of individuals out of 10 people. If every handshake uniquely corresponds to a pair, we are essentially counting the number of ways to choose 2 distinct people from 10. Formally, this is given by the binomial coefficient $$\\binom{10}{2}$$.\\n\\nTo demonstrate the reasoning in full detail, label the individuals as 1, 2, ..., 10. A handshake between persons i and j (where i \\neq j) represents one pair. It suffices to note that a pair (i, j) is the same as (j, i), so each distinct pair is counted exactly once. Therefore, the total number of handshakes is the total count of these pairs, namely $$\\binom{10}{2} = \\frac{10!}{2!(10-2)!} = 45$$.\\n\\nHence, the total number of handshakes is 45.",
+  "valid answer": "Valid Answers: 45",
+  "problem tags": [
+    "Combinatorics",
+    "Counting"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Think of the situation as choosing 2 people out of 10 to form each handshake pair.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "95614204484279869954"
+}

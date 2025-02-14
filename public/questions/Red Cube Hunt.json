@@ -1,0 +1,18 @@
+{
+  "problem name": "Red Cube Hunt",
+  "problem text": "A rectangular box with dimensions $10 \\times 20 \\times 30$ is painted red on its surface. It is then divided into $6000$ unit cubes of size $1 \\times 1 \\times 1$, and one cube is randomly picked. Determine the expected count of red faces on this chosen cube.",
+  "problem solution": "Assign numbers $1-6$ to each face of the cube, and define $I_i$ as the indicator that face $i$ of the selected cube is red. Then $T = I_1 + \\dots + I_6$ represents the total red faces of the cube. Care is needed since the indicators are not interchangeable. Instead, two indicators correspond to a $10 \\times 20$ face, two to a $20 \\times 30$ face, and two to a $10 \\times 30$ face. Thus, there are 3 groups of indicators that are interchangeable, allowing us to simplify to an expectation involving 3 indicators and double it, so $\\mathbb{E}[T] = 2(\\mathbb{E}[I_1] + \\mathbb{E}[I_2] + \\mathbb{E}[I_3])$, where $I_1$ relates to a $10 \\times 20$ face, $I_2$ to a $20 \\times 30$ face, and $I_3$ to a $10 \\times 30$ face. To find these expectations, calculate the likelihood that the indicated face is red on the chosen cube. For $I_1$, this is $10 \\cdot 20 = 200$ cubes. For $I_2$, it is $20 \\cdot 30 = 600$ cubes. For $I_3$, it is $10 \\cdot 30 = 300$ cubes. Divide all these by $6000$, the volume of the entire box. Thus, $\\mathbb{E}[T] = \\dfrac{2(200 + 300 + 600)}{6000} = \\dfrac{11}{30}$.",
+  "valid answer": "Valid Answers: $11/30$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Assign numbers $1-6$ to each face of the cube, and define $I_i$ as the indicator that face $i$ of the selected cube is red. Then $T = I_1 + \\dots + I_6$ represents the total red faces of the cube.",
+  "problem firm": [
+    "Five Rings",
+    "Hudson River Trading",
+    "Sig"
+  ],
+  "question id": "04772328796256807356"
+}

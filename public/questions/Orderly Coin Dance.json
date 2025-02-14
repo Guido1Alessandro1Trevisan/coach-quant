@@ -1,0 +1,16 @@
+{
+  "problem name": "Orderly Coin Dance",
+  "problem text": "You toss a fair coin $4$ times, what is the likelihood of obtaining the sequence $HTHT$ in that specific order?",
+  "problem solution": "The probability of any specific sequence of $x$ coin tosses is $\\left(\\dfrac{1}{2}\\right)^x$ (considering the coin is fair). This is because there are $2^x$ possible sequences of length $x$ (with each toss having 2 possible outcomes). For $4$ tosses, this results in $\\dfrac{1}{16}$.",
+  "valid answer": "Valid Answers: $1/16$",
+  "problem tags": [
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Contemplate the likelihood of any particular sequence of $x$ tosses?",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "16597040783795067551"
+}

@@ -1,0 +1,17 @@
+{
+  "problem name": "Eigenvalue Squaredogs",
+  "problem text": "Consider this matrix $ \\left[ \\begin{array}{cc} -5 & 2 \\\\ -7 & 4 \\end{array} \\right] $. It has $2$ eigenvalues, $a$ and $b$. Determine these eigenvalues and express the answer as $a^2 + b^2$.",
+  "problem solution": "To find the characteristic equation, solve for $$\\lambda$$ such that $$\\det(A - \\lambda I) = 0$$. We calculate $$A - \\lambda I = \\begin{bmatrix} -5 - \\lambda & 2 \\\\ -7 & 4 - \\lambda \\end{bmatrix}$$. This results in the characteristic equation $$(-5-\\lambda)(4-\\lambda) + 14 = \\lambda^2 + \\lambda - 6 = 0$$. Factoring yields $$(\\lambda + 3)(\\lambda - 2) = 0$$, with solutions $$\\lambda = -3$$, $$\\lambda = 2$$. Substituting these values, we find $$(-3)^2 + 2^2 = 13$$.",
+  "valid answer": "Valid Answers: $13$",
+  "problem tags": [
+    "Linear Algebra",
+    "Pure Math"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "How is the characteristic equation determined?",
+  "problem firm": [
+    "Goldman Sachs",
+    "Transmarket Group"
+  ],
+  "question id": "94529873814091989329"
+}

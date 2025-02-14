@@ -1,0 +1,17 @@
+{
+  "problem name": "Roll Gamble Strategy",
+  "problem text": "Two fair $6$-sided dice are thrown. Decide whether to retain the product of the shown numbers or roll both dice again for $4$. What is the expected value of your winnings using an optimal strategy?",
+  "problem solution": "Let $$ X $$ and $$ Y $$ be the results of each die, then $$ XY $$ is our reward. Since the dice rolls are independent, $$ \\mathbb{E}[XY] = \\mathbb{E}[X]\\mathbb{E}[Y] = (3.5)^2 = \\frac{49}{4} $$. If we reroll, the expected outcome of the second throw remains $$ \\frac{49}{4} $$. Thus, we choose to reroll if our initial product is $$ 8 $$ or smaller. This is because $$ 8 $$ is the smallest whole number that is at least $$ 4 $$ less than the average product of the dice, $$ \\frac{49}{4} $$. The likelihood of achieving a product of $$ 8 $$ or less is $$ \\frac{6 + 4 + 2 + 2 + 1 + 1}{36} = \\frac{4}{9} $$. These terms are derived by examining the possibilities of obtaining a product no greater than $$ 8 $$ by fixing one die's value. For instance, if the first die shows $$ 1 $$, regardless of the second die, the product will be at most $$ 8 $$, contributing $$ 6 $$ combinations to our count. Hence, we reroll with a chance of $$ \\frac{4}{9} $$, where the expected value is $$ \\frac{49}{4} - 4 = \\frac{33}{4} $$ for the reroll. Otherwise, we retain the die value. If retained, by constructing a table with all possible die outcomes as axes and products at row and column intersections, one can determine that the expected value of the die roll when it exceeds $$ 8 $$ is $$ \\frac{92}{5} $$. Consequently, the expected value of the game is $$ \\frac{4}{9} \\cdot \\frac{33}{4} + \\frac{5}{9} \\cdot \\frac{92}{5} = \\frac{125}{9} $$.",
+  "valid answer": "Valid Answers: $125/9$",
+  "problem tags": [
+    "Games",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "What is the average outcome of the dice throws? What condition must be satisfied to maintain your rolls? Drawing a table of potential results and the associated products may be helpful.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "16537820408572459406"
+}

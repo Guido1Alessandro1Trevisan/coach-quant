@@ -1,0 +1,16 @@
+{
+  "problem name": "Windy Pedal Puzzle",
+  "problem text": "A cyclist can cover $1$ mile in $3$ minutes with the wind aiding him, and in $4$ minutes if the wind is opposing him. Determine his speed for $1$ mile when there is no wind.",
+  "problem solution": "Considering this scenario in terms of rates, let $x$ represent the wind's speed (in miles/min) and $r$ represent the cyclist's speed (in miles/min). From the problem, we have $r + x = \\frac{1}{3}$ and $r - x = \\frac{1}{4}$. Solving this system yields $r = \\frac{7}{24}$, indicating it would take him $\\frac{24}{7}$ minutes to cover a mile without wind.",
+  "valid answer": "Valid Answers: $24/7$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Approach this by thinking in terms of rates, where $x$ is the wind's rate (in miles/min) and $r$ is the cyclist's rate (in miles/min). Formulate the equations from the problem using $r$ and $x$.",
+  "problem firm": [
+    "Jane Street",
+    "Sig"
+  ],
+  "question id": "35162997624294583990"
+}

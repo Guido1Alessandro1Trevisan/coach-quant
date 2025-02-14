@@ -1,0 +1,17 @@
+{
+  "problem name": "Double Five Quest",
+  "problem text": "Jenny owns a fair $6$-faced die marked with the numbers $1-6$. She repeatedly tosses the die and records the results in sequence. Jenny continues rolling until she encounters either two $5$s (which do not need to be in a row) OR both $4$ and $6$. Determine the probability that Jenny ceases rolling because she sees two $5$s.",
+  "problem solution": "Let's calculate the probability of the opposite event, which is observing $$4$$ and $$6$$ prior to two $$5$$s. The key insight is that no rolls besides $$4-6$$ are relevant. Consequently, when conditioned on being in $$4-6$$, each of the three numbers occurs with probability $$\\frac{1}{3}$$. We only need to examine the sequences of the rolls $$4,6,5,$$ and $$5$$. There are three scenarios where $$4$$ and $$6$$ occur before two $$5$$s.**Scenario 1 - 5 on Initial Roll:** Here, the subsequent rolls must be $$4/6$$ and then the other of $$4/6$$ that wasn't initially rolled. The probability of this scenario is $$\\frac{1}{3} \\cdot \\frac{2}{3} \\cdot \\frac{1}{2} = \\frac{1}{9}$$, as there's a $$\\frac{1}{3}$$ likelihood $$5$$ is first, then a $$\\frac{2}{3}$$ likelihood of rolling $$4/6$$ before another $$5$$, and finally a $$\\frac{1}{2}$$ likelihood of rolling the remaining $$4/6$$ before a $$5$$.**Scenario 2 - 4/6 Comes First and Second:** In this case, the probability is simply $$\\frac{2}{3} \\cdot \\frac{1}{2} = \\frac{1}{3}$$, similar to Scenario 1 after the $$5$$ is rolled in Scenario 1.**Scenario 3 - 4/6 Comes First and $$5$$ Comes Second:** Here, the probability is $$\\frac{2}{3} \\cdot \\frac{1}{2} \\cdot \\frac{1}{2} = \\frac{1}{6}$$. There is a $$\\frac{2}{3}$$ chance $$4/6$$ appears first, then a $$\\frac{1}{2}$$ chance that $$5$$ appears before the remaining $$4/6$$, and a $$\\frac{1}{2}$$ chance that the remaining $$4/6$$ shows up before the second $$5$$. Summing these, we find a probability of $$\\frac{11}{18}$$ that both $$4$$ and $$6$$ come up before two $$5$$s. Hence, our result is $$1 - \\frac{11}{18} = \\frac{7}{18}$$. This makes sense logically, as there are multiple sequences for $$4$$ and $$6$$ to appear, whereas two $$5$$s have a single sequence.",
+  "valid answer": "Valid Answers: $7/18$",
+  "problem tags": [
+    "Discrete Random Variables",
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Let's compute the probability of observing $4$ and $6$ before two $5$s. The key insight is that no other rolls matter aside from $4-6$. Therefore, when conditioned on being in $4-6$, each of the three numbers occurs with probability $1/3$. We only need to consider the sequences of the rolls $4,6,5,$ and $5$. What are the scenarios?",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "68015178426563604334"
+}

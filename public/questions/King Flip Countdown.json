@@ -1,0 +1,18 @@
+{
+  "problem name": "King Flip Countdown",
+  "problem text": "The card dealer deals from a set containing $10$ regular decks of cards. This implies there are $40$ cards of each rank and $520$ cards in total. The dealer conducts a game where he thoroughly shuffles all $10$ decks together, and then he begins flipping over cards from the top of the deck. The game concludes once he reveals $5$ kings. You succeed in the game by being closest to guessing how many cards in total (including the final king) the dealer reveals before the game terminates. What number of cards would you predict to enhance your probability of winning? Note, this differs from calculating the expected value.",
+  "problem solution": "Let's determine $\\mathbb{P}[X = k]$ for each $k$. This implies there are precisely $4$ kings in the first $k-1$ cards, and the $5$th king is revealed on the $k$th card. There are $\\binom{k-1}{4}$ possible ways to choose the positions of the $4$ kings in the initial $k-1$ places. Then, there are $P(40,5)$ ways to arrange the kings among the $4$ chosen spots in the first $k-1$ positions and the $k$th spot. Further, there are $P(480,k-5)$ ways to select $k-5$ cards from the remaining $480$ non-king cards to fill the other $k-5$ positions prior to $k$ that are not kings. We specifically choose non-kings to avoid another king appearing before the $k$th position (ensuring the 5th king shows up at the $k$th position). Naturally, there are $P(520,k)$ ways to arrange $k$ of the first $520$ cards into the initial $k$ positions, thus $$\\mathbb{P}[X = k] = \\dfrac{\\binom{k-1}{4}P(40,5)P(480,k-5)}{P(520,k)}$$ The support for this is $k = 5, 6, \\dots, 485$. The 5th king cannot appear before the 5th position, and it cannot be after 485 since that would mean all the last 40 cards in the deck are kings. Now, we must determine the smallest integer $k$ such that $$\\dfrac{\\mathbb{P}[X = k+1]}{\\mathbb{P}[X = k]} \\leq 1$$ The smallest integer above $k$ is the one we should choose as our position. Substituting, we obtain $$\\dfrac{\\binom{k}{4}P(40,5)P(480,k-4) / P(520,k+1)}{\\binom{k-1}{4}P(40,5)P(480,k-5) / P(520,k)} \\leq 1$$ Simplifying this leads to the inequality $(k - 4)(520-k) \\geq k(485 - k)$. Completing the algebra, $520k - k^2 - 2080 + 4k \\geq 485k - k^2$, so $k \\geq \\dfrac{160}{3} \\approx 53.3$. Consequently, $k = 54$ is the position we should choose. This is because the ratio above remains $> 1$ at $k = 53$.",
+  "valid answer": "Valid Answers: $54$",
+  "problem tags": [
+    "Combinatorics",
+    "Events",
+    "Games",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Calculate $\\mathbb{P}[X = k]$ for each $k$. The event $\\{X = k\\}$ indicates there are exactly $4$ kings in the first $k-1$ cards, and the $5$th king occurs on the $k$th card.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "52737853364763663053"
+}

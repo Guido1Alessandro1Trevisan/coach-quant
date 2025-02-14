@@ -1,0 +1,17 @@
+{
+  "problem name": "Odd Chase Rolls",
+  "problem text": "Suppose you have a fair six-faced die. How many rolls does one typically need to make until seeing an odd number face up for the first time?",
+  "problem solution": "We let the random variable $$X$$ represent the number of rolls needed until the first odd face appears. The probability that any given roll lands on an odd face is $$\\frac{1}{2}$$. Thus, $$X$$ follows a geometric distribution with success probability $$p = \\frac{1}{2}$$. For a geometric random variable with parameter $$p$$, the expected value is given by $$\\frac{1}{p}$$. Substituting $$p = \\frac{1}{2}$$, the expectation of $$X$$ is $$\\frac{1}{\\frac{1}{2}} = 2$$. Therefore, on average, it will take 2 rolls to obtain an odd number for the first time.",
+  "valid answer": "Valid Answers: 2",
+  "problem tags": [
+    "Expected Value",
+    "Probability",
+    "Geometric Distribution"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Recall the result for the geometric distribution: the expected number of trials until the first success is $$\\frac{1}{p}$$.",
+  "problem firm": [
+    "IMC"
+  ],
+  "question id": "77783371351661101852"
+}

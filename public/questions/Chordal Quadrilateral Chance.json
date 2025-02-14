@@ -1,0 +1,17 @@
+{
+  "problem name": "Chordal Quadrilateral Chance",
+  "problem text": "A circle has $8$ distinct points marked on it. If you draw every possible chord by connecting each pair of these points, and then randomly choose $4$ of these chords, what is the likelihood that these $4$ chords form the edges of a convex quadrilateral?",
+  "problem solution": "With $8$ points on the circle, there are $\\binom{8}{2} = 28$ possible chords that can be drawn. This is because a chord can be created for each pairing of points. Consequently, there are $\\binom{28}{4}$ possible selections of $4$ chords. Moreover, each combination of $4$ points on the circle exclusively defines one quadrilateral. This implies each choice of $4$ points results in exactly $1$ quadrilateral formed by connecting those $4$ points with chords. Therefore, there are $\\binom{8}{4}$ ways to select $4$ points. Thus, the probability is $\\dfrac{\\binom{8}{4}}{\\binom{28}{4}} = \\dfrac{2}{585}$.",
+  "valid answer": "Valid Answers: $2/585$",
+  "problem tags": [
+    "Events",
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "For any given $4$ points on a circle, $\\binom{4}{2} = 6$ distinct chords can be drawn connecting pairs of these points.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "21588385499696647061"
+}

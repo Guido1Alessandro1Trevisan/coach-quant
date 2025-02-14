@@ -1,0 +1,15 @@
+{
+  "problem name": "Power Mod Mavericks",
+  "problem text": "Determine the remainder when $11^{2360}$ is divided by $50$.",
+  "problem solution": "Observe that $11^5 = (10 + 1)^5 = 10^2 \\cdot C + \\binom{5}{1} \\cdot 10^1 \\cdot 1 + 1 = 10^2 C + 51$, where $C$ is a constant. We know $C$ is an integer since all other terms have a factor of $10^2$ or higher. Thus, $11^5$ leaves a remainder of $1$ when divided by $50$. Given $2360 = 5 \\cdot 472$, the remainder of $(11^5)^{472}$ upon division by $50$ is $1^{472} = 1$.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Pure Math"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Using the Binomial Theorem, $11^5 = (10 + 1)^5 = 10^2 \\cdot C + \\displaystyle \\binom{5}{1} \\cdot 10^1 \\cdot 1 + 1$",
+  "problem firm": [
+    "Belvedere Trading"
+  ],
+  "question id": "70739142736989705383"
+}

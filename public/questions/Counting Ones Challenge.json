@@ -1,0 +1,16 @@
+{
+  "problem name": "Counting Ones Challenge",
+  "problem text": "How many times does the digit '1' show up when writing out all the integers from 1 up to 1000?",
+  "problem solution": "We analyze the occurrences of '1' in every digit position. Consider first the numbers from 0 to 999 (inclusive), which is 1000 numbers in total. Each of the three digit positions (hundreds, tens, and ones) takes on every digit from 0 to 9 equally often. Therefore, for each position, '1' appears $$\\frac{1}{10}$$ of the time, i.e. exactly $$100$$ times among the 1000 numbers. Summing across the three positions gives $$3\\times100=300$$ occurrences of '1' in the range 0 to 999. Since 0 does not contain '1', this also counts the occurrences in the range 1 through 999. Finally, the number 1000 has exactly one additional digit '1'. Hence, the total number of times '1' appears from 1 to 1000 is $$300+1=301$$.",
+  "valid answer": "Valid Answers: $$301$$",
+  "problem tags": [
+    "Counting",
+    "Number Theory"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Break the counting into separate digit positions for all the numbers from 0 to 999, then handle the final number 1000.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "16353342735223821266"
+}

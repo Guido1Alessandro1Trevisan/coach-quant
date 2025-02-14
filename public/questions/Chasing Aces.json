@@ -1,0 +1,19 @@
+{
+  "problem name": "Chasing Aces",
+  "problem text": "On average, how many cards must be turned over from a standard deck of $52$ cards to see the first ace?",
+  "problem solution": "The probability that a specific non-ace card, such as the seven of clubs, appears before the first ace is $\\frac{1}{5}$. This conclusion follows because each of the five relevant cards (the four aces and the specified non-ace card) has an equal $\\frac{1}{5}$ probability of being first. Similarly, the probability remains $\\frac{1}{5}$ for any other non-ace card, like the jack of diamonds, the queen of hearts, or the four of spades. Given there are $48$ non-ace cards, the expected number of non-ace cards preceding the first ace is $48 \\times \\frac{1}{5}$. This estimation assumes that the card when the ace appears is not counted. If the ace's turn is to be included, add $1$.",
+  "valid answer": "Valid Answers: $10.6$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "In what way can the linearity of expectation be applied to distribute expectation over a sum of random variables, irrespective of independence?",
+  "problem firm": [
+    "Akuna Capital",
+    "Hudson River Trading",
+    "Imc",
+    "Optiver"
+  ],
+  "question id": "36262222443857876264"
+}

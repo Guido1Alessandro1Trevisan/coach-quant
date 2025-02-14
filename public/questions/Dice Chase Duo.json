@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Chase Duo",
+  "problem text": "On average, how many times should a fair $6$-sided die be rolled to achieve a sequence of $5$ followed by $6$?",
+  "problem solution": "We can use Markov Chains to address this question. Let $E_{0}$ be the expected number of rolls when a $5$ has not yet been rolled. Define $E_{1}$ as the expected number of rolls once a $5$ has been rolled. Finally, define $E_{2}$ as the expected number of rolls once both $5$ and $6$ have been rolled in sequence (which is the goal). Therefore, the equations are as follows: \\n\\n$E_{0} = \\frac{1}{6}(E_{1}+1)+\\frac{5}{6}(E_{0}+1) = \\frac{1}{6}E_{1}+\\frac{5}{6}E_{0}+1$\\n\\n$E_{1} = \\frac{1}{6}(E_{2}+1)+\\frac{1}{6}(E_{1}+1)+\\frac{2}{3}(E_{0}+1) = \\frac{1}{6}E_{2}+\\frac{5}{6}E_{0}+1$\\n\\n$E_{2} = 0$\\n\\nBy solving these equations, we find $E_{0} = 36$. Therefore, it takes an average of $36$ rolls to obtain a $5$ and $6$ in succession.",
+  "valid answer": "Valid Answers: $36$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Create $Markov$ $state$ $equations$.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "29466536966503969775"
+}

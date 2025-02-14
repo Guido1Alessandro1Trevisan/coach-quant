@@ -1,0 +1,16 @@
+{
+  "problem name": "Roots of Power",
+  "problem text": "Determine every real and complex value for which x raised to the sixth power equals 64. In other words, find all solutions to the equation x^6 = 64.",
+  "problem solution": "We start with the equation $$x^6 = 64$$. Note that 64 can be expressed as $$64 = 2^6$$. We then look for solutions to $$x^6 = 2^6$$. Equating magnitudes, we require that $$|x|^6 = 2^6$$, which yields $$|x| = 2$$. Next, we account for every possible complex argument by using the fact that the sixth roots of unity have the form $$e^{i\\frac{2\\pi k}{6}} = e^{i\\frac{\\pi k}{3}}$$ for k = 0, 1, 2, 3, 4, and 5. Therefore, the complete set of solutions is given by $$x = 2 e^{i\\frac{\\pi k}{3}},\\quad k = 0,1,2,3,4,5$$. Converting these polar forms to rectangular coordinates, the six distinct solutions are: 1) $$2 e^{i\\cdot 0} = 2$$, 2) $$2 e^{i\\frac{\\pi}{3}} = 1 + i\\sqrt{3}$$, 3) $$2 e^{i\\frac{2\\pi}{3}} = -1 + i\\sqrt{3}$$, 4) $$2 e^{i\\pi} = -2$$, 5) $$2 e^{i\\frac{4\\pi}{3}} = -1 - i\\sqrt{3}$$, 6) $$2 e^{i\\frac{5\\pi}{3}} = 1 - i\\sqrt{3}$$. The two real solutions are x = 2 and x = -2, while the remaining four solutions are non-real roots evenly spaced on the complex plane.",
+  "valid answer": "Valid Answers: x = 2 e^{i\\frac{k\\pi}{3}} for k=0,1,2,3,4,5",
+  "problem tags": [
+    "Complex Numbers",
+    "Exponential Equations"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Express 64 in exponential form and use the formula for nth roots of a complex number.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "15253317489210656212"
+}

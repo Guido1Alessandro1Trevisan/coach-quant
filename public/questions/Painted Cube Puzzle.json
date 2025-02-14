@@ -1,0 +1,18 @@
+{
+  "problem name": "Painted Cube Puzzle",
+  "problem text": "A cube with dimensions $10 \\times 10 \\times 10$ is coated in red paint on its exterior and then divided into $1000$ smaller cubes of size $1 \\times 1 \\times 1$, from which one is chosen randomly. Determine the expected number of red faces on this selected cube.",
+  "problem solution": "Assign the numbers $1-6$ to the faces of each small cube, and let $I_i$ denote the indicator variable for whether face $i$ of the chosen cube is red. Then $T = I_1 + \\dots + I_6$ signifies the total count of red faces on the cube. By using the linearity of expectation and noting that the cube's faces are identical in distribution, we have $\\mathbb{E}[T] = 6\\mathbb{E}[I_1]$. The value $\\mathbb{E}[I_1]$ represents the likelihood that face $1$ is red. Given that $10^2$ cubes will have face $1$ painted red, as each face on the large cube covers $10^2$ small cubes, the chance that face $1$ is red is $\\dfrac{10^2}{10^3} = \\dfrac{1}{10}$. Therefore, by substituting back, $\\mathbb{E}[T] = \\dfrac{3}{5}$.",
+  "valid answer": "Valid Answers: $3/5$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Assign the numbers $1-6$ to the faces of each small cube, and let $I_i$ denote the indicator variable for whether face $i$ of the chosen cube is red.",
+  "problem firm": [
+    "Five Rings",
+    "Hudson River Trading",
+    "Sig"
+  ],
+  "question id": "76979038633702284363"
+}

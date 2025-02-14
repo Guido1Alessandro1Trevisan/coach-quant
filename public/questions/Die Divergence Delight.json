@@ -1,0 +1,18 @@
+{
+  "problem name": "Die Divergence Delight",
+  "problem text": "You toss a fair die. Then, you continue to roll until you get a result that is different from your initial toss. Your payout is the total of all your rolls (including the initial one). What is the fair value of this game?",
+  "problem solution": "The game concludes when a number equal to your initial roll appears again. By applying the Law of Total Expectation and considering the initial result, if $X_1$ is the first roll and $T$ is the total, $\\mathbb{E}[T] = \\mathbb{E}[\\mathbb{E}[T \\mid X_1]] = \\sum_{i=1}^6 \\mathbb{E}[T \\mid X_1 = i]\\mathbb{P}[X_1 = i]$. Knowing that $\\mathbb{P}[X_1 = i] = \\frac{1}{6}$ for all $1 \\leq i \\leq 6$, it follows that $\\mathbb{E}[T] = \\frac{1}{6}\\sum_{i=1}^6 \\mathbb{E}[T \\mid X_1 = i]$. To find $\\mathbb{E}[T \\mid X_1 = i]$, we initially have $i$ from the first roll. Thus, $\\mathbb{E}[T \\mid X_1 = i] = i + \\mathbb{E}[T' \\mid X_1 = i]$, where $T'$ denotes the earnings after the initial roll. With a probability of $\\frac{1}{6}$, the value $i$ appears again, and our total increases by $i$, putting us in the same situation as before. Alternatively, with a probability of $\\frac{5}{6}$, we conclude the game in the next round, as $i$ is not rolled again. If it is known that $i$ is not rolled on the second die, the expected value would be $\\frac{21 - i}{5}$, since the sum of the other faces is $21-i$ and each of these 5 outcomes is equally likely if $i$ is not rolled. Therefore, by the Law of Total Expectation, $\\mathbb{E}[T' \\mid X_1 = i] = \\frac{1}{6}\\left(i + \\mathbb{E}[T' \\mid X_1 = i]\\right) + \\frac{5}{6} \\cdot \\frac{21 - i}{5}$. Solving this, we find that $i$ cancels and $\\mathbb{E}[T' \\mid X_1 = i] = \\frac{21}{5}$ for each $i$. Including the first roll, $\\mathbb{E}[T \\mid X_1 = i] = i + \\frac{21}{5}$. Therefore, since $\\mathbb{E}[T]$ is the mean of $\\mathbb{E}[T \\mid X_1 = i]$ for each $i$, we have $\\mathbb{E}[T] = \\frac{1}{6} \\sum_{i=1}^6 \\left(\\frac{21}{5} + i\\right) = \\frac{21}{5} + \\frac{7}{2} = \\frac{77}{10}$.",
+  "valid answer": "Valid Answers: $7.7$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Focus on the outcome of the $1^{st}$ roll. Then, after considering the value of the $1^{st}$ roll, focus on the outcome of the $2^{nd}$ roll to determine if it matches the $1^{st}$ roll.",
+  "problem firm": [
+    "Drw",
+    "Hudson River Trading"
+  ],
+  "question id": "43779044754247023529"
+}

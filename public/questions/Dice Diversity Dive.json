@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Diversity Dive",
+  "problem text": "Calculate the expected count of unique faces rolled when a fair $6$-sided die is thrown until a face is repeated.",
+  "problem solution": "We determine this using the known technique $\\mathbb{E}[X] = \\displaystyle \\sum_{k=1}^{\\infty} \\mathbb{P}[X \\geq k]$ for random variables $X$ that are non-negative integers. Define $X$ as the count of different faces observed. We need to evaluate $\\displaystyle \\mathbb{P}[X \\geq k]$ for $k = 1,2,\\dots,6$. We know that for $k \\geq 7$, it must be $0$ since the die has only $6$ faces. $\\mathbb{P}[X \\geq 1] = 1$, as you must roll at least one unique side to repeat it. For $\\mathbb{P}[X \\geq 2]$, we need a face different from the first face before repeating the first, which is decided on a single roll with a probability of $\\dfrac{5}{6}$, due to $5$ other faces remaining. For $\\mathbb{P}[X \\geq 3]$, after obtaining 2 unique faces with probability $\\dfrac{5}{6}$, you must roll another unique face next, with a probability of $\\dfrac{2}{3}$. Thus, $\\mathbb{P}[X \\geq 3] = \\dfrac{5}{6} \\cdot \\dfrac{2}{3} = \\dfrac{5}{9}$. Continuing this process, $\\mathbb{P}[X \\geq 4] = \\dfrac{5}{9} \\cdot \\dfrac{1}{2} = \\dfrac{5}{18}$, $\\mathbb{P}[X \\geq 5] = \\dfrac{5}{18} \\cdot \\dfrac{1}{3} = \\dfrac{5}{54}$, and $\\mathbb{P}[X \\geq 6] = \\dfrac{5}{54} \\cdot \\dfrac{1}{6} = \\dfrac{5}{324}$. Consequently, $\\mathbb{E}[X] = \\displaystyle \\sum_{k=1}^6 \\mathbb{P}[X \\geq k] = 1 + \\dfrac{5}{6} + \\dots + \\dfrac{5}{324} = \\dfrac{899}{324}$.",
+  "valid answer": "Valid Answers: $899/324$",
+  "problem tags": [
+    "Expected Value",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "$$\\mathbb{E}[X] = \\displaystyle \\sum_{k=1}^{\\infty} \\mathbb{P}[X \\geq k]$$. What is the interpretation of the event $$\\{X \\geq k\\}$$ for a suitably defined random variable $$X$$ in this context?",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "81057865221249284105"
+}

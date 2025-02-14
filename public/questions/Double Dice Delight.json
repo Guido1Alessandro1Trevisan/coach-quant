@@ -1,0 +1,17 @@
+{
+  "problem name": "Double Dice Delight",
+  "problem text": "What is the average number of times a fair $6$-sided die must be rolled to achieve two consecutive $6$s?",
+  "problem solution": "To solve this, we can use Markov Chains. Define $E_{0}$ as the expected number of rolls before achieving two consecutive $6$s. Let $E_{1}$ be the expected number of rolls when a single $6$ has been rolled (and is the last roll). Lastly, $E_{2}$ is the expected number of rolls when two $6$s have been rolled consecutively (the desired outcome). The equations can be written as: $$E_{0} = \\frac{1}{6}(E_{1}+1)+\\frac{5}{6}(E_{0}+1) = \\frac{1}{6}E_{1}+\\frac{5}{6}E_{0}+1$$$$E_{1} = \\frac{1}{6}(E_{2}+1)+\\frac{5}{6}(E_{0}+1) = \\frac{1}{6}E_{2}+\\frac{5}{6}E_{0}+1$$$$E_{2} = 0$$By solving these, we find $E_{0} = 42$. Therefore, it takes $42$ rolls on average to roll two consecutive $6$s.",
+  "valid answer": "Valid Answers: $42$",
+  "problem tags": [
+    "Expected Value",
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Think about the different stages leading to rolling two back-to-back $6$s.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "84101220957106131992"
+}

@@ -1,0 +1,17 @@
+{
+  "problem name": "Final Flicker Forecast",
+  "problem text": "Suppose $X_1, X_2, X_3, X_4 \\sim \\text{Exp}(1)$ IID are the durations of $4$ lightbulbs before they fail. Determine the expected duration until the last lightbulb fails.",
+  "problem solution": "We apply the principle that when $X_1, X_2, \\dots, X_n \\sim \\text{Exp}(\\lambda)$ are IID, then $\\text{min}\\{X_1, \\dots, X_n\\} \\sim \\text{Exp}(n\\lambda)$. Proving this is a useful exercise if you haven't encountered it. The total duration until the $4$th lightbulb fails is the sum of the durations between each failure. Specifically, let $T_1$ be the time until the first lightbulb fails, $T_2$ be the time until the second fails after the first, then $T_3$ and $T_4$ are the times until the third and fourth fail, respectively. Thus, $S = T_1 + T_2 + T_3 + T_4$ is the total duration until all have failed. Since $T_1 = \\text{min}\\{X_1, X_2, X_3, X_4\\}$, it represents the first failure, and thus $T_1 \\sim \\text{Exp}(4)$ by our earlier principle, leading to $\\mathbb{E}[T_1] = \\dfrac{1}{4}$. Due to the memoryless property of the exponential distribution, once the first fails, the remaining lifetimes are still each $\\text{Exp}(1)$. Assuming lightbulb $4$ failed first, if $R_1, R_2, R_3 \\sim \\text{Exp}(1)$ IID are the times until the next failure, then $T_2 = \\text{min}\\{R_1, R_2, R_3\\}$, thus $T_2 \\sim \\text{Exp}(3)$, resulting in $\\mathbb{E}[T_2] = \\dfrac{1}{3}$. Applying this reasoning to the remaining lightbulbs gives $\\mathbb{E}[T_3] = \\dfrac{1}{2}$ and $\\mathbb{E}[T_4] = 1$. Using the linearity of expectation, we find $\\mathbb{E}[S] = 1 + \\dfrac{1}{2} + \\dfrac{1}{3} + \\dfrac{1}{4} = \\dfrac{25}{12}$.",
+  "valid answer": "Valid Answers: $25/12$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "If $X_1, X_2, \\dots, X_n \\sim \\text{Exp}(\\lambda)$ IID, then $\\text{min}\\{X_1, \\dots, X_n\\} \\sim \\text{Exp}(n\\lambda)$.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "00606879247068712867"
+}

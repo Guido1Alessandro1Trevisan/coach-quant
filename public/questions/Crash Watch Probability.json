@@ -1,0 +1,17 @@
+{
+  "problem name": "Crash Watch Probability",
+  "problem text": "You are positioned at a bus station observing vehicles pass. The chance of witnessing at least one collision during a sixty-minute period is $\\frac{3}{4}$. What is the chance of witnessing at least one collision within a half-hour period? Assume the chance of spotting a collision at any point within the sixty-minute period is even.",
+  "problem solution": "The sixty-minute period can be divided into two separate half-hour segments such that the likelihood $p$ of seeing any collision is consistent. The likelihood of not observing a collision during a half-hour segment is $1-p$. Additionally, the likelihood of not witnessing any collisions over two separate half-hour segments (equivalent to an hour) can be expressed as: $(1-p)^2 = 1-\\frac{3}{4} \\Rightarrow p=\\frac{1}{2}$.",
+  "valid answer": "Valid Answers: $1/2$",
+  "problem tags": [
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The sixty-minute period can be divided into two separate $30$-minute segments. How can complementary events assist in defining the problem further?",
+  "problem firm": [
+    "Jane Street",
+    "Optiver"
+  ],
+  "question id": "49272545021082295547"
+}

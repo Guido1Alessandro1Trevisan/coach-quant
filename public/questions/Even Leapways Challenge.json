@@ -1,0 +1,16 @@
+{
+  "problem name": "Even Leapways Challenge",
+  "problem text": "A rabbit begins on the ground in front of a flight of $10$ steps. The rabbit can leap over any number of stairs in each jump, but it must use an even number of jumps to reach the top. How many unique ways can the rabbit travel from the ground to the top of the staircase (i.e., to the top of the $10$th step)?",
+  "problem solution": "Using the same concept as in Rabbit Hop I, we need to find subsets of $\\{1,2,\\dots,9\\}$ that have an odd number of elements. This is because we must choose an odd number of integers from $1-9$ such that when reaching step $10$, the total count of hops is even. In other terms, we need to determine the number of subsets with an odd count of elements in a set of size $9$. We can pair up odd and even subsets by associating a subset $A \\subseteq \\{1,2,\\dots,9\\}$ with an odd number of elements to its complement $A^c$, which will have an even number of elements. This works because if $\\|A| = k$, where $k$ is odd, then $9-k$ is even, ensuring a one-to-one correspondence between odd and even subsets, implying equal numbers of odd and even subsets. Therefore, there are $\\dfrac{1}{2} \\cdot 2^9 = 256$ such paths.",
+  "valid answer": "Valid Answers: $256$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Can you align paths to certain subsets of $\\{1,2,\\dots,9\\}$? What is the constraint?",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "07714740674861413902"
+}

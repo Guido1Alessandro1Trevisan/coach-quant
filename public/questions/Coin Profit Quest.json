@@ -1,0 +1,17 @@
+{
+  "problem name": "Coin Profit Quest",
+  "problem text": "Ken tosses a balanced coin repeatedly until it shows heads. He earns the lesser value between $64$ and $2^k$, where $k$ is the count of tosses. What is the expected value of his earnings?",
+  "problem solution": "Consider when $k=1$, which occurs with a probability of $\\frac{1}{2}$, Ken earns $2$, thus the expected value is $1$. For $k=2$, with probability $\\frac{1}{4}$, Ken earns $4$, making the expected value $1$. This pattern continues up to $k=7$, when the earnings stabilize at $64$. Hence, for $1 \\leq n \\leq 6$, the expected value is $\\frac{1}{2^k} \\times 2^k = 1$ for every $k$. For $k \\geq 7$, the expected value is: $\\frac{1}{2^7} \\times 2^6 + \\frac{1}{2^8} \\times 2^6 + \\ldots = \\frac{1}{2} + \\frac{1}{4} + \\ldots = \\sum_{x>0}\\frac{1}{2^x} = 1$. Therefore, the overall expected payout is: $6 \\times 1 + 1 = 7$.",
+  "valid answer": "Valid Answers: $7$",
+  "problem tags": [
+    "Expected Value",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Divide the task into scenarios where $k > 6$ and $k \\leq 6$. Determine the earnings for each scenario.",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "31642958359649409496"
+}

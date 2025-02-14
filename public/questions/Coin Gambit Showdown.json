@@ -1,0 +1,18 @@
+{
+  "problem name": "Coin Gambit Showdown",
+  "problem text": "Vishnu and Jason start with $1000$ and $500$ in their bank accounts, respectively. They continue flipping a fair coin. If it lands on heads, Vishnu gives Jason $1$. Otherwise, Jason pays Vishnu $1$. Determine the likelihood that Jason depletes his funds before Vishnu.",
+  "problem solution": "Eventually, either Jason or Vishnu will run out of money. Let $p$ represent the likelihood that Jason will become bankrupt first. Consequently, $1-p$ represents the probability that Vishnu will run out of funds first, leaving Jason with $1500$. After $n$ coin flips, Jason's expected financial position remains unchanged because the coin is unbiased; essentially, after $n$ flips, Jason expects to still have $500$. At the conclusion of the game—let's say, following the $n_{\\text{end}}$-th flip—the expected value of Jason's account is $p \\cdot 0 + (1- p) \\cdot 1500$. This must equal $500$, as reasoned earlier. Solving the equation $p \\cdot 0 + (1- p) \\cdot 1500 = 500$, we obtain $1500p = 1000$, yielding $p = \\frac{2}{3}$.",
+  "valid answer": "Valid Answers: $2/3$",
+  "problem tags": [
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "What is the expected value of Jason's account following $n$ flips?",
+  "problem firm": [
+    "Akuna Capital",
+    "Five Rings",
+    "Goldman Sachs"
+  ],
+  "question id": "58780180154901643019"
+}

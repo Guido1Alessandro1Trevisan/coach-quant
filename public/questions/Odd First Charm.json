@@ -1,0 +1,18 @@
+{
+  "problem name": "Odd First Charm",
+  "problem text": "Imagine you are repeatedly tossing a fair $6$-sided die. What is the likelihood that all the odd numbers, specifically $1$, $3$, and $5$, come up before any even number?",
+  "problem solution": "To solve this, three conditions must be satisfied: the first odd result must occur before any even, the second odd must likewise occur before any even, and finally, the last odd must appear before the first even. This can be viewed as a series of conditional probability events, where the appearance of the second odd is dependent on the first having already appeared. Initially, the chance that the first roll is odd rather than even is $\\frac{1}{2}$, since there is an equal probability for odd and even numbers, necessitating an odd roll. Once an odd number is rolled, the possibilities narrow down to $5$ outcomes. If the result is the odd number already rolled, it is ignored. Hence, the probability of rolling an odd number from the $5$ remaining outcomes is $\\frac{2}{5}$, as two of them are odd. Applying similar logic, once the second odd number appears, if either of the previously rolled odd numbers appears again, it is disregarded. Conditional on one of the $4$ remaining outcomes, the chance of it being the last odd number is $\\frac{1}{4}$, since one of these $4$ outcomes is odd. This results in a total probability of $\\frac{1}{2} \\cdot \\frac{2}{5} \\cdot \\frac{1}{4} = \\frac{1}{20}$. Alternatively, consider all $6! = 720$ possible sequences for the appearance of the $6$ numbers. For our condition to hold, $1,3,5$ must occupy the first $3$ positions (in any sequence), and $2,4,6$ must be in the last three positions in any sequence. There are $3! \\cdot 3! = 6 \\cdot 6 = 36$ such sequences, so the probability of this scenario is $\\frac{36}{720} = \\frac{1}{20}$.",
+  "valid answer": "Valid Answers: $1/20$",
+  "problem tags": [
+    "Conditional Probability",
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "We need three conditions to be true: the first odd number must show up before any even, the second odd number must also show up before any even, and lastly, the third odd must appear before any even. This situation is a sequence of conditional probabilities, wherein the second odd number must appear given that the first odd has already appeared.",
+  "problem firm": [
+    "Imc",
+    "Sig"
+  ],
+  "question id": "84985048628970191786"
+}

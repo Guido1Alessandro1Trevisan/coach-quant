@@ -1,0 +1,16 @@
+{
+  "problem name": "Safe Code Puzzle",
+  "problem text": "An electronic safe is secured with a passcode consisting of three digits. There are three given conditions related to the passcode. First, it is not an odd number. Second, it does not include the digit $6$. Third, at least one digit repeats. How many distinct three-digit combinations meet these conditions?",
+  "problem solution": "Consider the first two conditions while evaluating the potential values for each digit. The units digit must be an even number other than six, giving four options. The tens and hundreds digits each have nine options. Now apply the third condition to find the total number of codes meeting all conditions. There are four scenarios: first two digits are identical, the third is different; the first and third digits match, the second is different; the second and third digits are the same, the first is different; all three digits are identical. Each scenario is analyzed separately. Scenario 1: The first two digits can either be the same odd or the same even number. If both are odd, the third digit can be any of four possibilities. If both are even, the third digit can be one of three different even numbers. Total possibilities are $5 \\times 4 + 4 \\times 3 = 32$. Scenario 2: The first and third digits can be any of four options, constrained by the third digit's choices. The second digit can be any of eight different numbers. Total possibilities are $4 \\times 8 = 32$. Scenario 3: This scenario mirrors the previous one. The second and third digits can be any of four options, constrained by the third digit's choices. The first digit can be any of eight different numbers. Total possibilities are $4 \\times 8 = 32$. Scenario 4: All three digits can be any of four options, constrained by the third digit's choices. Total possibilities are $4$. In conclusion, the total number of three-digit combinations meeting these conditions is $32 + 32 + 32 + 4 = 100$.",
+  "valid answer": "Valid Answers: $100$",
+  "problem tags": [
+    "Combinatorics",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Start by considering the initial range of possibilities using the first two conditions, then analyze the cases based on the third condition.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "26824013232303505565"
+}

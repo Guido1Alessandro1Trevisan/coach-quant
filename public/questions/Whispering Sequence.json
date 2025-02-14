@@ -1,0 +1,16 @@
+{
+  "problem name": "Whispering Sequence",
+  "problem text": "Consider the following sequence of numbers: 12, 1112, 3112, 132112. Determine the next term in the list.",
+  "problem solution": "This sequence follows a 'look-and-say' pattern. For each term, read the digits of the preceding term in consecutive groups and describe them by stating the count of each digit followed by the digit itself.\\n\\nStarting with 12:\\n1) 12 is read as 'one 1, one 2' which becomes 1112.\\n2) 1112 is read as 'three 1, one 2' which becomes 3112.\\n3) 3112 is read as 'one 3, two 1, one 2' which becomes 132112.\\n4) 132112 is read as 'one 1, one 3, one 2, two 1, one 2' which translates to $$1113122112$$.\\n\\nHence, the next term in the sequence is $$1113122112$$.",
+  "valid answer": "Valid Answers: $$1113122112$$",
+  "problem tags": [
+    "Sequences",
+    "Number Patterns"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Pay attention to how each digit is counted in consecutive runs to form the next term.",
+  "problem firm": [
+    "Akuna Capital"
+  ],
+  "question id": "53809511510609739106"
+}

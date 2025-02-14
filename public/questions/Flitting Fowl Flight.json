@@ -1,0 +1,16 @@
+{
+  "problem name": "Flitting Fowl Flight",
+  "problem text": "Two locomotives start 30 miles apart on one track heading straight at each other. One moves at 20 mph, the other at 40 mph, and a bird flying at 10 mph repeatedly flutters back and forth from one train to the other until they collide. Determine the full distance the bird will travel before the collision occurs.",
+  "problem solution": "We shall treat this comprehensively by calculating the total time until collision. The combined speed of the two trains is $$20 + 40 = 60\\text{ mph}$$, so they meet after $$\\dfrac{30}{60} = 0.5\\text{ hours}$$. During this entire half-hour, the bird maintains a constant speed of 10 mph, traveling for 0.5 hours, yielding $$10 \\times 0.5 = 5\\text{ miles}$$ as the total distance covered.",
+  "valid answer": "Valid Answers: 5 miles",
+  "problem tags": [
+    "Relative Motion",
+    "Kinematics"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Instead of tracking each turnaround of the bird, first determine how long it takes for the two trains to collide and then use that time to find the bird's total travel distance.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "81240847537088700948"
+}

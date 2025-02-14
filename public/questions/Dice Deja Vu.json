@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Deja Vu",
+  "problem text": "Two fair $6$-sided dice are tossed, and the top faces are noted. Determine the likelihood that if both dice are rolled once more, the results obtained on the second attempt match those from the first.",
+  "problem solution": "We need to evaluate two scenarios here, which are based on whether the initial results of the dice are identical or not. The chance that the first pair of dice display the same number is $\\dfrac{6}{6^2} = \\dfrac{1}{6}$. In this scenario, the likelihood that the numbers on the second roll mirror those on the first roll is $\\dfrac{1}{36}$, since both dice have to show the identical number. Alternatively, if the numbers are different, which has a probability of $\\dfrac{5}{6}$, the probability that the results of the second rolls match those of the first is $2 \\cdot \\dfrac{1}{36} = \\dfrac{1}{18}$, because if the initial dice values are $a$ and $b$ (with $a eq b$, as we assume the rolls are distinct), you can roll either $ab$ or $ba$ on the second attempt. Thus, the probability of obtaining a match is $\\dfrac{1}{36} \\cdot \\dfrac{1}{6} + \\dfrac{1}{18} \\cdot \\dfrac{5}{6} = \\dfrac{11}{216}$.",
+  "valid answer": "Valid Answers: $11/216$",
+  "problem tags": [
+    "Events",
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "We need to consider two scenarios here, which are based on whether the initial $dice$ results are identical or not.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "50096128259708499682"
+}

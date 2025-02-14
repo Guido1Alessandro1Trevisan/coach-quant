@@ -1,0 +1,16 @@
+{
+  "problem name": "Handshake Enigma",
+  "problem text": "Suppose there are 30 individuals partitioned into 15 married pairs. Each participant may shake hands with anyone else except their own spouse. It turns out that among these 30 people, 29 have mutually distinct handshake counts. Determine the handshake count of the remaining 30th individual.",
+  "problem solution": "We begin by noting that the maximum number of handshakes per person is $$28$$, since one does not shake hands with oneself or one's spouse. Assuming 29 individuals each have different handshake totals, these values must be precisely $$0,1,2,\\dots,28$$. Observe that the person with $$0$$ handshakes must be married to the person with $$28$$ handshakes, as the individual who shakes $$28$$ times greets everyone except their spouse, forcing that spouse to have $$0$$. We then remove this (0,28) couple, leaving 28 individuals whose handshake counts must have been $$1,2,\\dots,27$$ before removing the person with $$28$$ handshakes. Subtracting one handshake from each of these 28 people (the one they all had with the individual who had $$28$$ handshakes) yields the totals $$0,1,\\dots,26$$. By a similar argument, $$0$$ pairs with $$26$$, $$1$$ pairs with $$25$$, etc., each pair summing to $$26$$ in the reduced problem (and hence summing to $$28$$ pre-reduction). Iterating this process shows that every count from $$0$$ up to $$28$$ pairs with its complementary count, leaving $$14$$ unpaired in the middle. Thus, the 30th person must have made $$14$$ handshakes.",
+  "valid answer": "Valid Answers: $$14$$",
+  "problem tags": [
+    "Combinatorics",
+    "Logic Puzzle"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about matching the lowest handshake count with the highest, and see how this pattern continues.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "60191809716561683757"
+}

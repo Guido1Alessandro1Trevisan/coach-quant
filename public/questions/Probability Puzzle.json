@@ -1,0 +1,16 @@
+{
+  "problem name": "Probability Puzzle",
+  "problem text": "Consider $v_1$ and $v_2$ as two vectors each with $10$ components. The elements of $v_1$ are IID Bernoulli $\\left(\\frac{1}{2}\\right)$ random variables. Similarly, the elements of $v_2$ are IID Bernoulli $\\left(\\frac{3}{4}\\right)$ random variables. Determine the likelihood that the dot product $v_1 \\cdot v_2$ results in an odd number, where the $\\cdot$ symbolizes the dot product operation for two vectors. The probability is expressed in the form $\\frac{1}{2} - \\frac{1}{a^n}$, where $a$ is a prime number. Compute $an$.",
+  "problem solution": "We will address this for a general $n$. Let $p_n$ be the probability when $v_1,v_2 \\in \\mathbb{R}^n$. For $n = 1$, the probability is simply $\\dfrac{3}{4} \\cdot \\dfrac{1}{2} = \\dfrac{3}{8}$, since this condition requires both randomly generated values to be $1$. Assuming $p_n$ is known, $p_{n+1}$ implies either a previous even sum with $n$ dimensions (with likelihood $1-p_n$) and the $(n+1)$st product is $1$ OR an earlier odd sum with $n$ dimensions (with likelihood $p_n$) and the $(n+1)$st product is $0$. Thus, $p_{n+1} = \\dfrac{3}{8} \\cdot (1-p_n) + \\dfrac{5}{8} p_n = \\dfrac{1}{4}p_n + \\dfrac{3}{8}$. This forms a recurrence relation that can be explicitly solved. Beginning with $p_1 = \\dfrac{3}{8}$, $p_2 = \\dfrac{3}{32} + \\dfrac{3}{8} = \\dfrac{15}{32}$, $p_3 = \\dfrac{15}{128} + \\dfrac{3}{8} = \\dfrac{63}{128}$, observe that $p_1 = \\dfrac{3}{8} = \\dfrac{1 - \\frac{1}{4}}{2}$, $p_2 = \\dfrac{1 - \\frac{1}{4^2}}{2}$, $p_3 = \\dfrac{1 - \\frac{1}{4^3}}{2}$, suggesting $p_n = \\dfrac{1-4^{-n}}{2}$. Consequently, $p_{10} = \\dfrac{1}{2} - \\dfrac{1}{2 \\cdot 4^{10}} = \\dfrac{1}{2} - \\dfrac{1}{2^{21}}$. So, $a = 2$ and $n = 21$, leading to $an = 42$.",
+  "valid answer": "Valid Answers: $42$",
+  "problem tags": [
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Calculate the probability for $n = 1$ and apply the law of total probability to extend this to general cases.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "80397106013498137171"
+}

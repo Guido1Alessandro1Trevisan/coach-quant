@@ -1,0 +1,17 @@
+{
+  "problem name": "Coin Flip Balance",
+  "problem text": "Bob suggests a challenge in which Alice and Bob each receive a coin. They can choose the probability of landing heads for their respective coins. After making their decision, both flip their coins. If both show $HH$, Alice gives Bob $6$. If both show $TT$, Alice hands over $4$. In any other case, Bob gives Alice $5$. However, Alice must disclose the probability $p_1$ she selects before Bob picks his $p_2$. The range of $p_1$ values where Bob's expected value in the game is non-positive, regardless of his choice, is expressed as $[a,b]$, with $a$ and $b$ as rational numbers. Determine $b-a$.",
+  "problem solution": "Let $p_2$ denote Bob's probability of success. We express the expected value as a function of $p_1$ and $p_2$. The likelihood of $HH$ is $p_1p_2$. For $TT$, it is $(1-p_1)(1-p_2)$. For $TH$ or $HT$, the probability is $p_1(1-p_2) + p_2(1-p_1) = p_1 + p_2 - 2p_1p_2$. Bob's profits for these outcomes are $6,4,$ and $-5$ respectively. Thus, the expected value is $6p_1p_2 + 4(1-p_1)(1-p_2) - 5(p_1 + p_2 - 2p_1p_2) = 6p_1p_2 + 4 - 4p_1 - 4p_2 + 4p_1p_2 - 5p_1 - 5p_2 + 10p_1p_2 = 20p_1p_2 - 9p_2 - 9p_1 + 4$. Factoring gives $(20p_1 - 9)p_2 + (4 - 9p_1)$. If $p_1 \\eq \\dfrac{9}{20}$ (to allow rearrangement and division), we find $p_2 > \\dfrac{9p_1 - 4}{20p_1 - 9}$. The RHS becomes $0$ when $p_1 = \\dfrac{4}{9}$, as the numerator is zero. Additionally, to find when this is at least $1$, $9p_1 - 4 \\geq 20p_1 - 9$ indicates $p_1 \\leq \\dfrac{5}{11}$. Checking this in the expected value formula gives $p_2 - 1$. Since probabilities cannot exceed $1$, unless $p_2 = 1$, Bob's expected value is negative. Similarly, for $p_1 = \\dfrac{4}{9}$, the expected value is $-p_2$. Thus, unless $p_2 = 0$, Bob again faces a negative expected value. Hence, $a = \\dfrac{4}{9}$ and $b = \\dfrac{5}{11}$, making $b-a = \\dfrac{1}{99}$.",
+  "valid answer": "Valid Answers: $\\frac{1}{99}$",
+  "problem tags": [
+    "Conditional Probability",
+    "Games",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Let $p_2$ be the probability of success for Bob. Determine the expected value as a function of $p_1$ and $p_2$. Identify the $p_1$ values where $p_2$ must exceed $1$ to achieve a positive expected value.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "55123534219737131169"
+}

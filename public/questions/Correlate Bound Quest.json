@@ -1,0 +1,17 @@
+{
+  "problem name": "Correlate Bound Quest",
+  "problem text": "Let $X, Y,$ and $Z$ be three random variables. It is given that $\\text{Corr}(X, Y) = \\dfrac{5}{13}$ and $\\text{Corr}(Y, Z) = \\dfrac{12}{13}$. Determine the interval of potential values for $\\text{Corr}(X, Z)$, represented as $[0, b]$, where $b$ is a simplified fraction. Find $b$.",
+  "problem solution": "The critical concept is that the correlation matrix for any set of random variables must be positive semi-definite. If we denote Corr $$(X,Z) = \\rho$$, the correlation matrix for $$(X,Y,Z)$$, denoted as $$C$$, becomes a $$3 \\times 3$$ matrix $$\\begin{bmatrix} 1 & \\frac{5}{13} & \\rho \\ \\frac{5}{13} & 1 & \\frac{12}{13} \\ \\rho & \\frac{12}{13} & 1 \\end{bmatrix}$$. To demonstrate that a matrix is positive definite, each sub-matrix of order $$1 \\times 1, 2 \\times 2, \\dots, n \\times n$$, with $$n$$ as the matrix size, starting from the top left must have a non-negative determinant. Here, the top left $$2 \\times 2$$ matrix's determinant, $$C_{11}C_{22} - C_{12}C_{21} = \\frac{144}{169} > 0$$, indicates that we only need to ensure the full matrix $$C$$ has a non-negative determinant. Upon calculating this determinant as a function of $$\\rho$$, it results in $$\\frac{120}{169}\\rho - \\rho^2$$. Solving this for $$0$$ yields $$\\rho = 0, \\frac{120}{169}$$. Given the leading coefficient for $$\\rho^2$$ is negative, the resulting parabola (i.e., determinant) is positive between these roots, thus the maximum $$\\rho^* = \\frac{120}{169}$$ ensures the determinant is non-negative.",
+  "valid answer": "Valid Answers: $120/169$",
+  "problem tags": [
+    "Covariance",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "The fundamental idea is that the correlation matrix for any set of random variables has to be positive semi-definite. To verify a matrix is positive definite, each sub-matrix of order $1 \\times 1$, $2 \\times 2$, $\\dots$, $n \\times n$, with $n$ as the matrix size, originating from the top left should possess a positive determinant. The case with a determinant of $0$ should be examined separately.",
+  "problem firm": [
+    "Citadel",
+    "Squarepoint Capital"
+  ],
+  "question id": "87328247229570645729"
+}

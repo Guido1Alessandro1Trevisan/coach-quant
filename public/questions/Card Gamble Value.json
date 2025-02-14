@@ -1,0 +1,18 @@
+{
+  "problem name": "Card Gamble Value",
+  "problem text": "You have ten cards, each numbered from $1$ to $10$, placed face down. You randomly pick one card and see its number. You can either receive a payment of $3.50$ or take the card's number as your payout. What is the fair value for participating in this game?",
+  "problem solution": "The chance that the card's number is below the payment amount is $\\dfrac{3}{10}$, so selecting the payment of $3.5$ is advisable. If not, choose the card's number as the payout. Thus, the expected game value is $\\dfrac{3}{10} \\cdot \\dfrac{7}{2} + \\dfrac{7}{10} \\cdot \\dfrac{4 + 5 + 6 + 7 + 8 + 9 + 10}{7} = 5.95$.",
+  "valid answer": "Valid Answers: $5.95$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Expected Value",
+    "Games",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Apply the Law of Total Expectation by conditioning on the card's number.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "30071066219573306195"
+}

@@ -1,0 +1,15 @@
+{
+  "problem name": "Viral Gala",
+  "problem text": "In a large banquet hall, there are $1000$ individuals dining. One of these individuals is known to be ill, while the remaining $999$ are not. Every minute, each person randomly engages in conversation with another individual in the hall. Since everyone is sociable, they do not converse with someone they have already spoken to. In each interaction, if one is ill and the other is healthy, the healthy individual becomes ill. Once ill, they remain in that state for the remainder of the dinner. Determine the longest duration (in minutes) required for everyone in the hall to become ill.",
+  "problem solution": "Consider dividing the $1000$ individuals into $25$ clusters of $40$ people each. Over $25$ rounds of $39$ minutes each, every member of a cluster converses with every other member of that same cluster. Additionally, each of these clusters is paired. Assume the initially sick individual is in Cluster $25$ and the last healthy individual is in Cluster $24$. During round $k$, the individuals in cluster $b$ can converse with all in cluster $24 - b + k \\hspace{3pt} \\text{mod} \\hspace{3pt} 25$, where $0$ corresponds to $25$. Thus, after $k$ rounds, the ill individuals are those in Cluster $25$ and Clusters $1,2,\\dots, k-1$. This is because, in round $1$, Cluster $25$ engages only with itself. Subsequently, it converses with Clusters $1,2,\\dots, k-1$. Therefore, Cluster $24$ remains unaffected until after the initial $24$ rounds, equating to $936$ minutes. Then, in the $937$th minute, all individuals in the $24$th cluster converse with those in the $25$th cluster, resulting in all becoming ill in that minute. Consequently, after $937$ minutes, everyone is ill.",
+  "valid answer": "Valid Answers: $937$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Consider subdividing the $1000$ individuals into $25$ groups of $40$ people each. Across $25$ rounds of $39$ minutes, each member of a group converses with every other member within that group. Additionally, each group is paired with another. Assume the first sick individual is in Group $25$ and the final healthy individual is in Group $24$. During round $k$, all individuals in group $b$ can converse with those in group $24 - b + k \\hspace{3pt} \\text{mod} \\hspace{3pt} 25$, where $0$ corresponds to $25$. What results from this setup?",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "28841279532297759750"
+}

@@ -1,0 +1,15 @@
+{
+  "problem name": "Spending Showdown",
+  "problem text": "A researcher is examining how the timing of shopping influences consumer behavior at a shopping center. She randomly and independently picks $20$ shoppers each from weekends and weekdays. It turns out that weekend shoppers have an average expenditure of $78$ with a standard deviation of $22$, while weekday shoppers average $67$ with a standard deviation of $20$. The researcher seeks to determine if there is enough evidence to assert a significant difference in the average spending between weekend and weekday shoppers. What is the achieved significance level? Round to $3$ significant digits. Assume simple random sampling, homogeneity of variance, and that expenditures are approximately normally distributed.",
+  "problem solution": "We are examining the null hypothesis $H_0: \\mu_1 = \\mu_2$ versus the alternative hypothesis $H_a: \\mu_1 eq \\mu_2$. Since neither sample size is large enough, we resort to a $t$ test with 38 degrees of freedom: $t = \\frac{\\bar{x_1} - \\bar{x_2}}{S_p \\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}}}$ where $S_p = \\sqrt{\\frac{(n_1-1)S_1^2 + (n_2-1)S_2^2}{n_1+n_2-2}}$. Calculating $S_p$: $S_p = \\sqrt{\\frac{(20-1) \\times 22^2 + (20-1) \\times 20^2}{20+20-2}} \\approx 21.024$. Calculating $t$: $t = \\frac{78 - 67}{21.024 \\sqrt{\\frac{1}{20} + \\frac{1}{20}}} \\approx 1.655$. As this is a two-tailed test, the achieved significance level is twice the $p$-value of a one-tailed test. Therefore, $p\\text{-value} = 2 \\times P(t \\geq 1.655) = 2 \\times .05308 \\approx 0.106$.",
+  "valid answer": "Valid Answers: $0.106$",
+  "problem tags": [
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Since neither sample size is large enough, you should apply a $t$ test with $20+20-2=38$ degrees of freedom.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "55091414318052974793"
+}

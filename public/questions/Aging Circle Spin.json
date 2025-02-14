@@ -1,0 +1,22 @@
+{
+  "problem name": "Aging Circle Spin",
+  "problem text": "Seven individuals seat themselves randomly around a circular table. Each person is of a unique age. Determine the likelihood that they are seated in order of increasing age. The sequence can be either in the clockwise or counterclockwise direction.",
+  "problem solution": "There are $ (7-1)! = 6! = 720 $ possible configurations for the individuals to sit without any constraints. Among these, only two seating orders have them arranged by age: specifically, when they are ordered CCW or CW. Hence, the probability is $ \\dfrac{2}{720} = \\dfrac{1}{360} $.",
+  "valid answer": "Valid Answers: $1/360$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "There are $$ (7-1)! = 6! = 720 $$ possible configurations for the individuals to sit without any constraints. Consider how many ways they can be seated in order by age.",
+  "problem firm": [
+    "Belvedere Trading",
+    "Goldman Sachs",
+    "Imc",
+    "Jane Street",
+    "Optiver",
+    "Sig",
+    "Worldquant"
+  ],
+  "question id": "67869061531987346609"
+}

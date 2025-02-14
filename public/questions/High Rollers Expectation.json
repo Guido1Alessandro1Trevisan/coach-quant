@@ -1,0 +1,17 @@
+{
+  "problem name": "High Rollers Expectation",
+  "problem text": "Suppose X and Y are identically distributed normal random variables. Determine the expected value of X on the condition that X exceeds Y.",
+  "problem solution": "Let X and Y be i.i.d. normal random variables with mean $$\\mu$$ and variance $$\\sigma^2$$. Then define $$V = X - Y$$. Since X and Y are independent normals with identical mean and variance, it follows that $$V$$ is normal with mean 0 and variance $$2\\sigma^2$$. The condition $$X > Y$$ is equivalent to $$V > 0$$. Also define $$U = \\tfrac{X + Y}{2}$$. Because X and Y are i.i.d. normal, the pair $$(U, V)$$ is jointly normal, uncorrelated, and hence independent. Next, observe that $$X = U + \\tfrac{V}{2}$$. Thus, $$E[X \\mid V > 0] = E[U + \\tfrac{V}{2} \\mid V > 0] = E[U \\mid V > 0] + \\tfrac{1}{2} E[V \\mid V > 0].$$ Since U is independent of V, $$E[U \\mid V > 0] = E[U] = \\mu$$. Moreover, for a normal variable with mean 0 and variance $$2\\sigma^2$$, the conditional expectation of V given that V is positive is $$E[V \\mid V > 0] = \\sqrt{\\tfrac{2}{\\pi}}\\,\\sigma\\,\\sqrt{2} = \\tfrac{2\\sigma}{\\sqrt{\\pi}}.$$ Substituting back, we get $$E[X \\mid X > Y] = \\mu + \\tfrac{\\sigma}{\\sqrt{\\pi}}.$$ In the special case where $$\\mu = 0$$ and $$\\sigma^2 = 1$$, this simplifies to $$E[X \\mid X > Y] = \\tfrac{1}{\\sqrt{\\pi}}.$$",
+  "valid answer": "Valid Answers: $$\\tfrac{1}{\\sqrt{\\pi}}$$ (standard normal), or $$\\mu + \\tfrac{\\sigma}{\\sqrt{\\pi}}$$ (general normal).",
+  "problem tags": [
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider decomposing X into two parts: one involving X+Y and the other involving X-Y. Independence will help simplify the conditional expectation.",
+  "problem firm": [
+    "Citadel",
+    "Open Solutions"
+  ],
+  "question id": "36792805420522736834"
+}

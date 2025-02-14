@@ -1,0 +1,18 @@
+{
+  "problem name": "Equal Flip Alchemy",
+  "problem text": "Suppose you have a coin that lands on heads with an unknown bias. How can you use this biased coin to simulate a fair coin flip that yields heads or tails each with equal probability?",
+  "problem solution": "We present a rigorous method that guarantees an unbiased outcome. Let the coin have probability $(p)$ of landing heads on any given toss, with $(0 < p < 1)$ (we do not assume $(p=1/2)$). Consider the following procedure: \\n 1. Flip the coin twice. \\n2. If the two outcomes are different (HT or TH), then declare $(\\text{HT})$ to be our simulated 'heads' and $(\\text{TH})$ to be our simulated 'tails'. \\n 3. If the two outcomes are the same (HH or TT), ignore these flips and start again at step 1. \\n Let us analyze why this works. Denote by $(H)$ a head and by $(T)$ a tail in a single coin toss. The probability of obtaining the sequence HT on two flips is $(p(1-p))$, and the probability of TH is $((1-p)p)$. These two events (HT and TH) are clearly mutually exclusive and each has the same probability, namely $(p(1-p))$. Hence, whenever the two-flip sequence yields HT or TH, the chance of it being HT or TH is exactly $(\\frac{p(1-p)}{p(1-p) + (1-p)p} = \\frac{1}{2})$. \\n If the outcome is HH or TT, we discard that result and repeat. One can demonstrate that eventually HT or TH must occur with probability 1 (the procedure will terminate almost surely). Thus, when the procedure does terminate, the probability of having chosen HT or TH is exactly $(\\frac{1}{2})$. In this way, a single use of the above protocol yields a fair coin flip, even if the original coin was biased. \\n Thus, by cleverly pairing flips of the biased coin and mapping each pair to a single 'fair' outcome or discarding it altogether, we achieve a fair coin flip from a biased one with certainty in finite expected time.",
+  "valid answer": "A correct method is to flip the biased coin twice and interpret HT as 'heads' and TH as 'tails'; if the result is HH or TT, disregard it and repeat. This yields a fair outcome with probability 1.",
+  "problem tags": [
+    "Probability",
+    "Randomness",
+    "Biased Coin"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think of discarding pairs of identical flips. Only count the pairs that differ, but do so in a symmetric way to ensure fairness.",
+  "problem firm": [
+    "Maple Analytics",
+    "Quantum Strategies"
+  ],
+  "question id": "50774990743513937998"
+}

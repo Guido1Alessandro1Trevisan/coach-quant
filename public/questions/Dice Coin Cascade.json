@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Coin Cascade",
+  "problem text": "Imagine a special six-sided die featuring faces (1,2,3,1,2,3). Each time it is rolled, you collect coins equal to that roll's face value. The process concludes as soon as two successive rolls yield the same face. Determine the expected total number of coins collected from this game.",
+  "problem solution": "We approach this by defining states based on the most recent roll. Let $$E_0$$ be the expected total from the start (before any roll). Let $$E_1$$, $$E_2$$, and $$E_3$$ be the expected additional coins if the last roll showed 1, 2, or 3, respectively. Because the die's faces are (1,2,3,1,2,3), each of the numbers 1, 2, and 3 appears with probability $$\\tfrac{2}{6} = \\tfrac{1}{3}$$. From an unrolled state, the first roll yields 1, 2, or 3 (each with probability $$\\tfrac{1}{3}$$) and then transitions to one of the states: 1, 2, or 3. Thus, $$E_0 = \\tfrac{1}{3}\\bigl[1 + E_1\\bigr] + \\tfrac{1}{3}\\bigl[2 + E_2\\bigr] + \\tfrac{1}{3}\\bigl[3 + E_3\\bigr].$$ Next, consider state 1: if we roll another 1, the game ends immediately and we receive 1 coin. Otherwise, we roll 2 or 3 (each with probability $$\\tfrac{1}{3}$$), earn that many coins, and move into the corresponding new state. Hence, $$E_1 = \\tfrac{1}{3}\\cdot 1 + \\tfrac{1}{3}\\bigl(2 + E_2\\bigr) + \\tfrac{1}{3}\\bigl(3 + E_3\\bigr).$$ Similar reasoning applies to states 2 and 3: $$E_2 = \\tfrac{1}{3}\\cdot 2 + \\tfrac{1}{3}\\bigl(1 + E_1\\bigr) + \\tfrac{1}{3}\\bigl(3 + E_3\\bigr),$$ $$E_3 = \\tfrac{1}{3}\\cdot 3 + \\tfrac{1}{3}\\bigl(1 + E_1\\bigr) + \\tfrac{1}{3}\\bigl(2 + E_2\\bigr).$$ By symmetry, we have $$E_1 = E_2 = E_3 = E.$$ Substituting into any of the above equations such as $$E_1 = 2 + \\tfrac{E_2 + E_3}{3}$$ quickly shows that $$E = 6.$$ Then, substituting back into the expression for $$E_0,$$ we get $$E_0 = \\tfrac{1}{3}(1 + 6) + \\tfrac{1}{3}(2 + 6) + \\tfrac{1}{3}(3 + 6) = 8.$$ Consequently, the expected value of the game is 8.",
+  "valid answer": "Valid Answers: 8",
+  "problem tags": [
+    "Expected Value",
+    "Markov Chains"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define separate expected values for each possible previous roll (1, 2, or 3) and set up linear equations using the die's transition probabilities.",
+  "problem firm": [
+    "Akuna Capital"
+  ],
+  "question id": "84040220416451293985"
+}

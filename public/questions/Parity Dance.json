@@ -1,0 +1,16 @@
+{
+  "problem name": "Parity Dance",
+  "problem text": "Imagine you have all the integers from 1 to 50 in a set. At each step, pick any two numbers to remove, then insert their absolute difference back into the set. After continuing until only one number remains, determine whether this final result is odd or even.",
+  "problem solution": "We begin by noting that the sum of the integers from 1 through 50 is $$1+2+3+\\dots+50 = \\frac{50\\times51}{2} = 1275$$, which is odd. We then observe that if two numbers $$a$$ and $$b$$ are removed and replaced with their absolute difference $$|a-b|$$, the change in the set's sum is given by $$(a+b) - |a-b|$$, which is an even number. Consequently, this operation never alters the parity (odd or even state) of the sum. Therefore, as we repeatedly perform this operation, the sum's parity remains odd. Since in the end there is only one number left, that final number must itself be odd, matching the original total's parity.",
+  "valid answer": "Valid Answers: $\\text{Odd}$",
+  "problem tags": [
+    "Number Theory",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Examine how the operation of removing two elements and inserting their difference affects the parity of the total sum.",
+  "problem firm": [
+    "SIG"
+  ],
+  "question id": "03339676385699633419"
+}

@@ -1,0 +1,15 @@
+{
+  "problem name": "Ace Chase Showdown",
+  "problem text": "A regular deck of $52$ cards is divided into two smaller decks, one with $39$ cards and the other with $13$ cards. You and a companion play a game where each player picks a deck and draws cards from the top until finding the first ace. The winner is the one who draws the fewest cards. Your companion is generous, so you have the option to choose which deck to use. Which deck should you pick? Answer $13$ if you should choose the deck with $13$ cards, $39$ if you should choose the deck with $39$ cards, and $-1$ if it makes no difference. Note that if a deck contains no aces, the other deck is considered faster, and ties are ignored, meaning no winner.",
+  "problem solution": "When picking a deck, consider that the $13$-card deck has a much higher chance of having no aces. However, if it does have an ace, the $13$-card deck is quicker on average. But, the chance of no ace in the $13$-card deck is so much greater than in the $39$-card deck that selecting the $39$-card deck is a better option. Therefore, you should choose the deck with $39$ cards.",
+  "valid answer": "Valid Answers: [ $20/\\text{mo}$ \\text{ billed annually to Invest in your future today, } $30/\\text{mo}$ \\text{ billed monthly to try it out and see if its worth it }]",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Which deck has a higher likelihood of not having any $aces$?",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "71760042326136960804"
+}

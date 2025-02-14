@@ -1,0 +1,15 @@
+{
+  "problem name": "Color Code Quest",
+  "problem text": "Given that WHITE=$000$, RED=$101$, BLUE=$110$, and PURPLE=$100$, determine the three-digit sequence for YELLOW.",
+  "problem solution": "The rule is that for the initial three sounds, $0$ signifies the vowel is enunciated and $1$ signifies the consonant is enunciated. Thus, YELLOW corresponds to $001$.",
+  "valid answer": "Valid Answers: [$20/mo \\text{ billed annually to Invest in your future today}, $30/mo \\text{ billed monthly to try it out and see if its worth it}]",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Consider the distinction between consonants and vowels.",
+  "problem firm": [
+    "Worldquant"
+  ],
+  "question id": "06006507726670598283"
+}

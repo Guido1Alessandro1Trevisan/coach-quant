@@ -1,0 +1,23 @@
+{
+  "problem name": "Dice Delight Dilemma",
+  "problem text": "A gambling house provides a game with a six-sided die where you receive a payout equal to the face value. You're allowed an initial roll. If you like your result, you may stop and collect. Otherwise, you can choose to roll a second time. If satisfied with this outcome, you may stop and collect this new value. If still unsatisfied, you may roll a third and final time and take the value of this last roll. Determine the fair expected payout for this game.",
+  "problem solution": "The expected value of the final roll is $3.5$, so you should only consider rolling the die a third time if your second roll is below $3.5$. The expected payout for the second roll becomes $\\frac{3}{6} \\times 5 + \\frac{3}{6} \\times 3.5 = 4.25$. Similarly, you should roll a second time only if your initial roll is under $4.25$. The expected payout for the first roll is thus $\\frac{2}{6} \\times 5.5 + \\frac{4}{6} \\times 4.25 \\approx 4.67$.",
+  "valid answer": "Valid Answers: $14/3$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Starting from the expected value of the third roll, you can determine the expected value of the second roll. Using this second roll's expected value, you can decide when to re-roll and compute your expected value at the game's commencement.",
+  "problem firm": [
+    "Akuna Capital",
+    "Belvedere Trading",
+    "Drw",
+    "Goldman Sachs",
+    "Hudson River Trading",
+    "Optiver",
+    "Sig",
+    "Transmarket Group"
+  ],
+  "question id": "32417328564620802028"
+}

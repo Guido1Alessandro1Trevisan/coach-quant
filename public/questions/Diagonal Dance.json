@@ -1,0 +1,16 @@
+{
+  "problem name": "Diagonal Dance",
+  "problem text": "Consider a 7 x 7 grid that is symmetric across the main diagonal, where each of the seven columns contains every number 1 through 7 exactly once. In other words, the (i,j) entry matches the (j,i) entry, and each column is a permutation of $\\{1,…,7\\}$. What is the probability that the main diagonal displays all of the numbers 1 through 7 exactly once?",
+  "problem solution": "We can view a $7x$ symmetric matrix with each column containing 1 through 7 exactly once as a commutative (or abelian) quasigroup of order 7. In fact, one may show that when the order is a prime number (in this case, 7), every symmetric Latin square of that size is isomorphic to the operation table of the cyclic group of that prime order. Concretely, consider the group $(\\mathbb{Z}\\,/\\,7\\mathbb{Z}, +)$ represented as the addition table modulo 7. That table is necessarily symmetric because addition of integers is commutative, and each row and column is a complete set of numbers 0 through 6 (equivalently, 1 through 7 if we relabel). In that group table, the diagonal entries are of the form $i + i \\pmod{7}$ for $i = 0, 1, 2, ..., 6,$ and all these values are distinct precisely because 7 is prime. Consequently, in the labeled version where the elements are relabeled as 1,...,7, the diagonal also contains all numbers from 1 to 7 exactly once. Since every symmetric 7 x 7 arrangement (where each row and column is a permutation) is isomorphic to this group structure, the diagonal in any such matrix cannot fail to collect all the numbers 1,...,7. Therefore, the probability that the diagonal is a complete set of 1,...,7 is 1.",
+  "valid answer": "Valid Answers: 1",
+  "problem tags": [
+    "Combinatorics",
+    "Group Theory"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Think about commutative group tables of prime order and whether their diagonals cover all elements.",
+  "problem firm": [
+    "SIG"
+  ],
+  "question id": "75215125975396043566"
+}

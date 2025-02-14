@@ -1,0 +1,16 @@
+{
+  "problem name": "Brownian Escape",
+  "problem text": "Suppose $B_t$ represents a standard Brownian Motion and define $T_4 = \\text{inf}\\{t > 0: |B_t| > 4\\}$. Determine $\\text{Var}(T_4)$.",
+  "problem solution": "We will broaden this problem and resolve it for a general $T_a = \\text{inf}\\{t>0: |B_t| >a\\}$ for any $a > 0$. It is commonly known that $Z_t = f(t,B_t)$ forms a martingale, where $f(t,b) = b^4 - 6b^2t + 3t^2$. By applying the Optional Stopping Theorem, we derive that $\\mathbb{E}[Z_{T_4}] = \\mathbb{E}[B_{T_a}^4 - 6B_{T_a}^2T_a + 3T_a^2] = \\mathbb{E}[Z_0] = 0$. Given that $B_{T_a} = \\pm a$ with equal likelihood, $B_{T_a}^4 = a^4$ holds with probability $1$. Likewise, $B_{T_a}^2 = a^2$ also holds with probability $1$. Thus, through linearity, we establish that $a^4 - 6a^2\\mathbb{E}[T_a] + 3\\mathbb{E}[T_a^2] = 0$. Using a more fundamental martingale argument on $B_t^2 - t$, one can effortlessly demonstrate that $\\mathbb{E}[T_a] = a^2$. Consequently, we find $\\mathbb{E}[T_a^2] = \\dfrac{5}{3}a^4$ by rearranging. To determine the variance, we apply the standard formula $\\text{Var}(T_a) = \\mathbb{E}[T_a^2] - (\\mathbb{E}[T_a])^2 = \\dfrac{5}{3}a^4 - a^4 = \\dfrac{2}{3}a^4$. In our specific scenario, $a = 4$, leading to the result $\\dfrac{512}{3}$.",
+  "valid answer": "Valid Answers: $512/3$",
+  "problem tags": [
+    "Stochastic Calculus",
+    "Pure Math"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Think about $f(t,b) = b^4 - 6b^2t + 3t^2$ and demonstrate that it establishes a martingale.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "08250018559183447864"
+}

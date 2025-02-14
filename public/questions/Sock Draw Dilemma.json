@@ -1,0 +1,17 @@
+{
+  "problem name": "Sock Draw Dilemma",
+  "problem text": "There are $3$ red socks and $n$ blue socks in a drawer. It is known that the probability of drawing two red socks in succession, without replacement, is $\\dfrac{1}{2}$. Determine the value of $n$.",
+  "problem solution": "We want the probability of drawing a pair of red socks to be $\\dfrac{1}{2}$. The chance that the first sock drawn is red is $\\dfrac{3}{n+3}$. After removing one red sock, the probability that the second sock is red is $\\dfrac{2}{n+2}$. Thus, the probability of both socks being red is $\\dfrac{6}{(n+2)(n+3)}$. This must be equal to $\\dfrac{1}{2}$, giving us $\\dfrac{6}{(n+2)(n+3)} = \\dfrac{1}{2}$. Rearranging, this leads to $(n+2)(n+3) = 12$. Expanding, we obtain $n^2 + 5n - 6 = 0$, which factors to $(n+6)(n-1) = 0$. Hence, $n = 1,-6$ are the solutions. Since $-6$ is not feasible, $n = 1$ is the solution. Note that $n \\leq 3$, otherwise it would be more probable to draw two blue socks than two red ones. We discard $n = 0$, as the probability would be $1$. This leaves three possibilities to verify.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Conditional Probability",
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "We are seeking a scenario where the probability of drawing two red socks is $\\dfrac{1}{2}$. Determine the probability when there are $n$ additional socks in the drawer.",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "61932928090539242930"
+}

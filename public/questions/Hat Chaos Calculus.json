@@ -1,0 +1,16 @@
+{
+  "problem name": "Hat Chaos Calculus",
+  "problem text": "Suppose there are N distinct individuals, each with a unique hat, who place their hats in a common room. Each person then selects one hat at random. What is the probability that nobody ends up with their own hat?",
+  "problem solution": "We seek the probability of a permutation with no fixed points, known as a derangement. There are $$N!$$ total permutations of how N hats can be returned to N people. Let $$!N$$ denote the number of derangements of N objects (permutations in which no element remains in its original place). We use the principle of inclusion-exclusion to count these: first note there are $$N!$$ total permutations. We subtract those permutations that fix at least 1 element, then add back those that fix at least 2 elements, and so on, leading to the closed-form expression for the number of derangements: $$!N = N! \\sum_{k=0}^N \\frac{(-1)^k}{k!}.$$ Therefore, the probability that no one gets their own hat is $$\\frac{!N}{N!} = \\sum_{k=0}^N \\frac{(-1)^k}{k!}.$$ As N becomes large, this sum converges to $$\\frac{1}{e}\\approx 0.3679.$$ Hence, for large N, the probability that no individual reclaims his or her original hat is very close to $$\\frac{1}{e}.$$",
+  "valid answer": "Valid Answers: $\\sum_{k=0}^N \\frac{(-1)^k}{k!}$ which is approximately $1/e$ for large N",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Use the principle of inclusion-exclusion to count permutations where no individual ends up with their original hat.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "36859796535058017313"
+}

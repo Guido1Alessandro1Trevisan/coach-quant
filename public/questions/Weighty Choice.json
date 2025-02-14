@@ -1,0 +1,16 @@
+{
+  "problem name": "Weighty Choice",
+  "problem text": "There are $6$ weights with masses $201, 202, \\dots, 206$ grams. We randomly place $3$ weights on each side of a balance. Determine the probability that the side containing the $206$ gram weight is heavier.",
+  "problem solution": "The initial $200$ can be ignored, as removing $200$ from each weight equally does not affect their relative order. Thus, we can think about this as weights $1-6$ grams. Place the $6$ gram weight on one side. The total of all weights is $21$ grams, so the side with $11$ or more grams will be heavier. There are $\\binom{5}{2} = 10$ ways to select two weights to accompany the $6$ gram weight. Out of these, only the pairs $(1,2)$ and $(1,3)$ have a sum of less than $5$ grams. Hence, the probability is $\\dfrac{10-2}{10} = \\dfrac{4}{5}$, since $8$ out of the $10$ combinations make that side heavier.",
+  "valid answer": "Valid Answers: $4/5$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The initial $200$ is irrelevant, as subtracting $200$ from each weight equally will not alter the order. Therefore, we can treat this as if the weights were $1-6$ grams. What is the total of all the weights?",
+  "problem firm": [
+    "Imc"
+  ],
+  "question id": "68084122425247165521"
+}

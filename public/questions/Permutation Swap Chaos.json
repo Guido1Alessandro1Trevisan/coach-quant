@@ -1,0 +1,18 @@
+{
+  "problem name": "Permutation Swap Chaos",
+  "problem text": "Consider a permutation of $(1,2,\\dots,1000)$ chosen uniformly at random. Let $X$ denote the number of elements not in their original positions, and $Y$ the number that remain in their initial positions. Find $\\text{Var}(Y-X)$.",
+  "problem solution": "Observe that $X = 1000 - Y$ since $X + Y$ is always $1000$. Hence, $\\text{Var}(Y-X) = \\text{Var}(1000 + 2Y) = 4\\text{Var}(Y)$. Now, we need to determine $\\text{Var}(Y)$. Notice that $Y = Y_1 + \\dots + Y_{1000}$, where $Y_i$ indicates if $i$ is in a fixed position. By symmetry, $\\mathbb{E}[Y] = 1000\\mathbb{E}[Y_1]$. The expectation $\\mathbb{E}[Y_1]$ is the probability that $1$ remains fixed, which is $\\dfrac{1}{1000}$ since each position is equally likely. To find $\\mathbb{E}[Y^2]$, we expand the square of the sum: $\\mathbb{E}[Y^2] = \\mathbb{E}[(Y_1 + \\dots + Y_{1000})^2] = \\sum_{i=1}^{1000} \\mathbb{E}[Y_i^2] + \\sum_{i \\neq j} \\mathbb{E}[Y_iY_j]$. The first term accounts for $i = j$, and the second for $i \\neq j$. Since $Y_i^2 = Y_i$ (as $Y_i$ is either $0$ or $1$), we have $\\mathbb{E}[Y_i^2] = \\dfrac{1}{1000}$. For the second sum, due to the symmetry of the $Y_i$, for $i \\neq j$, $\\mathbb{E}[Y_iY_j] = \\mathbb{E}[Y_1Y_2]$. This is the probability that both $1$ and $2$ are fixed, which is $\\dfrac{1}{1000} \\cdot \\dfrac{1}{999}$ because after fixing $1$, $2$ must also be fixed with a probability of $\\dfrac{1}{999}$. Thus, $\\mathbb{E}[Y_1Y_2] = \\dfrac{1}{1000} \\cdot \\dfrac{1}{999}$. There are $1000$ terms in the first sum and $1000 \\cdot 999$ terms in the second. Therefore, $\\mathbb{E}[Y^2] = 1000 \\cdot \\dfrac{1}{1000} + 1000 \\cdot 999 \\cdot \\dfrac{1}{1000} \\cdot \\dfrac{1}{999} = 2$. Hence, $\\mathbb{E}[Y^2] = 2 - 1^2 = 1$, leading to $\\text{Var}(Y-X) = 4(1) = 4$.",
+  "valid answer": "Valid Answers: $4$",
+  "problem tags": [
+    "Expected Value",
+    "Conditional Probability",
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Observe that $X = 1000 - Y$ since $X + Y$ is always $1000$. Hence, $\\text{Var}(Y-X) = \\text{Var}(1000 + 2Y) = 4\\text{Var}(Y)$. Now, we need to determine $\\text{Var}(Y)$. Notice that $Y = Y_1 + \\dots + Y_{1000}$, where $Y_i$ indicates if $i$ is in a fixed position.",
+  "problem firm": [
+    "Worldquant"
+  ],
+  "question id": "48827337667877248615"
+}

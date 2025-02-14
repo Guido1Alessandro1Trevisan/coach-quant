@@ -1,0 +1,16 @@
+{
+  "problem name": "Clockhand Reunion",
+  "problem text": "Currently, the time is $12:00$ PM, where the hour and minute hands coincide. In how many hours will they align again? Provide a fractional answer if necessary.",
+  "problem solution": "Define $h$ as the time in hours. The minute hand rotates $360h$ degrees. Additionally, the hour hand rotates $30h$ degrees. Since the first alignment requires an additional $360$ degrees covered by the minute hand beyond the hour hand, the equation becomes $360h = 30h + 360$, solving to $h = \\dfrac{12}{11}$.",
+  "valid answer": "Valid Answers: $12/11$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $h$ as the number of hours. The minute hand rotates $360h$ degrees. Additionally, the hour hand rotates $30h$ degrees. Consider the effect of one full rotation.",
+  "problem firm": [
+    "Imc",
+    "Jane Street"
+  ],
+  "question id": "53643599463862087872"
+}

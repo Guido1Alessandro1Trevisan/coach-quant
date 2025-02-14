@@ -1,0 +1,16 @@
+{
+  "problem name": "Trilogy of Tosses",
+  "problem text": "Imagine repeatedly flipping a fair coin, and stop once you get three heads in a row. On average, how many total flips will you perform?",
+  "problem solution": "We use states to keep track of how many heads have occurred in succession so far. Define the states as follows: \\(S_0\\) (no consecutive heads), \\(S_1\\) (1 consecutive head), \\(S_2\\) (2 consecutive heads), and \\(S_3\\) (3 consecutive heads, the stopping condition). Let \\(E_0\\), \\(E_1\\), and \\(E_2\\) be the expected number of additional flips needed from \\(S_0\\), \\(S_1\\), and \\(S_2\\), respectively. If we have 3 heads in a row (\\(S_3\\)), no more flips are needed, so \\(E_3 = 0\\). We formulate the expectations:\n1. From \\(S_0\\), flip once (1 toss). With probability \\(\\tfrac{1}{2}\\), we get heads and move to \\(S_1\\). With probability \\(\\tfrac{1}{2}\\), we get tails and remain in \\(S_0\\). Thus: \\(E_0 = 1 + \\tfrac{1}{2} E_1 + \\tfrac{1}{2} E_0\\).\n2. From \\(S_1\\), also flip once (1 toss). With probability \\(\\tfrac{1}{2}\\), we advance to \\(S_2\\). With probability \\(\\tfrac{1}{2}\\), we drop back to \\(S_0\\). So: \\(E_1 = 1 + \\tfrac{1}{2} E_2 + \\tfrac{1}{2} E_0\\).\n3. From \\(S_2\\), flipping once (1 toss). With probability \\(\\tfrac{1}{2}\\), we achieve the 3 heads in a row (\\(S_3\\)), and with probability \\(\\tfrac{1}{2}\\), we miss and revert to \\(S_0\\). Therefore: \\(E_2 = 1 + \\tfrac{1}{2} E_3 + \\tfrac{1}{2} E_0 = 1 + \\tfrac{1}{2}(0) + \\tfrac{1}{2} E_0 = 1 + \\tfrac{1}{2} E_0\\).\nSolve systematically:\n\\(E_0 = 1 + \\tfrac{1}{2} E_1 + \\tfrac{1}{2} E_0\\) implies \\(\\tfrac{1}{2} E_0 = 1 + \\tfrac{1}{2} E_1\\) or \\(E_0 = 2 + E_1\\).\n\\(E_1 = 1 + \\tfrac{1}{2} E_2 + \\tfrac{1}{2} E_0\\) remains as is.\n\\(E_2 = 1 + \\tfrac{1}{2} E_0\\).\nFirst express \\(E_1\\) in terms of \\(E_0\\) and \\(E_2\\): \\(E_1 = 1 + \\tfrac{1}{2} E_2 + \\tfrac{1}{2} E_0\\). Substitute \\(E_2 = 1 + \\tfrac{1}{2} E_0\\) into that equation to obtain \\(E_1 = 1 + \\tfrac{1}{2}(1 + \\tfrac{1}{2} E_0) + \\tfrac{1}{2} E_0 = 1.5 + 0.75 E_0\\).\nBut from \\(E_0 = 2 + E_1\\), we see \\(E_1 = E_0 - 2\\). Setting these equal: \\(E_0 - 2 = 1.5 + 0.75 E_0\\). Thus:\n\\(E_0 - 0.75 E_0 = 1.5 + 2\\)\n\\(0.25 E_0 = 3.5\\)\n\\(E_0 = 14\\).\nHence, on average, 14 flips are required. Therefore, the expected number of tosses before getting three heads consecutively is $$14$$.",
+  "valid answer": "Valid Answers: $$14$$",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define states based on how many consecutive heads you've collected, then set up equations for expected values to solve for the overall expectation.",
+  "problem firm": [
+    "JP Morgan"
+  ],
+  "question id": "63682918248334817400"
+}

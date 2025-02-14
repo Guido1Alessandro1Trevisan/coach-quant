@@ -1,0 +1,16 @@
+{
+  "problem name": "Bearly Catching Five",
+  "problem text": "A bear aims to catch $3$ fish from a stream. Once the bear has $3$ fish, it will depart. The bear captures each fish with a probability of $\\dfrac{1}{2}$. Determine the probability that the $5$th fish is caught.",
+  "problem solution": "Let $$ C $$ denote the event that the $$ 5 $$th fish is captured and $$ F $$ denote the event that the bear is still trying to catch fish on the $$ 5 $$th attempt. Using the Law of Total Probability, $$ \\mathbb{P}[C] = \\mathbb{P}[C \\mid F]\\mathbb{P}[F] + \\mathbb{P}[C \\mid F^c]\\mathbb{P}[F^c] $$. The probability $$\\mathbb{P}[F]$$ is simply the chance that the bear has caught no more than $$ 2 $$ fish in the first $$ 4 $$ tries. This probability calculates to $$\\frac{\\binom{4}{0} + \\binom{4}{1} + \\binom{4}{2}}{2^4} = \\frac{11}{16}$$. Thus, $$\\mathbb{P}[F^c] = 1 - \\frac{11}{16} = \\frac{5}{16}$$. From the problem statement, $$\\mathbb{P}[C \\mid F] = \\frac{1}{2}$$. Besides, $$\\mathbb{P}[C \\mid F^c] = 0$$, since the bear cannot catch a fish if it is not attempting to fish on the $$ 5 $$th attempt. Consequently, $$\\mathbb{P}[C] = \\frac{11}{16} \\cdot \\frac{1}{2} + 0 = \\frac{11}{32}$$.",
+  "valid answer": "Valid Answers: $11/32$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $C$ as the event that the $5$th fish is captured and $F$ as the event that the bear is fishing on the $5$th attempt. Applying the Law of Total Probability, $\\mathbb{P}[C] = \\mathbb{P}[C \\mid F]\\mathbb{P}[F] + \\mathbb{P}[C \\mid F^c]\\mathbb{P}[F^c]$. The probability $\\mathbb{P}[F]$ is the same as the probability that the bear has caught $2$ fish or fewer in the first $4$ attempts.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "33358053336837802235"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Heads Quest",
+  "problem text": "How many flips on average must one perform until observing two heads in a row while tossing a fair coin?",
+  "problem solution": "We model the process using states. Let S0 represent having no consecutive heads, S1 represent that we just obtained one head, and S2 be the absorbing state of achieving two heads in a row. Denote $$E_0$$, $$E_1$$, and $$E_2$$ as the expected flips remaining from each state. Clearly, $$E_2 = 0$$ because we are already done in state S2. From S0, each flip takes us to S1 with probability $$1/2$$ if a head appears, or keeps us in S0 with probability $$1/2$$ if we get tails, leading to the equation $$E_0 = 1 + \\frac{1}{2}E_1 + \\frac{1}{2}E_0.$$ From S1, the next flip completes the requirement (S2) with probability $$1/2$$ if it is a head, or returns to S0 with probability $$1/2$$ if it is tails, so $$E_1 = 1 + \\frac{1}{2}E_2 + \\frac{1}{2}E_0.$$ Solving these linear equations yields $$E_0 = 6,$$ demonstrating that six coin flips are expected before getting two heads consecutively.",
+  "valid answer": "Valid Answers: 6",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Treat the process as a Markov chain with states tracking your progress toward two heads in a row.",
+  "problem firm": [
+    "Akuna Capital"
+  ],
+  "question id": "90846882289700151347"
+}

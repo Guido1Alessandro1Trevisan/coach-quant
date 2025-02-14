@@ -1,0 +1,22 @@
+{
+  "problem name": "Coin Clash",
+  "problem text": "Emilia possesses $n+1$ unbiased coins, while Ron has $n$ unbiased coins. What is the likelihood that Emilia flips more heads than Ron when both flip all their respective coins?",
+  "problem solution": "We address this using symmetry by analyzing the heads count in the initial $n$ coins of both Emilia and Ron. Consider these three possibilities: $E_1$ is the scenario where Emilia has more heads than Ron; $E_2$ is the scenario where both have an equal number of heads; $E_3$ is the scenario where Emilia has fewer heads than Ron. Symmetry implies $P(E_1) = P(E_3) = a$ and $P(E_2) = b$. Since $\\sum_{\\omega \\in \\Omega} P(\\omega) = 1$, we have $2a+b=1$. In the case of $E_1$, Emilia will consistently have more heads than Ron, irrespective of the outcome of Emilia's last coin. Additionally, in $E_3$, Emilia will never surpass Ron in heads count, regardless of the outcome of Emilia's last coin. Hence, only $E_2$ is affected by the flip of Emilia's $(n+1)$th coin, where she wins half of the time (if she flips a heads). Consequently, the overall probability of Emilia winning is: $a+ 0.5b = a+(1-2a) = \\frac{1}{2}$.",
+  "valid answer": "Valid Answers: $0.5$",
+  "problem tags": [
+    "Conditional Probability",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Use symmetry to solve. First solve the problem as if Emilia and Ron have the same number of coins, then consider how Emilia's additional coin alters the outcome.",
+  "problem firm": [
+    "Citadel",
+    "Goldman Sachs",
+    "Hudson River Trading",
+    "Jane Street",
+    "Sig",
+    "Worldquant"
+  ],
+  "question id": "42964936308413913520"
+}

@@ -1,0 +1,17 @@
+{
+  "problem name": "Visible Headcount Wonders",
+  "problem text": "Consider $20$ individuals whose heights follow an unspecified continuous distribution, aligned in a single row. From the front of the line, we note that a person's head is visible if they are taller than all preceding individuals. Let $X$ represent the count of visible heads. Determine $\\mathbb{E}[X]$, rounding to the nearest tenth.",
+  "problem solution": "We break down $$ X = X_1 + X_2 + \\ldots + X_{20} $$ where $$ X_i $$ is defined as: $$ X_i =\\begin{cases}1 & \\text{if the } i \\text{-th individual is taller than all previous,} 0 & \\text{otherwise.}\\end{cases}$$ We assert that $$ E[X_i] = \\frac{1}{i} $$, as among the initial $$ i $$ individuals, each has an equal chance of being the tallest, making the probability that the $$ i $$-th is tallest $$ \\frac{1}{i} $$. By the Linearity of Expectation, it follows that $$ \\mathbb{E}[X]= \\sum_{i=1}^{20} \\frac{1}{i}  \\approx 3.6 $$. For a large $$ n $$ (number of individuals), a suitable approximation is $$ \\log(n) $$.",
+  "valid answer": "Valid Answers: $3.6$",
+  "problem tags": [
+    "Expected Value",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Employ an indicator random variable for the event that the $i$-th individual is the tallest among the first $i$ individuals.",
+  "problem firm": [
+    "Hudson River Trading"
+  ],
+  "question id": "73994559274254651667"
+}

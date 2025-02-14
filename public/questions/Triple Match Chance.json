@@ -1,0 +1,17 @@
+{
+  "problem name": "Triple Match Chance",
+  "problem text": "In a casino, you have a fair $6$-sided die, a typical roulette wheel (which has $38$ slots including two zeroes and numbers $1-36$), and a standard deck of cards. Considering Aces as ones, what is the probability that when the roulette wheel is spun, the die is thrown, and a card is drawn from the deck, all display the same number?",
+  "problem solution": "The die offers the fewest possibilities (only $1-6$), so start by rolling the die, letting it show a random side. The probability of drawing a card of that particular value from the deck is $\\dfrac{1}{13}$. The chance that the roulette wheel stops on that number is $\\dfrac{1}{38}$. Consequently, the combined probability, assuming independence, is $\\dfrac{1}{13 \\cdot 38} = \\dfrac{1}{494}$.",
+  "valid answer": "Valid Answers: $1/494$",
+  "problem tags": [
+    "Conditional Probability",
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "How many values are shared among all? $1$",
+  "problem firm": [
+    "Belvedere Trading"
+  ],
+  "question id": "02463706210600759450"
+}

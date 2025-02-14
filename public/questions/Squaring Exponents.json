@@ -1,0 +1,15 @@
+{
+  "problem name": "Squaring Exponents",
+  "problem text": "Determine the number of integers $100 \\leq k \\leq 400$ for which $k^k$ forms a perfect square.",
+  "problem solution": "By basic algebra, we have $\\sqrt{k^k} = k^{\\frac{k}{2}}$. Thus, if $k$ is an even number, then $\\dfrac{k}{2}$ remains an integer, ensuring that $k$ being even satisfies the condition. This results in $151$ integers. Additionally, if $k$ is a perfect square, then we have $k = n^2$ for some integer $n$. Consequently, $\\sqrt{k^k} = \\sqrt{(n^2)^{n^2}} = \\sqrt{n^{2n^2}} = n^{n^2}$ is also an integer. Odd perfect squares have not yet been included, so we can add those. Specifically, these are $11^2, 13^2, 15^2, 17^2,$ and $19^2$. This provides $5$ additional possibilities, totaling to $151 + 5 = 156$.",
+  "valid answer": "Valid Answers: [ $20/mo$ billed annually to Invest in your future today, $30/mo$ billed monthly to try it out and see if its worth it ]",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "By basic algebra, we have $\\sqrt{k^k} = k^{\\frac{k}{2}}$. Under what conditions is this an integer?",
+  "problem firm": [
+    "Worldquant"
+  ],
+  "question id": "83005188833064654371"
+}

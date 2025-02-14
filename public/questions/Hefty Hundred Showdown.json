@@ -1,0 +1,16 @@
+{
+  "problem name": "Hefty Hundred Showdown",
+  "problem text": "We have six distinct weights labeled from 101 to 106 that we distribute into two sets of three weights each, placing one set on the left side of a scale and the other set on the right side. What is the likelihood that the side carrying the weight labeled 106 will be heavier than the other side?",
+  "problem solution": "Solution Explanation: First, note there are $$\\binom{6}{3} = 20$$ equally likely ways to choose which three of the six weights go on one side of the scale (the other three automatically go on the other side). Because the weight 106 is the largest, let us examine the case in which 106 appears on a particular side (call it side A). We then pick 2 of the remaining 5 weights (101, 102, 103, 104, 105) to join 106 on side A. There are $$\\binom{5}{2} = 10$$ ways to do this. Let the two chosen weights be x and y from the set {101,102,103,104,105}. That means side B consists of the other three weights. Let S be the sum of the five smaller weights: $$S = 101 + 102 + 103 + 104 + 105 = 515.$$ The sum of side B is then $$S - (x + y).$$ For side A (which has 106) to be heavier, we require $$106 + x + y > 515 - (x + y).$$ This simplifies to $$106 + 2x + 2y > 515,$$ or $$x + y > 204.5.$$ We list all possible pairs (x,y), finding that 8 of the 10 pairs have x + y > 204.5. Consequently, if 106 is on side A, then in 8 of the 10 ways side A is heavier. By symmetry, if 106 is on side B, that side will be heavier in 8 of the 10 ways. Altogether, this yields 16 favorable ways out of 20 total ways to place the weights, giving a probability of $$\\frac{16}{20} = \\frac{4}{5}.$$",
+  "valid answer": "Valid Answers: $$\\dfrac{4}{5}$$",
+  "problem tags": [
+    "Probability",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Focus on which side 106 is on, and compare the total of its group to that of the other group.",
+  "problem firm": [
+    "IMC"
+  ],
+  "question id": "73111943918043521186"
+}

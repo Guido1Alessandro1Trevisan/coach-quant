@@ -1,0 +1,16 @@
+{
+  "problem name": "Random Radius Ripple",
+  "problem text": "A point $(X_1,X_2,\\dots,X_{10})$ is chosen uniformly at random from within a $10$-dimensional ball of radius $12$ centered at the origin. Determine the variance of the first coordinate, $X_1$.",
+  "problem solution": "We understand that the point is selected uniformly at random from within this sphere. Let $R$ represent the random distance from the origin of this point. It follows that $R^2 = X_1^2 + \\dots + X_{10}^2$. Given the sphere's symmetry about the origin and the identical marginal distributions of each coordinate, they are interchangeable and thus possess the same expected value. Thus, $\\mathbb{E}[R^2] = 10\\mathbb{E}[X_1^2]$. We recognize that \\text{Var}$(X_1) = \\mathbb{E}[X_1^2] - (\\mathbb{E}[X_1])^2$. However, due to the sphere's symmetry about the origin, the expected value of $X_1$ is $0$, so we only need the second moment of $X_1$. This reduces to finding the expected squared distance from the center, as stated earlier. Let's determine $\\mathbb{P}[R \\leq r]$. The volume of a sphere in $n$ dimensions with radius $r$ is given by a constant $C_n \\cdot r^n$. Thus, since our point is uniformly chosen from this sphere, the event $\\{R \\leq r\\}$ implies the point lies in a sub-sphere of radius $r$ within the larger sphere of radius $12$. The probability for this is $\\dfrac{r^{10}}{12^{10}}$. Consequently, the density function of $R$ (obtained by differentiating the CDF with respect to $r$) is $f_R(r) = \\dfrac{10r^9}{12^{10}}I_{(0,12)}(r)$. The indicator reflects that the radius must lie between $0$ and $12$. Finding $\\mathbb{E}[R^2]$ is straightforward using LOTUS. We compute $\\mathbb{E}[R^2] = \\dfrac{1}{12^{10}}\\displaystyle \\int_0^{12} 10r^{11}dr = \\dfrac{10}{12^{11}} 12^{12} = 120$. Substituting back into our initial equation, we find $120 = 10\\mathbb{E}[X_1^2]$, thus \\text{Var}$(X_1) = \\mathbb{E}[X_1^2] = 12$.",
+  "valid answer": "Valid Answers: $12$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Let $R$ denote the random distance from the origin to the point. We know $R^2 = X_1^2 + \\dots + X_{10}^2$.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "82004326129630657375"
+}

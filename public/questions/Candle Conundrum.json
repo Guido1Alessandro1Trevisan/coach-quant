@@ -1,0 +1,15 @@
+{
+  "problem name": "Candle Conundrum",
+  "problem text": "Consider two candles that are identical in size and have a consistent density. One of them takes $2$ hours to completely burn, while the other takes $1$ hour. Determine the time at which both candles should be ignited simultaneously so that at $4$ PM, one candle is twice as long as the other. Provide your answer in military time. For instance, if it is $8:20$ PM, respond with $2020$.",
+  "problem solution": "After $x$ hours, the fraction remaining of the candle that burns for $2$ hours is $1-\\dfrac{x}{2}$, whereas for the $1$ hour candle, it is $1-x$. We need to find $x$ such that $1-\\frac{x}{2}= 2(1-x)$. This is because the $1$ hour candle diminishes more quickly. Solving this equation, we find that $x = \\dfrac{2}{3}$. Therefore, both candles should be lit $40$ minutes before $4:00$ PM, specifically at $3:20$ PM. Consequently, the answer in military time is $1520$.",
+  "valid answer": "Valid Answers: $1520$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "After $x$ hours, the portion left of the $2$ hour candle is $1-\\dfrac{x}{2}$, while for the $1$ hour candle, it is $1-x$.",
+  "problem firm": [
+    "Transmarket Group"
+  ],
+  "question id": "49018660166027391920"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Correlated Sum Mystery",
+  "problem text": "Let $X$ and $Y$ be two random variables with variances equal to $9$ and $16$, respectively. Determine the standard deviation of $X+Y$ given that $\\rho(X,Y) = -3/8$.",
+  "problem solution": "We know that $ \\text{Var}(X+Y) = \\text{Var}(X) + \\text{Var}(Y) + 2\\text{Cov}(X,Y) = 9 + 16 + 2\\left(-\\frac{3}{8}\\right)\\sqrt{9}\\sqrt{16} = 16 $, hence the standard deviation of $ X+Y $ is $ \\sqrt{16} = 4 $.",
+  "valid answer": "Valid Answers: $4$",
+  "problem tags": [
+    "Covariance",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Recall that $ \\text{Var}(X+Y) = \\text{Var}(X) + \\text{Var}(Y) + 2\\text{Cov}(X,Y) $",
+  "problem firm": [
+    "Transmarket Group"
+  ],
+  "question id": "78740319778003233598"
+}

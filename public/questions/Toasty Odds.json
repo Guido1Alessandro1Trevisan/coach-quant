@@ -1,0 +1,18 @@
+{
+  "problem name": "Toasty Odds",
+  "problem text": "In front of you are three pancakes. One pancake is toasted on both its sides, another is toasted on just one side, and the last one is not toasted at all. You randomly pick one pancake and see that the top side is toasted. What is the chance that the other side is also toasted?",
+  "problem solution": "Label the sides of the six pancake halves as $s_i$ with $1 \\leq i \\leq 6$. Assume $s_1$, $s_2$, and $s_3$ are the toasted sides and $s_1$ and $s_2$ are on the same pancake. Among the six possible sides, you observe one of the three toasted sides: $s_1$, $s_2$, or $s_3$. Out of these three, two sides ($s_1$ and $s_2$) are part of the pancake toasted on both sides. Hence, the probability that the opposite side is also toasted is $\\frac{2}{3}$.",
+  "valid answer": "Valid Answers: $\\frac{2}{3}$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider each side separately. How many of them are toasted? Among these, how many belong to a pancake with another toasted side?",
+  "problem firm": [
+    "Goldman Sachs",
+    "Hudson River Trading",
+    "Sig"
+  ],
+  "question id": "24262963456491972790"
+}

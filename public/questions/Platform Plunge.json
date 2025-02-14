@@ -1,0 +1,15 @@
+{
+  "problem name": "Platform Plunge",
+  "problem text": "Imagine a quirky mechanical dancer that stands on a platform measuring 20cm in length. The dancer starts 3cm from the left edge, and each turn it has a 50% chance of stepping 10cm to the left or 10cm to the right. Once it crosses either edge of the platform, it falls off. Determine the expected number of steps before it topples off.",
+  "problem solution": "We model this scenario as a Markov chain with two non-absorbing states (the dancer being at 3cm or at 13cm), and two absorbing states (falling off the left edge at 0cm or the right edge at 20cm). Let $$E(3)$$ be the expected steps starting at 3cm, and $$E(13)$$ be the expected steps starting at 13cm. Once the dancer moves off the table, the process stops, so the expected steps from an absorbing state is $$0\\text{.}$$From 3cm, the dancer either moves to $$-7\\text{cm}$$ and falls off (absorbing state) with probability $$\\tfrac12,$$ or moves to 13cm with probability $$\\tfrac12.$$ Hence: $$E(3) = 1 + \\tfrac12\\cdot 0 + \\tfrac12\\cdot E(13).$$From 13cm, it either returns to 3cm with probability $$\\tfrac12,$$ or moves to 23cm and falls off with probability $$\\tfrac12.$$ Thus: $$E(13) = 1 + \\tfrac12\\cdot E(3) + \\tfrac12\\cdot 0.$$We combine these equations: $$\\begin{cases}E(3) = 1 + \\tfrac12 E(13),\\\\E(13) = 1 + \\tfrac12 E(3).\\end{cases}$$Solving simultaneously, we find both $$E(3) = 2$$ and $$E(13) = 2\\text{.}$$ Therefore, the expected number of steps before the dancing robot tumbles off the platform is $$2\\text{.}$$",
+  "valid answer": "Valid Answers: 2",
+  "problem tags": [
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Set up an equation for each seat (3cm and 13cm) in terms of the other, as these are the only two positions until the robot falls.",
+  "problem firm": [
+    "IMC"
+  ],
+  "question id": "62751175143591664516"
+}

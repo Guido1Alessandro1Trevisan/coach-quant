@@ -1,0 +1,19 @@
+{
+  "problem name": "Dice Gamble Spread",
+  "problem text": "Consider a basic options chain related to the expected value from multiplying the outcomes of two dice. You establish a $2$ unit spread market on the call at $19$. Provide your answer as the sum of the bid and ask prices. For instance, if your market was $5$ @ $7$, you would submit $12$.",
+  "problem solution": "To tackle this problem, start by determining the actual value of the call option. First, identify the combinations of dice results that result in profit. In ascending order, these are $ (4,5) $, $ (5,4) $, $ (4,6) $, $ (6,4) $, $ (5,5) $, $ (5,6) $, $ (6,5) $, and $ (6,6) $. For $ (4,5) $ or $ (5,4) $, the profit is $ 1 $ unit $ (20-19 = 1) $ with a probability of $ \\frac{2}{36} $. For $ (5,5) $, the profit is $ 6 $ units $ (25-19 = 6) $ with a probability of $ \\frac{1}{36} $. For $ (5,6) $ or $ (6,5) $, the profit is $ 11 $ units $ (30-19 = 11) $ with a probability of $ \\frac{2}{36} $. For $ (6,6) $, the profit is $ 17 $ units $ (36-19 = 17) $ with a probability of $ \\frac{1}{36} $. Finally, $ (4,6) $ and $ (6,4) $ give a profit of $ 5 $ units $ (24-19 = 5) $ with a probability of $ \\frac{2}{36} $. Summing these, we have $ \\frac{2}{36} \\cdot 1 + \\frac{2}{36} \\cdot 5 + \\frac{1}{36} \\cdot 6 + \\frac{2}{36} \\cdot 11 + \\frac{1}{36} \\cdot 17 = \\frac{19}{12} $, indicating our contract's fair price is $ \\frac{19}{12} $. To establish a $ 2- $unit wide market around this value, we bid $ 1 $ unit less than $ \\frac{19}{12} $ and offer $ 1 $ unit more than $ \\frac{19}{12} $. This results in a market of $ \\frac{7}{12} $ @ $ \\frac{31}{12} $, and adding these together (equivalent to doubling our theoretical value) provides the final answer of $ \\frac{19}{6} $.",
+  "valid answer": "Valid Answers: $19/6$",
+  "problem tags": [
+    "Finance",
+    "Games",
+    "Finance"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Create a market around the computed theoretical price of the call option.",
+  "problem firm": [
+    "Old Mission",
+    "Optiver",
+    "Sig"
+  ],
+  "question id": "32070856214425086305"
+}

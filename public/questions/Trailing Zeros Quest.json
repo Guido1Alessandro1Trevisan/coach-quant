@@ -1,0 +1,16 @@
+{
+  "problem name": "Trailing Zeros Quest",
+  "problem text": "Consider the factorial of 100. How many consecutive zero digits appear at its decimal ending?",
+  "problem solution": "We prove this by noting that each trailing zero in a factorial arises from factors of 10 within the product, and each 10 is composed of 2 and 5. Since there are far more factors of 2 than 5 in 100!, the count of 5s controls the number of trailing zeros. The number of 5s in 100! is the sum $$\\left\\lfloor \\frac{100}{5} \\right\\rfloor + \\left\\lfloor \\frac{100}{5^2} \\right\\rfloor + \\left\\lfloor \\frac{100}{5^3} \\right\\rfloor + \\cdots$$ until the denominators exceed 100. We have $$\\left\\lfloor \\frac{100}{5} \\right\\rfloor = 20, \\left\\lfloor \\frac{100}{25} \\right\\rfloor = 4, \\left\\lfloor \\frac{100}{125} \\right\\rfloor = 0,$$ and higher powers of 5 exceed 100, so they do not contribute. Thus the total count of trailing zeros is $$20 + 4 = 24.$$",
+  "valid answer": "Valid Answers: 24",
+  "problem tags": [
+    "Factorials",
+    "Number Theory"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Count how many factors of 5 occur in the prime factorization of 100!, as each 5 contributes to a trailing zero.",
+  "problem firm": [
+    "Akuna Capital"
+  ],
+  "question id": "63058973897488471962"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Climb",
+  "problem text": "If you roll a fair 6-sided die three consecutive times, what is the likelihood that the three outcomes appear in strictly ascending order?",
+  "problem solution": "First, observe that a fair six-sided die can yield any of the integers 1 through 6 on each roll. Hence, there are $6^3 = 216$ total possible outcomes when rolling the die three times. Next, note that a strictly increasing sequence of three rolls, say $x < y < z$, involves choosing any 3 distinct values from the set $\\{1,2,3,4,5,6\\}$ and arranging them in one fixed ascending order. The count of ways to pick 3 distinct values from 6 is $\\binom{6}{3} = 20$. Each choice yields exactly one strictly increasing sequence. Therefore, the total number of favorable outcomes is 20. Dividing by the total possible outcomes, we get the probability $$\\frac{20}{216} = \\frac{5}{54}$$. Thus, the chance of rolling a strictly ascending triple is $\\frac{5}{54}$",
+  "valid answer": "Valid Answers: 5/54",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "How many 3-element subsets of $\\{1,...,6\\}$ can be placed in a strictly ascending order?",
+  "problem firm": [
+    "Belvedere Trading"
+  ],
+  "question id": "53006376120573012696"
+}

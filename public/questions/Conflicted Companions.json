@@ -1,0 +1,16 @@
+{
+  "problem name": "Conflicted Companions",
+  "problem text": "Jimmy has $8$ companions. He will only ask $5$ to his gathering. Nevertheless, two of his companions are not on good terms and refuse to be present together. What are the possible arrangements of attendees considering this limitation?",
+  "problem solution": "An uncomplicated approach to determine this is to find the total number of methods to choose people and then find how many of those involve the two friends who are in conflict. There are $\\binom{8}{5} = 56$ total methods to select $5$ individuals from the $8$. To count the methods including both friends who cannot attend together, assume these two are already chosen for the group of $5$, and we must choose $3$ more individuals from the remaining $(8-2) = 6$ friends. Picking $3$ more from the remaining $6$, this gives $\\binom{6}{3} = 20$ combinations. Thus, there are $56 - 20 = 36$ ways to choose the guests.",
+  "valid answer": "Valid Answers: $36$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Find the overall number of ways to invite $people$ and then subtract the ones that include $both$.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "48452501829173978122"
+}

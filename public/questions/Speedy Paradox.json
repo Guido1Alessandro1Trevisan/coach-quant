@@ -1,0 +1,15 @@
+{
+  "problem name": "Speedy Paradox",
+  "problem text": "A racecar driver completes a one-mile circuit at a steady speed of $30$ miles per hour during his initial lap. Let $x$ represent the constant velocity of the racecar driver on the subsequent lap. Determine the value of $x$ for which the driver should travel on the second lap to achieve an average speed of $60$ miles per hour over the two laps. If such a value of $x$ does not exist, indicate $-1$.",
+  "problem solution": "Examine the pace at which the vehicle progresses. To reach an average speed of $60$ mph over both laps, the cumulative time for the two laps should be $2$ minutes. Given the racecar driver covered the first mile at $30$ mph, he took $2$ minutes for the first lap. Therefore, the driver would need to finish the second lap instantly, implying an infinite speed. This is unfeasible, so $x = -1$.",
+  "valid answer": "Valid Answers: $-1$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Reflect on the pace at which the vehicle moves. To achieve an average speed of $60$ mph for the two laps, the combined time for both laps must be $2$ minutes.",
+  "problem firm": [
+    "Transmarket Group"
+  ],
+  "question id": "69014988753234831521"
+}

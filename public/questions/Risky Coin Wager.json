@@ -1,0 +1,17 @@
+{
+  "problem name": "Risky Coin Wager",
+  "problem text": "Alice and Bob both receive a coin and are able to select the likelihood of flipping heads for their coin. After determining their probabilities, they toss their coins. If both show heads ($HH$), Alice gives Bob $6$. If both show tails ($TT$), Alice gives Bob $4$. For any other result, Bob gives Alice $5$. However, Alice needs to disclose her chosen probability of success, $p_1$, before Bob chooses his. Given that $p_1 = \\frac{3}{4}$, find the interval of probabilities $p_2$ for which Bob has a positive expected return on the game, expressed in the form $(a,1)$, where $a$ is a simplified fraction. Determine $a$.",
+  "problem solution": "Let Bob's probability of success be $p_2$. Analyze the expected returns as a function of $p_1$ and $p_2$. The likelihood of $HH$ is $p_1p_2$. The likelihood of $TT$ is $(1-p_1)(1-p_2)$. The likelihood of $HT$ or $TH$ is $p_2(1-p_1) + p_1(1-p_2) = p_1 + p_2 - 2p_1p_2$. From Bob's viewpoint, the gains for each scenario are $6,4,$ and $-5$. Thus, the expected return is $6p_1p_2 + 4(1-p_1)(1-p_2) - 5(p_1 + p_2 - 2p_1p_2) = 6p_1p_2 + 4 - 4p_1 - 4p_2 + 4p_1p_2 - 5p_1 - 5p_2 + 10p_1p_2 = 20p_1p_2 - 9p_2 - 9p_1 + 4$. Rearranging, this becomes $(20p_1 - 9)p_2 + (4 - 9p_1)$. Assuming $p_1 = \\dfrac{9}{20}$, we find $p_2 > \\dfrac{9p_1 - 4}{20p_1 - 9}$. Setting $p_1 = \\dfrac{3}{4}$, we find $p_2 > \\dfrac{11}{24}$, which is our solution.",
+  "valid answer": "Valid Answers: [ $20/\\text{mo}$ billed annually to Invest in your future today, $30/\\text{mo}$ billed monthly to try it out and see if it's worth it ]",
+  "problem tags": [
+    "Conditional Probability",
+    "Games",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define Bob's probability of heads as $p_2$. Examine the expected return as a function of $p_1$ and $p_2$. Then, resolve for $p_2$ using $p_1$ as an inequality.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "69428660810440509613"
+}

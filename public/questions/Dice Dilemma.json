@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Dilemma",
+  "problem text": "Imagine a game where you repeatedly throw a die until either a $5$ or a $6$ appears. If a $5$ comes up, you collect the total of all your previous throws (not counting the $5$ itself). If a $6$ is rolled, you earn nothing. You cannot choose to stop the game prematurely. What is the expected value of your payout?",
+  "problem solution": "Considering that the outcome is either a $5$ or a $6$, the probability of rolling a $5$ or $6$ is $1/2$ each. If a $6$ is rolled, the payout is $0$. If a $5$ appears, you collect the sum of the previous throws. Define $P$ as your payout, then $\\mathbb{E}[P] = \\mathbb{E}[P \\mid 6]\\mathbb{P}[6] + \\mathbb{E}[P \\mid 5]\\mathbb{P}[5]$ where rolling a $5$ and rolling a $6$ are considered as separate events. The first part is zero since its conditional expectation is $0$. Thus, $\\mathbb{E}[P] = \\dfrac{1}{2} \\cdot \\mathbb{E}[P \\mid 5]$. On average, it requires $3$ rolls to achieve a $5$, as the probability per attempt is $1/3$. Therefore, there are $2$ rolls on average before obtaining the $5$. The expected value of each of these throws is $2.5$, since they must be numbers between $1$ and $4$ in those initial $2$ rolls. Given that all results are equally probable, we find that $\\mathbb{E}[P \\mid 5] = 2 \\cdot 2.5 = 5$. Hence, $\\mathbb{E}[P] = \\dfrac{1}{2} \\cdot 5 = \\dfrac{5}{2}$.",
+  "valid answer": "Valid Answers: $\\frac{5}{2}$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Given that the outcome is either a $5$ or a $6$, the probability of rolling a $5$ or $6$ is $1/2$ each. If a $6$ is rolled, the payout is $0$. If a $5$ appears, you collect the sum of the previous throws. Define $P$ as your payout, then $\\mathbb{E}[P] = \\mathbb{E}[P \\mid 6]\\mathbb{P}[6] + \\mathbb{E}[P \\mid 5]\\mathbb{P}[5]$ where rolling a $5$ and rolling a $6$ are considered as separate events.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "52374832742382829671"
+}

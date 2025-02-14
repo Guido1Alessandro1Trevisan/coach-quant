@@ -1,0 +1,16 @@
+{
+  "problem name": "Slope Swaperoo",
+  "problem text": "Imagine two datasets $X$ and $Y$ where $\\text{Var}(X) = 10$ and $\\text{Var}(Y) = 20$. Conduct a linear regression $y \\sim \\alpha_x + \\beta_x x$ and find $\\beta_x = 1$. Now, consider the regression $x \\sim \\alpha_y + \\beta_y y$. Determine $\\beta_y$. If it cannot be calculated, use $-100$.",
+  "problem solution": "Let $r$ represent the Pearson Correlation Coefficient between $X$ and $Y$. Thus, $\\beta_x = r \\dfrac{\\sigma_y}{\\sigma_x}$ and $\\beta_y = r \\dfrac{\\sigma_x}{\\sigma_y}$. Hence, $$\\dfrac{\\beta_y}{\\beta_x} = \\dfrac{\\sigma_x^2}{\\sigma_y^2} \\iff \\beta_y = \\beta_x \\dfrac{\\sigma_x^2}{\\sigma_y^2} = 1 \\cdot \\dfrac{10}{20} = \\dfrac{1}{2}$$",
+  "valid answer": "Valid Answers: $\\frac{1}{2}$",
+  "problem tags": [
+    "Linear Regression",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $\\rho$ as the Pearson Correlation Coefficient between $X$ and $Y$. Then $\\beta_x = r \\dfrac{\\sigma_y}{\\sigma_x}$ and $\\beta_y = r \\dfrac{\\sigma_x}{\\sigma_y}$.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "57480739320407846189"
+}

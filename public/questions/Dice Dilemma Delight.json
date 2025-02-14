@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Dilemma Delight",
+  "problem text": "You can select between rolling a single fair six-sided die once and taking its top value as your payoff, or rolling one hundred fair six-sided dice and taking the average of the top values of all 100 dice as your payoff. The game costs 4 to enter. Which choice is preferable?",
+  "problem solution": "Consider the expected payoff in each scenario. For one fair six-sided die, the expected value is $$E_1 = \\dfrac{1 + 2 + 3 + 4 + 5 + 6}{6} = 3.5$$. For one hundred fair six-sided dice, each die also has expectation 3.5, so the mean of 100 dice is still $$3.5$$. Hence, both approaches yield the same expected payoff of 3.5. Since the game costs 4, the expected net result for either option is $$3.5 - 4 = -0.5$$, indicating a loss on average. Nonetheless, the probability of exceeding 4 differs: a single die has a 50% chance of rolling at least a 4, whereas the 100-dice average is highly concentrated around 3.5, making it much less likely to exceed 4. Therefore, if you prefer a higher likelihood of reaching or surpassing 4, rolling one die is better. Conversely, if you value lower variance, the 100-dice option is more consistent but very unlikely to pay 4 or more. In conclusion, while both have identical expected payoffs, the single-die game offers a greater possibility of covering the cost of 4, whereas the 100-dice game is more stable but almost guaranteed to land near 3.5.",
+  "valid answer": "Valid Answers: Pick the single die if you want a larger chance of earning 4 or greater; otherwise, they have identical expected values of 3.5, which is below the cost of 4.",
+  "problem tags": [
+    "Expected Value",
+    "Probability",
+    "Risk Analysis"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Compare the expected outcomes in both methods and note how often you might exceed 4 in each.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "50823436428363835189"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Lucky Even Tosses",
+  "problem text": "A fair die with $6$ sides is thrown repeatedly until the total of all outcomes on the top faces is even. Determine the expected count of rolls needed.",
+  "problem solution": "We analyze this based on whether the initial roll is even or odd. Let $N$ represent the number of rolls required, and define $E$ as the scenario where the initial roll is even. Then $$ \\mathbb{E}[N] = \\mathbb{E}[N \\mid E]\\mathbb{P}[E] + \\mathbb{E}[N \\mid E^c]\\mathbb{P}[E^c] $$ Given that the die is unbiased, $\\mathbb{P}[E] = \\mathbb{P}[E^c] = \\frac{1}{2}$. When the initial roll results in an even number, the task is completed in one roll, thus $\\mathbb{E}[N \\mid E] = 1$. If the initial roll is odd, we need another odd roll to achieve an even total. With a probability of $\\frac{1}{2}$ for rolling an odd number in each trial, the number of rolls required to get another odd roll follows $\\text{Geom}(0.5)$, which has an expected value of $2$. So, $\\mathbb{E}[N \\mid E^c] = 3$, considering the first roll. Consequently, the overall expectation is $\\mathbb{E}[N] = \\frac{1+3}{2} = 2$.",
+  "valid answer": "Valid Answers: $2$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the parity of the initial roll.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "09245929481063332846"
+}

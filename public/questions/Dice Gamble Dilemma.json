@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Gamble Dilemma",
+  "problem text": "You have a standard $6$-sided dice and you roll it. You can decide to accept your roll and gain the shown amount in dollars. Alternatively, you may opt for a second roll, but if the total of your two rolls reaches $7$ or more, you must pay the value of your first roll. If the total of both rolls is under $7$, you gain the amount shown on the second roll in dollars. Assuming you make the best possible choices, what is your expected earnings?",
+  "problem solution": "The initial insight is that if we roll a $3, 4, 5,$ or $6$, it isn't advisable to roll again. This is because the only way to improve is to roll a larger number, but any of these initial rolls would inevitably result in a sum exceeding $7$. Therefore, we should consider only rolling again if we get a $1$ or $2$. For a roll of $1$, there is a $\\dfrac{1}{6}$ likelihood of losing $1$ (if the second roll is a $6$). Otherwise, we earn $1, 2, \\dots, 5$, each with a probability of $\\dfrac{1}{6}$. Thus, the expected earnings if we reroll is $\\dfrac{1}{6} \\cdot (-1) + \\dfrac{1+2+3+4+5}{6} = \\dfrac{7}{3} > 1$. This suggests rolling again for a $1$ is advantageous. For a $2$, the probability of losing $2$ is $\\dfrac{1}{3}$ (if we roll a $5$ or $6$). Otherwise, we gain $1, 2, 3,$ or $4$ with equal probability $\\dfrac{1}{6}$. Therefore, the expected value if rerolling is $\\dfrac{1}{3} \\cdot (-2) + \\dfrac{1+2+3+4}{6} = 1 < 2$. This indicates we should retain a roll of $2$. Consequently, we keep all rolls except $1$, and for a $1$, we roll again. This provides an expected value of $\\dfrac{\\frac{7}{3} + 2 + 3 + 4 + 5 + 6}{6} = \\dfrac{67}{18}$.",
+  "valid answer": "Valid Answers: $67/18$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the outcome based on the value of the $cube$ and determine the expected $payout$ for each potential $reroll$.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "60021607277761793524"
+}

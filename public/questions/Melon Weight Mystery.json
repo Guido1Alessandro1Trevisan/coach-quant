@@ -1,0 +1,16 @@
+{
+  "problem name": "Melon Weight Mystery",
+  "problem text": "Five distinct melons each possess a unique weight. The sums of the weights of every pair of melons form exactly the following ten values: 16,17,18,19,20,21,22,24,25,26. Determine the weights of these five melons, listed from lightest to heaviest.",
+  "problem solution": "We proceed by letting the weights of the melons be $$a\\le b\\le c\\le d\\le e$$. Since there are $$\\binom{5}{2}=10$$ possible pairwise sums and we are given exactly 10 numerical sums, it follows that each of the given sums corresponds to exactly one pair. Next, we add all given sums: $$16+17+18+19+20+21+22+24+25+26=208.$$ Each melon weight appears in exactly four of these pairwise sums, so we have $$4(a+b+c+d+e)=208.$$ Hence, $$a+b+c+d+e=52.$$ Because 16 is the smallest sum and 26 is the largest, we deduce $$a+b=16$$ and $$d+e=26.$$ Then, $$c=52-(a+b)-(d+e)=52-16-26=10.$$ The sum 25 is the next largest, which must be $$c+e=25,$$ giving $$e=15,$$ and then $$d=26-e=11.$$ Now from $$a+b=16$$ and noting the next smallest sum, 17, must be $$a+c,$$ we get $$a=17-10=7.$$ It follows that $$b=16-7=9.$$ Checking all pairs confirms we recover precisely the set 16,17,18,19,20,21,22,24,25,26 without repetition. Therefore, the melon weights are $$7,9,10,11,15.$",
+  "valid answer": "Valid Answers: 7,9,10,11,15",
+  "problem tags": [
+    "Number Theory",
+    "Problem Solving"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Observe that each weight is counted exactly four times when you sum together all pairwise combinations.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "11151120026600385925"
+}

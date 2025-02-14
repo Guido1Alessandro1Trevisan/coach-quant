@@ -1,0 +1,17 @@
+{
+  "problem name": "Lucky Door Rollers",
+  "problem text": "Imagine there are 100 distinct doors, each containing exactly $1$. You repeatedly toss a fair 100-sided die 100 total times. Each time you roll a particular number, you open the corresponding door and collect the $1$ if it has not been opened yet. What is the expected total amount of money that you will collect by the end of the 100 rolls?",
+  "problem solution": "We denote the doors as Door 1, Door 2, $\\ldots$, Door 100, and let the random variable $ X $ represent the total number of distinct doors that are opened at least once. Because each distinct door successfully yields exactly $1$ if opened, the total amount of money collected equals $ X $. To compute $ E[X] $, let $ X_i $ be the indicator random variable for the event that Door $ i $ is opened at least once in the 100 rolls. Then $ X = \\sum_{i=1}^{100} X_i $. By linearity of expectation, we have: $ E[X] = \\sum_{i=1}^{100} E[X_i] $. We note that $ E[X_i] $ is just the probability that Door $ i $ is opened at least once. Since each die roll is equally likely to show any number from 1 to 100, the probability that Door $ i $ is never opened across 100 rolls is $ \\left(\\frac{99}{100}\\right)^{100} $. Therefore, the probability that Door $ i $ is opened at least once is $ 1 - \\left(\\frac{99}{100}\\right)^{100} $. So, $ E[X_i] = 1 - \\left( \\frac{99}{100}\\right)^{100} $. Summing over all 100 doors, we get: $ E[X] = \\sum_{i=1}^{100} \\left[1 - \\left( \\frac{99}{100}\\right)^{100}\\right] = 100 \\left[1 - \\left(\\frac{99}{100}\\right)^{100}\\right] $. Numerically, $ \\left(\\frac{99}{100}\\right)^{100} \\approx 0.3642 $, so the expected total is approximately $ 100 \\times (1 - 0.3642) = 63.58 $. Consequently, the expected value of the amount of money collected is about 63.58 dollars.",
+  "valid answer": "Valid Answers: Approximately 63.58, or exactly 100(1 - (99/100)^100)",
+  "problem tags": [
+    "Expected Value",
+    "Probability",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Try calculating the chance that any one particular door is not chosen at all.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "64440179871254392262"
+}

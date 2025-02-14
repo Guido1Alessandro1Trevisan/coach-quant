@@ -1,0 +1,16 @@
+{
+  "problem name": "Tripod Balance Challenge",
+  "problem text": "We construct a table using a circular disc and three legs. The legs are attached to the edge of the circular disc. What is the chance that the table remains stable?",
+  "problem solution": "Let's position the first leg at any random position on the edge. The second leg should ideally be $\\frac{1}{4}^{\\text{th}}$ of the circumference away from the first leg (visualize the circle, and you will notice that the average location for the second leg is midway between the first leg and the diametrically opposite point). Finally, for the table to be stable, the center (center of mass) must lie within the triangle formed by the three legs. Therefore, there is $\\frac{1}{4}^{\\text{th}}$ of the circumference available to place the third leg, ensuring the table's stability. Thus, the probability is $\\frac{1}{4}$.",
+  "valid answer": "Valid Answers: $\\frac{1}{4}$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "What insights can we gain about the center of mass of the table in relation to the legs to ensure the table is stable?",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "43812382776182374487"
+}

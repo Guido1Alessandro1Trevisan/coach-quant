@@ -1,0 +1,16 @@
+{
+  "problem name": "Flip Gamble Gain",
+  "problem text": "Two unbiased coins are tossed simultaneously. You gain $2$ if there is precisely one head. However, you lose $7$ if both coins show heads. What is your expected gain or loss for a single play of this game?",
+  "problem solution": "The outcomes for this game are $TT$, $HT$, $TH$, and $HH$. $TT$ results in $0$ since no heads appear. $HT$ and $TH$ both result in $2$ since there is exactly one head. $HH$ results in a loss of $7$ as per the conditions given. Since each outcome has the same probability, the expected gain or loss is $\\dfrac{0+2+2-7}{4} = -\\dfrac{3}{4}$.",
+  "valid answer": "Valid Answers: $-\\frac{3}{4}$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Two unbiased coins are tossed at once. You earn $2$ for each head that shows up, but you lose $7$ if both coins show heads. What is your expected gain or loss for a single round of this game?",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "58054836818732348372"
+}

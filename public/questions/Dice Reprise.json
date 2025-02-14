@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Reprise",
+  "problem text": "Francisco tosses a fair die and notes the outcome. He then continues to roll the die until he rolls a number that is at least as great as the first roll. Let $N$ represent the count of additional rolls he makes after the initial one. Calculate $\\mathbb{E}[N]$.",
+  "problem solution": "The chance of getting a number at least as great as the initial number depends on the number from the first roll. Thus, we should use $X_1$, the number rolled first, as a condition. This implies that $\\mathbb{E}[N] = \\mathbb{E}[\\mathbb{E}[N \\mid X_1]]$. For a given $X_1$, there are $7-X_1$ outcomes on the die that are at least $X_1$, making the probability of rolling at least $X_1$ on any roll $\\dfrac{7-X_1}{6}$. Consequently, the expected number of rolls needed is $\\dfrac{6}{7-X_1}$. Substituting this into the expression and applying LOTUS, $\\mathbb{E}[N] = \\mathbb{E}\\left[\\dfrac{6}{7-X_1}\\right] = \\displaystyle \\sum_{i=1}^6 \\dfrac{6}{7-i} \\cdot \\dfrac{1}{6} = \\dfrac{49}{20}$.",
+  "valid answer": "Valid Answers: $49/20$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Use the first roll's value to condition the problem. Following this, determine the distribution of rolls needed to surpass the first roll's value.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "09604433179455798165"
+}

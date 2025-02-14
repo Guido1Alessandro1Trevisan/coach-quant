@@ -1,0 +1,16 @@
+{
+  "problem name": "Fraction Fibbing",
+  "problem text": "Consider the fraction series 1/1, 1/2, 1/3, 1/5, 1/8. Determine the fraction that appears next in this pattern.",
+  "problem solution": "First, observe that the sequence of denominators appears to be part of the Fibonacci numbers, defined by the relations $F_1 = 1, F_2 = 1,$ and $F_{n+2} = F_{n+1} + F_n$. In this sequence, we notice the denominators as 1, 2, 3, 5, 8, corresponding to Fibonacci numbers if we shift the standard index slightly. The next Fibonacci number after 8 is 13. Hence, the next term in the given series is $\\frac{1}{13}$. Formally, if $a_n = \\frac{1}{F_{n+1}}$ for a suitable starting index, then $a_6 = \\frac{1}{F_7} = \\frac{1}{13}$.",
+  "valid answer": "Valid Answers: 1/13",
+  "problem tags": [
+    "Sequences",
+    "Number Patterns"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Notice whether the denominators align with a well-known integer progression, particularly one defined recursively.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "54256044177336404704"
+}

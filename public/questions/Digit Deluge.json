@@ -1,0 +1,16 @@
+{
+  "problem name": "Digit Deluge",
+  "problem text": "Determine the number of digits in $99^{99}$.",
+  "problem solution": "The number $99^{99}$ contains 198 digits. We have $99^{99} = 99^{99} \\times \\left(\\frac{100}{100}\\right)^{99} = 100^{99} \\times \\left(\\frac{99}{100}\\right)^{99} = 10^{198} \\times \\left(1-\\frac{1}{100}\\right)^{99} \\approx 10^{198} \\times \\left(1-\\frac{1}{100}\\right)^{100} \\approx 10^{198} \\times \\frac{1}{e}$. Consequently, $99^{99}$ has 198 digits.",
+  "valid answer": "Valid Answers: $198$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "The provided text with the specified formatting is: $ (1-\\frac{1}{n})^n $ converges to $ \\frac{1}{e} $ as $ n $ becomes very large. How can you adjust $ 99^{99} $ to match this expression?",
+  "problem firm": [
+    "Five Rings",
+    "Worldquant"
+  ],
+  "question id": "67403547326030551406"
+}

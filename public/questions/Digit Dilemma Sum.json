@@ -1,0 +1,16 @@
+{
+  "problem name": "Digit Dilemma Sum",
+  "problem text": "Determine the total obtained by summing all integers from 1 up to 100, excluding those that contain either the digit 7 or the digit 8 in their decimal representation. What value results from this calculation?",
+  "problem solution": "We approach this step by step, treating one-digit, two-digit, and then the number 100 separately. First, for one-digit numbers (1 through 9), the digits 7 and 8 are disallowed, so the valid digits are 1, 2, 3, 4, 5, 6, and 9, which sum to $$1+2+3+4+5+6+9=30$$. For two-digit numbers (from 10 through 99), the tens digit may be selected from (1, 2, 3, 4, 5, 6, 9) and the units digit from (0, 1, 2, 3, 4, 5, 6, 9). This yields $$7\\times8=56$$ valid two-digit numbers. To compute their total, observe that for tens digits T in (1, 2, 3, 4, 5, 6, 9) and units digits U in (0, 1, 2, 3, 4, 5, 6, 9), we sum $$\\\\sum(10T+U)=10\\times\\\\sum_{T=1,2,3,4,5,6,9}T\\times 8 + \\\\sum_{U=0,1,2,3,4,5,6,9}U\\times 7$$. Both sums $$\\\\sum_{T=1,2,3,4,5,6,9}T$$ and $$\\\\sum_{U=0,1,2,3,4,5,6,9}U$$ are 30, giving us $$10\\times 30\\times 8 + 30\\times 7=2400+210=2610$$. We then add the single-digit total (30) to obtain $$2610+30=2640$$. Finally, the number 100 contains digits 1 and 0 only, so 7 and 8 do not appear. Hence, 100 is also valid and contributes 100 more, giving a final result of $$2640+100=2740$$.",
+  "valid answer": "Valid Answers: 2740",
+  "problem tags": [
+    "Number Theory",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Separate the set of numbers into those with one digit and those with two digits, then analyze which digits are allowed in each position. Don't forget to check if 100 is allowed and include it if valid.",
+  "problem firm": [
+    "Akuna Capital"
+  ],
+  "question id": "25004168675312885511"
+}

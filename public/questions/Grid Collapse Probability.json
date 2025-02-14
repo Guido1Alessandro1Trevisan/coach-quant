@@ -1,0 +1,16 @@
+{
+  "problem name": "Grid Collapse Probability",
+  "problem text": "Imagine 16 cups arranged in a 4×4 grid. Each time a ball lands in a cup, that entire cup's row and column are removed from play. If each throw is equally likely to land in any of the original 16 positions (even if some positions have been removed), what is the probability that all cups are eliminated in only 4 throws (i.e., in the fewest possible throws)?",
+  "problem solution": "We formally prove that four is indeed the least number of throws required to remove all rows and columns, then compute the probability of achieving this exact scenario.\\n\\n1) Minimum Number of Throws:\\nEach successful throw removes exactly one row and one column. There are 4 rows and 4 columns total, so one requires at least 4 successful throws to remove all of them.\\n\\n2) Probability Computation:\\nBecause each throw is equally likely to land in any of the 16 original positions, we consider the probability that all four throws are \"active\" (i.e., they land on cups in rows and columns not yet removed) without any \"wasted\" throws.\\n\\n- First Throw: Probability of hitting an active cup is $$\\frac{16}{16} = 1$$ since the board is full.\\n- Second Throw: After the first throw, one row and one column are removed, leaving 3 rows and 3 columns for active cups (9 active squares). The probability that the second throw still hits one of these 9 active squares is $$\\frac{9}{16}$$.\\n- Third Throw: Now there are 2 rows and 2 columns left (4 active squares). The probability of hitting one of these squares is $$\\frac{4}{16}$$.\\n- Fourth Throw: Finally, there is exactly 1 row and 1 column (1 active square), and the probability of hitting that square is $$\\frac{1}{16}$$.\\n\\nSince each throw is independent and must all be active, we multiply these probabilities:\\n$$1 \\times \\frac{9}{16} \\times \\frac{4}{16} \\times \\frac{1}{16} = \\frac{9}{1024}.$$\\n\\nThus, the probability of winning in the minimum number of throws (4) is $$\\frac{9}{1024}.$$",
+  "valid answer": "Valid Answers: $$\\frac{9}{1024}$$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Observe how many \"active\" squares remain after each successful shot and compute consecutive probabilities of hitting them in each throw.",
+  "problem firm": [
+    "IMC"
+  ],
+  "question id": "13173997815785058382"
+}

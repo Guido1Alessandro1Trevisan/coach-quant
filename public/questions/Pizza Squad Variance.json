@@ -1,0 +1,16 @@
+{
+  "problem name": "Pizza Squad Variance",
+  "problem text": "A pizza restaurant employs $25$ independent individuals to make pizzas. The standard deviation for the number of pizzas each person makes daily is $60$. Determine the standard deviation of the total daily pizza output for the restaurant.",
+  "problem solution": "Consider $X_1, \\dots, X_{25}$ as the daily pizza output for each worker. Therefore, $T = X_1 + \\dots + X_{25}$ represents the total number of pizzas made daily by the restaurant. Since each worker is independent and has the same variance, $\\text{Var}(T) = 25 \\cdot \\text{Var}(X_1)$. Hence, $\\sigma_T = \\sqrt{\\text{Var}(T)} = 5 \\cdot \\sigma_{X_1} = 5 \\cdot 60 = 300$.",
+  "valid answer": "Valid Answers: $300$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Let $X_1, \\dots, X_{25}$ be the daily pizza output of each worker. Then $T = X_1 + \\dots + X_{25}$ represents the total number of pizzas made each day by the restaurant.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "55790220163376940342"
+}

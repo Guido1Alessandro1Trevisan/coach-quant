@@ -1,0 +1,15 @@
+{
+  "problem name": "Donation Dynamics",
+  "problem text": "You contribute a set amount each week to individuals in the area. If there are $5$ fewer individuals requiring support next week, each will get $2$ more than this week. Sadly, there were $4$ additional people the following week needing aid compared to this week, resulting in everyone getting $1$ less. Determine the amount each person received this week (the week when there were $4$ fewer individuals seeking help).",
+  "problem solution": "Let's set up the scenario. Let a represent the constant amount of money you contribute and $n$ be the number of individuals needing support this week. Then $\\dfrac{a}{n}$ was the amount each received. If there are $5$ fewer individuals in need next week, then each person will get 2 more than this week. This translates to $\\dfrac{a}{n-5} = \\dfrac{a}{n} + 2$. The second condition implies $\\dfrac{a}{n+4} = \\dfrac{a}{n} - 1$. Solve these equations. Multiplying the first equation by $n(n-5)$ gives $na = a(n-5) + 2n(n-5)$, simplifying to $5a = 2n(n-5) = 2n^2 - 10n$. For the second equation, multiplying by $n(n+4)$ results in $nx = a(n+4) - n(n+4)$, simplifying to $4x = n(n+4) = n^2 + 4n$. Subtracting two times the second equation from the first equation results in $-3a = -18n$, indicating that $\\dfrac{a}{n} = 6$.",
+  "valid answer": "Valid Answers: $6$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define the scenario. Let a represent the fixed donation amount, and $n$ be the number of individuals needing support this week. Then $\\dfrac{a}{n}$ was the sum each received. Convert the other statements into equations and solve them.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "44199668969473276228"
+}

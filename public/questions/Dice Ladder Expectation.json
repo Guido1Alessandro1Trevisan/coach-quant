@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Ladder Expectation",
+  "problem text": "Ab rolls a standard and fair $6$-sided die. Following this, if he obtains $k$ on the initial roll, Ab then rolls a fair die with $(6+k)$ sides for his second roll, with possible outcomes $1, 2, \\dots, 6+k$. Determine the expected outcome that Ab will get on his second roll.",
+  "problem solution": "Let $R$ denote the outcome of the second roll. We seek $\\mathbb{E}[R]$. Obviously, the outcomes $R$ can assume depend on the result of the first roll, so we must consider the condition on $X_1$, the initial roll value. Thus, $\\mathbb{E}[R] = \\mathbb{E}[\\mathbb{E}[R \\mid X_1]]$. $\\mathbb{E}[R \\mid X_1]$ represents the expected outcome of a fair $(6+X_1)$-sided die, which is $\\dfrac{(6+X_1) + 1}{2} = \\dfrac{7+X_1}{2}$. Consequently, we compute $\\mathbb{E}[R] = \\mathbb{E}\\left[\\dfrac{7+X_1}{2}\\right] = \\dfrac{7}{2} + \\dfrac{1}{2}\\mathbb{E}[X_1] = \\dfrac{7}{2} + \\dfrac{7}{4} = \\dfrac{21}{4}$. In the final step, we utilize the fact that the expected outcome of a fair die roll is $\\dfrac{7}{2}$.",
+  "valid answer": "Valid Answers: $21/4$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the condition based on the first roll's outcome. What is the mean of the first $n$ positive integers?",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "91403533493424250332"
+}

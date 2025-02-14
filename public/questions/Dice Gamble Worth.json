@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Gamble Worth",
+  "problem text": "Continue rolling a fair die until a number other than $1$ shows up, and the payout is the number on this final roll. Determine the fair worth of this game.",
+  "problem solution": "The mean value for this uniform distribution is $\\frac{2+3+4+5+6}{5} = 4.$",
+  "valid answer": "Valid Answers: $4$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Consider how the sample space is altered and the impact on the expected value computation.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "15232807906822313806"
+}

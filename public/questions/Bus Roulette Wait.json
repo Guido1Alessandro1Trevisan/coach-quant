@@ -1,0 +1,19 @@
+{
+  "problem name": "Bus Roulette Wait",
+  "problem text": "Consider you are waiting for a bus. The bus timetable is regular, with arrivals every $10$ minutes. However, the driver may independently decide to refuel between trips, with a $10\\%$ chance each time, independently of other trips. Note that if the bus refuels, $1$ hour is added to its journey time. If you arrive at any random moment during the day, what is the expected waiting time for the next bus, in minutes?",
+  "problem solution": "No solution found",
+  "valid answer": "Valid Answers: $145/8$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Expected Value",
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Apply the Law of Total Expectation to consider whether the bus makes a refueling stop or not.",
+  "problem firm": [
+    "Goldman Sachs",
+    "Jane Street"
+  ],
+  "question id": "87926922911951367176"
+}

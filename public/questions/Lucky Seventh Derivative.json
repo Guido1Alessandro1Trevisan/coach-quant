@@ -1,0 +1,16 @@
+{
+  "problem name": "Lucky Seventh Derivative",
+  "problem text": "Determine the value of $f^{(7)}(0)$, given that $f(x) = (1 + x + 2x^2 + 3x^3)e^{x^2}$.",
+  "problem solution": "Solution not available",
+  "valid answer": "Valid Answers: $8400$",
+  "problem tags": [
+    "Calculus",
+    "Pure Math"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Express $e^{x^2}$ as $\\displaystyle \\sum_{k=0}^{\\infty} \\dfrac{x^{2k}}{k!}$. Substitute this into the function and expand the series. Then, calculate $c_7 \\cdot 7!$ for each series, where $c_7$ is the term associated with $x^7$.",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "39683394920055829093"
+}

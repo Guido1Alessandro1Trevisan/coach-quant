@@ -1,0 +1,17 @@
+{
+  "problem name": "Linear Curve Quest",
+  "problem text": "Given three coordinate points (0,4), (2,4), and (2,6), determine the line that best fits these data points in the least-squares sense.",
+  "problem solution": "We label the given points as $$(x_1,y_1)=(0,4), (x_2,y_2)=(2,4), (x_3,y_3)=(2,6).$$ Suppose the best fit line is of the form $$y = mx + b,$$ where $$m$$ is the slope and $$b$$ is the intercept. The least squares approach prescribes that $$m = \\frac{n\\sum x_i y_i - (\\sum x_i)(\\sum y_i)}{n\\sum x_i^2 - (\\sum x_i)^2} \\text{ and } b = \\frac{1}{n}\\Bigl(\\sum y_i - m\\sum x_i\\Bigr),$$ where $$n=3.$$ We compute the sums: $$\\sum x_i = 0 + 2 + 2 = 4,\\quad \\sum y_i = 4 + 4 + 6 = 14,\\quad \\sum x_i^2 = 0^2 + 2^2 + 2^2 = 8,\\quad \\sum x_i y_i = (0)(4) + (2)(4) + (2)(6) = 20.$$ Plugging these into the slope formula, we get: $$m = \\frac{3 \\cdot 20 - 4 \\cdot 14}{3 \\cdot 8 - 4^2} = \\frac{60 - 56}{24 - 16} = \\frac{4}{8} = 0.5.$$ Next, we calculate the intercept: $$b = \\frac{1}{3}\\bigl(14 - 0.5 \\cdot 4\\bigr) = \\frac{1}{3} \\times 12 = 4.$$ Therefore, the best fit line is $$y = 0.5x + 4.$$",
+  "valid answer": "Valid Answers: y=0.5x+4",
+  "problem tags": [
+    "Linear Regression",
+    "Algebra",
+    "Least Squares"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Recall that the slope and intercept for a least squares fit can be computed using the formulas for linear regression.",
+  "problem firm": [
+    "Belvedere Trading"
+  ],
+  "question id": "95957552308881853672"
+}

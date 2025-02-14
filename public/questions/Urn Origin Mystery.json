@@ -1,0 +1,16 @@
+{
+  "problem name": "Urn Origin Mystery",
+  "problem text": "Consider two urns. The first urn contains w1 white balls and r1 red balls, and the second urn contains w2 white balls and r2 red balls. One urn is selected at random, and then a single ball is drawn from the chosen urn. If the drawn ball is white, what is the probability that this ball originated from the first urn?",
+  "problem solution": "We designate U1 as the event that urn 1 is selected, U2 as the event that urn 2 is selected, and W as the event that a white ball is drawn. By assumption, each urn is equally likely to be chosen, so $$P(U_1)=\\tfrac{1}{2}$$ and $$P(U_2)=\\tfrac{1}{2}.$$ The probability of drawing a white ball given urn 1 is chosen is $$P(W\\mid U_1)=\\dfrac{\\text{w1}}{\\text{w1}+\\text{r1}},$$ and the probability of drawing a white ball given urn 2 is chosen is $$P(W\\mid U_2)=\\dfrac{\\text{w2}}{\\text{w2}+\\text{r2}}.$$ We are interested in the posterior probability $$P(U_1\\mid W),$$ which we compute using Bayes' Theorem: $$P(U_1\\mid W)=\\dfrac{P(W\\mid U_1)\\,P(U_1)}{P(W\\mid U_1)\\,P(U_1)+P(W\\mid U_2)\\,P(U_2)}.$$ Substituting the values, we have $$P(U_1\\mid W)=\\dfrac{\\bigl(\\tfrac{\\text{w1}}{\\text{w1}+\\text{r1}}\\bigr)\\bigl(\\tfrac{1}{2}\\bigr)}{\\bigl(\\tfrac{\\text{w1}}{\\text{w1}+\\text{r1}}\\bigr)\\bigl(\\tfrac{1}{2}\\bigr)+\\bigl(\\tfrac{\\text{w2}}{\\text{w2}+\\text{r2}}\\bigr)\\bigl(\\tfrac{1}{2}\\bigr)}=\\dfrac{\\tfrac{\\text{w1}}{\\text{w1}+\\text{r1}}}{\\tfrac{\\text{w1}}{\\text{w1}+\\text{r1}}+\\tfrac{\\text{w2}}{\\text{w2}+\\text{r2}}}.$$ This fraction formally expresses the probability that the white ball came from urn 1, given that a white ball was observed.",
+  "valid answer": "Valid Answers: $$\\dfrac{\\tfrac{\\text{w1}}{\\text{w1}+\\text{r1}}}{\\tfrac{\\text{w1}}{\\text{w1}+\\text{r1}}+\\tfrac{\\text{w2}}{\\text{w2}+\\text{r2}}}$$",
+  "problem tags": [
+    "Bayes Theorem",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Begin by labeling events for each urn selection and use Bayes' Theorem to combine these with the probability of drawing a white ball.",
+  "problem firm": [
+    "Credit Suisse"
+  ],
+  "question id": "99777365616006392576"
+}

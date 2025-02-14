@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice vs Coinface",
+  "problem text": "Suppose you roll a fair six-sided die exactly 100 times and sum up the resulting face values, calling this total X. Next, flip a fair coin 400 times and record the total number of heads, calling this total Y. What is the probability that X is strictly greater than Y?",
+  "problem solution": "First, let us identify the relevant distributions. The total X is the sum of 100 independent rolls of a fair six-sided die, while Y is the count of heads in 400 independent fair coin flips.<br/>1) For a single fair die roll, the possible outcomes are 1,2,3,4,5,6, each with probability $$\\frac{1}{6}$$. The expected value of one roll is $$\\mathbb{E}[\\text{die}] = 3.5$$, and the variance of a single roll is $$\\mathbb{V}[\\text{die}] = \\frac{35}{12}.$$ Because X is the sum of 100 such independent rolls, we get:<br/>$$\\mathbb{E}[X] = 100 \\times 3.5 = 350,$$<br/>$$\\mathbb{V}[X] = 100 \\times \\frac{35}{12} = \\frac{3500}{12} \\approx 291.6667.$$<br/>2) For Y, each coin flip is a Bernoulli random variable that equals 1 with probability $$\\tfrac{1}{2}$$ (heads) and 0 with probability $$\\tfrac{1}{2}$$ (tails). Thus, Y follows a binomial distribution with parameters n=400 and p=1/2. Its expectation and variance are:<br/>$$\\mathbb{E}[Y] = 400 \\times \\frac{1}{2} = 200,$$<br/>$$\\mathbb{V}[Y] = 400 \\times \\frac{1}{2} \\times \\frac{1}{2} = 100.$$<br/>3) We are interested in the probability $$\\mathbb{P}(X > Y).$$ Define the difference $$W = X - Y.$$ Then the expectation of W is:<br/>$$\\mathbb{E}[W] = \\mathbb{E}[X] - \\mathbb{E}[Y] = 350 - 200 = 150,$$<br/>and the variance of W (because X and Y are independent) is:<br/>$$\\mathbb{V}[W] = \\mathbb{V}[X] + \\mathbb{V}[Y] = \\frac{3500}{12} + 100 = \\frac{3500}{12} + \\frac{1200}{12} = \\frac{4700}{12} \\approx 391.6667.$$<br/>Hence the standard deviation of W is $$\\sqrt{391.6667} \\approx 19.78.$$<br/>4) Since X and Y both involve large numbers of independent trials, by the Central Limit Theorem we can approximate X and Y by normal distributions. Thus, W can be approximated by a normal distribution with mean 150 and variance 391.6667. We wish to find $$\\mathbb{P}(W > 0) = \\mathbb{P}(Z > -\\frac{150}{19.78})$$ where Z is a standard normal random variable. The ratio is about 7.58, and the probability that a standard normal variable exceeds -7.58 (i.e., that Z is greater than -7.58) is extraordinarily close to 1. In other words, using this normal approximation, the probability that the die-sum exceeds the coin-heads-sum is effectively 1.<br/>5) Therefore, the probability that X > Y is approximately 1, to many decimal places. Any more precise calculation would require careful binomial and convolution-based analysis, but the normal approximation makes it evident that the chance is overwhelmingly close to certain.",
+  "valid answer": "Valid Answer: Approximately 1",
+  "problem tags": [
+    "Probability",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Compare their expectations and use the Central Limit Theorem to approximate the sum distributions.",
+  "problem firm": [
+    "Hudson River Trading"
+  ],
+  "question id": "10278294173387853908"
+}

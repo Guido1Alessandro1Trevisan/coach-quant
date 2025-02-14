@@ -1,0 +1,18 @@
+{
+  "problem name": "Cycle Chronicles",
+  "problem text": "Consider $C_n$ as the count of cycles in a random permutation of $\\{1,2,\\dots, 2n\\}$ that have a length greater than $n$. Determine $\\displaystyle \\lim_{n \\rightarrow \\infty} \\mathbb{E}[C_n]$. The solution is of the form $\\ln(q)$ for some rational number $q$. Identify $q$.",
+  "problem solution": "Initially, we need to calculate the expected number of $k$-cycles in the permutation where $k > n$. Sum these from $n+1$ to $2n$ to find $\\mathbb{E}[C_n]$. Assume some $n+1 \\leq k \\leq 2n$. Define $X_i$ as the indicator for the value $i$ being part of a cycle of length $k$. Then $T = \\dfrac{\\displaystyle \\sum_{i=1}^{2n}X_i}{k}$ gives the total number of $k$-cycles, accounting for rotations ($k$ such rotations per $k$-cycle). By linearity of expectation, $\\mathbb{E}[T] = \\dfrac{1}{k}\\displaystyle \\sum_{i=1}^{2n} \\mathbb{E}[X_i] = \\dfrac{2n}{k}\\mathbb{E}[X_1]$. $\\mathbb{E}[X_1]$ is the probability that $1$ is part of a $k$-cycle. Given that there are $(2n)!$ permutations of $\\{1,2,\\dots, 2n\\}$, there are $\\displaystyle \\binom{2n-1}{k-1}$ ways to choose $k-1$ more elements for the $k$-cycle. Once chosen, there are $(k-1)!$ ways to order those elements, and $(2n-k)!$ ways to arrange the remaining $2n-k$ elements. Therefore, the probability that $1$ is in a cycle is $\\dfrac{\\binom{2n-1}{k-1}(k-1)!(2n-k)!}{(2n)!} = \\dfrac{1}{2n}$. Thus, $\\mathbb{E}[T] = \\dfrac{1}{k}$ after substituting. This indicates that the expected number of $k$-cycles for $1 \\leq k \\leq 2n$ is $\\dfrac{1}{k}$. Thus, $\\mathbb{E}[C_n]$ is the sum of these from $n+1$ to $2n$. Specifically, $\\mathbb{E}[C_n] = \\displaystyle \\sum_{k = n+1}^{2n} \\dfrac{1}{k} = \\displaystyle \\sum_{k = n+1}^{2n} \\dfrac{1}{\\frac{k}{n}} \\cdot \\dfrac{1}{n}$. This resembles a Riemann Integral. Let $x = \\dfrac{k}{n}$ so $dx = \\dfrac{1}{n}$ (this is currently a discrete sum, so $dx$ represents the change between terms). The lower limit of our integral is $x_L = \\dfrac{n+1}{n} \\rightarrow 1$, while the upper limit is $x_U = \\dfrac{2n}{n} = 2$. As $n \\rightarrow \\infty$, this sum converges to the Riemann Integral $\\displaystyle \\int_1^2 \\dfrac{1}{x}dx = \\ln(2)$. Consequently, $q = 2$.",
+  "valid answer": "Valid Answers: $2$",
+  "problem tags": [
+    "Combinatorics",
+    "Calculus",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Begin by determining the expected number of $k$-cycles in the permutation when $k > n$. Then, add these from $n+1$ to $2n$ to find $\\mathbb{E}[C_n]$. Utilize linearity of expectation to compute this. You will obtain a sum that might be rewritten to resemble a Riemann Integral.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "40747160127455355770"
+}

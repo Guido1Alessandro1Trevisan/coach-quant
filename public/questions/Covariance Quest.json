@@ -1,0 +1,16 @@
+{
+  "problem name": "Covariance Quest",
+  "problem text": "Given the following details: $\\mathbb{E}[X_1] = -3$, $\\mathbb{E}[X_2] = 7$, $\\text{Var}[X_1] = 24$, $\\text{Var}[X_2] = 6$. Determine the greatest possible value for $\\text{Cov}(X_1, X_2)$.",
+  "problem solution": "The correlation coefficient $\\rho$ is expressed as $\\rho = \\frac{\\text{Cov}(X_1, X_2)}{\\sigma_1 \\sigma_2}, \\text{ where } \\sigma_1^2 = \\text{Var}(X_1) \\text{ and } \\sigma_2^2 = \\text{Var}(X_2).$ It is known that the correlation coefficient must fulfill $-1 \\leq \\rho \\leq 1.$ $-1 \\leq \\frac{\\text{Cov}(X_1, X_2)}{\\sigma_1 \\sigma_2} \\leq 1$ $-1 \\leq \\frac{\\text{Cov}(X_1, X_2)}{12} \\leq 1$ $-12 \\leq \\text{Cov}(X_1, X_2) \\leq 12$ The greatest possible value for $\\text{Cov}(X_1, X_2)$ is $12$.",
+  "valid answer": "Valid Answers: $12$",
+  "problem tags": [
+    "Covariance",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider utilizing the definition of the correlation coefficient",
+  "problem firm": [
+    "Akuna Capital"
+  ],
+  "question id": "96044401599863858586"
+}

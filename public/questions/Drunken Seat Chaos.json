@@ -1,0 +1,16 @@
+{
+  "problem name": "Drunken Seat Chaos",
+  "problem text": "There are 100 individuals queued to board an airplane. Define the $i$th individual in the queue as holding a ticket for seat $i$ on the plane. The first individual, who is inebriated, chooses a random seat on the plane to occupy with equal likelihood. The remaining 99 individuals are sober and will occupy their designated seat unless it is occupied, in which case they will select a random open seat. You are the last individual in the queue. What is the chance that you end up in your designated seat?",
+  "problem solution": "This can be addressed using symmetry. Consider your seat and the seat of the intoxicated passenger. Either your seat is filled before the intoxicated passenger's seat, or vice versa. Since there is no distinguishing feature between your seat and the intoxicated passenger's seat, each passenger who must select a random seat will have a uniform probability of occupying either your seat or the intoxicated passenger's seat, provided both remain available. Therefore, the probability is $\\frac{1}{2}$.",
+  "valid answer": "Valid Answers: $0.5$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "This can be solved using symmetry—try focusing only on your seat and the seat of the intoxicated passenger.",
+  "problem firm": [
+    "Imc"
+  ],
+  "question id": "39191127736358400426"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Colorful Coincidence",
+  "problem text": "In front of you are three fair dice, each with $6$ sides. Among them, two are blue and one is red. Determine the probability that exactly one of the blue dice has the same number as the red die.",
+  "problem solution": "Assume the red die shows a number $x$ where $x \\in (1, 6)$. There are $2$ blue dice that could show the same number $x$ as the red die. The chance for one blue die to match the red die is $\\dfrac{1}{6}$, and for the other blue die not to match is $\\dfrac{5}{6}$. Hence, the probability that precisely one blue die matches is $2 \\cdot \\dfrac{5}{6} \\cdot \\dfrac{1}{6} = \\dfrac{5}{18}$.",
+  "valid answer": "Valid Answers: $5/18$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Make the problem simpler by assigning the red die a random number value $x \\in (1-6)$",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "08419339092139205739"
+}

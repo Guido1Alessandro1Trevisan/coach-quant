@@ -1,0 +1,17 @@
+{
+  "problem name": "Goat Gambit",
+  "problem text": "You are participating in a game show where there are three doors to select from. One door conceals a car, while the other two hide goats. You choose one door at random and tell the host your selection. The host, being aware of what is behind each door, opens a different door that you didn't select, revealing a goat. You then have the option to either stick with your original choice or switch to the other unopened door. What is the probability of winning the car if you decide to switch? The probability can be assessed as follows: Initially, the chance of winning the car by sticking with your first choice is $\\frac{1}{3}$, due to one car being behind the three doors. Once the host reveals a goat, the probability of winning by switching increases to $\\frac{2}{3}$. Hence, to maximize your odds of getting the car, the best strategy is to switch doors.",
+  "problem solution": "Consider the strategy where you choose to switch doors. With this approach, you will only lose if your first selection is the door hiding the car, which occurs with a probability of $\\frac{1}{3}$. Alternatively, you will win when your first choice is a door with a goat behind it, which occurs with a probability of $\\frac{2}{3}$.",
+  "valid answer": "Valid Answers: $\\frac{2}{3}$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "How might Bayes' theorem be applied to solve the problem of conditional probability?",
+  "problem firm": [
+    "Imc",
+    "Squarepoint Capital"
+  ],
+  "question id": "99357887132758877670"
+}

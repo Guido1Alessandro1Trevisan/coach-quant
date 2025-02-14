@@ -1,0 +1,16 @@
+{
+  "problem name": "Prime Pair Puzzle",
+  "problem text": "Randomly choose two different prime numbers from the range $1$ to $20$, inclusive. Determine the probability that their sum results in an even number.",
+  "problem solution": "The primes not exceeding $20$ are $2, 3, 5, 7, 11, 13, 17,$ and $19$, adding up to $8$ numbers. There are $8 \\cdot 7 = 56$ possible ordered pairs for selecting $2$ numbers. The sum is even if $2$ is not chosen. Hence, there are $7 \\cdot 6 = 42$ ways to select two primes excluding $2$. Thus, the probability is $\\dfrac{42}{56} = \\dfrac{3}{4}$.",
+  "valid answer": "Valid Answers: $3/4$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The primes not exceeding $20$ are $2, 3, 5, 7, 11, 13, 17,$ and $19$, adding up to $8$ numbers.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "16374496337762807208"
+}

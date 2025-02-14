@@ -1,0 +1,16 @@
+{
+  "problem name": "Unstable Timing Challenge",
+  "problem text": "You possess two cords, each of which consumes 30 minutes to burn entirely from one end, but they do not necessarily burn at a steady speed. Using as many ignitions as needed, you want to measure out a total duration of 45 minutes. How can you achieve this?",
+  "problem solution": "First, label the ropes as Rope A and Rope B. We aim to measure 45 minutes in a rigorous, stepwise manner.\\n\\n1. At time \\(t = 0\\), ignite Rope A from both extremities simultaneously. This rope will be entirely spent precisely when 15 minutes have elapsed, because a rope burning from both ends consumes its entire length in half the time that it would burn from just one end.\\n\\n2. As soon as Rope A finishes burning (at \\(t = 15\\) minutes), ignite Rope B from a single end. By construction, Rope B will require exactly 30 minutes to burn if lit from just one end (irregular burn rates do not matter for total burn time).\\n\\n3. Once you see that Rope B has been completely consumed, an additional 30 minutes will have passed since \\(t = 15\\). The total measured time from the original start at \\(t = 0\\) is thus \\(15 + 30 = 45\\) minutes.\\n\\nHence, by first measuring 15 minutes with Rope A (burning it from both ends) and then 30 minutes with Rope B (burning from one end), you reliably measure out a total span of 45 minutes regardless of how unevenly each rope might burn internally.",
+  "valid answer": "A valid concise answer is: Light one rope at both ends (15 minutes), then light the other rope at one end (30 minutes), totaling 45 minutes.",
+  "problem tags": [
+    "Puzzles",
+    "Logic"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Attempt to measure a shorter duration first by lighting a rope at both ends, then use the other rope for the remaining time.",
+  "problem firm": [
+    "Marshall Wace"
+  ],
+  "question id": "23646016625439529615"
+}

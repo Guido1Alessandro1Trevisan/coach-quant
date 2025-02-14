@@ -1,0 +1,18 @@
+{
+  "problem name": "Dice Profit Anticipation",
+  "problem text": "Consider two unbiased $10$-sided dice, one red and one blue, each with numbers from $1$ to $10$. Both dice are thrown at the same time. The game ends if they land on the same number. If the blue die shows a number at least $3$ more than the red die, you earn $1$ and can roll both dice again. In all other cases, you re-roll without earning anything. The game only concludes when both dice display identical numbers. What is your expected earning from this game?",
+  "problem solution": "Define $P$ as the expected reward. The likelihood that the blue die exceeds the red die by at least $3$ is $\\dfrac{7}{25}$. This can be checked by considering the red die's value and noting that the number of favorable outcomes when the red die shows $k$ is $8-k$. Summing these results gives $28$ out of $100$ equally possible outcomes. The probability that both dice show the same number is $\\dfrac{1}{10}$. Thus, the probability of different numbers is $\\dfrac{31}{50}$. Applying the Law of Total Expectation to the first roll, $P = \\dfrac{7}{25}\\cdot (P+1) + \\dfrac{31}{50}P$. If the blue die is at least $3$ more than the red die, it's as if the game restarts with $1$ instead of $0$. Solving for $e$, we find $\\dfrac{1}{10}P = \\dfrac{7}{25}$, leading to $P = \\dfrac{14}{5}$.",
+  "valid answer": "Valid Answers: $14/5$",
+  "problem tags": [
+    "Discrete Random Variables",
+    "Expected Value",
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "The chance that the blue die is at least $3$ greater than the red die is $\\dfrac{7}{25}$.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "33954123650949131395"
+}

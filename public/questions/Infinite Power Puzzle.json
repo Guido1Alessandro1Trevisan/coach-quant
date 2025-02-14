@@ -1,0 +1,17 @@
+{
+  "problem name": "Infinite Power Puzzle",
+  "problem text": "Consider an unending exponent tower formed by repeatedly using the same base x, namely $x^{x^{x^{\\cdots}}}$. If the value of this infinite construction is given as 2, determine the numerical value of x.",
+  "problem solution": "We begin by defining the infinite tower T = $x^{x^{x^{\\ldots}}}$. Suppose the expression converges to some value T, and we know that T = 2. By the definition of an infinite exponent tower, we have $$T = x^T.$$ Substituting T = 2 into this equation yields $$\\displaystyle 2 = x^2.$$ Solving for x gives $$\\displaystyle x = \\sqrt{2}.$$ Next, we check that such a tower is well-defined for this value of x. In general, an infinitely nested exponent tower converges under certain numerical conditions (typically,  $e^{-e} < x \\le e^{1/e}$ ). Since $$\\sqrt{2}$$ is within this range, the tower does converge and the reasoning is valid. Therefore, the only solution is $\\displaystyle x = \\sqrt{2}.$",
+  "valid answer": "Valid Answers: $\\sqrt{2}$",
+  "problem tags": [
+    "Exponent Tower",
+    "Tetration",
+    "Algebra"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Label the infinite tower by T, so T = $x^T$, and use the fact that T = 2.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "53055945884705654893"
+}

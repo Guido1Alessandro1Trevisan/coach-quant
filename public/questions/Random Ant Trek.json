@@ -1,0 +1,17 @@
+{
+  "problem name": "Random Ant Trek",
+  "problem text": "An ant is located on a vertex of a cube and can only move along the $edges$. The ant is disoriented and chooses its path randomly along the edges. How many edges, on average, will the ant traverse to arrive at the opposite vertex of the cube?",
+  "problem solution": "Consider the cube has eight vertices: the starting vertex is $v_0$, three vertices adjacent to the starting point are $v_1$, three vertices adjacent to the target endpoint are $v_2$, and the target endpoint is $v_3$. Define $E[v_i]$ as the expected number of edges the ant travels to reach $v_3$ starting from $v_i$. This problem can be framed as finding the expected hitting time in a Markov chain: $$ E[v_0] = 1 + \\frac{1}{3}\\times E[v_1] + \\frac{1}{3}\\times E[v_1] + \\frac{1}{3}\\times E[v_1] $$ $$ E[v_1] = 1 + \\frac{1}{3}\\times E[v_0] + \\frac{1}{3}\\times E[v_2] + \\frac{1}{3}\\times E[v_2] $$ $$ E[v_2] = 1 + \\frac{1}{3}\\times E[v_1] + \\frac{1}{3}\\times E[v_1] + \\frac{1}{3}\\times E[v_3] $$ $$ E[v_3] = 0 $$ By substituting $E[v_3]$ and solving, we find $E[v_0]=10$.",
+  "valid answer": "Valid Answers: $10$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Frame the problem as figuring out the expected hitting time in a Markov chain. Identify your states and transition probabilities. Note, there should not be $8$ states.",
+  "problem firm": [
+    "Worldquant"
+  ],
+  "question id": "79621818788092821490"
+}

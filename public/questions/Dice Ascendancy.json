@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Ascendancy",
+  "problem text": "You throw a fair $6$-sided die two times. Determine the likelihood that the number on the first roll is strictly lower than the number on the second roll.",
+  "problem solution": "There are two methods to address this problem. The first method involves counting each possible scenario where the first roll is smaller than the second roll. The second method first calculates the probability of differing rolls and then assesses the chance of the first roll being strictly less than the second.**Solution 1** When a fair 6-sided die is rolled twice, there are $$6$$ potential results for the first roll and $$6$$ possible results for the second roll, resulting in a total of $$6 \\times 6 = 36$$ possible outcomes for both rolls. A favorable outcome is one where the first roll's value is less than the second roll's. Enumerating these outcomes, we have: 1. If the initial roll is $$1$$, the subsequent roll could be $$2, 3, 4, 5,$$ or $$6$$. (5 favorable outcomes) 2. If the initial roll is $$2$$, the subsequent roll could be $$3, 4, 5,$$ or $$6$$. (4 favorable outcomes) 3. If the initial roll is $$3$$, the next roll could be $$4, 5,$$ or $$6$$. (3 favorable outcomes) 4. If the first roll is $$4$$, the next roll could be $$5$$ or $$6$$. (2 favorable outcomes) 5. If the first roll is $$5$$, the next roll could be $$6$$. (1 favorable outcome) 6. If the first roll is $$6$$, no favorable outcomes exist. Summing all favorable outcomes gives $$5 + 4 + 3 + 2 + 1 = 15$$. The probability that the first roll is strictly less than the second roll is the count of favorable outcomes over the total outcomes. Thus, the probability is $$\\frac{15}{36}$$ which simplifies to $$\\frac{5}{12}$$.**Solution 2** For the first roll to be strictly less than the second, consider these aspects: 1. Distinct roll results: The two rolls must differ for one to be smaller than the other. With $$6$$ potential outcomes per roll, after the first roll, $$5$$ outcomes remain for the second roll that differ from the first, leading to a $$\\frac{5}{6}$$ probability that the second roll differs. 2. Lesser roll initially: Given the rolls differ, there are two outcomes: either the first roll is less, or it is greater. These are equally probable. Hence, the probability that the first roll is less than the second, given they differ, is $$\\frac{1}{2}$$. Multiplying these probabilities gives the overall probability. The chance that the first roll is strictly less than the second is $$\\frac{5}{6} \\times \\frac{1}{2} = \\frac{5}{12}$$.",
+  "valid answer": "Valid Answers: $5/12$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "For the first roll's value to be strictly less than the second's, the two rolls must differ. What is the likelihood that the two rolls differ? Given that the rolls differ, what is the probability that the first roll's value is strictly less than the second's?",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "91151899280779984625"
+}

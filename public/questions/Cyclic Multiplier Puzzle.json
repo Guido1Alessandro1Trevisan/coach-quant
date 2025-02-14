@@ -1,0 +1,15 @@
+{
+  "problem name": "Cyclic Multiplier Puzzle",
+  "problem text": "Find the least positive integer that concludes with the digit $4$ such that relocating its final digit to the front (e.g., $1234 \\Rightarrow 4123$) results in the original number being multiplied by $4$.",
+  "problem solution": "Clearly, the integer cannot be $4$, so it must have more than $1$ digit. Suppose it has precisely $2$ digits, expressed as $a4$ for some integer $a$. We seek $4(10a + 4) = 40 + a$, since $40 + a$ corresponds to $4a$. This simplifies to $39a = 24$, which is not achievable. Next, observe that the initial digit of our integer must be $1$, since multiplying by $4$ transforms the first digit to $4$. Thus, for a three-digit number, it can be expressed as $1a4$, with $a$ an integer. We require $4(104 + a) = 410 + a$, leading to $3a = -6$. This is also impossible, as $a$ must be non-negative. Now, examine a $4$-digit number. Here, it can be formed as $1ab4$. We must meet $4(1004 + 100a + 10b) = 4100 + 10a + b$, implying $390a + 39b = 84$. This cannot hold since $39$ does not divide $84$. A pattern is emerging. The number on the right side with $n$ non-fixed digits is $4 \\cdot 10^n + 10^{n-1}$, while the number on the left side is $4 \\cdot 10^n + 16$. Therefore, the task is to find the smallest $n$ such that their difference, $10^{n-1} - 16$, is divisible by $39$. The terms on the left prior to division are all $39 \\cdot 10^k$ for $0 \\leq k \\leq n-1$. Try matching this representation to the previous instance. For $n = 3$, this value is $984$, which isn't divisible by $39$. However, for $n = 4$, the number on the right becomes $9984 = 39 \\cdot 256$. Consequently, the number should take the form $1abcd4$, with $4$ free digits in the middle. The equation to resolve in non-negative integers is $39000a + 3900b + 390c + 39d = 9984$. Clearly, $a = 0$ since all digits must be non-negative. Dividing by $39$, we deduce that $100b + 10c + d = 256 = 100 \\cdot 2 + 10 \\cdot 5 + 6$, yielding $a = 0$, $b = 2$, $c = 5$, and $d = 6$. Therefore, the final answer is $102564$. A quick check confirms that $410256 = 4 \\cdot 102564$.",
+  "valid answer": "Valid Answers: [ $20/mo \\text{ billed annually to Invest in your future today, } 30/mo \\text{ billed monthly to try it out and see if its worth it } ]",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Note that the first digit of the integer must be $1$, as multiplying by $4$ changes the first digit to $4$. Try expressing the number in its decimal form and rearranging it; see what patterns arise concerning the left-hand side (LHS) term and what that implies for the right-hand side (RHS).",
+  "problem firm": [
+    "Worldquant"
+  ],
+  "question id": "27588933198802633237"
+}

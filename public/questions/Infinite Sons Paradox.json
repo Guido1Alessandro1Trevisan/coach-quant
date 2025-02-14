@@ -1,0 +1,15 @@
+{
+  "problem name": "Infinite Sons Paradox",
+  "problem text": "On the planet Earth II, each pair of parents favors having a male child over a female child. Assume the probability of having a male or female child is the same, and that the gender of each child is statistically independent. If each pair continues to have more children until they have a male child, at which point they cease having children, what percentage of males does this population tend towards over time?",
+  "problem solution": "Solution not available",
+  "valid answer": "Valid Answers: [ $50$, $0.5$ ]",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "This question does not provide a hint.",
+  "problem firm": [
+    "Imc"
+  ],
+  "question id": "68737739463738852349"
+}

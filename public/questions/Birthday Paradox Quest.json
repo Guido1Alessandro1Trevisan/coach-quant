@@ -1,0 +1,18 @@
+{
+  "problem name": "Birthday Paradox Quest",
+  "problem text": "With a year consisting of $365$ days, determine the number of individuals required in a group so that the chance of at least $2$ sharing the same birthday exceeds $\\frac{1}{2}$.",
+  "problem solution": "For the likelihood of at least two individuals sharing a birthday to surpass $\\frac{1}{2}$, the chance of everyone having distinct birthdays must be below $\\frac{1}{2}$. Assume there are $n$ individuals. The probability of no birthday matches is $\\frac{365}{365} \\times \\frac{364}{365} \\times \\ldots \\times \\frac{365-n+1}{365} < \\frac{1}{2}$. The minimum $n$ for this condition is $23$, calculated using a calculator.",
+  "valid answer": "Valid Answers: $23$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "For the chance of at least two people sharing a birthday to be higher than $\\frac{1}{2}$, the probability of no shared birthdays should be under $\\frac{1}{2}$.",
+  "problem firm": [
+    "Five Rings",
+    "Goldman Sachs",
+    "Two Sigma"
+  ],
+  "question id": "99397590792315178124"
+}

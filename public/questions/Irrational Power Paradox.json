@@ -1,0 +1,16 @@
+{
+  "problem name": "Irrational Power Paradox",
+  "problem text": "Is there a scenario in which raising an irrational base to an irrational exponent yields a rational result?",
+  "problem solution": "First, let us restate the question in a formal manner. We wish to examine whether it is possible for a number of the form $$\\alpha^\\beta$$, where both $$\\alpha$$ and $$\\beta$$ are irrational, to be rational. We consider the classic construction known as the Gelfond-Schneider technique, which often proceeds by contradiction or a clever redefinition.\\n\\nDefine $$x = \\sqrt{2}^{\\sqrt{2}}.$$ It remains unknown whether $$x$$ is rational or irrational. Regardless of that detail, consider the power: $$(x)^{\\sqrt{2}} = \\bigl(\\sqrt{2}^{\\sqrt{2}}\\bigr)^{\\sqrt{2}} = \\sqrt{2}^{\\sqrt{2} \\times \\sqrt{2}} = \\sqrt{2}^{2} = 2,$$ which is conclusively rational.\\n\\nThere are two cases to notice:\\n1. If $$x = \\sqrt{2}^{\\sqrt{2}}$$ is rational, then we have directly found an example of an irrational base (namely $$\\sqrt{2}$$) raised to an irrational power (namely $$\\sqrt{2}$$) giving a rational output (namely $$x$$).\\n2. On the other hand, if $$x = \\sqrt{2}^{\\sqrt{2}}$$ is irrational, then in transforming it via the exponent $$\\sqrt{2}$$, we explicitly arrive at a rational result (namely 2), again showing an instance of an irrational raised to an irrational giving a rational result.\\n\\nThus, whichever case holds true for $$x,$$ it follows that there exists at least one pair of irrational numbers whose power gives a rational result. Therefore, the answer is yes, an irrational number raised to an irrational power can indeed be rational.",
+  "valid answer": "Valid Answers: Yes. A known example is $$(\\sqrt{2}^{\\sqrt{2}})^{\\sqrt{2}} = 2.$$",
+  "problem tags": [
+    "Exponents",
+    "Number Theory"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the expression $$(\\sqrt{2}^{\\sqrt{2}})^{\\sqrt{2}}.$$",
+  "problem firm": [
+    "BNP Paribas"
+  ],
+  "question id": "18912435731764593344"
+}

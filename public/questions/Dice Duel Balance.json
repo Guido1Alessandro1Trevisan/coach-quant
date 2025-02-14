@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Duel Balance",
+  "problem text": "Imagine Alice uses $m$ $(6$-sided dice) while Bob uses $n$ $(8$-sided dice). Let $S_m$ represent the total of the faces showing on all $m$ of Alice's dice, and $T_n$ denote the total of the faces showing on all $n$ of Bob's dice. Determine the product $m^*n^*$, where $m^*$ and $n^*$ are the smallest whole numbers of $m$ and $n$ such that $\\mathbb{P}[S_{m^*} < T_{n^*}] = \\mathbb{P}[S_{m^*} > T_{n^*}]$.",
+  "problem solution": "We begin solving this by recognizing that the probability mass functions (PMFs) of a fair $6$-sided and $8$-sided die are symmetrically distributed around their respective averages, $3.5$ and $4.5$. Consequently, the PMFs of their independent totals are also symmetric. Specifically, $S_m$ is centered around $3.5m$, and $T_n$ is centered around $4.5n$ where $m$ is the count of Alice's rolls and $n$ is the count of Bob's rolls. To meet the problem's requirement, we need $3.5m = 4.5n$, or equivalently, $7m = 9n$ (by multiplying both sides by 2). Since 7 and 9 have no common factors, the smallest integer solution is $m^* = 9$ and $n^* = 7$, resulting in $m^*n^* = 63$.",
+  "valid answer": "Valid Answers: $63$",
+  "problem tags": [
+    "Events",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Observe that if $X_1, \\dots, X_k$ are independent and identically distributed (IID) random variables with PMFs symmetric about their mean, then $X_1 + \\dots + X_k$ will also be symmetric around its mean.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "11131187031110765698"
+}

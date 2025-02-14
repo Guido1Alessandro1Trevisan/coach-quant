@@ -1,0 +1,23 @@
+{
+  "problem name": "Heads Prediction Puzzle",
+  "problem text": "You possess a collection of $100$ coins. Among these, $1$ coin is biased with heads on both sides. The other $99$ coins are standard fair coins. You choose a coin at random from this collection and flip it $10$ times. It shows heads on all $10$ flips. Determine the probability that the coin you have chosen is the biased coin.",
+  "problem solution": "Define the following events: - $U$: The event that the chosen coin is the biased coin. - $U'$: The event that the chosen coin is a standard fair coin. - $H$: The event that the coin shows heads $10$ consecutive times. We need to find the probability that the chosen coin is the biased one, given that it shows heads on all $10$ flips, which is denoted as $P(U|H)$. Bayes' Theorem provides: $$ P(U|H)=\\frac{P(H|U)P(U)}{P(H)} $$ 1. Determine $P(H|U)$: This is the likelihood of obtaining $10$ heads in succession if the coin is the biased one. Since a biased double-headed coin always shows heads, $P(H|U) = 1$. 2. Determine $P(H)$: This is the likelihood of obtaining $10$ heads in succession with any coin. There are two possible cases: Case 1: The coin is the biased coin. The chance of selecting this coin is $P(U)=\\frac{1}{100}$. If selected, it always shows heads, so the probability of $10$ consecutive heads is $P(H|U)=1$. Case 2: The coin is a standard fair coin. The chance of selecting a fair coin is $P(U')=\\frac{99}{100}$. For a fair coin, the chance of showing heads on one flip is $\\frac{1}{2}$, so the likelihood of $10$ consecutive heads is $\\left(\\frac{1}{2}\\right)^{10}$. To find $P(H)$, the overall probability of $10$ consecutive heads, we combine the probabilities of these two cases: $$ P(H)=\\left( \\frac{1}{100} \\times 1 \\right) + \\left( \\frac{99}{100} \\times \\left(\\frac{1}{2}\\right)^{10} \\right) $$ Combining all this, we find: $$ P(U|H) = \\frac{1 \\times \\frac{1}{100}}{\\left( \\frac{1}{100} \\times 1 \\right) + \\left( \\frac{99}{100} \\times \\left(\\frac{1}{2}\\right)^{10} \\right)} = \\frac{1024}{1123} \\approx 0.912 $$ The likelihood that the coin you picked is the double-headed coin, given that it showed heads all $10$ times, is approximately $91.2\\%$.",
+  "valid answer": "Valid Answers: $1024/1123$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Initially, identify the events involved. There is the event of choosing the biased coin, and the event of a coin showing heads $10$ consecutive times. Label these events as $U$ and $H$ respectively. Bayes' Theorem gives $P(U|H)=\\frac{P(H|U)P(U)}{P(H)}$. You have determined all necessary values to compute this formula.",
+  "problem firm": [
+    "Akuna Capital",
+    "Citadel",
+    "Five Rings",
+    "Hudson River Trading",
+    "Jane Street",
+    "Sig",
+    "Transmarket Group",
+    "Two Sigma"
+  ],
+  "question id": "67388029754743454580"
+}

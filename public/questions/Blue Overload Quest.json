@@ -1,0 +1,17 @@
+{
+  "problem name": "Blue Overload Quest",
+  "problem text": "In front of you is a basket with $2$ red orbs and $1$ blue orb. Each turn, an orb is drawn at random and then replaced with a blue orb, no matter its color. Since replacements are always with blue orbs, determine the expected number of draws required until all orbs are blue.",
+  "problem solution": "Define $$ B_1 $$ as the number of draws required to change from $$ 1 $$ blue to $$ 2 $$ blue orbs in the basket. Likewise, define $$ B_2 $$ as the number of draws needed to advance from $$ 2 $$ blue to $$ 3 $$ blue orbs in the basket. We then need to determine $$ T = B_1 + B_2 $$, the total number of draws needed to transition to $$ 3 $$ blue orbs. By the linearity of expectation, $$ \\mathbb{E}[T] = \\mathbb{E}[B_1] + \\mathbb{E}[B_2] $$. Note that $$ B_1 \\sim \\text{Geom}\\left(\\frac{2}{3}\\right) $$, as each draw has a $$ \\frac{2}{3} $$ chance of selecting a red orb (which will then be replaced by a blue one). Similarly, $$ B_2 \\sim \\text{Geom}\\left(\\frac{1}{3}\\right) $$. The expected values are $$ \\frac{3}{2} $$ and $$ 3 $$, respectively, leading to the solution $$ \\mathbb{E}[T] = \\frac{3}{2} + 3 = \\frac{9}{2} $$.",
+  "valid answer": "Valid Answers: $9/2$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $B_1$ as the number of draws required to transition from $1$ blue to $2$ blue orbs in the basket. Similarly, define $B_2$ as the number of draws needed to transition from $2$ blue to $3$ blue orbs in the basket. Then compute: $T = B_1 + B_2$",
+  "problem firm": [
+    "Citadel",
+    "Sig"
+  ],
+  "question id": "31843320202948502947"
+}

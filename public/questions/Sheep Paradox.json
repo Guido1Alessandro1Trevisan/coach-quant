@@ -1,0 +1,15 @@
+{
+  "problem name": "Sheep Paradox",
+  "problem text": "On this mystical grassland, tigers are logical and put their survival first, with a preference for consuming sheep over grass. Suppose at each moment, a single tiger can consume one sheep, and after doing so, the tiger itself becomes a sheep. There are one hundred tigers and a single sheep on the enchanted grassland. How many sheep remain?",
+  "problem solution": "In the $1$-tiger scenario, the tiger will consume the sheep as it does not have to fear being consumed afterward. In the $2$-tiger scenario, each tiger understands that if they consume the sheep, they will then be consumed by the other tiger after becoming a sheep. Therefore, neither tiger will consume the sheep. In the $3$-tiger scenario, the sheep will be consumed because each tiger knows that if it consumes the sheep and becomes a sheep, there will be $2$ tigers remaining, and neither tiger will consume in the $2$-tiger scenario. In the $4$-tiger scenario, each tiger realizes that if it consumes the sheep, it will then be consumed after turning into a sheep, as they know the sheep is consumed in the $3$-tiger scenario. By following this reasoning, it can naturally be shown that if the count of tigers is even, the sheep will not be consumed. If the count is odd, the sheep will be consumed.",
+  "valid answer": "Valid Answers: [ $20/\\text{mo}$ billed annually to Invest in your future today, $30/\\text{mo}$ billed monthly to try it out and see if its worth it ]",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Start with a simpler case of the problem. In the $1$-tiger scenario, the tiger will consume the sheep as it does not have to fear being consumed afterward.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "71942627015857675047"
+}

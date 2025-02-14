@@ -1,0 +1,17 @@
+{
+  "problem name": "Hidden Color Paradox",
+  "problem text": "A cube measuring $3 \\times 3 \\times 3$ consists of $27$ smaller cubes each $1 \\times 1 \\times 1$, originally all white. Next, every face of the $3 \\times 3 \\times 3$ cube is painted red, and then the cube is taken apart into its $1 \\times 1 \\times 1$ units again. You pick a random small cube and observe that the $5$ visible faces are white. What is the likelihood that the unseen face is red? (Note: each cube orientation is equally probable)",
+  "problem solution": "Consider $$ R $$ as the scenario where the hidden side is red and $$ W $$ as the scenario where the visible sides are white. We need $$ \\mathbb{P}[R \\mid W] $$, and using conditional probability this is: $$ \\mathbb{P}[R \\mid W] = \\dfrac{\\mathbb{P}[R \\cap W]}{\\mathbb{P}[W]} $$. The event $$ \\mathbb{P}[R \\cap W] $$ happens when there is $$ 1 $$ red side hidden, and $$ 5 $$ visible sides are white. Among the cubes with exactly $$ 1 $$ red side, there are $$ 6 $$ which are located at the center of each face; other types have either no red paint or $$ 2 $$ or more red sides. Due to random orientation, the probability that the red side is not visible is $$ \\dfrac{1}{6} $$. Thus: $$ \\mathbb{P}[R \\cap W] = \\dfrac{1}{6} \\times \\dfrac{6}{27} = \\dfrac{1}{27} $$. For the denominator, we determine the probability that $$ 5 $$ visible sides are white. This is found by dividing cubes based on red sides count. The central cube is entirely white, so its orientation is irrelevant. Hence, $$ \\mathbb{P}[W] = \\dfrac{1}{27} + \\dfrac{1}{27} = \\dfrac{2}{27} $$. (There is $$ 1 $$ all-white cube, and $$ 6 $$ cubes each with $$ 1 $$ red side, each having $$ \\frac{1}{6} $$ chance to show all white sides) Substituting, we find $$ \\mathbb{P}[R \\mid W] = \\dfrac{1}{2} $$.",
+  "valid answer": "Valid Answers: $\\frac{1}{2}$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider using Bayes' Theorem and the cube's orientation.",
+  "problem firm": [
+    "Citadel",
+    "Jane Street"
+  ],
+  "question id": "67532710554060519778"
+}

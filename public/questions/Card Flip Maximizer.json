@@ -1,0 +1,16 @@
+{
+  "problem name": "Card Flip Maximizer",
+  "problem text": "Imagine you have a standard deck of 52 cards, with exactly 26 red cards and 26 black cards. One by one, you flip over cards without replacing them. Each red card adds +1 to your score, and each black card subtracts 1. At which moment should you stop flipping in order to achieve the greatest possible expected score?",
+  "problem solution": "We formalize the problem by defining a sequence of random variables $$X_1, X_2, \\dots, X_{52}$$, where each $$X_i = +1$$ if the $$i$$th card drawn is red and $$X_i = -1$$ if it is black. Because there are equally many red and black cards, the random sequence of partial sums $$S_k = X_1 + X_2 + \\cdots + X_k$$ forms a fair (symmetric) process. Moreover, at the end of the entire draw, the grand total must be zero (26 red minus 26 black totals 0). Treating $$S_k$$ as a martingale (technical conditions hold due to the symmetry and the fact we are drawing without replacement so that at each draw the expected increment is 0), we apply a fundamental theorem in probability known as Doob's Optional Stopping Theorem. This theorem states that, for any stopping rule $$\\tau$$ bounded between 1 and 52 (i.e., you cannot wait beyond the last card), the expected value of the stopped sum remains the same as the initial sum, namely, $$0$$. Formally, $$\\mathbb{E}[S_\\tau] = S_0 = 0.$$ Therefore, no strategy of selectively stopping based on the observed partial sums can provide an expected value advantage over simply stopping at any other fixed or random time. All strategies have an expected payoff of $$0$$. Thus, to answer the question of when to stop: there is no strategy that yields a strictly better expected score than stopping at any arbitrary time, so your maximum expected earning is $$0$$ regardless of how you attempt to time your stop.",
+  "valid answer": "Valid Answers: 0",
+  "problem tags": [
+    "Probability",
+    "Optimal Stopping"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Think of the partial sums of your score as a fair martingale. Remember that a key property of fair martingales is that you cannot expect to profit from them via a stopping strategy.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "08428237796326598944"
+}

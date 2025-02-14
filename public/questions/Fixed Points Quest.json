@@ -1,0 +1,17 @@
+{
+  "problem name": "Fixed Points Quest",
+  "problem text": "Consider $F_n$ as the count of invariant points of a random bijection $f: S_n \\rightarrow S_n$, where $S_n = \\{1,2,\\dots,n\\}$. Determine $\\lim_{n \\rightarrow \\infty}\\mathbb{P}[F_n = 5]$. The solution is expressed as $\\dfrac{c}{e}$, with $e$ being Euler's number and $c$ a constant. Identify $c$.",
+  "problem solution": "For sufficiently large $n$, the behavior of $F_n$ is approximately $\\text{Binom}(n,1/n)$ because each of the $n$ elements has a likelihood of $1/n$ to be a self-map. However, these events of being invariant points are not independent, as knowing one point is fixed increases the likelihood of another being fixed. Nonetheless, for large $n$, this effect is minimal, nearly making events independent. This can be formally argued to show that the conditions of the Poisson Limit Theorem are satisfied. Thus, as $n \\rightarrow \\infty$, $F_n \\implies \\text{Poisson}(1)$ (indicating convergence in distribution). Consequently, $\\mathbb{P}[F_n = 5]$ converges to $\\dfrac{1}{5!}e^{-5}$, leading to an answer of $\\dfrac{1}{120}$.",
+  "valid answer": "Valid Answers: $\\frac{1}{120}$",
+  "problem tags": [
+    "Discrete Random Variables",
+    "Limit Theorems",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Consider the Poisson Limit Theorem and the approximate behavior of $F_n$ for large $n$.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "13711332651634700345"
+}

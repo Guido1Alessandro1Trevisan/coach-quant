@@ -1,0 +1,17 @@
+{
+  "problem name": "Random Reward Gamble",
+  "problem text": "Imagine generating a random number uniformly from the range $(0,1)$. You have the option to generate more random numbers, paying $0.05$ for each additional number. The decision on how many extra numbers to generate must be made before creating the first random number. Your reward is the highest number out of all generated. With the best possible strategy, what is your expected reward from this game?",
+  "problem solution": "It is established that if $X_1, \\dots, X_n \\sim \\text{Unif}(0,1)$ IID, then for $M_n = \\text{max}\\{X_1,\\dots,X_n\\}$, $\\mathbb{E}[M_n] = \\dfrac{n}{n+1} = 1 - \\dfrac{1}{n+1}$. In fact, it can be proven that $M_n \\sim \\text{Beta}(n,1)$, but this detail is unnecessary for this problem. Specifically, we need to determine $n$ that optimizes our expected reward. If we generate $n$ numbers in total, we effectively perform $n-1$ additional generations. The expected maximum becomes $1 - \\dfrac{1}{n+1}$, and the cost is $\\dfrac{n-1}{20}$ for those extra generations. Hence, our reward in terms of total number of generations is $f(n) = 1 - \\dfrac{1}{n+1} - \\dfrac{n-1}{20}$. We aim to maximize this in $n$, thus we consider $f(n)$ as a continuous function and calculate its derivative with respect to $n$. Setting this derivative to zero to find the maximum gives $f'(n) = \\dfrac{1}{(n+1)^2} - \\dfrac{1}{20} = 0$, leading to $20 = (n+1)^2$. This implies $n = \\sqrt{20} - 1$. Since $n$ is not an integer, we should evaluate the closest integers to this value to determine the expected outcome. Given $4 < \\sqrt{20} < 5$, we evaluate $n = 3$ and $n = 4$ to find the expected value. Substituting directly shows that $f(3) = f(4) = \\dfrac{13}{20}$, resulting in the answer $\\dfrac{13}{20}$.",
+  "valid answer": "Valid Answers: $13/20$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Express the expected reward as a function of $n$, the number of times you generate the uniform numbers. Aim to maximize this with respect to $n$.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "26694608466382258308"
+}

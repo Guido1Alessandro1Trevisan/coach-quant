@@ -1,0 +1,17 @@
+{
+  "problem name": "Opposite Sum Swap",
+  "problem text": "Assume $X$ and $Y$ are perfectly negatively correlated, meaning $\\rho(X,Y) = -1$ with $\\sigma_Y > \\sigma_X$. Determine the correlation between $X+Y$ and $X-Y$.",
+  "problem solution": "Assume $X$ and $Y$ have variances $\\sigma_X^2$ and $\\sigma_Y^2$ respectively. Then $\\text{Cov}(X+Y,X-Y) = \\text{Cov}(X,X) - \\text{Cov}(Y,Y) = \\sigma_X^2 - \\sigma_Y^2$. Likewise, we know that $\\text{Var}(X+Y) = \\sigma_X^2 + \\sigma_Y^2 - 2\\sigma_X\\sigma_Y = (\\sigma_X - \\sigma_Y)^2$, hence $\\sigma_{X+Y} = |\\sigma_X - \\sigma_Y|$. Note the necessity of absolute values here since variance cannot be negative. Similarly, we find that $\\text{Var}(X-Y) = \\sigma_X^2 + \\sigma_Y^2 + 2\\sigma_X\\sigma_Y = (\\sigma_X + \\sigma_Y)^2$, leading to $\\text{Var}(X-Y) = \\sigma_X + \\sigma_Y$. Therefore, it follows that $\\rho(X+Y,X-Y) = \\frac{\\sigma_X^2 - \\sigma_Y^2}{(\\sigma_X+\\sigma_Y)|\\sigma_X - \\sigma_Y|} = \\frac{\\sigma_X - \\sigma_Y}{|\\sigma_X - \\sigma_Y|} = -1$. The $-1$ arises because $\\sigma_Y > \\sigma_X$, making the numerator negative. Alternatively, if $X$ and $Y$ are completely correlated, then $Y = aX + b$ for some constants $a$ and $b$. Given $\\sigma_Y > \\sigma_X$, it implies $|a| > 1$. Thus, $X+Y = X(1+a) + b$ and $X-Y = X(1-a) + b$. Since $|a| > 1$, one of $1+a$ and $1-a$ is positive while the other is negative. Consequently, as these are linear transformations of $X$ with opposing signs, they must have correlation $-1$. Notice this reasoning is independent of whether the correlation of $X$ and $Y$ is $-1$ or $1$.",
+  "valid answer": "Valid Answers: $-1$",
+  "problem tags": [
+    "Covariance",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Assume $X$ and $Y$ have variances $\\sigma_X^2$ and $\\sigma_Y^2$ respectively. Calculate $\\text{Cov}(X+Y,X-Y)$ and their variances using standard formulas.",
+  "problem firm": [
+    "Five Rings",
+    "Transmarket Group"
+  ],
+  "question id": "90495148716682353051"
+}

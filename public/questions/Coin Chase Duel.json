@@ -1,0 +1,20 @@
+{
+  "problem name": "Coin Chase Duel",
+  "problem text": "You and a companion engage in a fair coin game, recording the results of each flip. You emerge victorious if $HTH$ shows up before $HHT$; otherwise, your companion wins. What is the likelihood that your companion wins?",
+  "problem solution": "Both patterns have the subsequence HT. Imagine continuously tossing the coin and noting down outcomes, searching for HT subsequences. For HTH to occur first, HT must not be preceded by an H (as this would result in HHT) and must be followed by another H to form HTH. Therefore, the probability of HTH occurring first is $\\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$ given an HT is present. For HHT to happen first, HT must be preceded by an H, which has a probability of $\\frac{1}{2}$ given an HT is present. These are the sole possible outcomes, forming our sample space $\\frac{1}{2}+\\frac{1}{4}=\\frac{3}{4}$. Thus, the probability your companion wins is $\\frac{1}{2} \\div \\frac{3}{4} = \\frac{2}{3}$, while your probability of winning is $\\frac{1}{4} \\div \\frac{3}{4} = \\frac{1}{3}$. Essentially, HHT has double the chance of appearing before HTH.",
+  "valid answer": "Valid Answers: $2/3$",
+  "problem tags": [
+    "Expected Value",
+    "Conditional Expectation",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Both patterns have the subsequence $HT$. Visualize writing down endless coin toss results and checking for $HT$ subsequences. When does $HTH$ appear prior to $HHT$?",
+  "problem firm": [
+    "Akuna Capital",
+    "Sig",
+    "Worldquant"
+  ],
+  "question id": "71981162743272720674"
+}

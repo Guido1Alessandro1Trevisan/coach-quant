@@ -1,0 +1,17 @@
+{
+  "problem name": "Marble Mirage",
+  "problem text": "We have 50 red and 50 blue marbles, making a total of 100 marbles. These must be divided between two drawers in such a way that no drawer is left empty and no marbles remain outside any drawer. Then, one of the drawers is chosen at random, and a single marble is drawn at random from that drawer. The objective is to arrange the marbles so that the probability of drawing a red marble is maximized.",
+  "problem solution": "First, let us introduce notation. Let the first drawer (D1) contain $$r_1$$ red marbles and $$b_1$$ blue marbles, while the second drawer (D2) contains $$r_2$$ red marbles and $$b_2$$ blue marbles. We know: (1) $$r_1 + r_2 = 50$$ since there are 50 red marbles in total, (2) $$b_1 + b_2 = 50$$ for the 50 blue marbles, and (3) neither drawer is empty, hence $$r_1 + b_1 > 0$$ and $$r_2 + b_2 > 0$$. We select a drawer uniformly at random and then pick a marble at random from that chosen drawer, so the probability of obtaining a red marble is: $$\\dfrac{1}{2} \\times \\dfrac{r_1}{r_1 + b_1} + \\dfrac{1}{2} \\times \\dfrac{r_2}{r_2 + b_2}.$$ Our goal is to find integers $$r_1, b_1, r_2, b_2$$ that maximize this probability under the constraints above.\n\nA helpful maneuver is to isolate a single red marble in D1, thus $$r_1 = 1$$, $$b_1 = 0$$. Since D1 must not be empty, this choice satisfies that requirement with a single red marble. Then, because there are 50 red marbles total, we must place the remaining 49 red marbles in D2, and D2 also gets all 50 blue marbles, so $$r_2 = 49, b_2 = 50$$. This keeps D2 non-empty as well, because it has 99 marbles. An intuitive explanation for why this arrangement is optimal is that by isolating one red marble separately, we ensure that if that drawer is chosen, we have a certainty of drawing a red marble, thus significantly boosting the overall probability. Testing other configurations leads to lower probabilities, so having one drawer containing exactly one red marble and the other containing everything else is the best arrangement.\n\nThus, the formal conclusion is that the configuration that maximizes your chance of drawing a red marble is to put exactly one red marble in one drawer and all remaining marbles in the other drawer.",
+  "valid answer": "Put exactly 1 red marble in one drawer, and put all remaining 49 red marbles and all 50 blue marbles in the other drawer.",
+  "problem tags": [
+    "Probability",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Isolating a single red marble in a drawer to ensure a 100% chance of drawing red from that drawer can greatly increase your overall probability.",
+  "problem firm": [
+    "Maple Analytics",
+    "Quantum Strategies"
+  ],
+  "question id": "26973919947008165763"
+}

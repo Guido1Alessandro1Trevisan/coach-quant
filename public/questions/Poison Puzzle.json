@@ -1,0 +1,18 @@
+{
+  "problem name": "Poison Puzzle",
+  "problem text": "A monarch has $8$ barrels of wine. One barrel contains poison. If anyone consumes any quantity from the poisoned barrel, they will die precisely $1$ month later. There are $3$ servants willing to risk their lives for the monarch to evaluate the barrels. What is the least number of months required to identify the poisoned barrel?",
+  "problem solution": "Each servant can act as a binary signal for each barrel. Thus, only $1$ month is necessary to identify the poisonous barrel. For instance, if the barrels are labeled $K_1, K_2, \\ldots, K_8$, servant $1$ could test $K_1, K_3, K_5, K_7$, servant $2$ could test $K_2, K_3, K_6, K_7$, and servant $3$ could test $K_4, K_5, K_6, K_7$. Each unique outcome of the $3$ servants' fate corresponds to a specific poisoned barrel.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Each servant can act as a binary signal for each barrel.",
+  "problem firm": [
+    "Five Rings",
+    "Goldman Sachs",
+    "Jane Street",
+    "Two Sigma"
+  ],
+  "question id": "74356095643012269920"
+}

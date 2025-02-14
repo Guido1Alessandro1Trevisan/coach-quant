@@ -1,0 +1,19 @@
+{
+  "problem name": "Beta Surprise Hunt",
+  "problem text": "Assume $T, X_1, X_2, \\dots \\sim \\text{Beta}(12, 8)$ are IID. Define $N = \\text{min}\\{n \\in \\mathbb{N} : X_n > T\\}$. Determine $\\mathbb{E}[N]$. If this is infinite, provide $-1$.",
+  "problem solution": "This can be extended to any continuous non-negative distribution $F(x)$ with a probability density function $f(x)$. Let $T = t$. The chance on any given trial that $X_i > t$ is $1 - F(t)$. Therefore, $N \\mid T = t \\sim \\text{Geom}(1 - F(t))$. By applying the Law of Total Expectation, we find $\\mathbb{E}[N] = \\mathbb{E}[\\mathbb{E}[N \\mid T]] = \\mathbb{E}\\left[\\frac{1}{1 - F(T)}\\right] = \\int_0^{\\infty} \\frac{f(t)}{1 - F(t)} \\, dt = -\\ln(1 - F(t))\\big|_0^{\\infty} = \\infty$. Thus, the result is $-1$.",
+  "valid answer": "Valid Answers: $-1$",
+  "problem tags": [
+    "Expected Value",
+    "Conditional Expectation",
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Condition on $T = t$ and apply the Law of Total Expectation.",
+  "problem firm": [
+    "Drw",
+    "Goldman Sachs"
+  ],
+  "question id": "88065669625275134751"
+}

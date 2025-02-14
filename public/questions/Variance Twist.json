@@ -1,0 +1,17 @@
+{
+  "problem name": "Variance Twist",
+  "problem text": "Demonstrate that for two independent random variables, their combined variance is simply the sum of their individual variances.",
+  "problem solution": "We aim to prove $$Var(X+Y) = Var(X) + Var(Y)$$ when X and Y are independent random variables. Begin by recalling the definition of variance:\\n$$Var(X+Y) = E\\big[(X+Y)^2\\big] - \\big(E[X+Y]\\big)^2.$$\\nFirst, we handle the expected value term:\\n$$E[X+Y] = E[X] + E[Y].$$\\nThus:\\n$$\\big(E[X+Y]\\big)^2 = \\big(E[X] + E[Y]\\big)^2.$$/nNext, expand the first term E[(X+Y)^2]:\\n$$E\\big[(X+Y)^2\\big] = E\\big[X^2 + 2XY + Y^2\\big] = E[X^2] + 2E[XY] + E[Y^2].$$\\nBecause X and Y are independent, it follows that E[XY] = E[X]\\,E[Y]. Hence:\\n$$E\\big[(X+Y)^2\\big] = E[X^2] + 2E[X]\\,E[Y] + E[Y^2].$$\\nNow combine these pieces:\\n$$Var(X+Y) = \\Big(E[X^2] + 2E[X]\\,E[Y] + E[Y^2]\\Big) - \\Big(E[X] + E[Y]\\Big)^2.$$\\nUpon expanding \\((E[X] + E[Y])^2\\) and cancelling like terms, the result is:\\n$$Var(X+Y) = \\big(E[X^2] - (E[X])^2\\big) + \\big(E[Y^2] - (E[Y])^2\\big).$$\\nBy definition, this is exactly Var(X) + Var(Y):\\n$$Var(X+Y) = Var(X) + Var(Y).$$\\nThis completes the proof.",
+  "valid answer": "Valid Answers: $$Var(X + Y) = Var(X) + Var(Y)$$",
+  "problem tags": [
+    "Probability",
+    "Statistics"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Apply the definition of variance and use the fact that independence ensures $$E[XY] = E[X]\\,E[Y].$$",
+  "problem firm": [
+    "Cantab Capital",
+    "Jane Street"
+  ],
+  "question id": "36779959298527198823"
+}

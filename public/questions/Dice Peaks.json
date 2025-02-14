@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Peaks",
+  "problem text": "Two unbiased dice are rolled. Determine the probability that the largest number shown is a $4$.",
+  "problem solution": "While a comprehensive enumeration is feasible, an analytical method is presented here. For the peak value to be precisely four, it must be four or less, but greater than three. Mathematically, this is: $P(\\textrm{max} = 4) = P(\\textrm{max} \\leq 4) - P(\\textrm{max} \\leq 3)$ $= \\frac{4}{6} \\times \\frac{4}{6} - \\frac{3}{6} \\times \\frac{3}{6}$ $= \\frac{7}{36}$",
+  "valid answer": "Valid Answers: $7/36$",
+  "problem tags": [
+    "Conditional Probability",
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Though a complete listing approach can be used, a more analytical method might yield better insights. For the highest value to be $4$, it must be no more than $4$, and more than $3$.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "81344931210741087587"
+}

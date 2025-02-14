@@ -1,0 +1,16 @@
+{
+  "problem name": "Light Isolation Puzzle",
+  "problem text": "Consider a $3 \\times 3$ grid of lamps, each of which is lit with probability $\\dfrac{1}{2}$. Determine the probability that no two neighboring (grid cells that share a side) lamps are illuminated.",
+  "problem solution": "Visualize the lamps organized in a matrix: $ \\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\end{bmatrix} $. There are $ 2^9 = 512 $ possible configurations for the lamps being either on or off. Our task is to count the configurations that satisfy the given condition. Focusing on lamp $ 5 $ (the central lamp): If it is illuminated, then $ 2, 4, 6, $ and $ 8 $ must be off. However, $ 1, 3, 7, $ and $ 9 $ can be either on or off, yielding $ 2^4 = 16 $ possibilities. The situation where lamp $ 5 $ is not illuminated is more complicated. If lamp $ 5 $ is off, we examine $ 3 $ scenarios based on the states of lamps $ 4 $ and $ 6 $: **Scenario 1 - Both Illuminated:** If $ 4 $ and $ 6 $ are on, lamps $ 1, 3, 7, $ and $ 9 $ must be off, while $ 2 $ and $ 8 $ can be either on or off. This results in $ 2^2 = 4 $ configurations. **Scenario 2 - One Illuminated:** Assume $ 4 $ is on and $ 6 $ is off; we multiply by $ 2 $ for the opposite case. With $ 4 $ on, $ 1 $ and $ 7 $ must be off, and $ 2 $ and $ 3 $ can be either on or off, resulting in $ 3 $ scenarios. The same reasoning applies for lamps $ 8 $ and $ 9 $, leading to $ 2 \\cdot 3 \\cdot 3 = 18 $ configurations. **Scenario 3 - Both Off:** If both $ 4 $ and $ 6 $ are off, lamps $ 1-3 $ can be all off ($ 1 $ case), exactly one on ($ 3 $ cases), or $ 1 $ and $ 3 $ on with $ 2 $ off ($ 1 $ case), giving a total of $ 5 $ scenarios. The same applies for lamps $ 7-9 $, resulting in $ 5^2 = 25 $ scenarios. Adding these, we find $ 16 + 4 + 18 + 25 = 63 $ favorable configurations, resulting in a final probability of $ \\frac{63}{512} $.",
+  "valid answer": "Valid Answers: $63/512$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Begin by dividing the problem into cases based on whether the middle lamp is illuminated or not.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "83148528573117110072"
+}

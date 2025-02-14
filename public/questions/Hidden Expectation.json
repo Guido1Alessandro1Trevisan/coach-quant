@@ -1,0 +1,17 @@
+{
+  "problem name": "Hidden Expectation",
+  "problem text": "Consider $X_1, X_2, \\dots \\sim \\text{Unif}(0,1)$ independently and identically distributed. Define $N$ as the first index $n$ where $X_n = \\text{max}\\{X_1, \\dots, X_n\\}$. Determine $\\mathbb{E}[X_{N-1}]$, which is the maximum value among the initial $N$ selections. The solution will take the form $a + be$ where $a$ and $b$ are integers. Compute $a + b$.",
+  "problem solution": "Define $f(x)$ as the expected maximum value given the current maximum is $x$. Our aim is to find $f(0)$ since we are drawing uniformly from $(0,1)$, and the initial maximum is $0$. We do not start with a value below $0$ because values below $0$ cannot be obtained. With probability $x$, the subsequent value is less than $x$, making $x$ the maximum. Otherwise, if the next value $y > x$, $y$ is uniformly spread over $(x,1)$, so the expected maximum in that scenario is $f(y)$. We integrate over all $x < y < 1$ by applying the Law of Total Probability. Formulated as an equation, this gives $f(x) = x^2 + \\displaystyle \\int_x^1 f(y) \\, dy$. Differentiating to turn it into a differential equation, we find that $f'(x) = 2x - f(x)$. Alternatively, $f'(x) + f(x) = 2x$. The boundary condition for this differential equation is $f(1) = 1$, as values cannot exceed $1$. This is an ordinary linear first-order differential equation, so we use the integrating factor method. Specifically, the integrating factor is $\\mu(x) = e^{\\int 1 \\, dx} = e^{x}$. Applying this to both sides, $(e^{x}f(x))' = 2xe^{x}$, implying $e^{x}f(x) = \\displaystyle \\int 2xe^{x} \\, dx = 2e^x(x-1) + C$. Thus, $f(x) = 2x - 2 + Ce^{-x}$. Using the initial condition $f(1) = 1$, we find $C = e$, so $f(x) = 2(x-1) + e^{1-x}$. Specifically, $f(0) = e-2$, so the solution is $1 - 2 = -1$. As a check, observe that the result of this problem and the solution to Decreasing Uniform Chain sum to $1$, which is logical. If $X_i \\sim \\text{Unif}(0,1)$, then $1 - X_i \\sim \\text{Unif}(0,1)$, thus establishing a symmetry between the two problems.",
+  "valid answer": "Valid Answers: $-1$",
+  "problem tags": [
+    "Conditional Probability",
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Utilize Law of Total Probability to condition based on the subsequent value.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "26194681948525930033"
+}

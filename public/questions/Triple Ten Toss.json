@@ -1,0 +1,17 @@
+{
+  "problem name": "Triple Ten Toss",
+  "problem text": "Determine the likelihood of rolling a total of $10$ with three unbiased $6$-sided dice.",
+  "problem solution": "While generating functions might be the quickest method, we'll use case analysis instead. The combinations of values (unordered for now) that lead to a sum of $10$ are $ (1,6,3), (1,5,4), (2,6,2), (2,5,3), (2,4,4), (3,4,3) $. Among these, three combinations have all distinct values, specifically $ (1,6,3), (1,5,4),$ and $ (2,5,3) $. For these sets, there are $3! = 6$ permutations possible with the three dice. This results in $3 \\cdot 6 = 18$ permutations. The remaining three outcomes have two different values. For these, there are $3$ possible arrangements per outcome, as one only needs to choose the die showing the different value. The other two dice remain the same. This gives $3 \\cdot 3 = 9$ permutations. Adding these cases yields $18 + 9 = 27$ permutations resulting in a sum of $10$. We then divide by $6^3 = 216$ to find the probability, giving an answer of $\\dfrac{1}{8}$.",
+  "valid answer": "Valid Answers: $1/8$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The combinations of values (unordered for now) that lead to a sum of $10$ are $(1,6,3), (1,5,4), (2,6,2), (2,5,3), (2,4,4), (3,4,3)$.",
+  "problem firm": [
+    "Citadel",
+    "Jane Street"
+  ],
+  "question id": "46009445193187033541"
+}

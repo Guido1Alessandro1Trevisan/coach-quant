@@ -1,0 +1,17 @@
+{
+  "problem name": "Max Die Four",
+  "problem text": "You throw three unbiased dice. What is the probability that the greatest number rolled is a $4$?",
+  "problem solution": "A direct computation method is feasible, but a more theoretical method is presented here. For the highest number to be precisely four, it must be no more than four, but greater than three. That is: $P(\\textrm{max} = 4) = P(\\textrm{max} \\leq 4) - P(\\textrm{max} \\leq 3)$ $= \\frac{4}{6} \\times \\frac{4}{6} \\times \\frac{4}{6} - \\frac{3}{6} \\times \\frac{3}{6} \\times \\frac{3}{6}$ $= \\frac{37}{216}$",
+  "valid answer": "Valid Answers: $37/216$",
+  "problem tags": [
+    "Combinatorics",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "For the highest number to be exactly $4$, it must be no more than $4$, but not less than or equal to $3$.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "39917797514778292855"
+}

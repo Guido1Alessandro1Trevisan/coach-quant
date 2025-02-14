@@ -1,0 +1,16 @@
+{
+  "problem name": "Graph Safari Quest",
+  "problem text": "Consider an undirected graph containing $10$ vertices. From each vertex, any other vertex (including itself) is reachable with equal likelihood of $1/10$. What is the expected number of moves to visit all vertices at least once (rounded to the nearest whole number)?",
+  "problem solution": "By reinterpreting this as a $10$-faced die, we aim to determine the number of rolls required to encounter all $10$ faces at least once. This situation is a traditional coupon collector's problem. The duration until the first face appears is $1$ since it takes one move to begin at any position. Subsequently, the random time before a second (distinct) face appears follows a geometric distribution with a success probability of $\\frac{9}{10}$, thus having an average of $\\frac{10}{9}$ (because the mean of a geometrically distributed random variable is the reciprocal of its parameter). Following this, the time before a third (new) face appears is geometrically distributed with a success probability of $\\frac{8}{10}$, resulting in a mean of $\\frac{10}{8}$. This pattern continues until the random time for the tenth face, which follows a geometric distribution with a parameter of success $\\frac{1}{10}$, thereby having a mean of $\\frac{10}{1}$. We now sum the mean times from the first to the last occurrence, giving the overall expected value by adding all individual means. $\\sum_{k=1}^{10} \\frac{10}{k} \\approx 29.29$ Therefore, the solution is $29$.",
+  "valid answer": "Valid Answers: $29$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "What if, instead of considering an undirected graph, we had a $10$-faced die? Are these concepts equivalent?",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "69267614900299095985"
+}

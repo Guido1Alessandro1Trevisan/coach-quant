@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Duel Dollars",
+  "problem text": "Suppose we roll two distinct dice: one with thirty faces labeled 1 through 30 (call its result a), and another with twenty faces labeled 1 through 20 (call its result b). We gain a dollars if a exceeds b, and we lose b dollars if b is greater than or equal to a. What is our expected net gain?",
+  "problem solution": "To solve this problem with absolute rigor, let X be the random variable representing the resulting payoff. Formally, X equals $$a$$ if $$a > b$$, and equals $$-b$$ if $$b \\ge a$$. Each ordered pair $$(a,b)$$ occurs with probability $$\\tfrac{1}{600}$$, since there are 30 possible outcomes for a and 20 possible outcomes for b. The expected value $$E[X]$$ is then given by summing over all possible pairs:\n\\(1\\) Split the sum into the two exclusive cases:\n• Case 1: $$a > b$$. Here, the payoff is $$a$$.\n• Case 2: $$b \\ge a$$. Here, the payoff is $$-b$$.\n\nCase 1 (a > b):\nWe count all ordered pairs $$(a,b)$$ with $$1 \\le b < a \\le 30$$ and $$b \\le 20$$. Alternatively, fix b and let a range from b+1 to 30:\n$$\\sum_{b=1}^{20} \\sum_{a=b+1}^{30} a.$$\\\nFirst compute the inner sum for a fixed b:\n$$\\sum_{a=b+1}^{30} a = \\sum_{a=1}^{30} a - \\sum_{a=1}^{b} a = \\frac{30\\cdot 31}{2} - \\frac{b\\,(b+1)}{2} = 465 - \\frac{b\\,(b+1)}{2}.$$\nHence summing over b from 1 to 20:\n$$\\sum_{b=1}^{20} \\Bigl(465 - \\frac{b\\,(b+1)}{2}\\Bigr) = 20\\cdot 465 - \\frac{1}{2}\\sum_{b=1}^{20} \\bigl(b^2 + b\\bigr).$$\\\nWe know:\n$$\\sum_{b=1}^{20} b^2 = 2870 \\quad\\text{and}\\quad \\sum_{b=1}^{20} b = 210,$$\nso\n$$\\sum_{b=1}^{20} (b^2 + b) = 2870 + 210 = 3080.$$\nThus,\n$$20\\cdot 465 - \\frac{1}{2} (3080) = 9300 - 1540 = 7760.$$\nThat is the total sum of all payoffs in Case 1.\n\nCase 2 (b \\ge a):\nHere, the payoff is $$-b$$. We consider all ordered pairs $$(a,b)$$ with $$1 \\le a \\le b \\le 20$$ (note that b cannot exceed 20). For each fixed b, a can take any integer value from 1 to b, providing b such pairs each with payoff $$-b$$. Thus for each b, the contribution is\n$$b\\times (-b) = -b^2.$$\nSumming from b = 1 to b = 20 gives:\n$$\\sum_{b=1}^{20} (-b^2) = -\\sum_{b=1}^{20} b^2 = -2870.$$\n\nCombining both cases:\nThe total sum of payoffs is\n$$7760 + (-2870) = 4890,$$\nand the number of equally likely pairs is 30\\times 20 = 600. Therefore, the expected value is\n$$E[X] = \\frac{4890}{600} = \\frac{489}{60} = 8.15.$$",
+  "valid answer": "Valid Answers: $$\\frac{163}{20} \\text{ or } 8.15$$",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Separate the outcomes into the cases a>b and b>=a, then sum over all possible pairs in each case.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "09898257143681567049"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Flipped Correlation Dance",
+  "problem text": "Suppose $X$ and $Y$ are two random variables where $\\text{Corr}(X,Y) = -0.4$. Determine $\\text{Corr}(3X+1,1-Y)$ if feasible, otherwise return $100$.",
+  "problem solution": "The correlation quantifies the linear relationship between $X$ and $Y$ and remains constant under scaling and translation. Therefore, $\\text{Corr}(aX+b,cY+d) = \\text{sign}(ac)\\text{Corr}(X,Y)$. Here, $\\text{sign}(ac) = -1$, so the result is $-1 \\cdot -0.4 = 0.4$.",
+  "valid answer": "Valid Answers: $0.4$",
+  "problem tags": [
+    "Covariance",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The correlation measures the linear relationship between $X$ and $Y$ and is invariant to scaling and translation.",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "91501597164643206916"
+}

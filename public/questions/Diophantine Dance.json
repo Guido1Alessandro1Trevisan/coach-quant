@@ -1,0 +1,20 @@
+{
+  "problem name": "Diophantine Dance",
+  "problem text": "Determine all integer pairs $(x,y)$ that satisfy $3x + 7y = 10000$. Every solution can be expressed as $x = a + 7n$ and $y = b - 3n$, where $n$ represents any integer value and $a,b$ are integers such that $b$ is the smallest positive integer. Calculate the product $ab$.",
+  "problem solution": "As $3$ and $7$ are coprime, a solution to this equation is guaranteed to exist. Observing that $3(-2) + 7(1) = 1$, multiplying by $10000$ yields $3(-20000) + 7(10000) = 10000$, indicating $(x,y) = (-20000,10000)$ is a solution. Based on the hint, every solution can be represented as $(-20000+7n,10000 - 3n)$. We aim to minimize the coefficient of $-3n$. Since $9999 = 3 \\cdot 3333$, setting $m = n-3333$ allows us to reformulate the solutions as $(-20000 + 7(m + 3333), 10000 -3(m+3333)) = (3331 + 7m, 1-3m)$. This is the general solution form where $b$ is minimized. Specifically, $ab = 3331$.",
+  "valid answer": "Valid Answers: $3331$",
+  "problem tags": [
+    "Pure Math",
+    "Pure Math"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Since $3$ and $7$ are coprime, there exists a solution to this equation. Observe that $3(-2) + 7(1) = 1$.",
+  "problem firm": [
+    "Five Rings",
+    "Goldman Sachs",
+    "Imc",
+    "Jane Street",
+    "Worldquant"
+  ],
+  "question id": "05341740818701757770"
+}

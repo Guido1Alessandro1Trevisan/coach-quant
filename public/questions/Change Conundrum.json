@@ -1,0 +1,15 @@
+{
+  "problem name": "Change Conundrum",
+  "problem text": "Brian heads to the corner shop carrying $0.60$ in change. His coins consist solely of nickels, dimes, and quarters. If the total number of coins Brian has is $N$, determine the minimal value of $N$ such that it is impossible to determine the exact number of each type of coin.",
+  "problem solution": "Evidently, $N = 1$ and $N = 2$ are not feasible, as $0.60$ cannot be achieved with only one or two coins of these types. For $N = 3$, we find that $2$ quarters and $1$ dime suffice. No alternative combinations achieve this total. Observe that $0.40$ is the smallest amount that can be expressed in two distinct ways using identical numbers of coins: as $1$ quarter and $3$ nickels OR $4$ dimes, each using $4$ coins. By adding $2$ dimes to these combinations, we find that $N = 6$ is the least number for which this holds. To confirm $0.40$ as the smallest, note that the amount must be at least $0.25$, since otherwise, quarters cannot be used. Testing $0.30$ and $0.35$ shows they do not suffice.",
+  "valid answer": "Valid Answers: $6$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Recognize that $0.40$ is the smallest sum that can be expressed in two different ways with an equal number of coins.",
+  "problem firm": [
+    "Imc"
+  ],
+  "question id": "95996872697633376255"
+}

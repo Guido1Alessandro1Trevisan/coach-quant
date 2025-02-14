@@ -1,0 +1,17 @@
+{
+  "problem name": "Walkway Luck",
+  "problem text": "You are on a 100-meter walkway, standing at the 37-meter mark. Each second, you randomly step either one meter forward or one meter backward with equal probability, continuing until you reach either 0 meters or 100 meters. What is the probability that you exit from the 100-meter end before you exit from the 0-meter end?",
+  "problem solution": "We model this as a simple one-dimensional random walk with absorbing boundaries. Specifically, we let 0 and 100 be absorbing states, and 37 be the walker's initial position. Let $$p_i$$ be the probability that starting at position $$i$$, you exit (or get absorbed) at the 100-meter end first. By the symmetry of steps (each direction has probability 1/2), one can invoke a classic result often described under the name 'gambler's ruin problem'. For an unbiased random walk on the integer line from 0 to 100, starting at position $$i,$$ the probability of being absorbed by the right boundary (i.e., reaching 100 first) is given by $$\\dfrac{i}{100}.$$ In this situation, since $$i = 37,$$ the probability is therefore $$\\dfrac{37}{100} = 0.37.$$ We can also verify this from first principles: for a random walk with equal probabilities of stepping left or right, the probability of eventually hitting the upper boundary (point 100) before the lower boundary (point 0) varies linearly with the starting position. Therefore, beginning at point 37, the probability that you exit on the right side is simply the fraction of the distance already covered relative to 100, which is $$37/100.$$",
+  "valid answer": "Valid Answers: 37/100, 0.37",
+  "problem tags": [
+    "Probability",
+    "Random Walk"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about how the probability scales if each step is equally likely in both directions. Consider how gambler's ruin is derived.",
+  "problem firm": [
+    "Maple Analytics",
+    "Quantum Strategies"
+  ],
+  "question id": "97390045667161347579"
+}

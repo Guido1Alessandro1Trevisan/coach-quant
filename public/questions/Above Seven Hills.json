@@ -1,0 +1,15 @@
+{
+  "problem name": "Above Seven Hills",
+  "problem text": "Find the smallest multiple of $77$ that is greater than or equal to $700,000$.",
+  "problem solution": "Given that $770000 = 77 \\cdot 10000$ and $77000 = 77 \\cdot 1000$ are multiples of $77$, we know $693000 = 770000 - 77000$ is also a multiple of $77$. Since $7700 = 77 \\cdot 100$ is another multiple of $77$, adding $7700$ to $693000$ gives $700700$, which is a multiple of $77$. Finally, $693$ is the largest multiple of $77$ less than or equal to $700$, so subtracting $693$ from $700700$ yields $700007$, the smallest multiple of $77$ that is no less than $700000$.",
+  "valid answer": "Valid Answers: $700007$",
+  "problem tags": [
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Start by examining $770000$ and $77000$.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "25431664562893202600"
+}

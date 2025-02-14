@@ -1,0 +1,16 @@
+{
+  "problem name": "Color Clash Probability",
+  "problem text": "A container holds $6$ uniquely colored marbles, including blue and green ones. You randomly select $4$ marbles with replacement. Determine the probability that at least one of the marbles is blue and one is green.",
+  "problem solution": "Let $$B$$ and $$G$$ denote the events that among the $$4$$ drawn marbles, there is at least one blue and one green marble, respectively. We seek $$\\mathbb{P}[B \\cap G]$$. Since these events are not mutually exclusive, it is simpler to calculate the complement and apply inclusion-exclusion. Hence, $$\\mathbb{P}[B \\cap G] = 1 - \\mathbb{P}[B^c \\cup G^c] = 1 - \\left(\\mathbb{P}[B^c] + \\mathbb{P}[G^c] - \\mathbb{P}[B^c \\cap G^c]\\right)$$. We know that $$\\mathbb{P}[B^c] = \\mathbb{P}[G^c] = \\left(\\dfrac{5}{6}\\right)^4$$, since there is a $$\\dfrac{5}{6}$$ probability in each draw of not getting a blue (or green) marble. Furthermore, $$\\mathbb{P}[B^c \\cap G^c] = \\left(\\dfrac{4}{6}\\right)^4$$, because one must pick one of the other $$4$$ colors in each draw. Substituting these values, we find $$\\mathbb{P}[B\\cap G] = 1 - 2 \\cdot \\dfrac{625}{1296} + \\dfrac{256}{1296} = \\dfrac{151}{648}$$.",
+  "valid answer": "Valid Answers: $151/648$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Let $B$ and $G$ denote the events that there is at least one blue and one green marble, respectively, in the $4$ picked. We need to find $\\mathbb{P}[B \\cap G]$. These events are not mutually exclusive, so using the complement with inclusion-exclusion simplifies the process.",
+  "problem firm": [
+    "Imc"
+  ],
+  "question id": "63451323288740521559"
+}

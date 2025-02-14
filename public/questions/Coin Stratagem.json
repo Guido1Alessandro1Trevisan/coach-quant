@@ -1,0 +1,16 @@
+{
+  "problem name": "Coin Stratagem",
+  "problem text": "Two players alternately place identical coins within a fixed circular area, ensuring no coin overlaps another or lies outside the boundary. A player who cannot place a coin during their turn loses, and the other player is declared the winner. If you get the first move, is there a guaranteed method to secure victory?",
+  "problem solution": "Solution Explanation: We will show there is a straightforward winning strategy for the first player, based on a symmetry argument. First, label the circle's center as the origin in a coordinate system. The key opening move is to place the initial coin exactly at the center of the circle. This placement ensures that the available area around this first coin is symmetrically distributed with respect to the center. For each move your opponent makes, suppose they place their coin at a point $$(x,y)$$ relative to the center. You then respond by placing your coin at the reflected point $$(-x,-y)$$ with respect to the same center.\\n\\nFormal Justification: Once the first coin is placed at the center, the circle is divided into pairs of points that are mirror images with respect to the center. Because your opponent successfully placed a coin at $$(x,y)$$, there must be sufficient space for its mirror image at $$(-x,-y)$$, ensuring no overlaps. By repeating this reflection strategy on every turn, you can always find a valid placement for your coin, achieving a perfect pairing of each move your opponent makes, thereby never running out of space before they do. Thus, the first player always has a decisive winning strategy by starting at the center and continuing with the symmetry approach thereafter.",
+  "valid answer": "Valid Answers: \"Yes, by placing the first coin in the center and mirroring all moves\"",
+  "problem tags": [
+    "Game Theory",
+    "Spatial Reasoning"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider putting your first coin in a spot that makes the remainder of the circle identical around it, so your opponent's moves can be mirrored.",
+  "problem firm": [
+    "World Quant"
+  ],
+  "question id": "15123308123665917182"
+}

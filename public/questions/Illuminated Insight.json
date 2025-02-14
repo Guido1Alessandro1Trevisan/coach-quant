@@ -1,0 +1,15 @@
+{
+  "problem text": "In a room, there are $100$ lamps, each initially turned off with a switch next to it. The first individual comes in and toggles every switch. The second individual enters and toggles every second switch. The third individual comes in and toggles every third switch. This pattern continues until the $100$-th individual toggles every $100$-th switch, or the final switch. Determine how many lamps are switched on.",
+  "problem solution": "The $i$-th lamp is toggled by individual $j$ if $j$ divides $i$. Therefore, the $i$-th lamp will remain on if it is toggled an odd number of times. A number with an odd number of divisors is known as a perfect square, and there are $10$ perfect squares between $1$ and $100$.",
+  "valid answer": "Valid Answers: $10$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider examples where the lamp stays on. What causes the lamp to remain illuminated at the conclusion of this process?",
+  "problem name": "Illuminated Insight",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "45495239597615032004"
+}

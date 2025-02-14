@@ -1,0 +1,16 @@
+{
+  "problem name": "Card Chaos",
+  "problem text": "There are 2 containers and 100 unique cards labeled $1-100$. Each round, a card is drawn from the deck and placed into a container chosen uniformly at random. Determine the expected value of the card with the smallest number in the container holding card $100$. The solution is expressed as $a(1-a^{-b})$ for integer values $a$ and $b$. Compute $ab$.",
+  "problem solution": "We will use the alternate expectation formula for non-negative integer-valued random variables $\\mathbb{E}[X] = \\displaystyle \\sum_{k=1}^{\\infty} \\mathbb{P}[X \\geq k]$. Here, $X$ is the random variable representing the smallest card number in the container containing card $100$. The condition $\\{X \\geq k\\}$ signifies that all cards numbered $1, 2, \\dots, k-1$ are in the opposite container. Each card is in the opposite container with a probability of $\\dfrac{1}{2}$, hence $\\mathbb{P}[X \\geq k] = \\dfrac{1}{2^{k-1}}$. The largest possible smallest card number is $100$, occurring when card $100$ is alone in its container. Thus, $\\mathbb{E}[X] = \\displaystyle \\sum_{k=1}^{100} \\dfrac{1}{2^{k-1}} = \\sum_{k=0}^{99} \\dfrac{1}{2^k} = \\dfrac{1 - 2^{-100}}{1 - \\frac{1}{2}} = 2 - 2^{-99} = 2(1 - 2^{-100})$. Consequently, the solution to our problem is $2 \\cdot 100 = 200$.",
+  "valid answer": "Valid Answers: $200$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Apply $\\mathbb{E}[X] = \\displaystyle \\sum_{k=1}^{\\infty} \\mathbb{P}[X \\geq k]$. For a wisely chosen $X$, what does the event $\\{X \\geq k\\}$ represent?",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "19705896889681323484"
+}

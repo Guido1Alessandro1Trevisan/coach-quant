@@ -1,0 +1,16 @@
+{
+  "problem name": "Prime Product Quest",
+  "problem text": "What is the count of $10$-digit numbers where each digit is a prime and their product equals $100000$?",
+  "problem solution": "The prime factorization for $10^5 = 2^5 \\cdot 5^5$. This indicates that to achieve a product with $5$ trailing zeroes, we require $5$ occurrences of each digit $2$ and $5$ in the number. Yet, there are only $10$ positions available. Consequently, the number must comprise $5$ of each of the two digits. Thus, we need to calculate the ways to allocate $5$ occurrences of each of $2$ and $5$ into $10$ positions. Each set of digits is indistinct, so selecting positions for one type determines the other, resulting in $\\binom{10}{5} = 252$ solutions.",
+  "valid answer": "Valid Answers: $252$",
+  "problem tags": [
+    "Combinatorics",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The digits' product must be a fixed $c \\cdot 10^5 = c \\cdot 2^5 \\cdot 5^5$.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "37746191505993627141"
+}

@@ -1,0 +1,18 @@
+{
+  "problem name": "Dice Triad Triumph",
+  "problem text": "Imagine rolling $5$ typical fair dice and calculating the total of the highest $3$ numbers. Determine the likelihood that this total equals $18$.",
+  "problem solution": "To achieve a total of $18$ from three dice, it's necessary to have at least $3$ sixes among the $5$ dice. Consequently, this means we're essentially finding the probability of having $3, 4,$ or $5$ sixes in $5$ dice rolls. The probability of rolling $5$ sixes is just $\\dfrac{1}{6^5}$, since each die has a $\\dfrac{1}{6}$ chance. The chance of getting $4$ sixes is $5 \\cdot \\dfrac{5}{6} \\cdot \\dfrac{1}{6^4}$, because there are $5$ options for choosing the die that isn't a $6$, a $\\dfrac{5}{6}$ chance that the chosen die is not a $6$, and then $\\dfrac{1}{6}$ probability for each of the remaining $4$ dice to show a $6$. Finally, the probability of having exactly $3$ sixes is $\\displaystyle \\binom{5}{2} \\cdot \\left(\\dfrac{5}{6}\\right)^2 \\cdot \\dfrac{1}{6^3}$. This arises because there are $\\displaystyle \\binom{5}{2} = 10$ combinations to select the two dice that do not show a $6$, $\\dfrac{5}{6}$ probability for each of them not to be a $6$, and $\\dfrac{1}{6}$ chance for each of the other three dice to be a $6$. Summing these probabilities gives $\\dfrac{1}{6^5} + \\dfrac{25}{6^5} + \\dfrac{250}{6^5} = \\dfrac{276}{6^5} = \\dfrac{23}{648}$.",
+  "valid answer": "Valid Answers: $23/648$",
+  "problem tags": [
+    "Events",
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "What conditions must be met for the sum of three standard dice to be $18$?",
+  "problem firm": [
+    "Jane Street",
+    "Two Sigma"
+  ],
+  "question id": "78268439807675757826"
+}

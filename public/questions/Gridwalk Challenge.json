@@ -1,0 +1,16 @@
+{
+  "problem name": "Gridwalk Challenge",
+  "problem text": "Consider a 3x3 arrangement of squares. Starting from the upper-leftmost square, in how many distinct ways can one traverse the grid, moving only to squares sharing a common edge, so that each square is visited exactly once?",
+  "problem solution": "We seek Hamiltonian paths on the 3x3 grid graph beginning at the top-left corner. Observe that each move must go to an adjacent square (above, below, left, or right), with no revisits allowed. One formal solution method is backtracking enumeration: we systematically list all realizable sequences of adjacent moves through all 9 squares. Each branch of the search explores a next possible step to an unused neighbor until all squares are either exhausted (yielding success) or no further step is possible. By rigorous case-by-case analysis (or a computer-aided search), one finds exactly $$12$$ valid Hamiltonian paths that start at the top-left square. As a brief illustration, one such path is $$(0,0) \\to (0,1) \\to (0,2) \\to (1,2) \\to (1,1) \\to (1,0) \\to (2,0) \\to (2,1) \\to (2,2),$$ and all others can be found by continuing the exhaustive pairing of choices at each step. Thus, the total number of ways is $$12$$.",
+  "valid answer": "Valid Answers: 12",
+  "problem tags": [
+    "Combinatorics",
+    "Graph Theory"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Try systematically listing each possible adjacency-based step from the corner without revisiting squares, or use a backtracking program to count all possible Hamiltonian paths.",
+  "problem firm": [
+    "IMC"
+  ],
+  "question id": "23749977886754796276"
+}

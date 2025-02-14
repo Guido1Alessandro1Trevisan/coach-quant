@@ -1,0 +1,17 @@
+{
+  "problem name": "Four of Fate",
+  "problem text": "You are dealt $5$ cards from a typical deck. You are informed that at least $3$ cards share the same rank. Determine the probability that your hand includes all $4$ cards of a single rank.",
+  "problem solution": "There exist $48 \\cdot 13 = 624$ hands that consist of all $4$ cards of the same rank. This is because there are $13$ choices for the rank for which we have all $4$ cards. Then, there are $48$ options to select the last card. We need to divide this by the overall number of hands with at least $3$ cards of a single rank. We know $624$ hands have exactly $4$ cards of one rank. Hence, we need to count the number of hands having exactly $3$ cards of one rank. There are $13$ choices for the rank of which we have $3$ cards. There are $4$ choices for the suit that is not in our selection. Additionally, there are $\\binom{48}{2}$ ways to choose two other cards for our hand that are not of the chosen rank. Therefore, our result is $\\dfrac{624}{624 + 4 \\cdot 13 \\cdot \\binom{48}{2}} = \\dfrac{1}{95}$.",
+  "valid answer": "Valid Answers: $1/95$",
+  "problem tags": [
+    "Combinatorics",
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "There are $48 \\cdot 13 = 624$ hands that consist of all $4$ cards of the same rank. Using a similar approach, how many hands have at least $3$ cards of a single rank?",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "23128603192362502962"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Sphere Encapsulation Challenge",
+  "problem text": "If you choose four distinct random points on the surface of a unit sphere, what is the probability that the tetrahedron they form encloses the center of that sphere?",
+  "problem solution": "We provide a thorough, proof-like explanation. Let us begin by recalling a well-known general fact: if n+1 points are selected uniformly at random on the surface of an n-dimensional sphere, then the probability that these points' convex hull contains the sphere's center (origin) is $$\\frac{1}{2^n}$$. In our setting, n=3, so when 4 points are chosen on the 2-sphere (the unit sphere in 3-dimensional space), the probability that the center lies inside the resulting tetrahedron is thus $$\\frac{1}{2^3}=\\frac{1}{8}$$. To see why more rigorously, label the four chosen points P1, P2, P3, P4. Each point is uniformly distributed on the sphere, meaning all orientations of any configuration of points are equally likely. One formal way to see that the probability is exactly 1/8 is to note that for any set of four points, precisely one of the eight possible ways to assign 'orientation directions' (thinking of each triangular face's outward normal vector) will enclose the center. Because there is no bias toward any particular orientation by symmetry, the chance that the actual configuration encloses the center is 1 out of these 8 equally likely scenarios. This symmetry argument, along with the uniform distribution assumption, yields that the probability is exactly $$\\frac{1}{8}$$.",
+  "valid answer": "Valid Answers: $1/8$",
+  "problem tags": [
+    "Geometry",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Recall the more general result: for n+1 points chosen uniformly on an n-sphere, the probability their convex hull contains the center is 1/2^n.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "11495182090875041800"
+}

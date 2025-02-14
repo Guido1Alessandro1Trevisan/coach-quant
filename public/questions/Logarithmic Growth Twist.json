@@ -1,0 +1,18 @@
+{
+  "problem name": "Logarithmic Growth Twist",
+  "problem text": "Determine the derivative of $f(x) = (\\ln(x))^x$ at the point $x = e$.",
+  "problem solution": "Utilize logarithmic differentiation for this problem. Define $y = f(x) = (\\ln(x))^x$. Then, $\\ln(y) = x\\ln(\\ln(x))$. By applying the product and chain rules, we find $\\dfrac{y'}{y} = \\ln(\\ln(x)) + x \\cdot \\dfrac{1}{x\\ln(x)} \\iff y' = y\\left[\\ln(\\ln(x)) + \\dfrac{1}{\\ln(x)}\\right] = (\\ln(x))^x\\left[\\ln(\\ln(x)) + \\dfrac{1}{\\ln(x)}\\right]$. Substituting $x = e$ into this expression results in a value of $1$.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Calculus",
+    "Pure Math"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Consider using logarithmic differentiation for this problem.",
+  "problem firm": [
+    "Citadel",
+    "Five Rings",
+    "Goldman Sachs"
+  ],
+  "question id": "18359148429963317242"
+}

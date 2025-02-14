@@ -1,0 +1,15 @@
+{
+  "problem name": "Dice Mystery Solver",
+  "problem text": "You possess a pair of fair dice: one is a standard six-sided die, and the other is a six-sided die with unreadable faces. The numbers on this unreadable die are not required to be $1-6$. When you roll these two dice, the probability of the sum of the numbers being any integer from $1$ to $12$, inclusive, is equal. What is the total of the numbers on the unreadable die?",
+  "problem solution": "There are 36 potential combinations when rolling two six-sided dice. For each of the twelve possible results to have an equal probability, each must appear exactly three times. For the sum $1$ to appear three times, the unreadable die must show three $0$s. Moreover, for the sum $12$ to appear three times, there must be three $6$s on the unreadable die. Thus, we have determined the numbers on the unreadable die, and their total is $18$.",
+  "valid answer": "Valid Answers: $18$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Which numbers must be on the unreadable die for a sum of $1$ to occur? Which numbers must be on the unreadable die for a sum of $12$ to occur?",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "20056526735475566526"
+}

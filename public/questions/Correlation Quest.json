@@ -1,0 +1,16 @@
+{
+  "problem name": "Correlation Quest",
+  "problem text": "Consider 7 random variables $X_1, \\dots, X_7$, each with the same distribution, a mean of $0$, and a variance of $1$. Additionally, they share the same correlation between any pair, denoted by $\\rho$. Determine the least possible value for $\\rho$.",
+  "problem solution": "We will examine $\\text{Var}(\\overline{X})$, where $\\overline{X} = \\dfrac{X_1 + \\dots + X_7}{7}$. By substituting this and leveraging the properties of variance, we find that $\\text{Var}(\\overline{X}) = \\dfrac{1}{49} \\text{Var}(X_1 + \\dots + X_7) = \\dfrac{1}{49}\\left[\\displaystyle \\sum_{i=1}^7 \\text{Var}(X_i) + \\sum_{i eq j} \\text{Cov}(X_i,X_j)\\right]$. Given the known mean and variance for each random variable, the first sum equates to $7$. Similarly, we have $\\text{Cov}(X_i,X_j) = \\rho(1)(1) = \\rho$, with $42$ terms in that sum due to $7 \\cdot 6 = 42$. Thus, the second sum is simply $42\\rho$. Consequently, $\\text{Var}(\\overline{X}) = \\dfrac{7 + 42\\rho}{49}$. The requirement is that $\\text{Var}(\\overline{X}) \\geq 0$, since the variance for any random variable cannot be negative. Therefore, we can ignore the denominator and deduce that $7 + 42\\rho \\geq 0 \\iff \\rho \\geq -\\dfrac{1}{6}$. Hence, the answer is $-\\dfrac{1}{6}$.",
+  "valid answer": "Valid Answers: $-\\frac{1}{6}$",
+  "problem tags": [
+    "Covariance",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about $\\text{Var}(\\overline{X})$, where $\\overline{X} = \\dfrac{X_1 + \\dots + X_7}{7}$.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "58031750100907181385"
+}

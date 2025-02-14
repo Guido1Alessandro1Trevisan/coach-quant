@@ -1,0 +1,16 @@
+{
+  "problem name": "Correlation Triangles",
+  "problem text": "Imagine that X, Y, and Z are three random variables whose pairwise correlations all match some common value $$\\rho$$. Identify the most stringent restriction on $$\\rho$$ ensuring that a genuine correlation relationship can hold among the three variables. Then, discuss how this result generalizes for n random variables possessing uniform pairwise correlations.",
+  "problem solution": "Solution Explanation. We begin by recognizing that for three random variables X, Y, and Z with common correlation $$\\rho = \\Corr(X,Y) = \\Corr(Y,Z) = \\Corr(Z,X)$$, the associated correlation matrix must be positive semidefinite (PSD). Specifically, the correlation matrix for these three variables is: $$\\begin{pmatrix}1 & \\rho & \\rho \\\\ \\rho & 1 & \\rho \\\\ \\rho & \\rho & 1 \\end{pmatrix}.$$ A matrix is PSD precisely when all of its eigenvalues are nonnegative. We compute these eigenvalues by algebraic techniques (or by standard results for the eigenvalues of compound-symmetric matrices). The eigenvalues of the above 3x3 matrix are: $$\\lambda_1 = 1 + 2\\rho, \\quad \\lambda_2 = 1 - \\rho, \\quad \\lambda_3 = 1 - \\rho.$$ For the matrix to be PSD, we require $$\\lambda_1 \\ge 0$$ and $$\\lambda_2 \\ge 0.$$ Consequently, we get: $$1 + 2\\rho \\ge 0 \\quad \\Rightarrow \\quad \\rho \\ge -\\tfrac{1}{2},$$ and $$1 - \\rho \\ge 0 \\quad \\Rightarrow \\quad \\rho \\le 1.$$ Hence, for three random variables with identical pairwise correlation, $$\\rho$$ must lie within the range $$-\\tfrac{1}{2} \\le \\rho \\le 1.$$ Generalization to n Variables. For n random variables where each pair has the same correlation $$\\rho$$, the corresponding n x n correlation matrix has diagonal entries equal to 1 and off-diagonal entries equal to $$\\rho$$. This matrix is also required to be PSD, and its eigenvalues are $$\\lambda_1 = 1 + (n-1)\\rho$$ and $$\\lambda_2 = 1 - \\rho,$$ where $$\\lambda_2$$ has multiplicity (n-1). Ensuring nonnegative eigenvalues yields: $$1 + (n-1)\\rho \\ge 0 \\quad \\Rightarrow \\quad \\rho \\ge -\\tfrac{1}{n-1},$$ and $$1 - \\rho \\ge 0 \\quad \\Rightarrow \\quad \\rho \\le 1.$$ Hence, in the n-variable scenario, the permissible range is $$-\\tfrac{1}{n-1} \\le \\rho \\le 1.$$",
+  "valid answer": "Valid Answers: For three variables, $$-\\tfrac{1}{2} \\le \\rho \\le 1.$$ For n variables, $$-\\tfrac{1}{n-1} \\le \\rho \\le 1.$$",
+  "problem tags": [
+    "Correlation",
+    "Positive Semi-Definiteness"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the constraints for the correlation matrix to be positive semidefinite and find its eigenvalues.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "95001791235943400015"
+}

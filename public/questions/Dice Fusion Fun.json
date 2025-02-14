@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Fusion Fun",
+  "problem text": "You need to replicate the roll of a fair 15-sided die, yet you only have two standard 6-sided dice. How can you generate one of fifteen equally-likely outcomes using these two dice?",
+  "problem solution": "We begin by observing that rolling two fair 6-sided dice yields $$6\\times6=36$$ equally-likely ordered pairs. Now note that there are $$15$$ such pairs whose sum is less than 7. Indeed, the sum 2 appears once ($(1,1)$), the sum 3 appears twice ($(1,2),(2,1)$), the sum 4 appears three times ($(1,3),(2,2),(3,1)$), the sum 5 appears four times ($(1,4),(2,3),(3,2),(4,1)$), and the sum 6 appears five times ($(1,5),(2,4),(3,3),(4,2),(5,1)$). Because we seek exactly 15 possible outcomes, we can ignore any roll whose sum is 7 or higher and reroll whenever that occurs. This acceptance-rejection strategy ensures we end up with one of those 15 pairs, each equally likely with probability $$\\dfrac{1}{15}$$ once a sum below 7 is achieved. Finally, assign a unique label from 1 to 15 to each of the 15 distinct pairs, thereby simulating a fair 15-sided die.",
+  "valid answer": "Valid Answers: Roll two 6-sided dice and discard any result whose sum is 7 or more, labeling the 15 outcomes that sum below 7 from 1 to 15.",
+  "problem tags": [
+    "Simulation",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Count exactly how many ways you can roll a sum less than 7; then discard any other rolls and try again until success.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "01728574700261967331"
+}

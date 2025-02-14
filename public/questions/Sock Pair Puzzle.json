@@ -1,0 +1,16 @@
+{
+  "problem name": "Sock Pair Puzzle",
+  "problem text": "In a drawer, there are $10$ pairs of socks, each pair having a unique color. You randomly pick $2$ socks. Determine the probability that you draw a pair of the same color.",
+  "problem solution": "Select the first sock at random. This is possible because the drawer contains an equal number of socks of each color. The second sock must be of the same color as the first. Out of the $19$ remaining socks, only $1$ matches the color, giving a probability of $\\dfrac{1}{19}$.",
+  "valid answer": "Valid Answers: $1/19$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "The color of the first sock is irrelevant. When choosing the second sock, how many are still in the drawer, and how many of those match the first sock's color?",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "02705410615792245944"
+}

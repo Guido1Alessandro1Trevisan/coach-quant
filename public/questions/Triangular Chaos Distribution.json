@@ -1,0 +1,16 @@
+{
+  "problem name": "Triangular Chaos Distribution",
+  "problem text": "Suppose you have an equilateral triangle. How can you produce a random point inside it so that every location is equally likely, without using any form of rejection sampling?",
+  "problem solution": "We seek to select points uniformly from an equilateral triangle. A constructive method is: (1) Label the triangle's vertices as $A$, $B$, and $C$. (2) Generate two independent uniform random variables $U$ and $V$ over $[0,1]$. (3) If $U + V > 1$, replace $(U,V)$ with $(1 - U, 1 - V)$. (4) Define the sampled point $P = U A + V B + (1 - U - V) C$. We first prove that this method yields a uniform distribution. Note that the transformation $(U,V) \\to (1-U, 1-V)$ reflects points above the line $U + V = 1$ into points below that line, ensuring that $(U,V)$ remains in a standard simplex in the plane corresponding to the interior of triangle $ABC$. To see that we obtain uniform coverage: (i) We observe that $(U,V)$ is uniformly distributed in the standard unit square before the reflection step. (ii) Imposing the condition $U+V\\le1$ (or executing the reflection if $U+V>1$) then confines $(U,V)$ to a right triangular region of area $\\tfrac12$. This is precisely the simple region whose coordinates map linearly onto $\\triangle ABC$. (iii) The linear map $(U,V) \\mapsto U A + V B + (1-U-V)C$ takes uniform points in that right triangle to uniformly distributed points in $\\triangle ABC$. Under the stated reflection rule, no samples are discarded, so this is not a rejection method. In an equilateral triangle of side length $s$, one may place $A$ at the origin $$(0,0)$$, $B$ at $$(s,0)$$, and $C$ at $$\\bigl(\\tfrac{s}{2}, \\tfrac{\\sqrt{3}\\,s}{2}\\bigr).$$ Then the point $P$ is calculated plainly from those vertex coordinates. Thus, the described technique produces a point $P$ that is uniformly distributed over the equilateral triangle with no need to reject or reroll any samples.",
+  "valid answer": "Valid Answers: The barycentric method or an equivalent scheme using linear transformations (e.g., reflect (U,V) if U+V>1).",
+  "problem tags": [
+    "Probability",
+    "Geometric Sampling"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Try using two uniform random variables in the unit square, and reflect points that lie above the diagonal U+V=1.",
+  "problem firm": [
+    "Akuna Capital"
+  ],
+  "question id": "37460007770264281308"
+}

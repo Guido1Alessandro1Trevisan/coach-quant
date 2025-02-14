@@ -1,0 +1,15 @@
+{
+  "problem name": "Binary Factorial Fade",
+  "problem text": "In the binary representation of $142!$, determine the count of trailing zeroes.",
+  "problem solution": "In base $$10$$, the number of trailing zeroes for $$n$$ corresponds to the largest power of $$10$$ that divides $$n$$. In binary, this translates to finding the largest power of $$2$$ that divides $$142!$$. From the even numbers, we get $$71$$ powers of $$2$$. Next, there are $$\\text{floor}\\left(\\frac{142}{2^2}\\right) = 35$$ additional powers of $$2$$ from multiples of $$4$$. Continuing this process, we find that there are $$\\sum_{k=1}^{\\infty} \\text{floor}\\left(\\frac{n}{2^k}\\right)$$ trailing zeroes in binary for $$n!$$. The sum is finite because eventually $$2^k > n$$, making the floor become $$0$$. For $$n = 142$$, it results in $$\\sum_{k=1}^{\\infty} \\text{floor}\\left(\\frac{142}{2^k}\\right) = 71 + 35 + 17 + 8 + 4 + 2 + 1 = 138$$.",
+  "valid answer": "Valid Answers: $138$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The trailing zeroes equal the highest power of $2$ that divides $142!$.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "58805542140374421837"
+}

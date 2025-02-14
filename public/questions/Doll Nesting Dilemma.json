@@ -1,0 +1,16 @@
+{
+  "problem name": "Doll Nesting Dilemma",
+  "problem text": "Nested Dolls are a series of dolls that get progressively smaller and can be opened to fit smaller ones inside. Kaushik owns $7$ dolls, each a different size. A legal arrangement of these dolls requires using at least $2$ of the $7$ and placing them inside each other in such a way that they decrease in size from outer to inner. How many such arrangements can Kaushik make?",
+  "problem solution": "By designating the dolls as $1-7$, where $7$ is the biggest and $1$ is the smallest, observe that any subset of $\\{1,2,\\dots, 7\\}$ with at least $2$ members forms a valid arrangement by organizing them with the largest member on the outside, the second largest inside it, and so on. There is $1$ subset of $\\{1,2,\\dots, 7\\}$ with size $0$ and $\\displaystyle \\binom{7}{1} = 7$ subsets with size $1$. The total number of subsets is $2^7 = 128$, thus there are $128 - 8 = 120$ valid arrangements.",
+  "valid answer": "Valid Answers: $120$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Assign numbers $1-7$ to the dolls and associate the arrangements with subsets of $\\{1,2,\\dots,7\\}$.",
+  "problem firm": [
+    "Imc"
+  ],
+  "question id": "16792624062830322067"
+}

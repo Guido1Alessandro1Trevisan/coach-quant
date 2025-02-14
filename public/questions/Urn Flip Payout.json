@@ -1,0 +1,17 @@
+{
+  "problem name": "Urn Flip Payout",
+  "problem text": "In front of you are $2$ identical urns. Urn one contains $4$ ($1$) chips and $6$ ($10$) chips, whereas urn two contains $3$ ($1$) chips and $7$ ($10$) chips. You randomly select an urn and draw a $1$ chip. You can then choose another chip randomly, either from the same urn or from the other urn. The second chip's value determines your payout. What is your expected payout with optimal strategy?",
+  "problem solution": "To find the expected payout, compare staying with your current urn to switching urns. Consider $2$ scenarios based on which urn the first chip came from. Label urn $A$ as the urn initially with $4$ ($1$ chips) and urn $B$ as the one with $3$ ($1$ chips). Define the random variable $X$ for the urn of the first chip. We have $\\mathbb{P}[X = A] = \\frac{4}{3}\\mathbb{P}[X = B]$ because urn $A$ has $4$ ($1$ chips) and urn $B$ has $3$. Since these probabilities sum to $1$, $\\mathbb{P}[X = A] = \\frac{4}{7}$ and $\\mathbb{P}[X = B] = \\frac{3}{7}$. Next, analyze the cases of switching urns or not. Let $P_0$ be the payout if you stay with the initial urn. Without switching: $\\mathbb{E}[P_0] = \\mathbb{E}[P_0 \\mid X = A]\\mathbb{P}[X = A] + \\mathbb{E}[P_0 \\mid X = B]\\mathbb{P}[X = B]$. If $X = A$, after one ($1$ chip) is removed, $6$ ($10$ chips) and $3$ ($1$ chips) remain, so $\\mathbb{E}[P_0 \\mid X = A] = \\frac{63}{9} = 7$. Similarly, urn $B$ would have $7$ ($10$ chips) and $2$ ($1$ chips) left, so $\\mathbb{E}[P_0 \\mid X = B] = \\frac{72}{9} = 8$. Substitute these values, giving $\\mathbb{E}[P_0] = 7 \\cdot \\frac{4}{7} + 8 \\cdot \\frac{3}{7} = \\frac{52}{7}$. Define $P_1$ as the payout if you switch. Thus, $\\mathbb{E}[P_1] = \\mathbb{E}[P_1 \\mid X = A]\\mathbb{P}[X = A] + \\mathbb{E}[P_1 \\mid X = B]\\mathbb{P}[X = B]$. If $X = A$, by switching, you select from fresh urn $B$, so $\\mathbb{E}[P_1 \\mid X = A] = \\frac{73}{10} = 7.3$. Similarly, if $X = B$, you draw from fresh urn $A$, hence $\\mathbb{E}[P_1 \\mid X = B] = \\frac{64}{10} = 6.4$. Thus, $\\mathbb{E}[P_1] = 6.4 \\cdot \\frac{3}{7} + 7.3 \\cdot \\frac{4}{7} = \\frac{242}{35} < \\frac{245}{35} = 7$. Consequently, it’s optimal not to switch, and the expected payout is $\\frac{52}{7}$.",
+  "valid answer": "Valid Answers: $\\frac{52}{7}$",
+  "problem tags": [
+    "Expected Value",
+    "Games",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Assess the expected payout if you switch urns versus staying with your chosen urn. Break this into $2$ scenarios based on the urn from which the first chip is drawn. Label urn $A$ as having started with $4$ \\$(\\$1\\$) chips and urn $B$ with $3$ \\$(\\$1\\$) chips. Define the random variable $X$ for the urn of your first chip. Proceed from here. Good luck.",
+  "problem firm": [
+    "Drw"
+  ],
+  "question id": "43619101702674441830"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Double Heads Quest",
+  "problem text": "Consider tossing a fair coin three times. What is the chance that, out of these three flips, exactly two come up heads?",
+  "problem solution": "To solve this thoroughly, note that each coin flip can produce heads (H) or tails (T), giving $$2^3=8$$ equally likely sequences of three flips. Enumerate all possible outcomes: HHH, HHT, HTH, THH, HTT, THT, TTH, and TTT. Of these 8 outcomes, exactly three (HHT, HTH, and THH) contain precisely two heads. Consequently, the probability is the ratio of favorable outcomes to the total number of possible outcomes, which is $$\\frac{3}{8}$$. Therefore, the probability of obtaining exactly two heads in three fair coin tosses is $$\\frac{3}{8}$$.",
+  "valid answer": "Valid Answers: $$\\frac{3}{8}$$",
+  "problem tags": [
+    "Probability",
+    "Binomial"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "List every possible outcome from three coin tosses to identify those with exactly two heads.",
+  "problem firm": [
+    "DRW"
+  ],
+  "question id": "16158160810839468845"
+}

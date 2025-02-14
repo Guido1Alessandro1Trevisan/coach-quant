@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Range Quest",
+  "problem text": "You toss three unbiased dice. What is the likelihood that the gap between the highest and lowest numbers rolled is exactly $4$?",
+  "problem solution": "To achieve a difference of precisely four, the numbers must have either a peak of $6$ and a trough of $2$, or a peak of $5$ and a trough of $1$. Examine these scenarios individually. For the first scenario, two of the numbers are $6$ and $2$. The third number can be $2$, $3$, $4$, $5$, or $6$. Consequently, the unordered results are $226$, $236$, $246$, $256$, and $266$. The first result has $3$ permutations, the second has six permutations, the third has six permutations, the fourth has six permutations, and the fifth has three permutations. Each permutation has a probability $\\frac{1}{216}$ of happening, so the cumulative probability of this scenario is $\\frac{3+6+6+6+3}{216} = \\frac{24}{216}$. For the second scenario, two of the numbers are $5$ and $1$. The third number can be $1$, $2$, $3$, $4$, or $5$. Therefore, the unordered results are $115$, $125$, $135$, $145$, and $155$. The first result has three permutations, the second result has six permutations, the third result has six permutations, the fourth result has six permutations, and the fifth result has three permutations. Each permutation has a probability $\\frac{1}{216}$ of happening, so the cumulative probability of this scenario is $\\frac{3+6+6+6+3}{216} = \\frac{24}{216}$. Altogether, the probability of achieving a difference between the highest and lowest numbers of exactly four is: $\\frac{24+24}{216} = \\frac{2}{9}$.",
+  "valid answer": "Valid Answers: $2/9$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "To achieve a difference of exactly $4$, the numbers must either have a peak of $6$ and a trough of $2$, or a peak of $5$ and a trough of $1$. Try considering these two scenarios separately.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "21770241944911182478"
+}

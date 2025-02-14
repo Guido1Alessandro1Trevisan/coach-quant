@@ -1,0 +1,17 @@
+{
+  "problem name": "Jar Harmony Probability",
+  "problem text": "Consider $2$ jars placed before you. Jar $A$ contains $3$ blue balls and $4$ red balls, while Jar $B$ holds $6$ blue balls and $4$ red balls. If a ball is randomly picked from each jar, what is the probability that both balls are of the same color?",
+  "problem solution": "We need to determine the probability that the balls drawn from Jar $A$ and Jar $B$ are of identical color, meaning they are either both red or both blue. The chance of both being red is $\\dfrac{4}{7} \\cdot \\dfrac{4}{10} = \\dfrac{16}{70}$. The chance of both being blue is $\\dfrac{3}{7} \\cdot \\dfrac{6}{10} = \\dfrac{18}{70}$. Adding these probabilities gives a total probability of $\\dfrac{16 + 18}{70} = \\dfrac{17}{35}$.",
+  "valid answer": "Valid Answers: $17/35$",
+  "problem tags": [
+    "Combinatorics",
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "A successful outcome occurs if both selected balls are red or both are blue.",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "13122972910459158374"
+}

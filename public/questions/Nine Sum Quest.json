@@ -1,0 +1,16 @@
+{
+  "problem name": "Nine Sum Quest",
+  "problem text": "Determine the number of integers no greater than $100000$ whose digits add up to $9$. Examples include $81$, $144$, and $13212$.",
+  "problem solution": "We can promptly check that $100000$ does not have digits adding up to $9$. Thus, we focus on numbers with up to $5$ digits. To standardize, prepend $0$s to numbers with fewer than $5$ digits until they are $5$ digits long. For instance, $81$ turns into $00081$ and $144$ becomes $00144$. Therefore, our number takes the form $x_1x_2x_3x_4x_5$, where each $0 \\leq x_i \\leq 9$, allowing for numbers with less than $5$ digits. The task is to find the number of non-negative integer solutions to $x_1 + x_2 + x_3 + x_4 + x_5 = 9$. This is a typical stars-and-bars problem, calculated as $\\binom{9+5-1}{5-1} = \\binom{13}{4} = 715$.",
+  "valid answer": "Valid Answers: $715$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "To standardize, prepend $0$s to numbers with fewer than $5$ digits until they are $5$ digits long. For instance, $81$ turns into $00081$ and $144$ becomes $00144$.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "65424778530173136184"
+}

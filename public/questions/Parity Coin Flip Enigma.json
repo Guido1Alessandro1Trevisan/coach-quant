@@ -1,0 +1,16 @@
+{
+  "problem name": "Parity Coin Flip Enigma",
+  "problem text": "Imagine tossing coins a certain number of times. If the total flips is an odd figure, what is the probability that the overall count of heads is even? Likewise, if the number of flips is even, what is the probability of getting an even count of heads? Finally, how does the answer change if some coins have different probabilities of landing heads?",
+  "problem solution": "We begin with the scenario of flipping n fair coins (i.e., each coin has a probability of 1/2 for heads). Let us denote by X the random variable representing the total quantity of heads. We want to compute P(X is even). Using either a binomial expansion argument or a symmetry consideration, one can show that for any positive integer n, P(X is even) = $$\\frac{1}{2}$$. In more detail, we note that for each outcome with a certain number of heads, there is a complementary outcome obtained by flipping the result of exactly one coin in the sequence, which toggles the parity of the count of heads, thus guaranteeing an equal split between even and odd counts. Consequently, for both odd n and even n of fair coins, the probability of observing an even number of heads is always $$\\frac{1}{2}$$. Now let the coins possibly have unequal bias, with coin i having probability p\\_i of landing heads. We set up an indicator random variable for each coin, X\\_i, that is 1 if coin i lands heads and 0 otherwise. Then X = X\\_1 + X\\_2 + ... + X\\_n. A principled way to handle this is through the generating function approach, or by a known identity for the probability of an even sum of independent Bernoulli random variables. The result is that P(X is even) = $$\\frac{1}{2} + \\frac{1}{2} \\prod\\_{i=1}^n (1 - 2p\\_i)$$. When p\\_i = 1/2 for all i, the product term becomes 0, recovering the fair coin result of $$\\frac{1}{2}$$.",
+  "valid answer": "Valid Answers: For all fair coins (whether odd or even count), $$\\frac{1}{2}$$. For coins with probabilities p\\_1, p\\_2, ..., p\\_n, $$\\frac{1}{2} + \\frac{1}{2}\\prod\\_{i=1}^n (1 - 2p\\_i)$$.",
+  "problem tags": [
+    "Probability",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Apply a symmetry argument or a binomial identity. A generating function can also reveal P(even number of heads).",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "02890318476077698302"
+}

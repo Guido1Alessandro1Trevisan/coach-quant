@@ -1,0 +1,16 @@
+{
+  "problem name": "Path Puzzle Paths",
+  "problem text": "Imagine you have a rectangular arrangement of 3 rows and 4 columns. You want to travel from the top-left corner to the bottom-right corner, with each move consisting of a single step to the right or a single step down. How many distinct ways are there to complete this journey?",
+  "problem solution": "Solution Explanation:\\n\\nIn a formal sense, let us represent any path by a sequence of steps, each step being either R (right) or D (down). To move from the top-left corner to the bottom-right corner of a 3\\times 4 grid, you must move exactly 3 steps to the right (R) and 4 steps down (D).\\n\\nHence, every possible path corresponds to a unique permutation of the 7 steps (3 R's and 4 D's). The number of such permutations is counted by the binomial coefficient, because we choose which 3 of the 7 positions are R (and the remaining 4 are D), or equivalently we choose which 4 of the 7 positions are D. Formally, the number of distinct paths is given by:\\n$$\\binom{7}{3} = \\binom{7}{4} = \\frac{7!}{3!4!} = 35.$$\\n\\nTherefore, there are 35 distinct ways to travel from the top-left corner of the 3\\times 4 grid to its bottom-right corner using only single steps to the right or single steps down.",
+  "valid answer": "Valid Answers: 35",
+  "problem tags": [
+    "Combinatorics",
+    "Path Counting"
+  ],
+  "problem difficulty": "easy",
+  "problem hint": "Count how many total moves must be made, then decide how many of them must be right moves and how many must be down moves.",
+  "problem firm": [
+    "Citi"
+  ],
+  "question id": "16974980600552506445"
+}

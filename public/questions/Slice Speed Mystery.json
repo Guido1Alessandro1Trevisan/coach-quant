@@ -1,0 +1,17 @@
+{
+  "problem name": "Slice Speed Mystery",
+  "problem text": "Garrett has a passion for pizza and likes to take his time with each slice. The duration for him to consume a slice follows a uniform distribution from $1$ to $5$ minutes. If he has been eating for $2$ minutes and hasn't finished yet, calculate the likelihood that he completes the slice in the subsequent minute.",
+  "problem solution": "Let $$ T $$ represent the time Garrett spends eating his pizza slice. It is given that $$ T \\sim \\text{Unif}(1,5) $$. Knowing he has already spent at least $$ 2 $$ minutes on the slice, we seek the probability that he finishes within the next minute, specifically $$ \\mathbb{P}[T \\leq 3 \\mid T \\geq 2] $$. Using the definition of conditional probability, we find this to be $$ \\dfrac{\\mathbb{P}[2 \\leq T \\leq 3]}{\\mathbb{P}[T \\geq 2]} = \\dfrac{\\frac{1}{4}}{\\frac{3}{4}} = \\dfrac{1}{3} $$.",
+  "valid answer": "Valid Answers: $1/3$",
+  "problem tags": [
+    "Events",
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $T$ as the time Garrett needs to finish his pizza slice. The problem states that $T \\sim \\text{Unif}(1,5)$. Knowing he has been eating for at least $2$ minutes, determine the probability that he will finish in the upcoming minute. What exact probability expression are we evaluating?",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "55080216085383341813"
+}

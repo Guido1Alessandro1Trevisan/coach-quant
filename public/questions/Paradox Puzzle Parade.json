@@ -1,0 +1,16 @@
+{
+  "problem name": "Paradox Puzzle Parade",
+  "problem text": "Suppose you have 100 statements listed. The first says that at most zero of the statements are correct, the second says that at most one is correct, and so on, until the 100th says at most 99 of the statements are correct. Determine which of these statements are actually correct and how many of them are true.",
+  "problem solution": "We aim to find a number k such that exactly k statements are true. Let the statements be labeled S1 through S100, where statement Si says: 'At most i-1 of these 100 statements are true.' We require self-consistency: if S_i is true, then k \\le i-1, and if S_i is false, then k > i-1. Suppose k is the number of true statements. Then for each i \\le k, we have i-1 < k, contradicting 'at most i-1' true statements, so those S_i must be false. For each i > k, we have i-1 \\ge k, so 'at most i-1' is satisfied, making S_i true. Consequently, precisely the statements numbered k+1 through 100 are true, giving a total of 100 - k true statements. Because that total must be k, we get the equation k = 100 - k, implying 2k = 100, so k = 50. Therefore, 50 statements indeed hold true, precisely those from S51 through S100, and the first 50 statements are false.",
+  "valid answer": "Valid Answers: 50",
+  "problem tags": [
+    "Logic",
+    "Paradox"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider assuming exactly k statements are true and see which statements must be true or false as a result.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "28200533365833623349"
+}

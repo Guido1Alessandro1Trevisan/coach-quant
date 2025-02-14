@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Dilemma 2",
+  "problem text": "You randomly choose between a fair four-sided die with faces labeled 1 through 4 and a fair six-sided die with faces labeled 1 through 6, then roll your chosen die. The outcome is 2. What is the probability that the four-sided die was selected?",
+  "problem solution": "Let A be the event that the four-sided die is chosen, and let B be the event that the observed roll is 2. Since the selection is random, $$P(A) = \\frac{1}{2}$$ and $$P(\\text{not }A) = \\frac{1}{2}.$$ Furthermore, the probability of rolling a 2 on the four-sided die is $$P(B\\mid A) = \\frac{1}{4},$$ and on the six-sided die it is $$P(B\\mid \\text{not }A) = \\frac{1}{6}.$$ By Bayes' Theorem, $$P(A\\mid B) = \\frac{P(B\\mid A)\\,P(A)}{P(B\\mid A)\\,P(A) + P(B\\mid \\text{not }A)\\,P(\\text{not }A)} = \\frac{\\frac{1}{4}\\cdot\\frac{1}{2}}{\\frac{1}{4}\\cdot\\frac{1}{2} + \\frac{1}{6}\\cdot\\frac{1}{2}} = \\frac{\\frac{1}{8}}{\\frac{1}{8} + \\frac{1}{12}} = \\frac{\\frac{1}{8}}{\\frac{5}{24}} = \\frac{3}{5}.$$ Therefore, the probability is $$\\frac{3}{5}.$$",
+  "valid answer": "Valid Answers: 3/5",
+  "problem tags": [
+    "Probability",
+    "Conditional Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Use Bayes' Theorem, combining the likelihood of rolling a 2 with the prior probabilities for each die.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "17429639022161073001"
+}

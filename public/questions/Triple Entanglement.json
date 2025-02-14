@@ -1,0 +1,17 @@
+{
+  "problem name": "Triple Entanglement",
+  "problem text": "If an event A stands alone with respect to event B and also independently of event C, does that necessarily ensure that A remains independent of B∩C?",
+  "problem solution": "First, let us define independence in the standard way: events X and Y are said to be independent if $$P(X \\cap Y) = P(X)P(Y).$$ We are given that A is independent of B: $$P(A \\cap B) = P(A) P(B),$$ and that A is independent of C: $$P(A \\cap C) = P(A) P(C).$$ We want to determine if it must then follow that $$P(A \\cap (B \\cap C)) = P(A)P(B \\cap C).$$ We will show by counterexample that this need not be true. Consider a discrete sample space with four equally likely outcomes: $$\\Omega = \\{(1,1),(1,2),(2,1),(2,2)\\}.$$ Let $$A = \\{(1,1),(1,2)\\}, B = \\{(1,1),(2,1)\\}, C = \\{(1,1),(2,2)\\}.$$ Then we calculate: $$P(A) = 1/2, P(B) = 1/2, P(C) = 1/2.$$ Next, $$P(A \\cap B) = 1/4,$$ which matches $$P(A)P(B) = (1/2)(1/2) = 1/4,$$ so A is independent of B. Similarly, $$P(A \\cap C) = 1/4,$$ which equals $$P(A)P(C) = (1/2)(1/2) = 1/4,$$ so A is also independent of C. However, if we look at $$B \\cap C = \\{(1,1)\\},$$ then $$P(B \\cap C) = 1/4.$$ Meanwhile, $$A \\cap (B \\cap C) = \\{(1,1)\\},$$ so $$P(A \\cap B \\cap C) = 1/4.$$ But $$P(A) P(B \\cap C) = (1/2)(1/4) = 1/8.$$ Hence, $$P(A \\cap B \\cap C) = 1/4 \\neq 1/8 = P(A)P(B \\cap C),$$ showing that A is not independent of B \\cap C. In conclusion, the independence of A from B and A from C separately does not guarantee that A is independent of B \\cap C in general.",
+  "valid answer": "Valid Answers: No, not necessarily",
+  "problem tags": [
+    "Probability",
+    "Set Theory"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Try to create a small probability space with four equally likely outcomes and define A, B, and C in such a way that A is independent of both B and C but not from their intersection.",
+  "problem firm": [
+    "Veritas Analytics",
+    "Titan Solutions"
+  ],
+  "question id": "82933584194955102054"
+}

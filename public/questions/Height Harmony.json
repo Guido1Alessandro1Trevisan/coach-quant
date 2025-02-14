@@ -1,0 +1,16 @@
+{
+  "problem name": "Height Harmony",
+  "problem text": "A group of ten students, each with a unique height, is organizing for a photograph. The photographer stipulates that the two tallest individuals must be positioned in the central two spots, with the rest arranged so that their heights decrease as they move outward. Determine the number of possible arrangements for the students.",
+  "problem solution": "The two tallest students can be placed in two different configurations. Consider the remaining eight students and focus on the four spots to the left of the center. Any selection of four out of these eight students can occupy these spots since each selection has a unique descending order arrangement. The four students not selected automatically fill the right side, again with a single descending order configuration. Therefore, there are ${8 \\choose 4}$ configurations for the non-center students. Given two ways to arrange the central pair, the total arrangements are: ${2 \\choose 1} \\times {8 \\choose 4} = 140$",
+  "valid answer": "Valid Answers: $140$",
+  "problem tags": [
+    "Combinatorics",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "There are two configurations for the tallest pair. Determine how many ways the $4$ positions to the left of the center can be occupied.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "97844618425140137623"
+}

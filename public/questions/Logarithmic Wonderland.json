@@ -1,0 +1,16 @@
+{
+  "problem name": "Logarithmic Wonderland",
+  "problem text": "Assume $\\ln(X) \\sim N(0, 1)$. Determine $\\ln(\\mathbb{E}[X])$.",
+  "problem solution": "Consider $Z \\sim N(0,1)$. It follows that $X = e^{Z}$. We need to calculate $\\mathbb{E}[X] = \\mathbb{E}[e^Z] = M_Z(1)$, where $M_Z(\\theta)$ is the moment generating function of $Z$. The moment generating function for $Z \\sim N(0,1)$ is given by $M_Z(\\theta) = e^{\\frac{1}{2}\\theta^2}$. Consequently, $M_Z(1) = e^{\\frac{1}{2}}$, hence the result is $\\ln(e^{\\frac{1}{2}}) = \\frac{1}{2}$.",
+  "valid answer": "Valid Answers: $\\frac{1}{2}$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Assume $Z \\sim N(0,1)$. Thus, $X = e^{Z}$. The task is to compute $\\mathbb{E}[X] = \\mathbb{E}[e^Z] = M_Z(1)$, where $M_Z(\\theta)$ is the moment generating function for $Z$.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "81282190227603484325"
+}

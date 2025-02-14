@@ -1,0 +1,15 @@
+{
+  "problem name": "Orbital Reunion",
+  "problem text": "Consider a solar system with three planets revolving around a central star. Assume they move in the same direction and lie on the same orbital plane. The first planet completes an orbit every $40$ years, the second every $60$ years, and another one every $90$ years. Currently, the three planets are aligned with the star. Determine the next occurrence, measured in years, when all three planets will once again align with the star.",
+  "problem solution": "The alignment can occur on either the same or opposing sides of the star. Therefore, the effective periods are actually $20$, $30$, and $45$. We seek the least common multiple of these values, which is $180$.",
+  "valid answer": "Valid Answers: $180$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Remember that the planets can align either on the same side of the star or on opposite sides.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "08757908252794791084"
+}

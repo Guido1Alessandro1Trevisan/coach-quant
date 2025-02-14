@@ -1,0 +1,17 @@
+{
+  "problem name": "Equitable Odds Challenge",
+  "problem text": "You are wagering on the result of a football match. Team Alpha has odds of $(2:1)$, which means you receive $3$ upon winning, leading to a net gain of $2$. Team Beta has odds at $(3:1)$, while a draw has odds of $(10:1)$. Let $A$, $B$, and $C$ denote the smallest whole dollar amounts you stake on Team Alpha, Team Beta, and a draw, respectively. If you aim to secure an identical profit regardless of the match's result, how much is your profit? If betting on this match is determined to be unwise, input $0$.",
+  "problem solution": "To tackle this problem, we can examine the potential results and form equations for the net gain in each scenario. For instance, if Team Alpha triumphs, your net gain is $2A - B - C$, as you gain $2A$ and lose the amounts $B$ and $C$ wagered on Team Beta and a draw, respectively. By applying this logic, we establish these equations: If Team Alpha triumphs: $2A - B - C$ If Team Beta triumphs: $3B - A - C$ If a draw happens: $10C - A - B$. To ensure consistent profit regardless of the result, we equate these expressions. Solving this equation system results in $A = 44$, $B = 33$, and $C = 12$ as the least amounts you can stake. Verifying by substituting these figures into the equations shows a profit of $43$ in all scenarios. Hence, the solution is $43$.",
+  "valid answer": "Valid Answers: $43$",
+  "problem tags": [
+    "Finance",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about the returns for each potential result.",
+  "problem firm": [
+    "Optiver",
+    "Sig"
+  ],
+  "question id": "12970529622232027864"
+}

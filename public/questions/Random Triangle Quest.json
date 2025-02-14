@@ -1,0 +1,16 @@
+{
+  "problem name": "Random Triangle Quest",
+  "problem text": "Consider $X, Y, Z \\sim \\text{Unif}(0,1)$, which are independent and identically distributed. Determine the probability that it is possible to create a triangle with sides $X, Y,$ and $Z$.",
+  "problem solution": "Solution has not been identified",
+  "valid answer": "Valid Answers: $\\frac{1}{2}$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "To form an invalid triangle, at least one of these must be true: $X > Y + Z$, $Y > X + Z$, or $Z > X + Y$. Notice that these three scenarios are mutually exclusive. Can you see why?",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "24185288148606179036"
+}

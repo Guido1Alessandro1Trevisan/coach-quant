@@ -1,0 +1,16 @@
+{
+  "problem name": "Ladder Slide Chase",
+  "problem text": "A $50$-ft ladder is leaned against a vertical wall of a tall structure. The ladder's base is on a slick surface, causing it to slide and the top to descend the wall. The base moves away from the wall at a steady pace of $4$ feet per minute. Determine the speed at which the top of the ladder is moving down the wall (in feet per minute) when the base is $30$ feet from the wall.",
+  "problem solution": "Consider the ladder as the hypotenuse of a right triangle formed by the ground and the wall. By applying the Pythagorean Theorem, we get $30^2 + y^2 = 50^2 \\iff y = 40$. Thus, the top of the ladder is $40$ feet above the ground at that moment. Next, differentiate both sides of $x^2 + y^2 = z^2$. Given that $x' = 4$, since the base length is growing as the ladder descends along the wall. Additionally, $z' = 0$, because the ladder's length remains unchanged. We seek $y'$. Differentiating yields $2xx' + 2yy' = 2zz'$. The RHS is $0$ because $z' = 0$. Substitute and solve for $y'$. $2(30)(4) + 2(40)y' = 0 \\iff y' = -3$. Thus, our solution is $3$, indicating the ladder descends the wall at a rate of $3$ feet per minute.",
+  "valid answer": "Valid Answers: $3$",
+  "problem tags": [
+    "Calculus",
+    "Pure Math"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the ladder as the hypotenuse of a right triangle formed by the ground and the wall. Apply Pythagorean Theorem.",
+  "problem firm": [
+    "Transmarket Group"
+  ],
+  "question id": "20703219887463458862"
+}

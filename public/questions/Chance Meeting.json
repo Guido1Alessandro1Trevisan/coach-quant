@@ -1,0 +1,19 @@
+{
+  "problem name": "Chance Meeting",
+  "problem text": "Two quants are arranging a meal at Dorsia. Suppose each one independently shows up at a uniformly random time between $8:00$pm and $9:00$pm, staying precisely $10$ minutes before leaving. What is the probability that they will encounter each other and dine together?",
+  "problem solution": "Let quant $x$ appear $X$ minutes after 8:00pm and quant $y$ appear $Y$ minutes after 8:00pm. The two quants will meet if and only if $\\vert Y - X \\vert \\leq 10$. The area defined by this condition in the space $X, Y \\in [0, 60]$ is $60^2 - 50^2 = 1100$. Given that both $X$ and $Y$ have uniform distribution, the likelihood that the quants meet is $\\frac{1100}{3600} = \\frac{11}{36}.$",
+  "valid answer": "Valid Answers: $11/36$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Remember that their arrival timings are uniformly distributed. Geometry might be helpful for solving this problem. How can you determine the sample space and restriction for this scenario?",
+  "problem firm": [
+    "Belvedere Trading",
+    "Citadel",
+    "Sig"
+  ],
+  "question id": "02335937971889913492"
+}

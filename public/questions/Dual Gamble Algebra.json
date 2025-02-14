@@ -1,0 +1,17 @@
+{
+  "problem name": "Dual Gamble Algebra",
+  "problem text": "Quant Essential stock will either increase twofold in value or decrease by $50\\%$ by the next day. You can also wager on the stock's rise or fall with a friend at $1:1$ odds. Let $A$ and $B$ be the smallest whole dollar amounts you invest in the stock and wager on its increase/decrease with your friend, respectively. Assume you aim to achieve the same gross profit regardless of the stock's movement the following day. What is your profit from wagering $A$ and $B$? If a guaranteed profit is not possible, enter $0$.",
+  "problem solution": "An important point in this scenario is that investing in the stock is more advantageous than wagering on its rise with your friend, as you will still have $50\\%$ of your stock investment if it decreases. Therefore, we should invest in the stock and wager on its fall with your friend. The profit equations are as follows: if the stock rises, your profit is $A-B$; if the stock falls, your profit is $B-0.5A$. By equating these two expressions, we find $A = \\frac{4B}{3}$. Consequently, $A$ and $B$ are $4$ and $3$, respectively, ensuring a consistent profit of $1$.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Finance",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Construct equations for $ \\text{gross profit} $ for each potential outcome.",
+  "new problem na me": "Stock Gamble Dynamics",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "79747207217581735772"
+}

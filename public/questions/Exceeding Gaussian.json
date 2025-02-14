@@ -1,0 +1,16 @@
+{
+  "problem name": "Exceeding Gaussian",
+  "problem text": "Consider a normally distributed variable X with a mean of 50 and a variance of 4. What is the likelihood that X exceeds 54?",
+  "problem solution": "We have a random variable X $\\sim N(\\mu = 50, \\sigma^2 = 4)$. Here, the standard deviation is $\\sigma = \\sqrt{4} = 2$. We want to determine $P(X > 54)$.<br/>To convert X into a standard normal variable Z, we use the transformation $Z = \\dfrac{X - \\mu}{\\sigma}$. Thus, $P(X > 54) = P\\Bigl(Z > \\dfrac{54 - 50}{2}\\Bigr) = P(Z > 2)$.<br/>For a standard normal variable Z, the value of $P(Z > 2)$ is well documented in statistical tables or can be computed using a cumulative distribution function. By standard normal distribution tables, $P(Z > 2) \\approx 0.0228$. Hence, $P(X > 54) \\approx 0.0228$.<br/><br/>Formal justification relies on the properties of the normal distribution and the linear transformation that converts a normal random variable to its standard counterpart. The distribution of Z is $N(0,1)$, and its cumulative distribution function (CDF) is tabulated. Consequently, we compute the probability that Z is greater than 2 based on these established tables, arriving at approximately 0.0228.",
+  "valid answer": "Valid Answers: 0.0228",
+  "problem tags": [
+    "Probability",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Express X in terms of the standard normal Z, then find the area under the Z-curve above 2.",
+  "problem firm": [
+    "DRW"
+  ],
+  "question id": "70267605704967848432"
+}

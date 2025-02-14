@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Memory Repeat",
+  "problem text": "Three fair $6$-sided dice are tossed, and the numbers on their top faces are noted. Determine the likelihood that the numbers observed when all three dice are tossed again match the initially noted three numbers.",
+  "problem solution": "No solution determined",
+  "valid answer": "Valid Answers: $83/3888$",
+  "problem tags": [
+    "Events",
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "No hint provided",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "90780621952650557026"
+}

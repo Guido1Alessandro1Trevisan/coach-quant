@@ -1,0 +1,19 @@
+{
+  "problem name": "Coin Flip Dynamics",
+  "problem text": "Consider we need to simulate an event with probability $\\dfrac{1}{3}$. This can be done using this approach: Toss a fair coin two times. If the result is $HH$, we consider the event to have occurred. If the result is $HT$ or $TH$, we consider the event not to have occurred. If the result is $TT$, we repeat the $2$ coin toss experiment following the same guidelines. Determine the expected number of coin tosses required to simulate the event.",
+  "problem solution": "Let $N$ represent the number of coin tosses required to simulate the event. There is a probability of $\\dfrac{3}{4}$ that we decide whether the event occurred on the initial attempt. If we get $TT$, which has a probability of $\\dfrac{1}{4}$, we restart our attempt, but the total number of tosses increases by $2$. Thus, with a probability of $\\dfrac{3}{4}$, it takes $2$ tosses to simulate, and with a probability of $\\dfrac{1}{4}$, it takes $2 + \\mathbb{E}[N]$ tosses to simulate, as we have conducted $2$ tosses and are back to the beginning for the next attempt. Therefore, we have that $\\mathbb{E}[N] = \\dfrac{3}{4} \\cdot 2 + \\dfrac{1}{4}(2 + \\mathbb{E}[N])$. Solving for $\\mathbb{E}[N]$ gives $\\mathbb{E}[N] = \\dfrac{8}{3}$.",
+  "valid answer": "Valid Answers: $8/3$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider whether the simulation completes within the first $2$ tosses.",
+  "problem firm": [
+    "Akuna Capital",
+    "Goldman Sachs",
+    "Optiver",
+    "Worldquant"
+  ],
+  "question id": "14564696054326495846"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Ascendancy Exploration",
+  "problem text": "You roll a fair six-sided die three times in succession, and your aim is to determine the probability that the three results strictly increase. Furthermore, discuss some fundamental aspects of Brownian motion in simple terms.",
+  "problem solution": "First, note that each of the three dice rolls can produce one of 6 outcomes, yielding a total of $$6^3 = 216$$ equally likely possibilities. We want to count the number of ways to obtain three strictly ascending values (e.g., $$1,2,3$$ but not $$1,3,3$$ or $$2,2,5$$). To do this, we observe that choosing 3 distinct faces from 6 is counted by the binomial coefficient $$\\binom{6}{3} = 20$$. Each 3-element selection corresponds uniquely to one strictly increasing sequence, so there are exactly 20 strictly increasing triples. Therefore, the probability is $$\\dfrac{20}{216} = \\dfrac{5}{54}$$, as 20 outcomes out of 216 satisfy the condition. Brownian motion, on the other hand, is a continuous-time stochastic process often used to model random changes; it has independent, normally distributed increments and continuous sample paths. It is a foundational process in both physics for modeling particle diffusion and in finance for stock price modeling. In rigorous mathematical language, it is a martingale with stationary and independent increments and a continuous trajectory.",
+  "valid answer": "Valid Answers: $$\\dfrac{5}{54}$$",
+  "problem tags": [
+    "Probability",
+    "Random-Processes"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the size of the sample space $$6^3$$ and count the strictly increasing sequences using combinations.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "93229349412766595466"
+}

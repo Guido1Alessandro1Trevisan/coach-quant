@@ -1,0 +1,18 @@
+{
+  "problem name": "Dice Delight",
+  "problem text": "Consider a 6-sided die with face values $1-6$ and respective chances $1/6, 1/5 - x, 1/10 + 2x, 1/5 - x, 1/6,$ and $1/6$. Determine the value of $x$ that optimizes the chance of achieving a total of $7$ when rolling the die twice.",
+  "problem solution": "A sum of $7$ can be achieved by rolling any sequence of $(1,6)$, $(2,5)$, or $(3,4)$. The likelihood of rolling a sequence of $(1,6)$ is $2 \\cdot \\frac{1}{6} \\cdot \\frac{1}{6} = \\frac{1}{18}$. For a sequence of $(2,5)$, the likelihood is $2 \\cdot \\frac{1}{6} \\cdot \\left(\\frac{1}{5} - x\\right)$. For a sequence of $(3,4)$, it is $\\left(\\frac{1}{10} + 2x\\right) \\cdot \\left(\\frac{1}{5} - x\\right)$. Summing these probabilities and simplifying, if $p(x)$ is the probability of a total of $7$ in $2$ rolls with $x$ as the die's parameter, $p(x) = -4x^2 + \\frac{4}{15}x + \\frac{73}{450}$. Using the formula $x^* = -\\frac{b}{2a}$ locates the $x$-coordinate for the maximum, specifically $x^* = -\\frac{\\frac{4}{15}}{-8} = \\frac{1}{30}$.",
+  "valid answer": "Valid Answers: $1/30$",
+  "problem tags": [
+    "Discrete Random Variables",
+    "Conditional Probability",
+    "Calculus",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "To achieve a total of $7$, roll any sequence of $(1,6)$, $(2,5)$, or $(3,4)$. Formulate a function $p(x)$ that provides the likelihood of a total of $7$ in $2$ rolls with respect to $x$. Then, maximize by deriving.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "03824196414514965811"
+}

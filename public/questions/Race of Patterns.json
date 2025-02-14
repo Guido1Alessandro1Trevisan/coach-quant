@@ -1,0 +1,16 @@
+{
+  "problem name": "Race of Patterns",
+  "problem text": "We toss a fair coin repeatedly and check for the appearance of certain three-flip patterns. Specifically, we wish to know the probability that the pattern HHT occurs before the pattern THH. This arises in various betting scenarios, including those involving the Kelly criterion, and can be explored using Markov chains.",
+  "problem solution": "We may formalize the solution by tracking states where partial overlaps of HHT or THH have occurred. Label the following states as: S0 for no relevant flips yet, SH for H, ST for T, SHH for HH, SHT for HT, and STH for TH. Once HHT or THH is observed, we transition to an absorbing state indicating which pattern appears first. Let $$p_0$$ be the probability HHT appears first from state S0, $$p_H$$ from SH, $$p_T$$ from ST, $$p_{HH}$$ from SHH, $$p_{HT}$$ from SHT, and $$p_{TH}$$ from STH. Note that if from SHH we flip T, we immediately obtain HHT, while from STH we flip H, we get THH. Setting up the transition equations: $$p_0 = \\tfrac{1}{2}p_H + \\tfrac{1}{2}p_T,$$ $$p_H = \\tfrac{1}{2}p_{HH} + \\tfrac{1}{2}p_{HT},$$ $$p_T = \\tfrac{1}{2}p_{TH} + \\tfrac{1}{2}p_T,$$ $$p_{HH} = \\tfrac{1}{2}p_{HH} + \\tfrac{1}{2}\\cdot 1,$$ $$p_{HT} = \\tfrac{1}{2}p_{TH} + \\tfrac{1}{2}p_T,$$ $$p_{TH} = \\tfrac{1}{2}\\cdot 0 + \\tfrac{1}{2}p_{HT}.$$ Solving, we get $$p_{HH} = 1,$$ followed by successively concluding $$p_{HT} = 0,$$ $$p_{TH} = 0,$$ $$p_T = 0,$$ $$p_H = \\tfrac{1}{2},$$ and finally $$p_0 = \\tfrac{1}{4}.$$ Therefore, the probability that HHT occurs before THH is $$\\dfrac{1}{4}.$$",
+  "valid answer": "Valid Answers: $1/4$",
+  "problem tags": [
+    "Probability",
+    "Markov Chains"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Track possible states of partial overlaps for HHT and THH. Which transitions lead to HHT first?",
+  "problem firm": [
+    "Citi"
+  ],
+  "question id": "60480093335081349694"
+}

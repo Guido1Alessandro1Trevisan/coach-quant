@@ -1,0 +1,16 @@
+{
+  "problem name": "Coin Flip Synchronicity",
+  "problem text": "Consider a scenario where $2$ participants each toss a fair coin $4$ times and note their results. Determine the likelihood that both participants end up with the same count of tails.",
+  "problem solution": "To address this problem, begin by computing the likelihood for each possible count of tails. This can be achieved using the binomial formula. $\\mathbb{P}[0 \\text{ tails}]=\\left(\\frac{1}{2}\\right)^4=\\frac{1}{16}$ $\\mathbb{P}(1 \\text{ tails})=\\binom{4}{1}\\left(\\frac{1}{2}\\right)^4=\\frac{1}{4}$ $\\mathbb{P}(2 \\text{ tails})=\\binom{4}{2}\\left(\\frac{1}{2}\\right)^4=\\frac{3}{8}$ $\\mathbb{P}(3 \\text{ tails})=\\binom{4}{3}\\left(\\frac{1}{2}\\right)^4=\\frac{1}{4}$ $\\mathbb{P}(4 \\text{ tails})=\\left(\\frac{1}{2}\\right)^4=\\frac{1}{16}$ As the probability for each participant getting a certain number of tails is independent, we can square these probabilities to find the chance that both participants achieve the same number of tails. $\\mathbb{P}(0 \\text{ tails for both})=\\left(\\frac{1}{16}\\right)^2=\\frac{1}{256}$ $\\mathbb{P}(1 \\text{ tails for both})=\\left(\\frac{1}{4}\\right)^2=\\frac{1}{16}$ $\\mathbb{P}(2 \\text{ tails for both})=\\left(\\frac{3}{8}\\right)^2=\\frac{9}{64}$ $\\mathbb{P}(3 \\text{ tails for both})=\\left(\\frac{1}{4}\\right)^2=\\frac{1}{16}$ $\\mathbb{P}(4 \\text{ tails for both})=\\left(\\frac{1}{16}\\right)^2=\\frac{1}{256}$ Adding these probabilities together, we obtain $\\mathbb{P}(\\text{same \\# of tails})=2 \\cdot \\frac{1}{256}+2 \\cdot \\frac{1}{16}+\\frac{9}{64}=\\frac{35}{128}$",
+  "valid answer": "Valid Answers: $35/128$",
+  "problem tags": [
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Calculate the probability for a single participant getting each specific count of tails.",
+  "problem firm": [
+    "Optiver",
+    "Sig"
+  ],
+  "question id": "23099135074090696641"
+}

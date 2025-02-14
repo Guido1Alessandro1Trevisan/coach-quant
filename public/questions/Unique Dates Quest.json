@@ -1,0 +1,16 @@
+{
+  "problem name": "Unique Dates Quest",
+  "problem text": "Starting from 03/01/2024 (DD/MM/YYYY), identify the soonest future date (strictly after 03/01/2024) such that when its day, month, and year are written in the form DD/MM/YYYY, no digit is repeated among the eight digits.",
+  "problem solution": "We first restate the condition: to write a day $D$ (two digits), month $M$ (two digits), and year $Y$ (four digits) so that all eight digits are pairwise different.\n\n1) Notice that the year 2024 has digits \\(2, 0, 2, 4\\), which already repeats the digit \\(2\\). Thus, no day-month combination for 2024 can yield all distinct digits.\n\n2) More systematically, any year that either repeats a digit internally or includes \\(0\\) tends to conflict with leading zeroes in day/month or with repeating digits in day/month. One must check each subsequent year. For example:\n   • 2025 through 2029 all contain a repeated digit '2'.\n   • 2030 has digits \\(2, 0, 3, 0\\), repeating \\(0\\).\n   • 2031 has digits \\(2, 0, 3, 1\\), no internal repetition, but every single-digit month/day uses a leading zero that collides with the zero in 2031, and every valid two-digit month/day eventually overlaps with \\(2, 0, 3, 1\\). This reasoning often prohibits forming eight distinct digits.\n\n3) Checking year by year, one finally arrives at 2345. The digits of 2345 are \\(2, 3, 4, 5\\), all distinct with no zero. Now we look for a valid month \\(M\\) and day \\(D\\) whose digits do not appear in \\(2, 3, 4, 5\\). Since months less than 10 have a leading zero, we verify that zero does not already appear in the year (which it does not). Moreover, the digit(s) making up the month must also be new:\n   • Month = 06 (digits \\(0, 6\\)) is allowable since \\(0\\) and \\(6\\) are not in \\(2, 3, 4, 5\\).\n   • Now the day \\(D\\) must avoid \\(2, 3, 4, 5, 0, 6\\). Hence the available digits are \\(1, 7, 8, 9\\). Furthermore, single-digit days would begin with \\(0\\), duplicating the zero in the month, so they are invalid. Examining two-digit days from \\(1, 7, 8, 9\\) that form a legitimate calendar date, the earliest valid day is 17 (since 17 is an actual day in June). Its digits \\(1, 7\\) do not appear yet.\n\n4) Therefore, among all days after 03/01/2024, the first date to satisfy the distinct digits property is 17/06/2345 (DD/MM/YYYY). In this case, the eight digits \\(1, 7, 0, 6, 2, 3, 4, 5\\) are pairwise different.\n\nHence, the earliest future date after 03/01/2024 whose day-month-year notation uses all distinct digits is 17/06/2345.\n\nFormally, checking dates in chronological order (or logically eliminating years that cannot fulfill the requirement) shows no earlier date can meet this distinctness condition.",
+  "valid answer": "The earliest valid date is $$17/06/2345$$.",
+  "problem tags": [
+    "Combinatorics",
+    "Date Arithmetic"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Years containing any repeated digit or zero are especially restrictive. You may have to look deep into future years to avoid repeats both in the year and any leading zeroes for the month/day.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "99336741366285000221"
+}

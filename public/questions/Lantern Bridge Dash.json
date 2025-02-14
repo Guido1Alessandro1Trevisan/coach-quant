@@ -1,0 +1,17 @@
+{
+  "problem name": "Lantern Bridge Dash",
+  "problem text": "David, Emma, Frank, and Grace must traverse a river. The only method available to cross is a bridge with a capacity of $2$ individuals at a time. It is nighttime, so they require a lantern to see, and they have just $1$ lantern. When crossing, pairs must move at the pace of the slower person. The goal is to get everyone across swiftly. The crossing durations are: David needs $10$ minutes, Emma requires $5$ minutes, Frank $2$ minutes, and Grace $1$ minute. Determine the minimum time necessary for everyone to reach the opposite bank.",
+  "problem solution": "The crucial insight is understanding that the lantern carrier returning does not need to be from the last duo. Also, David and Emma, being the slowest, should cross together, but not initially, because it would mean one of them returns, taking too long. Therefore, Frank and Grace should cross first, taking $2$ minutes. Grace returns with the lantern, using $1$ minute. Next, David and Emma cross, taking $10$ minutes. Frank returns with the lantern, taking $2$ minutes. Finally, Frank and Grace cross again, taking $2$ minutes, totaling $17$ minutes.",
+  "valid answer": "Valid Answers: $17$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "A crucial insight is that the person returning with the lantern need not be part of the last pair.",
+  "problem firm": [
+    "Belvedere Trading",
+    "Jane Street",
+    "Sig"
+  ],
+  "question id": "40007683806170571707"
+}

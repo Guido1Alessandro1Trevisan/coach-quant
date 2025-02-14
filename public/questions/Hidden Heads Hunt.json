@@ -1,0 +1,15 @@
+{
+  "problem name": "Hidden Heads Hunt",
+  "problem text": "Three coin tosses are conducted. Given that at least one of the tosses resulted in heads, find the probability that exactly two of the tosses were heads, in any order.",
+  "problem solution": "We begin by listing all 8 possible equally likely outcomes for three coin tosses: TTT, TTH, THT, THH, HTT, HTH, HHT, and HHH. Each outcome initially has probability $$\\frac{1}{8}$$. However, we are told there was at least one heads, so TTT is excluded from consideration, leaving us with a reduced sample space of 7 outcomes: TTH, THT, THH, HTT, HTH, HHT, and HHH. Exactly three of these outcomes (HHT, HTH, and THH) have exactly two heads and one tails. Therefore, the probability of obtaining two heads, given that there is at least one head, is $$\\frac{3}{7}$$. This follows from counting the favorable outcomes and dividing by the size of the reduced sample space.",
+  "valid answer": "Valid Answers: $$\\frac{3}{7}$$",
+  "problem tags": [
+    "Probability"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "How many outcomes remain if you exclude the one with no heads, and how many of those contain exactly two heads?",
+  "problem firm": [
+    "Akuna Capital"
+  ],
+  "question id": "53388525527568813818"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Intersecting Cylinders Volume",
+  "problem text": "Imagine two distinct cylinders, each having radius 1, arranged so that their principal axes intersect at right angles in three-dimensional space. Determine the volume of the region that lies inside both cylinders simultaneously.",
+  "problem solution": "We present a thorough, formal approach. First, let us align the cylinders with suitable coordinate axes. Define one cylinder by the region $$x^2 + y^2 \\le 1$$ in the $$xy$$-plane (extended along the $$z$$-axis), and define the other by $$y^2 + z^2 \\le 1$$ in the $$yz$$-plane (extended along the $$x$$-axis). The axes of these cylinders intersect perpendicularly, and both cylinders have radius 1. The intersection of these two solids is known classically as a Steinmetz solid. We now compute its volume rigorously. By symmetry, focus on the first octant where $$x, y, z \\ge 0$$. In that region, we must satisfy both $$x^2 + y^2 \\le 1$$ and $$y^2 + z^2 \\le 1$$. Thus, the volume in the first octant is given by the triple integral $$\\int_{0}^{1} \\int_{0}^{\\sqrt{1 - x^2}} \\int_{0}^{\\sqrt{1 - y^2}} 1 \\,dz\\,dy\\,dx.$$ We integrate with respect to $$z$$ first, obtaining $$\\sqrt{1 - y^2}$$ for the innermost integral. The region is further integrated with respect to $$y$$ from 0 to $$\\sqrt{1 - x^2}$$, and then with respect to $$x$$ from 0 to 1. Through a step-by-step evaluation (often facilitated by using trigonometric substitution or a known quarter-circle area argument), one finds that the integral over the first octant equals $$\\frac{2}{3}.$$ Because the solid has perfect symmetry in all octants, we multiply this result by 8. Hence, the total volume of the intersection is $$8 \\times \\frac{2}{3} = \\frac{16}{3}.$$ Therefore, the volume enclosed by the two intersecting cylinders of radius 1 is $$\\frac{16}{3}.$$",
+  "valid answer": "Valid Answers: $$\\frac{16}{3}$$",
+  "problem tags": [
+    "Three-Dimensional Geometry",
+    "Volume Calculation"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Consider calculating the volume in just the first octant and then multiply by symmetry; this shape is known as the Steinmetz solid.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "53908284297756054508"
+}

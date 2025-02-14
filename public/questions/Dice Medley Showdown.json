@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Medley Showdown",
+  "problem text": "Consider $X_1, \\ldots, X_5$ as the results shown on the top faces of $5$ separate rolls of a fair $6$-sided die marked with numbers $1$ to $6$. Arrange the following in order from highest to lowest value: a) $\\mathbb{E}[X_1 X_2]$; b) $\\mathbb{E}[X_1^2]$; c) $\\mathbb{E}[X_{(3)}^2]$, where $X_{(3)}$ is the median of the $5$ die results. Assign $a = 1, b = 2,$ and $c = 3$. Respond with the number that represents the sequence from highest to lowest. For instance, if $c > b > a$, give the answer as $321$.",
+  "problem solution": "We determine $\\mathbb{E}[X_1X_2] = \\mathbb{E}[X_1]\\mathbb{E}[X_2] = (3.5)^2 = 12.25$ through independence of the rolls. Additionally, $\\mathbb{E}[X_1^2] = \\dfrac{1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2}{6} \\approx 15.17$, leading to $b > a$. Next, establish where $c$ fits in comparison. Reasoning intuitively, given the complexity of the calculations, we note the distribution is biased towards the center (requiring $3$ $6$s or $3$ $1$s for extreme values). In the sum for $\\mathbb{E}[X_1^2]$, the gain from the squared $6$ outweighs the loss from the squared $1$, ranking it below $\\mathbb{E}[X_1^2]$. Comparing to $\\mathbb{E}[X_1X_2]$, if either die shows a low number, the product decreases significantly, which is quite probable, whereas the median tends to reach at least an average value (such as $3$ or $4$), causing it to be skewed higher. Thus, $b > c > a$, giving the result $231$.",
+  "valid answer": "Valid Answers: $231$",
+  "problem tags": [
+    "Discrete Random Variables",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Calculate the first two expectations explicitly, then contemplate the distribution of the median values.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "54902295859362026285"
+}

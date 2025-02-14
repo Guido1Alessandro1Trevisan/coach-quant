@@ -1,0 +1,29 @@
+{
+  "problem name": "Dice Face Quest",
+  "problem text": "On average, how many rolls of a regular fair $6$-sided die are required to see each face at least once?",
+  "problem solution": "Define $ T_i $ as the count of rolls necessary to see the $ i $th new face, given that $ (i-1) $ distinct faces have been observed. Then $ T = T_1 + \\dots + T_6 $ represents the total rolls necessary to see all faces of the die. It is clear that $ T_1 = 1 $, since the first roll will always produce a new face. Furthermore, $ T_2 \\sim \\text{Geom}(5/6) $, since $ 5 $ out of the $ 6 $ faces remain unseen. More generally, $ T_i \\sim \\text{Geom}\\left(\\frac{7-i}{6}\\right) $, because $ 7-i $ faces have yet to be seen. Therefore, $\\mathbb{E}[T_i] = \\frac{6}{7-i}$. Using the linearity of expectation, we find that $\\mathbb{E}[T] = \\sum_{i=1}^6 \\frac{6}{7-i} = 6 \\sum_{i=1}^6 \\frac{1}{i} = 14.7$. The sums are equal by changing the index of summation.",
+  "valid answer": "Valid Answers: $14.7$",
+  "problem tags": [
+    "Expected Value",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Define $T_i$ as the count of rolls necessary to see the $i$th new face, given that $(i-1)$ distinct faces have been observed. Then $T = T_1 + \\dots + T_6$ represents the total rolls necessary to see all faces of the die.",
+  "problem firm": [
+    "Akuna Capital",
+    "Citadel",
+    "Drw",
+    "Goldman Sachs",
+    "Hudson River Trading",
+    "Imc",
+    "Old Mission",
+    "Optiver",
+    "Sig",
+    "Squarepoint Capital",
+    "Transmarket Group",
+    "Two Sigma",
+    "Worldquant"
+  ],
+  "question id": "77852572302719004864"
+}

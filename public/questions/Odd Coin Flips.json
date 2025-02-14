@@ -1,0 +1,16 @@
+{
+  "problem name": "Odd Coin Flips",
+  "problem text": "Imagine flipping four fair coins exactly once each. What is the probability that the total number of heads is an odd integer?",
+  "problem solution": "We begin by noting that each coin has a 50% chance of landing heads and 50% chance of landing tails, and the flips are independent. Let X be the total number of heads after flipping the four coins. X can be any integer from 0 to 4, inclusive. We compute the probability that X is odd (i.e., X = 1 or X = 3). The number of ways to obtain k heads out of 4 flips is given by $$\\binom{4}{k}$$, and each of the 16 equally likely outcomes across four flips has probability $$\\frac{1}{16}$$. Therefore, the probability of getting an odd number of heads is: $$\\frac{\\binom{4}{1} + \\binom{4}{3}}{16} = \\frac{4 + 4}{16} = \\frac{8}{16} = \\frac{1}{2}.$$ Thus, there is a 50% chance of ending up with an odd number of heads in four coin flips. This conclusion is further verified by symmetry, because the probability of an even number of heads must be the same as that of an odd number of heads, resulting in a probability of $$\\frac{1}{2}$$ for each case.",
+  "valid answer": "Valid Answers: $1/2$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Count how many heads can appear in four coin tosses and add probabilities for the distributions where the number of heads is odd.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "44502757174634463308"
+}

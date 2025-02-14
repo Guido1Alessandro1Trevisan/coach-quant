@@ -1,0 +1,16 @@
+{
+  "problem name": "Dicey Sum Quest",
+  "problem text": "Two fair $6$-sided dice are rolled. Determine the probability that the sum of the numbers shown is at least equal to the product of the numbers shown.",
+  "problem solution": "Let $X$ and $Y$ represent the results of the dice rolls. We seek to find instances where $X + Y \\geq XY$. By solving for $Y$, we obtain $Y \\leq \\frac{X}{X-1}$. When $X = 1$, this inequality is satisfied for any $Y$. If $X = 2$, it holds for $Y = 1, 2$. For $X > 2$, it only holds when $Y = 1$ upon substituting into the inequality. Hence, the condition simplifies to either rolling at least one $1$ or obtaining the result $(2,2)$. The probability of this occurring is $\\frac{12}{36} = \\frac{1}{3}$, which can be verified by constructing a probability table or through the Inclusion-Exclusion Principle including the case $(2,2)$.",
+  "valid answer": "Valid Answers: $\\frac{1}{3}$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Let $X$ and $Y$ be the results of the two rolls. Then we need to determine when $X + Y \\geq XY$.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "92183870009735096381"
+}

@@ -1,0 +1,17 @@
+{
+  "problem name": "Age Circle Riddle",
+  "problem text": "Seven individuals, each with a unique age, are seated at random around a circular table with seven seats. Find the probability that they position themselves in order of increasing age, disregarding the direction.",
+  "problem solution": "Position the youngest individual at any seat around the table. There are $6!$ possible ways to arrange the other $6$ individuals yet to be seated. Out of these arrangements, precisely $2$ result in an increasing order of age. Specifically, these occur when ages increase either clockwise or counter-clockwise. Thus, $2$ of these $6!$ equally probable permutations are in increasing age order, giving us a probability of $\\dfrac{2}{6!} = \\dfrac{1}{360}$.",
+  "valid answer": "Valid Answers: $1/360$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "If you begin with the youngest individual, in how many ways can the remaining $6$ people be arranged around the table such that their ages increase?",
+  "problem firm": [
+    "Jane Street",
+    "Worldquant"
+  ],
+  "question id": "35113934683374353229"
+}

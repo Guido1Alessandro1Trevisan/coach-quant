@@ -1,0 +1,16 @@
+{
+  "problem name": "Glove Harmony Quandary",
+  "problem text": "You have $5$ distinct pairs of gloves each numbered $1-5$. The $10$ gloves are randomly matched in pairs. Determine the probability that each pair has numbers differing by no more than $1$.",
+  "problem solution": "We will address the more general situation with $$ n $$ numbered pairs of gloves. Note that there are $$\\displaystyle \\frac{(2n)!}{2^n \\cdot n!}$$ ways to pair the $$ 2n $$ gloves, since there are $$ (2n)! $$ total permutations, $$ n! $$ ways to rename the pairs, and $$ 2 $$ ways to reorder each pair. Let $$ g_n $$ represent the count of pairings that meet our criteria. Consider the two gloves with label $$ n $$, denoted $$ n_1 $$ and $$ n_2 $$. First, select a partner for $$ n_1 $$. Either $$ n_2 $$ is paired with $$ n_1 $$, reducing the problem to $$ n-1 $$ pairs, or $$ n_1 $$ pairs with one of the gloves labeled $$ n-1 $$, with $$ 2 $$ choices for that glove. Consequently, $$ n_2 $$ pairs with the other glove labeled $$ n-1 $$, which is then determined. This reduces the problem to $$ n-2 $$ pairs. Hence, the recurrence relation is $$ g_n = g_{n-1} + 2g_{n-2} $$. The $$ 2 $$ preceding $$ g_{n-2} $$ signifies the two choices for the glove labeled $$ n-1 $$ to pair with $$ n_1 $$ in that scenario. We now establish initial conditions. Clearly, $$ g_1 = 1 $$ as there is one obvious pair. Additionally, $$ g_2 = 3 $$ since there are $$ 3 $$ ways to choose a partner for any one glove, fixing the other pair immediately. The characteristic equation for this recurrence is $$ r^2 - r - 2 = 0 $$, yielding solutions $$ r = 2, -1 $$. Thus, $$ g_n = c_0 \\cdot 2^n + c_1 \\cdot (-1)^n $$. Using initial conditions, we find $$ 1 = 2c_0 - c_1 $$ and $$ 3 = 4c_0 + c_1 $$. Solving gives $$ c_0 = \\frac{2}{3} $$ and $$ c_1 = \\frac{1}{3} $$. Thus, $$ g_n = \\frac{2^{n+1} + (-1)^n}{3} $$. Therefore, the probability for this condition with $$ n $$ pairs is $$ p_n = \\frac{g_n}{\\frac{(2n)!}{2^n \\cdot n!}} = \\frac{(2^{n+1} + (-1)^n) \\cdot 2^n \\cdot n!}{3(2n)!} $$. Substituting $$ n = 5 $$, we find $$ p_5 = \\frac{1}{45} $$.",
+  "valid answer": "Valid Answers: $1/45$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Observe that there are $\\dfrac{(2n)!}{2^n \\cdot n!}$ ways to match the $2n$ gloves, with $(2n)!$ total arrangements, $n!$ ways to label the pairs, and $2$ ways to reorder each pair. Define $g_n$ as the count of pairings satisfying our condition. Find a recurrence relation for $g_n$ by conditioning on one of the gloves labeled $n$.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "81818525029638937789"
+}

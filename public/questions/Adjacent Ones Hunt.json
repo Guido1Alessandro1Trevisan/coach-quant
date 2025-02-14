@@ -1,0 +1,17 @@
+{
+  "problem name": "Adjacent Ones Hunt",
+  "problem text": "Determine the number of positive integers up to 100000 (inclusive) that contain at least one instance of two adjacent '1' digits in their decimal representation.",
+  "problem solution": "We proceed by complementary counting. First, let us include leading zeros so that every integer up to 99999 is treated as a 5-digit string (from 00000 to 99999). Define $$a(n)$$ to be the number of n-digit strings with no consecutive '1' that do not end in '1', and $$b(n)$$ to be the number of n-digit strings with no consecutive '1' that do end in '1'. We observe that $$a(1)=9\\text{, }b(1)=1$$, making $$S(1)=a(1)+b(1)=10$$. For each $$n\\ge 1$$, the recurrences arise as follows: appending any digit other than '1' to any valid n-digit string yields $$9\\bigl(a(n)+b(n)\\bigr)$$ possibilities, giving $$a(n+1)=9\\bigl(a(n)+b(n)\\bigr)$$. To end in '1' without forming '11', we must append '1' to a string ending in a digit other than '1', so $$b(n+1)=a(n)$$. Thus the total count without '11' in n digits is $$S(n)=a(n)+b(n)$$. Successive computation yields $$S(5)=96309$$ for the 5-digit strings from 00000 to 99999. Therefore, exactly $$100000-96309=3691$$ of these 100000 strings must contain '11'. The integer 100000 itself does not contribute an additional instance of '11', so the final count is $$3691$$.",
+  "valid answer": "Valid Answers: 3691",
+  "problem tags": [
+    "Combinatorics",
+    "Counting",
+    "Recursion"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Try counting the complement of the set: how many integers do NOT contain consecutive '1's?",
+  "problem firm": [
+    "IMC"
+  ],
+  "question id": "56346862558083498217"
+}

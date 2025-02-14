@@ -1,0 +1,16 @@
+{
+  "problem name": "Incredible Arbitrage Equation",
+  "problem text": "Consider a scenario where you have a stock priced at $S_0 = 10$, along with a European call on $S$ priced at $C_0 = 4$ and a European put on $S$ priced at $P_0 = 3$, both having a strike price of $K = 4$. Additionally, there are bonds available that yield $1$ at time $T$. Assume the interest rate is $0$. Determine the arbitrage opportunity. You may take long or short positions in assets. Provide the solution in the format: \\# Stock + \\# Call + \\# Put + \\# Bonds.",
+  "problem solution": "According to put-call parity, the relationship $C - P = S - K$ should be satisfied. Currently, $C - P = 4 - 3 = 1$ while $S - K = 10 - 4 = 6$. Evidently, $1 < 6$, indicating the existence of an arbitrage opportunity. When encountering such an inequality, the strategy is to long the undervalued assets and short the overvalued ones. In this scenario, $C - P$ is undervalued while $S - K$ is overvalued. We will long $C - P$, implying that we long $1$ unit of $C$ and short $1$ unit of $P$. Subsequently, we short $1$ unit of $S$ and long $4$ units of the bond, given that bonds yield $1$ at maturity, meaning $K = 4$ equates to $4$ units of the bond. Therefore, the result is $-1 + 1 - 1 + 4 = 3$.",
+  "valid answer": "Valid Answers: $3$",
+  "problem tags": [
+    "Finance",
+    "Finance"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Is put-call parity applicable?",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "79878749318068043586"
+}

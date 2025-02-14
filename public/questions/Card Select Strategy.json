@@ -1,0 +1,17 @@
+{
+  "problem name": "Card Select Strategy",
+  "problem text": "Imagine you possess a set of $100$ cards with numbers from $1-100$. The deck is shuffled thoroughly, and the cards are distributed one at a time from the top. For each card distributed, you have the choice to either retain it or discard it. Discarding any card incurs a cost of $1$. At the conclusion, you receive a payout equal to the average of the values of all retained cards. Determine the optimal approach and the expected earnings from this game.",
+  "problem solution": "The best strategy involves retaining all cards with values at least $k$, for some threshold $k$. Therefore, let's define $f(k)$ as the expected earnings from this strategy. The average of all cards with values no less than $k$ is $\\dfrac{100+k}{2}$, which will be the payout. Next, we must consider the discarding cost, as we discard all $k-1$ cards with values less than $k$. Hence, $f(k) = \\dfrac{100+k}{2} - (k-1) = 51 - \\dfrac{k}{2}$ for $1 \\leq k \\leq 100$. Since this function decreases as $k$ rises, the optimal strategy is to retain all cards! The anticipated earnings from this approach is $51 - \\dfrac{1}{2} = \\dfrac{101}{2}$.",
+  "valid answer": "Valid Answers: [ $101/2$, $50.5$ ]",
+  "problem tags": [
+    "Expected Value",
+    "Games",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "The optimal plan will be to retain all cards with values at least $k$, for a certain threshold $k$. Consequently, as a function of $k$, denoted $f(k)$, calculate the expected earnings of the strategy.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "09828710471324451525"
+}

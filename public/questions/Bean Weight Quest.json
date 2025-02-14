@@ -1,0 +1,20 @@
+{
+  "problem name": "Bean Weight Quest",
+  "problem text": "There are $8$ beans, with one being marginally heavier than the rest. What is the least number of weighings needed with a balance scale to identify the heavier bean?",
+  "problem solution": "Place $3$ beans on each pan of the balance scale. If the scale is equal, proceed to weigh the remaining $2$ beans. If it tips, assume the left pan is heavier and select $2$ out of the $3$ beans to weigh. If these weighings are equal, the last bean is the heavier one. Otherwise, the side with greater weight contains the heavier bean. Thus, only two uses of the balance scale are necessary.",
+  "valid answer": "Valid Answers: $2$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Place $3$ beans on each pan of the balance scale. If the scale balances, proceed to weigh the remaining $2$ beans. What if the scale does not balance?",
+  "problem firm": [
+    "Belvedere Trading",
+    "Citadel",
+    "Imc",
+    "Optiver",
+    "Sig",
+    "Worldquant"
+  ],
+  "question id": "42893525933661972281"
+}

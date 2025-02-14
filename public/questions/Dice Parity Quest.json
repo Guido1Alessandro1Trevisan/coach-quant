@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Parity Quest",
+  "problem text": "A normal unbiased $6$-sided die is tossed repeatedly until (and including) the first instance of a $6$. Determine the probability that the total sum of all visible faces before halting is an even number.",
+  "problem solution": "Whether to include the $6$ or not is irrelevant, since adding $6$ to the total does not alter the parity of the sum. Let $p$ denote this probability. We analyze based on the initial roll. If the first roll shows a $6$, then the sum is even with probability $1$. If the first roll results in a $2$ or $4$, then the sum of the remaining numbers must be even, which happens with probability $p$. If the first roll is an odd number, then the sum of the subsequent numbers must be odd, with probability $1-p$. Using the Law of Total Probability, we establish that $p = \\dfrac{1}{6} \\cdot 1 + \\dfrac{1}{3} \\cdot p + \\dfrac{1}{2} \\cdot (1-p)$. Solving this equation gives $p = \\dfrac{4}{7}$.",
+  "valid answer": "Valid Answers: $4/7$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Whether to include the $6$ or not is irrelevant, since adding $6$ to the total does not alter the parity of the sum. Let $p$ denote this probability. Analyze based on the initial roll.",
+  "problem firm": [
+    "Hudson River Trading"
+  ],
+  "question id": "48207957685243187423"
+}

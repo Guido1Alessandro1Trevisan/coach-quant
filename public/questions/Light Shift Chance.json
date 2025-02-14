@@ -1,0 +1,17 @@
+{
+  "problem name": "Light Shift Chance",
+  "problem text": "A traffic light shows red (stop), yellow (caution), and green (go) lights. The sequence is green $\\rightarrow$ yellow $\\rightarrow$ red. The green light is on for $40$ seconds, followed by the yellow light for $4$ seconds, and then the red light for $40$ seconds before the cycle repeats with green. Determine the probability that the light changes color during a $4$ second duration.",
+  "problem solution": "The strategy is to consider the color of the light at the beginning of the $4$ second span. In the long run, the fraction of time the light is yellow is $\\dfrac{4}{40 + 4 + 40} = \\dfrac{1}{21}$, while it remains green or red with a fraction of $\\dfrac{10}{21}$ each. Hence, at the start of the interval, there is a probability of $\\dfrac{1}{21}$ that it is yellow, guaranteeing a change of color since yellow lasts only $4$ seconds. There is a probability of $\\dfrac{10}{21}$ that it is green, meaning the observation must begin in the final $4$ seconds of green to witness a change, occurring with a probability of $\\dfrac{1}{10}$, given the $40$ second duration of green. The same reasoning applies for red, thus the overall probability is $\\dfrac{1}{21} \\cdot 1 + \\dfrac{10}{21} \\cdot \\dfrac{1}{10} \\cdot 2 = \\dfrac{1}{7}$.",
+  "valid answer": "Valid Answers: $1/7$",
+  "problem tags": [
+    "Conditional Probability",
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The strategy is to consider the color of the light at the beginning of the interval.",
+  "problem firm": [
+    "Transmarket Group"
+  ],
+  "question id": "35487376445524586015"
+}

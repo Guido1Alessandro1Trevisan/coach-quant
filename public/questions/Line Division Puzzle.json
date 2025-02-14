@@ -1,0 +1,17 @@
+{
+  "problem name": "Line Division Puzzle",
+  "problem text": "Find the greatest number of separate regions that can be formed in a plane using $10$ lines that are not parallel. For example, one line splits the plane into $2$ sections.",
+  "problem solution": "Let $L_n$ represent the greatest number of sections formed with $n$ lines. As noted, $L_1 = 2$ and $L_2 = 4$ when using two non-parallel lines. The $(n+1)$st line should cross each of the initial $n$ lines, generating $n+1$ individual sections. This is seen in small examples such as $n = 1, 2,$ and $3$. We can also describe it as the $(n+1)$st line divides $k$ of the previous sections when it crosses the existing lines in $k-1$ locations. Since two lines can intersect at most once, it follows that $L_{n+1} \\leq L_n + (n+1)$, as the new line can intersect the existing lines in up to $n$ places. It is also feasible to position the line so that it remains non-parallel to all current lines and avoids existing intersection points. Thus, $L_{n+1} \\geq L_n + (n+1)$ similarly. This establishes the recurrence $L_{n+1} = L_n + (n+1)$, which resolves to $L_n = \\frac{n(n+1)}{2} + 1$. Substituting $n = 10$, the result is $56$.",
+  "valid answer": "Valid Answers: $56$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Let $$ L_n $$ denote the greatest number of sections formed with $$ n $$ lines. As previously stated, $$ L_1 = 2 $$ and $$ L_2 = 4 $$ when using two non-parallel lines. The vital insight is that the additional $$ (n+1) $$st line must cross each of the first $$ n $$ lines, creating $$ n+1 $$ unique sections.",
+  "problem firm": [
+    "Five Rings",
+    "Jane Street"
+  ],
+  "question id": "62956572175751202042"
+}

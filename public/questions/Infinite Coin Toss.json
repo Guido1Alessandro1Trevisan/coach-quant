@@ -1,0 +1,21 @@
+{
+  "problem name": "Infinite Coin Toss",
+  "problem text": "Imagine you are invited to participate in a game where a fair coin is tossed repeatedly until the first heads appears. If the initial heads shows up on the $n$th toss, you receive a payout of $2^n$. What is the fair value of this game? If your answer is infinite, submit $-1$.",
+  "problem solution": "The count of tosses required to get the first heads is $N \\sim \\text{Geom}(1/2)$. We need to determine $\\mathbb{E}[2^N]$, which represents our expected winnings. Specifically, $\\displaystyle \\mathbb{E}[2^N] = \\displaystyle \\sum_{n=1}^{\\infty} 2^n \\mathbb{P}[N = n] = \\sum_{n=1}^{\\infty} 2^n \\cdot \\left(\\dfrac{1}{2^n}\\right) = \\sum_{n=1}^{\\infty} 1 = \\infty$. Thus, the solution is infinite, meaning the input should be $-1$.",
+  "valid answer": "Valid Answers: $-1$",
+  "problem tags": [
+    "Expected Value",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The count of tosses needed to observe the first heads is $N \\sim \\text{Geom}(1/2)$. We seek $\\mathbb{E}[2^N]$, the expected payout.",
+  "problem firm": [
+    "Akuna Capital",
+    "Belvedere Trading",
+    "Goldman Sachs",
+    "Imc",
+    "Squarepoint Capital"
+  ],
+  "question id": "80663784912331601959"
+}

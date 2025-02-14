@@ -1,0 +1,16 @@
+{
+  "problem name": "Pirate Diplomacy",
+  "problem text": "A cache of $100$ gold pieces is to be apportioned among five buccaneers, ordered by rank from $1$ (lowest rank) to $5$ (highest rank). They adhere to these guidelines for dividing the coins: 1. The highest-ranking pirate proposes a distribution of coins among all. 2. Every pirate, including the proposer, votes on the suggestion. If $50\\%$ or more agree, the coins are divided as proposed. 3. Otherwise, if more than $50\\%$ decline, the proposer is thrown overboard. The next in rank then makes a proposal, and the remaining pirates vote. 4. This continues until a proposal passes or just one pirate remains, who then claims all $100$ coins. Pirates value survival over riches, and they will act logically to maximize their share while ensuring survival. How many coins does the top-ranking pirate (pirate $5$) retain if he puts forward the best possible proposal? If the top pirate is always eliminated, the answer is $0$.",
+  "problem solution": "To address this issue, we analyze backwards, considering scenarios from a lone pirate up to all five. This illuminates each pirate's logical decisions in every potential circumstance. 1. One pirate remaining (Pirate 1): As the sole decision-maker, Pirate 1 takes all $100$ coins. 2. Two pirates remaining (Pirates 1 and 2): Pirate 2 can self-vote, meeting $50\\%$ of votes, ensuring his proposal always succeeds. He retains all $100$ coins. Pirate 1, lacking voting influence, gains nothing. 3. Three pirates remaining (Pirates 1, 2, and 3): Pirate 3 requires one additional vote beside his own. Knowing Pirate 1 gains nothing if Pirate 3 is ousted, Pirate 3 offers $1$ coin to Pirate 1 and keeps $99$. This secures Pirate 1's vote. Pirate 2 receives nothing. 4. Four pirates remaining (Pirates 1, 2, 3, and 4): Pirate 4, needing one more vote besides his own, knows Pirate 2 gains nothing if Pirate 4 is ousted. By offering $1$ coin to Pirate 2 and retaining $99$, Pirate 4 secures Pirate 2's vote. Pirates 1 and 3 receive nothing. 5. Five pirates remaining (Pirates 1 through 5): Pirate 5 requires two votes besides his own. By offering $1$ coin to Pirates 1 and 3—who gain nothing if Pirate 5 is eliminated—and keeping $98$ coins, Pirate 5 ensures a majority. Pirates 2 and 4 receive nothing, but they cannot alter the decision as Pirate 5 already has the majority. This backward reasoning reveals Pirate 5 can maintain a majority and ensure his survival by cleverly distributing coins. He keeps $98$ coins, while Pirates 1 and 3 receive $1$ coin each, leaving Pirates 2 and 4 empty-handed. Thus, pirate 5 retains $98$ gold coins with his best proposal.",
+  "valid answer": "Valid Answers: $98$",
+  "problem tags": [
+    "Games",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Begin with the scenario involving a single pirate and progressively consider additional pirates. Examine how the senior-most pirate in each instance can secure the required votes while offering the minimum coins to others.",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "30016870905311912218"
+}

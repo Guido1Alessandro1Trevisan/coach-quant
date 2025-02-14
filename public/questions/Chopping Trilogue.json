@@ -1,0 +1,16 @@
+{
+  "problem name": "Chopping Trilogue",
+  "problem text": "Consider a single stick of unit length. You select two cutting points uniformly at random along this stick. What is the probability that the three resulting segments can be arranged to form a valid triangle?",
+  "problem solution": "We seek the probability that three segments, arising from two random cuts along a unit-length stick, satisfy the three triangle inequalities. Let the two cut positions be represented by random variables $$X$$ and $$Y$$ such that $$0 < X < Y < 1$$. The lengths of the three segments are then $$X,\\ (Y - X),\\ (1 - Y).$$ For these three lengths to form a valid triangle, all three of the following inequalities must hold:\\(1\\) $$X + (Y - X) > (1 - Y).$$\\(2\\) $$X + (1 - Y) > (Y - X).$$\\(3\\) $$(Y - X) + (1 - Y) > X.$$ We rewrite each inequality in simpler form: \\(1\\) implies $$Y > 1 - Y \\implies Y > \\frac{1}{2}.$$\\(2\\) becomes $$X + 1 - Y > Y - X \\implies X + 1 - Y > Y - X \\implies 2X + 1 > 2Y \\implies X + \\frac{1}{2} > Y.$$\\(3\\) requires $$(Y - X) + (1 - Y) > X \\implies 1 - X > X \\implies X < \\frac{1}{2}.$$ Thus the valid region in the $$(X,Y)$$ plane with $$0 < X < Y < 1$$ is constrained by these three conditions: $$Y > \\frac{1}{2},\\ X < \\frac{1}{2},\\ Y < X + \\frac{1}{2}.$$ The region of possible $$(X,Y)$$ pairs under $$0 < X < Y < 1$$ has area $$\\frac{1}{2}$$. Within that triangle, the region defined by the above inequalities occupies half of that area, equating to $$\\frac{1}{4}$$ total. Consequently, the probability that the three segments can form a valid triangle is $$\\frac{1}{4}$$.",
+  "valid answer": "Valid Answers: 1/4",
+  "problem tags": [
+    "Probability",
+    "Geometry"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Examine the three triangle inequalities for the lengths of the three segments, expressed in terms of the two random cut points.",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "34402151542727490301"
+}

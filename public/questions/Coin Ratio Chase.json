@@ -1,0 +1,17 @@
+{
+  "problem name": "Coin Ratio Chase",
+  "problem text": "Imagine you are tossing a fair coin and you can choose when to stop. The aim is to maximize the ratio of the number of heads to the overall flips. These ratios are expressed as $a:1$. What is the expected value of “$a$” if your plan is to aim for a ratio of $0.5:1$ over many tosses, but if it surpasses $0.5:1$, you stop immediately?",
+  "problem solution": "There is a 50% chance you will obtain heads on the first toss, resulting in a ratio of $1:1$. This is the ideal ratio achievable in this game, so you stop here. The other 50% chance is that you get tails on the first toss (current ratio $0:1$). Nevertheless, according to the law of large numbers, as you continue tossing, the heads to total flips ratio will approach $0.5:1$. Therefore, the expected ratio is $0.5*1+0.5*0.5 = 0.75$.",
+  "valid answer": "Valid Answers: $0.75$, $\\frac{3}{4}$",
+  "problem tags": [
+    "Discrete Random Variables",
+    "Games",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "If you achieve heads on your first toss, should you toss again?",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "68603346627521764473"
+}

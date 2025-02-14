@@ -1,0 +1,16 @@
+{
+  "problem name": "Rainbow Cube Corners",
+  "problem text": "Consider a standard cube and suppose that each of its 8 corners is to be painted with one of two available colors. In how many distinct ways can these vertices be colored so that no pair of corners directly connected by an edge share the same color?",
+  "problem solution": "First, note that each corner (vertex) of the cube is connected to exactly 3 neighboring corners. We can represent the corners and their adjacencies by a graph in which vertices correspond to cube corners and edges represent adjacency. This graph is called the 3-dimensional cube graph and has 8 vertices. A key observation is that this graph is bipartite: in fact, if we label each corner by the parity of the sum of its 3 coordinates (0 or 1), no two corners with the same parity can be adjacent. Formally, a graph is bipartite if and only if it has no odd cycles, and the cube graph contains only cycles of even length. Once we recognize it is bipartite, we conclude that there are exactly two ways to color a connected bipartite graph with two distinct colors: pick a corner to color with the first color, and all adjacent corners are forced to use the second color, which forces the colors of their adjacent corners, and so on. Swapping the two color choices yields no new pattern beyond these two. Thus, the total number of valid colorings is $$2$$.",
+  "valid answer": "Valid Answers: $$2$$",
+  "problem tags": [
+    "Combinatorics",
+    "Graph Theory"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about bipartite graphs and consider coloring any vertex first, forcing other vertices' colors.",
+  "problem firm": [
+    "IMC"
+  ],
+  "question id": "38974225294719973817"
+}

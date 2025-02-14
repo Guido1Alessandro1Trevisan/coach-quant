@@ -1,0 +1,16 @@
+{
+  "problem name": "Looping Labyrinth",
+  "problem text": "John finds himself in a chamber with five identical portals. Two portals lead to freedom; one exits to a path measuring $2$ miles, while the other leads to a path $5$ miles in length. The remaining three portals return him to the chamber through magical routes; one measures $3$ miles, another $4$ miles, and the last is $1$ mile long. If John is returned to the chamber, the portals are rearranged and appear identical again. How many miles will John walk before escaping?",
+  "problem solution": "No solution found",
+  "valid answer": "Valid Answers: $15/2$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "No hint found",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "53201050060497907050"
+}

@@ -1,0 +1,15 @@
+{
+  "problem name": "Mini Compounding Quest",
+  "problem text": "You begin with $100$ in your savings account today. You decide to place it in a stock offering $1\\%$ interest compounded daily. Rounded to the nearest dollar, what will be the total amount in your account after $15$ days?",
+  "problem solution": "Applying the Taylor approximation $$e^x \\approx 1+x$$, we find that $$100(1.01)^{15} \\approx 100(1 + 0.15) = 115$$. Nevertheless, we need to slightly increase this due to the interest compounding over the $$15$$ days, meaning it is not exactly \\$1 per day. Thus, a reasonable estimate is \\$116, which turns out to be accurate. It is evident that it will not reach \\$117 as the absolute maximum obtainable is $$1.15 \\cdot 15 = 17.25$$, which assumes you continually get $$1.15$$ interest each day. However, this is significantly overestimated, so $$116$$ is a more realistic estimate.",
+  "valid answer": "Valid Answers: $116$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Utilize the Taylor approximation $e^x \\approx 1 + x$",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "63787831926844744570"
+}

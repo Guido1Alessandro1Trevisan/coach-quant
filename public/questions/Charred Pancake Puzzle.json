@@ -1,0 +1,16 @@
+{
+  "problem name": "Charred Pancake Puzzle",
+  "problem text": "Consider three pancakes: one is charred on both surfaces, one is charred on a single surface, and one is uncharred. These pancakes are placed in a stack at random, so that only the top surface is visible. Noting that the visible surface on top is charred, what is the probability that the pancake on top is the one that has both of its surfaces charred?",
+  "problem solution": "We aim to find the probability that the fully charred pancake ends up on top, given that a charred surface is visible from above. Label the pancakes based on their number of charred sides: two-charred, one-charred, and none-charred. Overall, there are 6 total surfaces among the three pancakes. Out of these 6 surfaces, 3 are charred (2 from the fully charred pancake and 1 from the singly charred pancake). In a random arrangement, each of the 6 sides is equally likely to appear on top. Because we see that the top surface is charred, we are restricting our attention to those 3 charred surfaces. Of these 3 surfaces, 2 belong to the pancake with both sides charred. Consequently, the probability that the fully charred pancake is on top is $$\\dfrac{2}{3}$$.",
+  "valid answer": "Valid Answers: 2/3",
+  "problem tags": [
+    "Probability",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider that each of the 6 total surfaces is equally likely to be on top in a random stacking.",
+  "problem firm": [
+    "SIG"
+  ],
+  "question id": "19045192774434733755"
+}

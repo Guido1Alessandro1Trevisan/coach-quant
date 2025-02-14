@@ -1,0 +1,16 @@
+{
+  "problem name": "Straddle Jigsaw",
+  "problem text": "Determine the cost of a straddle at-the-money with underlying $S = 20$, expiration time $T = 0.36$, and volatility $\\sigma = 0.4$. Round the result to $2$ decimal places.",
+  "problem solution": "For options that are at-the-money, we can use this approximate formula for pricing: $ V = \\sqrt{\\frac{T-t}{2\\pi}}\\sigma S $ A straddle involves buying both a call and a put, hence we need to substitute the values into the formula and multiply by $ 2 $. Substituting, we find: $ V = 2*\\sqrt{\\frac{.36}{2\\pi}}(0.4)(20) = 3.83 $",
+  "valid answer": "Valid Answers: $3.83$",
+  "problem tags": [
+    "Finance",
+    "Finance"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "What is a way to estimate the price of $at-the-money$ options?",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "07288912225911448790"
+}

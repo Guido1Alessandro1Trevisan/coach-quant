@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Divisor Duel",
+  "problem text": "You and a companion engage in a challenge where you alternately toss a fair $6$-faced die, maintaining a cumulative count of the summed face values from each toss. The game is won by the participant who last tossed the die when the cumulative sum first becomes a factor of $7$. You can choose to play first or second. With a logical strategy, what is your likelihood of emerging victorious?",
+  "problem solution": "Logically, you should opt to play second. This is because there is no chance to win on the initial roll, but on each subsequent roll, there is a $1/6$ chance of winning, as precisely $1$ of the $6$ possible outcomes will result in the sum being a factor of $7$. To determine the probability of winning for you, the player rolling second, denote this probability by $p$. By considering your initial roll, there is a $5/6$ chance that you do not roll a number causing the sum to be divisible by $7$ on your first attempt. For it to be your turn again, your companion must also not roll a number that makes the sum divisible by $7$, which also has a $5/6$ probability. In this scenario, your winning probability when it returns to your turn is $p$. Alternatively, you roll a number that makes the sum divisible by $7$, with a likelihood of $1/6$. Thus, we derive the equation $p = \\frac{5}{6} \\cdot \\frac{5}{6}p + \\frac{1}{6} \\iff p = \\frac{6}{11}$.",
+  "valid answer": "Valid Answers: $6/11$",
+  "problem tags": [
+    "Games",
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Can you win on the initial roll if you start first? How about if you go second?",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "80965442585903911686"
+}

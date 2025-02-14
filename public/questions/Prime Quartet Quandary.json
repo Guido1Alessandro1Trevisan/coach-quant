@@ -1,0 +1,17 @@
+{
+  "problem name": "Prime Quartet Quandary",
+  "problem text": "From the set of the first $16$ positive prime numbers, $4$ distinct integers are chosen. Determine the likelihood that their sum is even.",
+  "problem solution": "All prime numbers except $2$ are odd, resulting in an odd sum when none of the selected numbers is $2$. This means we choose all $4$ integers from the remaining $15$ primes. There are $\\binom{15}{4}$ combinations to select $4$ from these $15$ and $\\binom{16}{4}$ total ways to choose $4$ primes from the $16$. Thus, our probability becomes $\\dfrac{\\binom{15}{4}}{\\binom{16}{4}} = \\dfrac{3}{4}$.",
+  "valid answer": "Valid Answers: $3/4$",
+  "problem tags": [
+    "Events",
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "All prime numbers except $2$ are odd.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "70763774167239847167"
+}

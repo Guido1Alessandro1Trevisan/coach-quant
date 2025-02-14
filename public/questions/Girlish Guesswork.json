@@ -1,0 +1,16 @@
+{
+  "problem name": "Girlish Guesswork",
+  "problem text": "A meeting is organized for parents who have at least one girl. Jane, who has two kids, is among the attendees. What is the probability that both of Jane's children are girls?",
+  "problem solution": "The possible outcomes for having two kids with at least one being a girl are $\\Omega = \\{ (b,g), (g,b), (g,g)\\}$, where $(b,g)$ indicates the first child is a boy and the second is a girl. Therefore, the likelihood that Jane has two girls is $\\frac{1}{3}$.",
+  "valid answer": "Valid Answers: $\\frac{1}{3}$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the set of outcomes based on the details provided about Jane's children.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "44183794251739180273"
+}

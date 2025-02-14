@@ -1,0 +1,16 @@
+{
+  "problem name": "Scaling Riddle",
+  "problem text": "Imagine performing a linear regression on a dataset, yielding an $R^2$ statistic of $0.48$. Consider the outcome of a linear regression performed again on a dataset where every value of each data point is doubled (for instance, if $(2,5)$ is in the original dataset, it becomes $(4,10)$ in the new dataset). What would the new $R^2$ value be? If it cannot be determined, input $-1$.",
+  "problem solution": "Remember that $R^2 = 1 - \\dfrac{SSE}{SST}$. When all data points are doubled, the new $SSE$ becomes $4$ times greater than it was initially. This arises because we are summing the squared errors, and doubling each point doubles the magnitude of the errors. Upon squaring, the $SSE$ thus becomes $4$ times larger. Similarly, $SST$ is also multiplied by four for the same reason. Hence, the ratio $\\dfrac{SSE}{SST}$ remains constant, meaning that $R^2$ stays the same as before.",
+  "valid answer": "Valid Answers: $0.48$",
+  "problem tags": [
+    "Linear Regression",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Bear in mind that $R^2 = 1 - \\dfrac{SSE}{SST}$. Consider the change in $SSE$, and the change in $SST$.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "07386781844464922531"
+}

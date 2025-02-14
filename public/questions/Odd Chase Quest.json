@@ -1,0 +1,16 @@
+{
+  "problem name": "Odd Chase Quest",
+  "problem text": "You repeatedly toss a fair six-sided die until you observe your initial odd value (one of 1, 3, or 5). What is the probability that, by the time you see that first odd number, you have already rolled each of the even values (2, 4, and 6) at least once?",
+  "problem solution": "Solution Explanation: We seek the probability that all the even faces $$(2,4,6)$$ appear at least once before the first occurrence of any odd face $$(1,3,5).$$ Since the die is fair, each face has probability $$\\tfrac{1}{6}$$ per roll. Observe that the process stops immediately upon rolling an odd number. Thus, the probability that an initial odd number appears on the $$n\\text{-th}$$ roll is $$(\\tfrac{1}{2})^n,$$ because we must roll even (probability $$\\tfrac{1}{2}$$) for the first $$(n-1)$$ times and then odd (probability $$\\tfrac{1}{2}$$) on the $$n\\text{-th}$$. During those $$(n-1)$$ even rolls, each roll is equally likely to be one of $$(2,4,6)$$ with probability $$\\tfrac{1}{3}.$$ We want the probability that all three of these even values have appeared. The total number of ways to roll $$(n-1)$$ times from $$(2,4,6)$$ is $$3^{n-1}.$$ By the Principle of Inclusion-Exclusion, the number of sequences of length $$(n-1)$$ containing all three values is $$3^{n-1} - 3\\,2^{n-1} + 3.$$ Dividing by $$3^{n-1},$$ we get that the probability of all three evens appearing in $$(n-1)$$ tries is $$\\dfrac{3^{n-1} - 3\\,2^{n-1} + 3}{3^{n-1}}.$$ \n\nNext, we multiply by the probability $$(\\tfrac{1}{2})^n$$ that the sequence has length $$n$$ with exactly $$(n-1)$$ evens followed by an odd, and sum over all valid $$n.$$ In fact, to see three distinct even values, we need at least $$n=4.$$ Hence, we sum from $$n=4$$ to $$\\infty$$: \n$$ \\sum_{n=4}^{\\infty} \\left(\\tfrac{1}{2}\\right)^{n}\\,\\dfrac{3^{n-1} - 3\\,2^{n-1} + 3}{3^{n-1}}. $$\nOne carefully separates this expression into simpler geometric series:\n$$ \\sum_{n=4}^{\\infty} \\left(\\tfrac{1}{2}\\right)^{n} - 3\\sum_{n=4}^{\\infty} \\left(\\tfrac{1}{2}\\right)^{n}\\left(\\tfrac{2}{3}\\right)^{n-1} + 3\\sum_{n=4}^{\\infty} \\left(\\tfrac{1}{2}\\right)^{n}\\left(\\tfrac{1}{3}\\right)^{n-1}. $$\nEvaluating these sums yields:\n• $$ \\sum_{n=4}^{\\infty} \\left(\\tfrac{1}{2}\\right)^{n} = \\tfrac{1}{16} + \\tfrac{1}{32} + \\cdots = \\tfrac{1}{8}, $$\n• $$ \\sum_{n=4}^{\\infty} \\left(\\tfrac{1}{2}\\right)^{n}\\left(\\tfrac{2}{3}\\right)^{n-1} = \\tfrac{1}{36}, $$\n• $$ \\sum_{n=4}^{\\infty} \\left(\\tfrac{1}{2}\\right)^{n}\\left(\\tfrac{1}{3}\\right)^{n-1} = \\tfrac{1}{360}. $$\nPutting these results together:\n$$ \\tfrac{1}{8}\\; -\\; 3\\Bigl(\\tfrac{1}{36}\\Bigr)\\; +\\; 3\\Bigl(\\tfrac{1}{360}\\Bigr)\\; =\\; \\tfrac{1}{8}\\; -\\; \\tfrac{1}{12}\\; +\\; \\tfrac{1}{120}\\; =\\; \\tfrac{1}{20}. $$\nTherefore, the final probability that you obtain all the even faces before rolling the first odd face is $$\\boxed{\\tfrac{1}{20}}.$$",
+  "valid answer": "Valid Answers: $$\\tfrac{1}{20}$$",
+  "problem tags": [
+    "Probability",
+    "Markov Chain"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Focus on the substring of your rolls that are even and use the fact that each even face (2,4,6) is equally likely when an even occurs.",
+  "problem firm": [
+    "IMC"
+  ],
+  "question id": "03485146761962178947"
+}

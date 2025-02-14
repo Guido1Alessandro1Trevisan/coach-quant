@@ -1,0 +1,16 @@
+{
+  "problem name": "Twin Spades Quest",
+  "problem text": "Determine the likelihood that the first two cards drawn from a well-shuffled standard deck are a pair ($\\text{two cards sharing the same rank}$).",
+  "problem solution": "The rank of the pair is decided by the first card drawn. Any card can be chosen initially since each rank has an equal number of duplicates. Thus, assume the first card is any card. There are $3$ remaining cards of that rank among the $51$ cards left in the deck, so the probability of drawing a pair is $\\dfrac{3}{51} = \\dfrac{1}{17}$.",
+  "valid answer": "Valid Answers: $\\frac{1}{17}$",
+  "problem tags": [
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The rank of the pair is determined by the first card drawn.",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "89575443896424857268"
+}

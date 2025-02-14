@@ -1,0 +1,17 @@
+{
+  "problem name": "Lucky Card Draw",
+  "problem text": "Consider a stack of $35$ cards labeled $1-35$. Each card chosen uniformly at random awards you $5$ times its number. Determine the expected reward if you pick $2$ cards from this stack. (cards can be drawn again)",
+  "problem solution": "Let $C_1$ and $C_2$ represent the numbers on the two cards drawn. Thus, our reward is $5(C_1 + C_2)$ according to the rules. Given that $C_1, C_2 \\sim \\text{DiscreteUnif}\\left(\\left\\{1,2,\\dots,35\\right\\}\\right)$, we aim to find $\\mathbb{E}[5(C_1 + C_2)]$. Using linearity, this becomes $5\\mathbb{E}[X_1] + 5\\mathbb{E}[X_2]$. Since both draws are symmetric, their expected values are the same, simplifying this to $10\\mathbb{E}[X_1] = 10 \\cdot 18 = 180$.",
+  "valid answer": "Valid Answers: $180$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $C_1$ and $C_2$ as the numbers on the two cards drawn. From these, our earning is $5(C_1 + C_2)$ as per the problem statement. What statistical model is appropriate for $C_1$ and $C_2$?",
+  "problem firm": [
+    "Old Mission",
+    "Optiver"
+  ],
+  "question id": "14418802798841014305"
+}

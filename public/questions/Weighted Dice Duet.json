@@ -1,0 +1,17 @@
+{
+  "problem name": "Weighted Dice Duet",
+  "problem text": "A $6$-sided die is biased such that the chance of landing on a face with $n$ dots $(1 \\leq n \\leq 6)$ is directly proportional to the count of dots on that face compared to the total dot count on the die. Calculate the probability that the sum is $7$ when this die is rolled twice.",
+  "problem solution": "The normalization factor here is that each dot contributes a $\\dfrac{1}{21}$ likelihood for that face to show up. Therefore, face $i$, $1 \\leq i \\leq 6$, has a $\\dfrac{i}{21}$ chance of appearing. We need the outcomes $i$ and $7-i$ to result from the two rolls, summing over $i = 1,\\dots, 6$ to consider all scenarios. This condition occurs with a probability of $\\dfrac{i(7-i)}{21^2}$ for each $1 \\leq i \\leq 6$, since the rolls are independent, thus the probability of interest is $\\displaystyle \\dfrac{1}{21^2} \\sum_{i=1}^6 7i - i^2 = \\dfrac{8}{63}$.",
+  "valid answer": "Valid Answers: $8/63$",
+  "problem tags": [
+    "Combinatorics",
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Apply $Law \\; of \\; Total \\; Probability$ to condition based on the outcome of the first roll.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "29993460967742684457"
+}

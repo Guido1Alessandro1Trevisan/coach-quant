@@ -1,0 +1,17 @@
+{
+  "problem name": "Five Face Quest",
+  "problem text": "A fair die with 5 faces numbered $1$ to $5$ is rolled continuously until the total value of the top faces reaches at least $5$. Determine the anticipated number of rolls required.",
+  "problem solution": "We will address the extended version for an $n$-faced die with a total sum reaching at least $n$. We'll represent the expected rolls needed to achieve a sum of at least $n$, beginning from a sum of $k$, as $E_k$. Obviously, $E_n = 0$, since the sum is already $n$. Also, $E_{n-1} = 1$, because regardless of the result, the total will be at least $n$. Then, $E_{n-2} = 1 + \\frac{1}{n}E_{n-1} = 1 + \\frac{1}{n}$, since with a chance of $\\frac{1}{n}$, the result is $1$, resulting in a sum of $n-1$. Similarly, $E_{n-3} = 1 + \\frac{1}{n} E_{n-1} + \\frac{1}{n}E_{n-2} = 1 + \\frac{2}{n} + \\frac{1}{n^2}$. By following this pattern, induction shows that $E_{n-k} = \\sum_{j=0}^{k-1} \\frac{\\binom{k-1}{j}}{n^j}$. Consequently, applying the Binomial Theorem, $E_0 = E_{n-n} = \\sum_{j=0}^{n-1} \\binom{n-1}{j}\\left(\\frac{1}{n}\\right)^j = \\left(1 + \\frac{1}{n}\\right)^{n-1}$. We utilized the Binomial Theorem with $x = \\frac{1}{n}$ and $y = 1$. Thus, for $n = 5$, the solution is $\\frac{6^4}{5^4} = \\frac{1296}{625}$.",
+  "valid answer": "Valid Answers: $1296/625$",
+  "problem tags": [
+    "Expected Value",
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "We define the expected number of rolls to reach a sum of at least $n$, starting with a sum of $k$, as $E_k$. Clearly, $E_n = 0$, since we start with a sum of $n$. Moreover, $E_{n-1} = 1$, because any result will result in a sum of at least $n$. This is the general case, and substituting $n = 5$ will yield the answer.",
+  "problem firm": [
+    "Akuna Capital"
+  ],
+  "question id": "12209124881866559693"
+}

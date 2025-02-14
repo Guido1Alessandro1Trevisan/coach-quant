@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Product Quest",
+  "problem text": "We roll three fair six-sided dice (with faces from 1 to 6). What is the mean of the product of these three outcomes?",
+  "problem solution": "Let the results of the dice be random variables $$X, Y, Z$$. Each is uniformly distributed on $$\\{1, 2, 3, 4, 5, 6\\}$$ with probability $$\\frac{1}{6}$$ for each face. Since the dice are independent, the expected product is the product of their individual expectations, so $$E[XYZ] = E[X] \\cdot E[Y] \\cdot E[Z] = (3.5)(3.5)(3.5) = 42.875 = \\frac{343}{8}$$. Alternatively, one may compute the sum $$E[XYZ] = \\sum_{x=1}^{6} \\sum_{y=1}^{6} \\sum_{z=1}^{6} xyz \\left(\\frac{1}{6}\\right)^3$$, which also evaluates to $$\\frac{343}{8}$$. Thus, the expected product is $$\\frac{343}{8}$$.",
+  "valid answer": "Valid Answers: $$\\frac{343}{8}, 42.875$$",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Recall that for independent random variables, the expected product equals the product of the expected values.",
+  "problem firm": [
+    "Belvedere Trading"
+  ],
+  "question id": "17396465553457093659"
+}

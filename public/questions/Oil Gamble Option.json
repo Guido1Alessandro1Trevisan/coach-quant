@@ -1,0 +1,17 @@
+{
+  "problem name": "Oil Gamble Option",
+  "problem text": "Saudi Oil Company is exploring for crude oil. There is a $30\\%$ probability of a successful well and a $70\\%$ probability of failure. If oil isn't discovered, their shares will have a value of $20$, but if they succeed, it will be $100$. You possess an option (without an obligation) to purchase the shares for $50$ the following day after the outcome of the well is known. What is the fair price of this option?",
+  "problem solution": "We choose to exercise our option only if the Saudi Oil venture is successful. We will earn $50$ in this scenario, happening with a probability of $0.3$. Thus, the solution is $50 \\cdot 0.3 = 15$.",
+  "valid answer": "Valid Answers: $15$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "We exercise our option only if the venture is successful.",
+  "problem firm": [
+    "Old Mission",
+    "Sig"
+  ],
+  "question id": "87146846914780206979"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Semicircle Surprise",
+  "problem text": "Consider $n$ points chosen uniformly at random on the circumference of a circle. Determine the likelihood that all $n$ points lie on a single semicircle for $n = 100$. The probability is expressed as $\\dfrac{a}{b^c}$ where $a, b, c$ are integers greater than 0 and $b$ is minimized. Calculate $a + b + c$.",
+  "problem solution": "Initially assume all $n$ points are placed on the circle. Select one point, referred to as $A$. Draw a line through $A$ and $C$, the center of the circle; this diameter creates two semicircles. To avoid overcounting, consider only the semicircle starting at $A$ in the counterclockwise direction. Each of the other $n-1$ points has a probability of $\\frac{1}{2}$ of lying within this semicircle. Repeating this calculation for all $n$ points, we find the probability is $\\frac{n}{2^{n-1}}$. Substituting $n = 100$, the result is $\\frac{100}{2^{99}}$. Therefore, with $a$, $b$, and $c$, the sum is $100 + 2 + 99 = 201$.",
+  "valid answer": "Valid Answers: $201$",
+  "problem tags": [
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Assume $n$ points are already on the circle. Pick one point, named $A$. Draw a line through $A$ and $O$, the circle's center, creating two semicircles. To prevent overcounting, focus only on the semicircle beginning from $A$ in a counterclockwise direction.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "53285334164546768780"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Chop Chance",
+  "problem text": "Consider a rod with a length of $1$, which is being divided into $6$ sections by making $5$ equal and random incisions. What is the likelihood that no segment exceeds $\\frac{1}{2}$ in length?",
+  "problem solution": "We need to determine the likelihood that all segment lengths are under $\\frac{1}{2}$. $P($all under $\\frac{1}{2}) = 1 - P($at least one segment exceeds $\\frac{1}{2}) = 1 - P(1$ segment exceeds $\\frac{1}{2})$. Note: This third step is based on the fact that with a rod length of $1$, it's impossible to have more than $1$ segment exceed $\\frac{1}{2}$. Our cuts are at $(U1, U2, U3, U4, U5)$ which create segments of lengths $(L1, L2, L3, L4, L5, L6)$ from left to right where $L1=U1-0$, $L2=U2-U1$, etc. $P($Segment $L1 \\geq \\frac{1}{2}$ in length$) = 1 - \\left(\\dfrac{1}{2}\\right)^5$, indicating all cuts happen outside of $L1$ which needs a minimum length of $\\frac{1}{2}$. With $6$ segments, the probability is $6 \\cdot \\left(\\dfrac{1}{2}\\right)^5 = \\dfrac{3}{16}$. Note: If we were considering a length $< \\frac{1}{2}$, such as $\\frac{1}{3}$, the situation could allow for multiple segments to exceed $\\frac{1}{3}$ simultaneously, necessitating the Inclusion Exclusion Principle in Statistics. Since we seek the likelihood that no segment exceeds $\\frac{1}{2}$, our final result is the complement of the above. Thus, the ultimate answer is $1 - \\frac{3}{16} = \\frac{13}{16}$.",
+  "valid answer": "Valid Answers: $13/16$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "The only scenario in which a portion of the rod exceeds $\\frac{1}{2}$ in length is if every incision happens outside the section of length $\\geq \\frac{1}{2}$",
+  "problem firm": [
+    "Worldquant"
+  ],
+  "question id": "15013896822701350141"
+}

@@ -1,0 +1,17 @@
+{
+  "problem name": "Hefty Quest",
+  "problem text": "You have 14 visually indistinguishable spheres, one of which is strictly heavier than the others. Using a balance scale that can indicate whether the left side is heavier, the right side is heavier, or if both sides weigh the same, what is the least number of weighings needed to be certain of finding the heavier sphere? Also, describe the result in terms of a general formula for an arbitrary number of spheres n.",
+  "problem solution": "We first restate the problem formally: we have n spheres, all identical except for one that is heavier. We use a balance scale that can produce three possible outcomes in each weighing: left side heavier, right side heavier, or balanced. Our goal is to minimize the number of weighings required to identify the single heavier sphere with certainty. A balance scale weighing that has three possible outcomes can distinguish among up to $$3^k$$ different scenarios in k weighings. Therefore, to guarantee that each of the n spheres can be uniquely identified as the heavier one in some scenario, we need $$3^k \\ge n$$. Taking logarithms (base 3), we get $$k \\ge \\log_3(n)$$. Since k must be an integer, the minimal k is $$\\lceil \\log_3(n) \\rceil$$. In the specific case where $$n = 14$$, we check the smallest k such that $$3^k \\ge 14$$. Observe that $$3^2 = 9 < 14$$ and $$3^3 = 27 \\ge 14$$, so k = 3 weighs suffice. We can outline a strategy to achieve this in 3 weighings as follows: (1) Separate the 14 spheres into three groups as evenly as possible (for instance, 5, 5, and 4). (2) Weigh one group of 5 against another group of 5. If they balance, the heavier sphere is in the group of 4 not weighed, and a similar partitioning plan continues; if one side is heavier, the heavier sphere is among that side's 5. (3) Proceed iteratively by further splitting the suspect group and weighing subgroups until the heavier sphere is definitively located. By applying this kind of division and comparison scheme, exactly 3 weighings are sufficient for 14 spheres. More generally, the minimal number of weighings for n spheres is $$\\lceil \\log_3(n) \\rceil$$.",
+  "valid answer": "Valid Answers: 3 weighings for 14 balls, and in general $$\\lceil \\log_3(n) \\rceil$$ weighings.",
+  "problem tags": [
+    "Combinatorics",
+    "Search Problem",
+    "Weighing Puzzle"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Each weighing can result in three possible outcomes, so aim to evenly split the possibilities each time.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "14347754332903371771"
+}

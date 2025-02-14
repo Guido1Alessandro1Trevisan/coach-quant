@@ -1,0 +1,17 @@
+{
+  "problem name": "Letter Blitz Strategy",
+  "problem text": "Suppose you have no letters initially, and you can perform three actions—typing one letter, copying all currently written letters, or pasting that copied block—each in one second, and you want at least 200 letters in the fewest total seconds. What procedure achieves this as quickly as possible?",
+  "problem solution": "First, note that typing one letter, then copying, then pasting repeatedly yields linear growth, which is too slow. Instead, the optimal strategy involves multiple copy–paste cycles to multiply your progress more rapidly. A systematic analysis shows that doing two initial type actions (to have $$2$$ letters) and then repeating a cycle of copy followed by several pastes leads to the smallest number of total actions. Concretely, label each second's action as follows: (1) Type, (2) Type, (3) Copy, (4) Paste, (5) Paste, (6) Copy, (7) Paste, (8) Paste, (9) Copy, (10) Paste, (11) Paste, (12) Copy, (13) Paste, (14) Paste, (15) Paste. After step (2), you have $$2$$ letters typed; after step (5), you have $$6$$ letters; after step (8), you have $$18$$ letters; after step (11), you have $$54$$ letters; and after step (15), you reach $$216$$ letters. Since $$216 \\ge 200$$, this sequence meets the requirement in only $$15$$ moves, and no quicker method exists upon exhaustive checking. Therefore, the minimum time is $$15$$ seconds.",
+  "valid answer": "Valid Answers: $$15$$",
+  "problem tags": [
+    "Optimization",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Evaluate repeated copy–paste steps to multiply the number of letters faster than single pastes.",
+  "problem firm": [
+    "SIG",
+    "Orion Metrics"
+  ],
+  "question id": "03814905591233929950"
+}

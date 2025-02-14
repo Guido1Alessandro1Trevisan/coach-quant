@@ -1,0 +1,16 @@
+{
+  "problem name": "Coin Dice Quest",
+  "problem text": "We toss a balanced coin repeatedly until the first heads appears. Provided that the initial heads shows up on the $n$th toss, we then throw a fair $6$-sided die $n$ times. Determine the probability that the outcome of $1$ appears in the dice rolls.",
+  "problem solution": "We determine the likelihood of not obtaining any $1$'s, and then subtract this from $1$, as working with the complement is easier here. Let $O$ represent the event of not rolling a $1$, and $T_k$ represent the event that the first heads occurs on the $k$th toss. The probability is represented by $\\mathbb{P}[O] = \\sum_{k=1}^{\\infty} \\mathbb{P}[O \\mid T_k]\\mathbb{P}[T_k]$ where $\\mathbb{P}[T_k] = \\frac{1}{2^k}$ and $\\mathbb{P}[O \\mid T_k] = \\left(\\frac{5}{6}\\right)^k$. The series is $\\sum_{k=1}^{\\infty} \\left(\\frac{5}{12}\\right)^k = \\frac{5}{12} \\sum_{k=1}^{\\infty} \\left(\\frac{5}{12}\\right)^{k-1}$ which simplifies to $\\frac{5/12}{1 - 5/12} = \\frac{5}{7}$, hence the probability of rolling a $1$ is $1 - \\frac{5}{7} = \\frac{2}{7}$.",
+  "valid answer": "Valid Answers: $2/7$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "To begin solving this, consider the number of tosses made before the first $heads$ appears.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "01669918284536480809"
+}

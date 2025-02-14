@@ -1,0 +1,16 @@
+{
+  "problem name": "Coin Conundrum",
+  "problem text": "Consider 100 coins: one coin is double-headed, while all others are fair with a 50% chance of landing heads. You randomly select a coin and flip it ten times, seeing heads each time. Determine the probability that the chosen coin is the double-headed one.",
+  "problem solution": "First, label the events: let B be the event that you picked the biased (double-headed) coin, and let F be the event that you picked a fair coin. The probability of B before any flips is $$\\frac{1}{100}$$, while the probability of F is $$\\frac{99}{100}$$. Next, the probability of getting 10 heads in a row if the coin is biased is $$1$$, since a double-headed coin will always produce heads. Conversely, the probability of getting 10 consecutive heads if the coin is fair is $$\\left(\\frac{1}{2}\\right)^{10} = \\frac{1}{1024}$$. By Bayes' theorem, we compute: $$P(B \\mid \\text{10 heads}) = \\frac{P(\\text{10 heads} \\mid B) P(B)}{P(\\text{10 heads} \\mid B) P(B) + P(\\text{10 heads} \\mid F) P(F)} = \\frac{1 \\cdot \\frac{1}{100}}{1 \\cdot \\frac{1}{100} + \\frac{1}{1024} \\cdot \\frac{99}{100}}.$$ Combine terms by finding a common denominator: since $$\\frac{1}{100} = \\frac{1024}{102400}$$ and $$\\frac{99}{100} \\cdot \\frac{1}{1024} = \\frac{99}{102400},$$ the denominator becomes $$\\frac{1024 + 99}{102400} = \\frac{1123}{102400}.$$ Therefore, the probability is $$\\frac{\\frac{1}{100}}{\\frac{1123}{102400}} = \\frac{1/100}{1123/102400} = \\frac{1024}{1123} \\approx 0.911.$$ This yields a final probability of about 91.1%.",
+  "valid answer": "Valid Answers: $$\\frac{1024}{1123} \\approx 0.911$$",
+  "problem tags": [
+    "Probability",
+    "Bayesian"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Use Bayes' theorem and note that the double-headed coin will always land heads, whereas a fair coin has a $$\\left(\\frac{1}{2}\\right)^{10}$$ chance of ten heads.",
+  "problem firm": [
+    "SIG"
+  ],
+  "question id": "89722677718543412206"
+}

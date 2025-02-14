@@ -1,0 +1,17 @@
+{
+  "problem name": "Disk Center Drift",
+  "problem text": "Consider choosing a point X at random from the unit disk. What is the expected value of the distance between X and the center of the disk?",
+  "problem solution": "We approach this by letting the random variable R represent the distance from X to the origin. Since X is chosen uniformly over the unit disk, the probability density function of R is given by $$f_R(r) = 2r$$ for $$0 \\le r \\le 1$$. This result arises because the area of a thin annulus of radius r and thickness dr is proportional to the circumference, yielding area proportional to $$2 \\pi r dr$$, and normalizing over the total area of the unit disk $$\\pi \\cdot 1^2$$ simplifies to 2r. To find the expectation, we compute $$E[R] = \\int_0^1 r \\cdot f_R(r) \\, dr = \\int_0^1 r \\cdot 2r \\, dr = 2 \\int_0^1 r^2 \\, dr = 2 \\left[ \\frac{r^3}{3} \\right]_0^1 = \\frac{2}{3}.$$ Thus, the expected distance from the origin for a uniformly chosen point in the unit disk is $$\\frac{2}{3}.$$",
+  "valid answer": "Valid Answers: $$\\frac{2}{3}$$",
+  "problem tags": [
+    "Probability",
+    "Geometry",
+    "Statistics"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Consider the distribution of distances by looking at thin concentric rings of thickness dr inside the unit circle.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "01382327587741875523"
+}

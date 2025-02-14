@@ -1,0 +1,17 @@
+{
+  "problem name": "Sharpe Surge Puzzle",
+  "problem text": "Imagine you have two investments, $A$ and $B$. Asset $A$ is anticipated to yield excess returns of $7\\%$, while asset $B$ is expected to deliver excess returns of $4\\%$. The covariance matrix for the excess returns of $A$ and $B$ is $\\begin{bmatrix} 1 & 1 \\ 1 & 2 \\end{bmatrix}$. Subject to the condition of holding a total of $1$ unit of assets (meaning if you purchase $a$ units of $A$ and $b$ units of $B$, then $a+b = 1$), determine the number of units of asset $A$ that should be held to maximize the anticipated Sharpe Ratio of a portfolio composed of a mix of assets $A$ and $B$.",
+  "problem solution": "Let $R_A$ and $R_B$ represent the excess returns of $A$ and $B$. Given the covariance matrix, $\\text{Var}(R_A) = 1$ and $\\text{Var}(R_B) = 2$. Additionally, $\\text{Cov}(R_A,R_B) = 1$. Assume $a$ denotes the proportion of asset $A$ held. Therefore, $1-a$ is the fraction held in asset $B$. It is provided that $\\mathbb{E}[R_A] = 7$ and $\\mathbb{E}[R_B] = 4$. We aim to maximize the expression $\\dfrac{\\mathbb{E}[aR_A + (1-a)R_B]}{\\sqrt{\\text{Var}(aR_A + (1-a)R_B)}}$. The numerator is straightforward to compute. By employing Linearity of Expectation, $\\mathbb{E}[aR_A + (1-a)R_B] = a\\mathbb{E}[R_A] + (1-a)\\mathbb{E}[R_B] = 7a + 4(1-a) = 3a+4$. To find the variance of the new portfolio, we apply the variance of sum formula: $\\text{Var}(aR_A + (1-a)R_B) = a^2\\text{Var}(R_A) + (1-a)^2 \\text{Var}(R_B) + 2a(1-a)\\text{Cov}(R_A,R_B) = a^2 + 2(1-a)^2 + 2a(1-a)$. Thus, the function in terms of $a$ to optimize is $\\dfrac{3a+4}{\\sqrt{a^2 + 2(1-a)^2 + 2a(1-a)}}$. By avoiding the derivative computation, the derivative in terms of $a$ is $-\\dfrac{7a-10}{\\left(a^2+2a\\left(1-a\\right)+2\\left(1-a\\right)^2\\right)^\\frac{3}{2}}$. This derivative equates to zero at $a = \\dfrac{10}{7}$, and since the derivative transitions from positive to negative, this point is a maximum.",
+  "valid answer": "Valid Answers: $10/7$",
+  "problem tags": [
+    "Pure Math",
+    "Finance",
+    "Finance"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Define $R_A$ and $R_B$ as the excess returns of $A$ and $B$. The covariance matrix indicates that $\\text{Var}(R_A) = 1$ and $\\text{Var}(R_B) = 2$. Additionally, $\\text{Cov}(R_A, R_B) = 1$. Assume $a$ is the weight attributed to asset $A$. Subsequently, $1-a$ is allocated to asset $B$. The problem states that $\\mathbb{E}[R_A] = 7$ and $\\mathbb{E}[R_B] = 4$. Our goal is to maximize $\\dfrac{\\mathbb{E}[aR_A + (1-a)R_B]}{\\sqrt{\\text{Var}(aR_A + (1-a)R_B)}}$.",
+  "problem firm": [
+    "Worldquant"
+  ],
+  "question id": "49015139176781193136"
+}

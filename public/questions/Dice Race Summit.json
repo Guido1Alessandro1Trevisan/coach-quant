@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Race Summit",
+  "problem text": "When two dice are rolled repeatedly, what is the chance of obtaining a sum of $5$ before getting a sum of $2$?",
+  "problem solution": "Consider rolling two unbiased 6-sided dice, resulting in $36$ potential outcomes. Among them, $4$ produce a sum of $5$, while just $1$ results in a sum of $2$. Repeated rolls will ultimately result in either a sum of $2$ or $5$. Thus, we can simplify by disregarding all other results, focusing on the probability of the $4$ dice roll outcomes that produce a sum of $5$ occurring before the $1$ outcome that results in a sum of $2$. This probability is calculated as $\\frac{4}{4+1}$ (successful outcomes over total relevant outcomes), resulting in a probability of $\\frac{4}{5}$.",
+  "valid answer": "Valid Answers: $4/5$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about how many combinations yield a sum of $2$ or $5$. We must conclude with one of these sums.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "08636629221889699097"
+}

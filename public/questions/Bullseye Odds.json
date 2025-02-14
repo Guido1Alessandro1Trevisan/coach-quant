@@ -1,0 +1,17 @@
+{
+  "problem name": "Bullseye Odds",
+  "problem text": "An archer targets a dartboard. Given a $\\dfrac{3}{4}$ probability of hitting any single shot, determine the likelihood that she hits at least one out of her next three attempts.",
+  "problem solution": "The complementary scenario is her missing all three attempts. The probability of missing each shot is $\\dfrac{1}{4}$, so the probability of missing all three is $\\dfrac{1}{4^3} = \\dfrac{1}{64}$. Therefore, the chance of hitting at least one shot in the next three is $1 - \\dfrac{1}{64} = \\dfrac{63}{64}$.",
+  "valid answer": "Valid Answers: $63/64$",
+  "problem tags": [
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Consider the complementary scenario where she misses all three shots.",
+  "problem firm": [
+    "Belvedere Trading",
+    "Citadel"
+  ],
+  "question id": "54112518113888433992"
+}

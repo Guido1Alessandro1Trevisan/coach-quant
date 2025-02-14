@@ -1,0 +1,16 @@
+{
+  "problem name": "Double Month Puzzle",
+  "problem text": "What is the least number of people needed in a group so that at least two of them have their birthday in the same month?",
+  "problem solution": "Given there are $12$ months, the Pigeonhole Principle tells us that with $13$ people, at least two will have their birthday in the same month.",
+  "valid answer": "Valid Answers: $13$",
+  "problem tags": [
+    "Combinatorics",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "A year consists of $12$ months.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "70941923502817329533"
+}

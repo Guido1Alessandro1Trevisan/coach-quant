@@ -1,0 +1,16 @@
+{
+  "problem name": "Coin Flip Faceoff",
+  "problem text": "Imagine you and a friend each have a set of fair coins, with you having 51 and your companion having 50. If both of you flip all your coins, what is the probability that you end up with a strictly greater number of heads?",
+  "problem solution": "We define X as the number of heads from your 51 coins and Y as the number of heads from your friend's 50 coins. We seek $$P(X > Y)$$. Consider your first 50 coins, X', and your final coin, C. By symmetry, $$P(X' > Y) = P(Y > X')$$. Also, $$P(X' = Y) + P(X' > Y) + P(X' < Y) = 1$$ and $$P(X' > Y) = P(X' < Y)$$. Hence $$P(X' = Y) + 2P(X' > Y) = 1$$. Thus $$P(X' > Y) = \\\\dfrac{1 - P(X' = Y)}{2}\\\\!$$. If $$X' > Y$$ then you surpass your friend regardless of C. If $$X' = Y$$, then heads on C gives you more heads. Since C is fair, this event has probability $$\\\\dfrac{1}{2}$$. Therefore $$P(X > Y) = P(X' > Y) + P(X' = Y)\\\\times\\\\dfrac{1}{2} = \\\\dfrac{1}{2}$$.",
+  "valid answer": "Valid Answers: $$\\\\dfrac{1}{2}$$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider pairing up your first 50 coin flips with your friend's 50 coin flips. The extra coin can be viewed as a tie-breaker.",
+  "problem firm": [
+    "HRT"
+  ],
+  "question id": "36120968451603278513"
+}

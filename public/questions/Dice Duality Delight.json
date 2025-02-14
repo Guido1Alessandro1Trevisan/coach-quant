@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Duality Delight",
+  "problem text": "Kathy possesses a fair die with 6 faces, numbered from $1$ to $6$. She continues rolling and recording the results until both a $4$ and $6$ appear. Determine the probability that Kathy rolls exactly $2$ $5$s during this process.",
+  "problem solution": "Consider the sequence of events based on the roll when Kathy halts. She needs at least $4$ rolls to observe both $2$ $5$s, a $4$, and a $6$. Assume Kathy ceases after $n$ rolls. In the first $n-1$ rolls, exactly $2$ $5$s must have been rolled. There are $\\binom{n-1}{2}$ possible ways to choose the positions for these two fives. The final roll must be either a $4$ or a $6$, and this number must not have appeared earlier. There are $2$ choices for the last roll. Without loss of generality, let it be $6$. The remaining $n-3$ rolls can be any number from $1$ to $4$, but at least one $4$ must appear to ensure both $4$ and $6$ are present. There are $4^{n-3}$ possible sequences for these $n-3$ rolls, excluding those without a $4$, which totals $3^{n-3}$. Hence, there are $4^{n-3} - 3^{n-3}$ sequences for the other rolls. In total, there are $6^n$ sequences of length $n$. Thus, the probability she finishes after $n \\geq 4$ rolls is $\\dfrac{2 \\cdot \\binom{n-1}{2}\\cdot (4^{n-3} - 3^{n-3})}{6^n}$. To get the total probability, sum over $n$. This results in the sum $\\displaystyle \\sum_{n=4}^{\\infty} \\dfrac{2 \\cdot \\binom{n-1}{2}\\cdot (4^{n-3} - 3^{n-3})}{6^n} = 2\\left[\\sum_{n=4}^{\\infty} \\binom{n-1}{3-1} \\dfrac{1}{6^3} \\cdot \\left(\\dfrac{2}{3}\\right)^{n-3} - \\sum_{n=4}^{\\infty} \\binom{n-1}{3-1} \\dfrac{1}{6^3} \\cdot \\left(\\dfrac{1}{2}\\right)^{n-3}\\right]$. The terms resemble Negative Binomial distributions with $r = 3$ and $p = 1/3$ and $1/2$, respectively. However, they are slightly different, requiring the constants $\\dfrac{1}{6^3}$ to be $\\dfrac{1}{3^3}$ and $\\dfrac{1}{2^3}$. Thus, multiply by $2^3$ and $3^3$ in each sum. The support of a Negative Binomial begins at $r = 3$, whereas these start at $r = 4$. To adjust, use the complement and evaluate the PMF at $3$ for each. Doing so, $2\\left[\\dfrac{1}{2^3}\\sum_{n=4}^{\\infty} \\binom{n-1}{3-1} \\dfrac{1}{3^3} \\cdot \\left(\\dfrac{2}{3}\\right)^{n-3} - \\dfrac{1}{27} \\cdot \\sum_{n=4}^{\\infty} \\binom{n-1}{3-1} \\dfrac{1}{2^3} \\cdot \\left(\\dfrac{1}{2}\\right)^{n-3}\\right] = \\dfrac{1}{4} \\cdot \\dfrac{26}{27} - \\dfrac{2}{27} \\cdot \\dfrac{7}{8} = \\dfrac{19}{108}$.",
+  "valid answer": "Valid Answers: $19/108$",
+  "problem tags": [
+    "Combinatorics",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Segment the event based on when Kathy halts rolling. What needs to transpire for her to cease rolling after precisely $n$ rolls? Consider the negative binomial distribution.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "81627074928612288116"
+}

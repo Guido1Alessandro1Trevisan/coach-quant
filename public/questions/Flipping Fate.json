@@ -1,0 +1,17 @@
+{
+  "problem name": "Flipping Fate",
+  "problem text": "Ahmed tosses a fair coin repeatedly until he gets two heads or two tails consecutively for the first occurrence. What is the chance that Ahmed flips the coin an even number of times?",
+  "problem solution": "Let $$ D $$ denote this event and $$ N $$ be the count of tosses required until two identical consecutive results appear. Then $$ \\mathbb{P}[D] = \\displaystyle \\sum_{k=1}^{\\infty} \\mathbb{P}[N = 2k] $$, since we are interested in an even count of tosses for $$ N $$. The event $$ \\{N = 2k\\} $$ indicates that the final two flips must be either $$ HH $$ or $$ TT $$. With the final 2 flips determined, the remaining $$ 2k-2 $$ flips are fixed. Since consecutive identical outcomes occur only at the last 2 flips, the flips must alternate between $$ H $$ and $$ T $$, with the initial flip determined by the chosen ending. For instance, if $$ \\{N = 4\\} $$ this relates to the sequences $$ THTT $$ and $$ HTHH $$. Therefore, of the $$ 2^{2k} $$ possible sequences of length $$ k $$, exactly $$ 2 $$ fit our condition, so $$ \\mathbb{P}[T = 2k] = \\dfrac{2}{2^{2k}} = \\dfrac{2}{4^k} $$. Substituting this into our earlier sum, $$ \\mathbb{P}[D] = 2\\displaystyle \\sum_{k=1}^{\\infty} \\dfrac{1}{4^k} = 2 \\cdot \\dfrac{\\frac{1}{4}}{1 - \\frac{1}{4}} = \\dfrac{2}{3} $$.",
+  "valid answer": "Valid Answers: $\\frac{2}{3}$",
+  "problem tags": [
+    "Events",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "What is the total number of sequences of length $2k$ that fulfill this requirement?",
+  "problem firm": [
+    "Imc"
+  ],
+  "question id": "03594002344894074060"
+}

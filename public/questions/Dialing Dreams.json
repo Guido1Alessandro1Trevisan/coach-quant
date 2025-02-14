@@ -1,0 +1,16 @@
+{
+  "problem name": "Dialing Dreams",
+  "problem text": "You have a 6-digit phone number where each of the six positions can be taken by any digit from 0 to 9, with no constraints at all. How many unique such telephone numbers can be formed?",
+  "problem solution": "To determine the total count of valid phone numbers, we note that each of the 6 digits can be any one of the ten digits from 0 through 9. Because these choices are independent, the total number of possibilities is given by the product rule, $$10^6.$$ This expands to \\(1,000,000\\) distinct 6-digit telephone numbers. Formally, we can think of the set of digits as $$\\{0,1,2,3,4,5,6,7,8,9\\},$$ so each of the 6 places has 10 options. Thus, the total amount of possible 6-digit numbers is $$10\\times10\\times10\\times10\\times10\\times10 = 10^6 = 1,000,000.$$",
+  "valid answer": "Valid Answers: 1000000",
+  "problem tags": [
+    "Combinatorics",
+    "Counting"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Recall that each digit can be 0-9, and use the product rule to calculate the final total.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "78765996703689291394"
+}

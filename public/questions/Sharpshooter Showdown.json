@@ -1,0 +1,17 @@
+{
+  "problem name": "Sharpshooter Showdown",
+  "problem text": "Three sharpshooters $X$, $Y$, and $Z$ take turns firing at a target. $X$ goes first, followed by $Y$, then $Z$, and this sequence repeats until one successfully hits the target. Each marksman has a $50\\%$ chance of hitting the target on their turn, independent of the other shots. Determine the probability that $X$ is the first to hit the target.",
+  "problem solution": "No solution found",
+  "valid answer": "Valid Answers: $4/7$",
+  "problem tags": [
+    "Conditional Probability",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "No hint found",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "63416734824766969203"
+}

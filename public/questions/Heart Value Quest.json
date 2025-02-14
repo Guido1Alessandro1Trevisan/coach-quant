@@ -1,0 +1,16 @@
+{
+  "problem name": "Heart Value Quest",
+  "problem text": "Imagine each card in a standard deck has a value equal to its rank, where $A = 1$, $J = 11$, $Q = 12$, and $K = 13$. Additionally, any card that is a heart has its value doubled (for instance, Ace of Hearts has a value of $2$). Determine the expected value when a card is randomly selected from the deck.",
+  "problem solution": "The total value of all cards in the deck is calculated as $5 \\cdot \\sum_{i=1}^{13} i$, since each suit adds $1 + 2 + \\dots + 13$ to the total, except hearts, which contribute $2 \\cdot (1 + 2 + \\dots + 13)$. With $52$ cards in total, the expected value of a randomly chosen card is $\\dfrac{5 \\cdot \\frac{13 \\cdot 14}{2}}{52} = \\dfrac{35}{4}$.",
+  "valid answer": "Valid Answers: $35/4$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about calculating the total sum of all card values in the deck.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "43929998550740372863"
+}

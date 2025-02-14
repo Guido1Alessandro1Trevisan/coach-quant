@@ -1,0 +1,17 @@
+{
+  "problem name": "Chance Snip Spread",
+  "problem text": "Imagine you possess a rope with a length of $1$ meter. You randomly make a cut along the rope's length. Determine the variance of the length of the longer segment (in meters).",
+  "problem solution": "Let $X$ be the distance from the left end where the cut is made. Then $X \\sim \\text{Unif}(0,1)$ and $L = \\text{max}\\{X,1-X\\}$ represents the length of the longer segment, as the cut at position $X$ results in two segments of lengths $X$ and $1-X$. We know that $L \\geq 0.5$, since one of the segments must be at least $1/2$ in length. However, the event $\\{L = c\\}$ corresponds to $X = c$ or $X = 1-c$, leading to $L \\sim \\text{Unif}(0.5,1)$, which means $\\text{Var}(L) = \\dfrac{(0.5)^2}{12} = \\dfrac{1}{48}$.",
+  "valid answer": "Valid Answers: $1/48$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Let $X$ be the distance from the left end where the rope is cut. Then $X \\sim \\text{Unif}(0,1)$ and $L = \\text{max}\\{X,1-X\\}$ represents the length of the longer segment, as the cut at position $X$ results in two segments of lengths $X$ and $1-X$. Try to determine the distribution of $L$.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "66098658335448089819"
+}

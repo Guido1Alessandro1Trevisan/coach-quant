@@ -1,0 +1,15 @@
+{
+  "problem name": "Digits Dance",
+  "problem text": "Consider the set $A$ consisting of all integers where the product of the digits equals $96$. Define $x$ as the smallest element and $y$ as the largest element of the set $A$. Calculate the value of $y - x$. Note that every digit must be greater than 1, making $A$ a finite set.",
+  "problem solution": "The number $96$ can be expressed as the prime factorization $3 \\cdot 32 = 3 \\cdot 2^5$. Therefore, any number in the set must include exactly $5$ twos and one three. To find the maximum number, we should arrange these digits from largest to smallest, resulting in $322222$. For the minimum number, we observe that $2^3 = 8$ and $2 \\cdot 3 = 6$. By combining four of the twos with the three into $8$ and $6$, the smallest possible arrangement of the digits $8$, $2$, and $6$ is $268$. Consequently, the result is $322222 - 268 = 321954$.",
+  "valid answer": "Valid Answers: $321954$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Determine how $96$ can be broken down into its prime factors.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "84755801268731123170"
+}

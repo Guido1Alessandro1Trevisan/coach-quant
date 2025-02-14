@@ -1,0 +1,18 @@
+{
+  "problem name": "Rope Slice Puzzle",
+  "problem text": "A $1$-meter rope is cut into three sections by making two random incisions. What is the expected measurement of the longest section?",
+  "problem solution": "Consider $X \\in [0,1]$ as the location of the first incision, and $Y \\in [0,1]$ as the second, ensuring $X < Y$. Since each section has an equal chance of being the longest, the expected measurement of the longest part is independent of which segment it is. We determine $E[X \\vert X \\text{ is the longest}]$. Given $X < Y$, our constraints are: $X > Y-X \\Rightarrow Y < 2X$ and $X > 1-Y \\Rightarrow Y > 1-X$. These constraints arise because $X$ is assumed to be longer than the other two parts, $(Y-X)$ and $(1-Y)$. Plotting these constraints in our domain, we find that the region satisfying the inequalities is triangle $A$ with vertices $\\left(\\frac{1}{2}, \\frac{1}{2}\\right)$, $\\left(\\frac{1}{2},1\\right)$, and $\\left(\\frac{1}{3}, \\frac{2}{3}\\right)$, and triangle $B$ with corners $\\left(\\frac{1}{2}, \\frac{1}{2}\\right)$, $\\left(\\frac{1}{2},1\\right)$, and $(1, 1)$. We want to determine the likelihood of an event falling within either area and the expected value of $X$ in each region. Area of $A$: $\\frac{1}{2} \\times \\frac{1}{2} \\times \\left(\\frac{1}{2} - \\frac{1}{3}\\right) = \\frac{1}{24}$ Area of $B$: $\\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{8} = \\frac{3}{24} = 3 \\times \\text{Area of A}$ Expected value of $X$ in $A$: $\\frac{1}{2} - \\frac{1}{3} \\left( \\frac{1}{2} - \\frac{1}{3} \\right) = \\frac{4}{9}$ Expected value of $X$ in $B$: $\\frac{1}{2} + \\frac{1}{3} \\times \\frac{1}{2} = \\frac{2}{3}$ The property of centroids (the center is $\\frac{1}{3}$ of the way from the base) assists us in calculating these values. Ultimately, the expected value of $X$ when it is the longest part is: $E[X \\vert X \\text{ is the longest}] = \\frac{1}{4} \\times \\frac{4}{9} + \\frac{3}{4} \\times \\frac{2}{3} = \\frac{11}{18}$",
+  "valid answer": "Valid Answers: $11/18$",
+  "problem tags": [
+    "Expected Value",
+    "Continuous Random Variables",
+    "Statistics"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Using shaded graphs can be helpful for this problem. As an initial step, consider expressing your constraints. Remember that since each segment has an equal chance of being the longest, the expected length of the longest segment is not dependent on which segment it is, so you are solving for $E[X \\vert X \\textrm{ is the longest}]$.",
+  "problem firm": [
+    "Akuna Capital",
+    "Five Rings"
+  ],
+  "question id": "79937857206776995550"
+}

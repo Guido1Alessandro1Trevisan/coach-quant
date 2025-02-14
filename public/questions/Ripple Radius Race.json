@@ -1,0 +1,18 @@
+{
+  "problem name": "Ripple Radius Race",
+  "problem text": "When a stone is tossed into a pond, it creates a circular wave with its radius expanding at $2$ feet per second. Determine the rate at which the area of this wave is growing after $10$ seconds (in square feet per second). The solution is in the format $k\\pi$ where $k$ is an integer. Calculate $k$.",
+  "problem solution": "Given that $A(r) = \\pi r^2$ as a function of $r$ and $r' = 2$. After $10$ seconds, the circle's radius is $2 \\cdot 10 = 20$ feet. Thus, $A' = 2\\pi r r'$, substituting the values gives $2 \\pi (20) (2) = 80 \\pi$. Hence, $k = 80$.",
+  "valid answer": "Valid Answers: $80$",
+  "problem tags": [
+    "Calculus",
+    "Pure Math"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "We understand that $A(r) = \\pi r^2$ as a function of $r$ and that $r' = 2$. After $10$ seconds, the circle's radius becomes $2 \\cdot 10 = 20$ feet.",
+  "problem firm": [
+    "Goldman Sachs",
+    "Sig",
+    "Transmarket Group"
+  ],
+  "question id": "29070892639255113080"
+}

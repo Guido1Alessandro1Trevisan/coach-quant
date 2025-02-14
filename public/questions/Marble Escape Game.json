@@ -1,0 +1,17 @@
+{
+  "problem name": "Marble Escape Game",
+  "problem text": "You find yourself on death row. The judge proposes a game: You have $50$ white marbles, $50$ black marbles, and $2$ empty containers available. You can allocate all $100$ marbles between the $2$ containers however you like. Afterward, you will be blindfolded and need to choose one container to draw a marble from. Drawing a white marble results in your freedom, whereas drawing a black marble results in immediate execution. What is your probability of staying alive if you employ the best strategy?",
+  "problem solution": "No solution identified",
+  "valid answer": "Valid Answers: $74/99$",
+  "problem tags": [
+    "Games",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "If the containers are not evenly distributed, it implies that one container must have a probability greater than $0.5$ of drawing a white marble, while the other has a probability less than $0.5$. In the optimal scenario, one container offers a probability of $1$ of survival, while the other offers a $0.5$ probability, leading to a $75\\%$ chance of survival.",
+  "problem firm": [
+    "Akuna Capital",
+    "Belvedere Trading"
+  ],
+  "question id": "62508218332294083826"
+}

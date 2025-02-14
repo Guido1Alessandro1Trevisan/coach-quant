@@ -1,0 +1,16 @@
+{
+  "problem name": "Bread Slice Triangles",
+  "problem text": "Gabe possesses 2 loaves of bread, with lengths $5$ and $8$. He cannot decide where to slice the $8$ unit bread, so he slices at a random point along its length. What is the probability that the loaf of length $5$ and the two segments from the cut form a triangle?",
+  "problem solution": "Let $X$ denote the distance from the left end where Gabe slices the $8$ length bread. Therefore, $X \\sim \\text{Unif}(0, 8)$ since the cut location is random. The resulting segments have lengths $5$, $X$, and $8 - X$. To form a triangle, the sum of any pair of sides must exceed the third side. We can apply this property of triangles to find the appropriate range for $X$ to form a valid triangle. The inequalities indicate $5 < X + (8 - X) = 8$, which is irrelevant. Next, $X < 5 + (8 - X)$, implying $X < \\frac{13}{2}$ as our first condition. Additionally, $8 - X < 5 + X$, leading to $X > \\frac{3}{2}$ as our second condition. Thus, forming a valid triangle corresponds to determining $\\mathbb{P}\\left[\\frac{3}{2} < X < \\frac{13}{2}\\right]$, which simplifies to $\\frac{5}{8}$ by noting this interval is $5$ units long out of an overall $8$ unit interval.",
+  "valid answer": "Valid Answers: $5/8$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Remember, to form a triangle, the sum of any two sides must exceed the third side.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "66821997318899699937"
+}

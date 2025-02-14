@@ -1,0 +1,16 @@
+{
+  "problem name": "Fishy Triples Conundrum",
+  "problem text": "Three anglers discover, one after another, that when they attempt to partition the fish in the bucket into triples, there is exactly one fish left over. In each case, the fisherman takes that single leftover fish plus one-third of the remaining fish, and then the next fisherman arrives. Determine the smallest initial number of fish in the bucket that makes all three scenarios possible.",
+  "problem solution": "Let $$x_0$$ be the initial fish count. The first fisherman notices $$x_0 \\equiv 1 \\pmod{3}$$ so write $$x_0 = 3k + 1$$. He takes the one leftover fish plus one-third of the remainder: $$1 + \\frac{x_0 - 1}{3} = \\frac{x_0 + 2}{3}$$. Hence the number of fish remaining is $$x_1 = x_0 - \\frac{x_0 + 2}{3} = \\frac{2(x_0 - 1)}{3}.$$ For the same process to continue for the second fisherman, $$x_1$$ must also satisfy $$x_1 \\equiv 1 \\pmod{3}$$. Then the second fisherman leaves $$x_2 = \\frac{2(x_1 - 1)}{3}.$$ The third fisherman again requires $$x_2 \\equiv 1 \\pmod{3}$$, leaving $$x_3 = \\frac{2(x_2 - 1)}{3}.$$ Solving these nested divisibility conditions shows the smallest positive solution for $$x_0$$ is $$25$$. Substituting back confirms that starting with $$25$$ fish allows each of the three fishermen to find exactly one fish left over upon dividing by three, take that fish plus one-third of the remainder, and leave an integer number of fish in the bucket. Therefore, the minimal initial number of fish is $$25$$.",
+  "valid answer": "Valid Answers: 25",
+  "problem tags": [
+    "Number Theory",
+    "Divisibility"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Use modular arithmetic or backward reasoning to ensure that after each fisherman’s removal, the leftover bucket count is of the form 3k+1.",
+  "problem firm": [
+    "IMC"
+  ],
+  "question id": "78938707638518811144"
+}

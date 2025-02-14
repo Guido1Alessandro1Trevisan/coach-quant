@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Battle Royale",
+  "problem text": "Two red and two blue fair dice with $6$ sides each are thrown and their results are noted. Determine the likelihood that the total of the numbers shown on the blue dice is greater than the total of the numbers shown on the red dice.",
+  "problem solution": "Due to the symmetry in this scenario, as the dice are all the same except for their color, if $X$ and $Y$ represent the totals of the numbers on the blue and red dice, respectively, we are looking for $\\mathbb{P}[X > Y]$. By symmetry, $\\mathbb{P}[X > Y] = \\mathbb{P}[X < Y]$. The only other scenario to consider is $\\mathbb{P}[X = Y]$. Consequently, $\\mathbb{P}[X > Y]$ can be calculated as $\\dfrac{1 - \\mathbb{P}[X = Y]}{2}$ by using the identity $\\mathbb{P}[X > Y] + \\mathbb{P}[X = Y] + \\mathbb{P}[X < Y] = 1$. Thus, the task is to compute $\\mathbb{P}[X = Y]$. This involves counting all potential outcomes where the sums are equal. Specifically, $\\mathbb{P}[X = Y] = \\displaystyle \\sum_{k=2}^{12} \\mathbb{P}[X = k] \\mathbb{P}[Y=k]$ due to the independence of $X$ and $Y$. Using the probability mass function of the sum of two dice, we find this to equal $\\dfrac{1^2 + 2^2 + \\dots + 6^2 + \\dots + 2^2 + 1^2}{36^2} = \\dfrac{146}{1296}$. Therefore, $\\mathbb{P}[X > Y] = \\dfrac{1 - \\dfrac{146}{1296}}{2} = \\dfrac{575}{1296}$.",
+  "valid answer": "Valid Answers: $575/1296$",
+  "problem tags": [
+    "Combinatorics",
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "There is symmetry in this scenario, as the dice are not different except for their color. Calculate the probability that the sums of the dice are the same.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "72226340841394796048"
+}

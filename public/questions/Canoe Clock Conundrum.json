@@ -1,0 +1,15 @@
+{
+  "problem name": "Canoe Clock Conundrum",
+  "problem text": "A bunch of pals are using a canoe to travel. They paddle upstream from their camping spot for three hours. Eventually, they decide to return. They paddle downstream for five hours and find themselves $32$ miles downstream from their original campsite. The next day, they head back to their campsite and arrive by $7$:$00$ PM. Given that the river's current flows at a steady speed of $2$ miles per hour and the friends row at a consistent speed, what time do they start their journey back home the next morning? Provide your answer in military time format. For instance, if the time is $4$:$30$ AM, enter $430$. If the time is $4$:$30$ PM, enter $1630$.",
+  "problem solution": "To begin, we need to determine the speed at which the friends rowed. Suppose $x$ represents this constant rowing speed in miles per hour. While going upstream, they travel at $x - 2$ miles per hour due to the opposing current. While going downstream, their speed is $x + 2$ miles per hour. Therefore, we have $3(x - 2) - 5(x + 2) = -32$, since they paddle upstream for $3$ hours and downstream for $5$ hours, ending up $26$ miles below their starting point. Solving for $x$ gives $x = 8$. Thus, as they travel upstream to return to their campsite the next morning, their speed is $6$ miles per hour. Consequently, it takes them $\\dfrac{32}{6} = \\dfrac{16}{3}$ hours to reach their campsite. This equates to $5$ hours and $20$ minutes. Hence, they must have departed at $1:40$ PM. Therefore, the answer is $1340$.",
+  "valid answer": "Valid Answers: $1340$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider $x$ as the constant rowing speed in miles per hour. While traveling upstream, they move at $x-2$ miles per hour due to the opposing stream. What about when moving downstream?",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "95868049536794199686"
+}

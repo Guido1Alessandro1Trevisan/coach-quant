@@ -1,0 +1,16 @@
+{
+  "problem name": "Adjacent Duo Dance",
+  "problem text": "In a class consisting of $15$ boys and $10$ girls, they stand in a line at random. How many times on average will a boy and a girl be adjacent? For example, in $BGBBGGGBGGBBBBG$, there are $7$ instances where a boy and girl are adjacent.",
+  "problem solution": "Define $\\mathbb{E}$ as the average number of times a boy and girl stand next to each other. Consider a general scenario where $m$ represents the count of boys and $n$ represents the count of girls. There are $m+n-1$ positions where a boy might be next to a girl. Therefore, $\\mathbb{E}=(m+n-1)\\cdot\\mathbb{P}$, where $\\mathbb{P}$ denotes the likelihood of a boy standing next to a girl at each position. To determine $\\mathbb{P}$, given that a boy is adjacent to a girl, there are $\\displaystyle{\\binom{n+m-2}{n-1}}$ ways to arrange the remaining boys and girls, which is then multiplied by $2$ to account for both arrangements (BG or GB). The total number of arrangements for boys and girls is $\\displaystyle{\\binom{n+m}{n}}$. Thus, $\\mathbb{P}=\\frac{2\\left(\\begin{array}{c}n+m-2 \\ n-1\\end{array}\\right)}{\\left(\\begin{array}{c}n+m \\ n\\end{array}\\right)}=\\dfrac{2 n m}{(n+m)(n+m-1)}$. Using this probability, $\\mathbb{E}=(m+n-1)\\cdot\\mathbb{P}=\\dfrac{2mn}{m+n}$. Substituting $15$ boys and $10$ girls, we find $\\mathbb{E}=\\dfrac{2\\cdot15\\cdot10}{15+10}=12$.",
+  "valid answer": "Valid Answers: [ $20/\\text{mo}$ billed annually to Invest in your future today, $30/\\text{mo}$ billed monthly to try it out and see if its worth it ]",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider determining the chance of a boy and girl being adjacent at each possible position.",
+  "problem firm": [
+    "Worldquant"
+  ],
+  "question id": "18175620564168644927"
+}

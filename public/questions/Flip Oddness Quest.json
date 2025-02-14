@@ -1,0 +1,16 @@
+{
+  "problem name": "Flip Oddness Quest",
+  "problem text": "Suppose you have 10 coins, where 5 of them are fair (landing on heads with probability 1/2) and 5 of them are biased (landing on heads with some probability not equal to 1/2). If you toss all 10 coins exactly once, what is the probability that the total number of heads is even?",
+  "problem solution": "We can solve this using a known identity for the probability that a sum of independent Bernoulli random variables is even. Let the probability of heads for each coin be denoted by $$p_i$$. The probability that the total number of heads is even is given by $$\\frac{1}{2}\\bigl(1 + \\prod_{i=1}^{10}(1 - 2p_i)\\bigr).$$ If at least one coin is fair, say $$p_i=\\frac{1}{2}$$ for that coin, then $$(1 - 2p_i) = (1 - 2\\times\\frac{1}{2})=0,$$ and so the product $$\\prod_{i=1}^{10}(1 - 2p_i)$$ is zero. Therefore, the probability becomes $$\\frac{1}{2}(1 + 0) = \\frac{1}{2}.$$ From a more intuitive perspective, a single fair coin keeps the total number of heads 'balanced' such that there is always an equal chance of having an even or odd number of heads. Consequently, with one or more fair coins, the probability is $$\\frac{1}{2}.$$",
+  "valid answer": "Valid Answers: $$\\frac{1}{2}$$",
+  "problem tags": [
+    "Probability",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "How does having at least one fair coin affect the parity of the total heads?",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "18781338220666577171"
+}

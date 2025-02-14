@@ -1,0 +1,16 @@
+{
+  "problem name": "Coin Streak Quest",
+  "problem text": "We continue flipping a fair coin until n consecutive results appear that are all heads or all tails. Determine the expected number of total flips that will be required to reach this state.",
+  "problem solution": "To solve this problem in a rigorous manner, let us define E\\(\\_i\\) as the expected number of additional coin flips needed once we already have i consecutive identical results (heads or tails), but have not yet reached n consecutive identical results. Let E\\(\\_n\\) = 0 because if we already have n consecutive identical results, no more flips are needed. We are ultimately interested in E\\(\\_0\\), which is the expected number of flips before any coin has been tossed or when no consecutive match has been established yet.  \n\nFirst, from state i = 0 (meaning no prior flips or no current streak), it takes exactly 1 flip to move to state i = 1. Hence,\n$$E\\(\\_0\\) = 1 + E\\(\\_1\\).$$  \n\nFor any 1 \\(\\le i \\le n-2\\), if the next toss is the same as the previous streak's result (probability 1/2), we progress from i consecutive identical results to i+1 consecutive results. If the next toss differs (probability 1/2), then we break the streak and revert to exactly 1 consecutive instance of the new result (not zero, because we have 1 instance of the new outcome). Thus, for 1 \\(\\le i \\le n-2\\),\n$$E\\(\\_i\\) = 1 + \\frac{1}{2} E\\(\\_{i+1}\\) + \\frac{1}{2} E\\(\\_1\\).$$  \n\nFinally, from i = n-1, if the next flip is the same, we achieve n consecutive identical results and finish, so that adds 0 additional expected flips beyond the single toss. If different, it reverts to a streak of length 1, so:\n$$E\\(\\_{n-1}\\) = 1 + \\frac{1}{2}\\cdot 0 + \\frac{1}{2} E\\(\\_1\\) = 1 + \\frac{1}{2} E\\(\\_1\\).$$  \n\nSolving these equations shows that:\n$$E\\(\\_0\\) = 2^n - 1.$$\n\nIndeed, we can check specific small cases:\n• For n = 1, clearly we need exactly 1 flip to get a single head or tail, so \\(E\\(\\_0\\) = 1\\). This matches \\(2^1 - 1 = 1\\).\n• For n = 2, one can solve via simpler states or direct calculation, finding \\(3\\) flips on average. This agrees with \\(2^2 - 1 = 3\\).\n• For n = 3, the answer is \\(7\\), which follows \\(2^3 - 1 = 7\\).\n\nThus, the final expected number of flips to first observe n consecutive heads or n consecutive tails in a fair coin tossing sequence is:\n$$E = 2^n - 1.$$",
+  "valid answer": "Valid Answers: $2^n - 1$",
+  "problem tags": [
+    "Probability",
+    "Expectation"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Set up equations based on how many consecutive identical outcomes (heads or tails) you currently have.",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "30533542383960781681"
+}

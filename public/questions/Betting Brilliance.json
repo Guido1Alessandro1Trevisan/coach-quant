@@ -1,0 +1,18 @@
+{
+  "problem name": "Betting Brilliance",
+  "problem text": "Suppose you are placing a wager on a game with a $75\\%$ chance of winning, where the payout is $1:1$. Given an optimal strategy, what fraction of your bankroll should you wager on this game?",
+  "problem solution": "Apply the Kelly Criterion formula. The formula is $\\frac{p(b+1)-1}{b}$ where $p$ represents the probability of winning the wager and $b$ is the odds ratio. In this scenario, $p$ is $0.75$ and $b$ is $1$. Hence, you should risk $\\frac{0.75(1+1)-1}{1} = 0.5$. Therefore, you should wager $50\\%$ of your bankroll on this game.",
+  "valid answer": "Valid Answers: $0.5$, $\\frac{1}{2}$, $50$",
+  "problem tags": [
+    "Finance",
+    "Finance"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Refer to the Kelly Criterion.",
+  "problem firm": [
+    "Imc",
+    "Old Mission",
+    "Sig"
+  ],
+  "question id": "37223897529007472766"
+}

@@ -1,0 +1,15 @@
+{
+  "problem name": "Lunar Launch",
+  "problem text": "Find the smallest number that is a multiple of $77$ and is not less than $70,000$.",
+  "problem solution": "Given that $77000 \\cdot 77 \\cdot 1000$ and $7700 = 77 \\cdot 100$ are multiples of $77$, it follows that $69300 = 77000 - 7700$ is also a multiple. Additionally, $770 = 77 \\cdot 10$ is a multiple of $77$, thus $69300 + 770 = 70070$ is another multiple of $77$. This is the smallest such number because subtracting $77$ from it results in a number less than $70000$.",
+  "valid answer": "Valid Answers: $70070$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Start by looking at $77000$ and $7700$ initially.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "39773184532473277608"
+}

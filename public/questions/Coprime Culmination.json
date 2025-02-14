@@ -1,0 +1,15 @@
+{
+  "problem name": "Coprime Culmination",
+  "problem text": "Identify all subsets of $S = \\{1, 2, 3, \\dots, 30\\}$ such that each pair of elements in that subset is coprime. Determine the subset $\\Omega \\subseteq S$ meeting this requirement with the maximum possible sum of its elements. What is the total sum of the elements in $\\Omega$?",
+  "problem solution": "To ensure that every element is coprime, an initial approach is to consider all prime numbers up to $30$. Additionally, we should include $1$, since $1$ is coprime with every positive integer. Thus, a possible set is $\\{1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29\\}$. The sum of this set is $130$. However, this can be improved by replacing some primes with combinations of their factors that yield a higher sum. For instance, removing $3$ and $5$ allows us to add $15$, raising the sum to $137$. The question becomes which numbers can be replaced without violating the coprime condition. Starting with removing $2$, since it is the smallest number besides $1$ in our subset. The closest we can get to $30$ with the current elements is $28$, as $2^2 \\cdot 7 = 28$. $29$ is already included, and $30$ cannot currently be added, as $3$ and $5$ divide $30$. Therefore, replacing $2$ and $7$ with $28$ increases our sum by $19$ to $149$. Our new set becomes $\\{1, 3, 5, 11, 13, 17, 19, 23, 28, 29\\}$. Further observations show that $3^3 = 27$, which remains coprime with all elements in the set. Similarly, $5^2 = 25$ is also coprime with the rest, allowing these substitutions. This results in the final set $\\Omega = \\{1, 11, 13, 17, 19, 23, 25, 27, 28, 29\\}$. The sum of this set is $193$.",
+  "valid answer": "193",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "To ensure that every element is coprime, an initial approach is to consider all prime numbers up to $30$. Additionally, we should include $1$, since $1$ is coprime with every positive integer. Thus, a possible set is $\\{1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29\\}$. The sum of this set is $130$. Can you improve this by substituting and combining different numbers?",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "66177625425781421669"
+}

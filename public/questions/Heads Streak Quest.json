@@ -1,0 +1,16 @@
+{
+  "problem name": "Heads Streak Quest",
+  "problem text": "An unbiased coin is repeatedly flipped until it displays five heads in a row. Determine the average (expected) quantity of flips required for this to happen.",
+  "problem solution": "We model the scenario with states that track how many consecutive heads have just occurred: let \\(E_0\\) be the expected number of additional flips starting with 0 consecutive heads so far, \\(E_1\\) with 1 consecutive head, and similarly up to \\(E_5\\) which is 0 once we have 5 consecutive heads. Since the coin is fair, each flip has a 1\\/2 probability of being heads or tails. We have \\(E_5=0\\) because once we have five heads in a row, we require no further flips. For \\(n=0,1,2,3,4\\), each toss adds 1 flip to our count, then either advances us to state \\(n+1\\) (if heads) or resets us to state 0 (if tails). Therefore: $$E_0 = 1 + \\frac{1}{2}E_1 + \\frac{1}{2}E_0\\quad\\rightarrow\\quad E_0 - \\frac{1}{2}E_0 = 1 + \\frac{1}{2}E_1\\quad\\rightarrow\\quad \\frac{1}{2}E_0 = 1 + \\frac{1}{2}E_1\\quad\\rightarrow\\quad E_0=2+E_1, \\quad E_1=1 + \\frac{1}{2}E_2 + \\frac{1}{2}E_0, \\quad E_2=1 + \\frac{1}{2}E_3 + \\frac{1}{2}E_0, \\quad E_3=1 + \\frac{1}{2}E_4 + \\frac{1}{2}E_0, \\quad E_4=1 + \\frac{1}{2}E_5 + \\frac{1}{2}E_0=1 + \\frac{1}{2}\\cdot0 + \\frac{1}{2}E_0=1 + \\frac{1}{2}E_0.$$ Solving this linear system step by step, we ultimately find \\(E_0=62\\). Hence, the expected number of coin tosses until five consecutive heads first appear is 62.",
+  "valid answer": "Valid Answers: 62",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define states based on the number of consecutive heads so far, then formulate equations for the expected values in those states.",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "25426295618969352726"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Twists and Turns",
+  "problem text": "Imagine you are traveling on a grid from (0,0) up to (8,8), with each step only moving East (E) or North (N). Determine in how many distinct ways this journey can be completed so that the number of times you switch from E to N or from N to E is an even integer.",
+  "problem solution": "First, note that traveling from (0,0) to (8,8) requires exactly 8 E moves and 8 N moves in total, so the total number of ways to arrange these moves is $$\\binom{16}{8}$$. Next, define a direction change to be a shift from an E move to an N move, or vice versa. The string of 16 moves (composed of 8 E's and 8 N's) can be divided into runs of consecutive letters. Let r be the number of such runs. Then the number of direction changes is $$r - 1$$. We want this integer, $$r - 1$$, to be even, which implies that r itself is odd. If r is odd, a path that begins with E and has r runs must also end with E. Specifically for r = 2k+1 runs, there are k+1 runs of E and k runs of N, each run consisting of a positive number of identical moves that sum to 8 total E's and 8 total N's. The number of ways to split 8 E moves into k+1 positive runs is $$\\binom{7}{k}$$, and the ways to split 8 N moves into k positive runs is $$\\binom{7}{k-1}$$. Summing over all admissible k from 1 to 7, and multiplying by 2 to account for paths starting (and ending) with N as well, yields $$2\\sum_{k=1}^{7} \\binom{7}{k}\\binom{7}{k-1} = 6006$$. Hence, $$6006$$ is the total number of qualifying paths in which the direction changes are even.",
+  "valid answer": "Valid Answers: 6006",
+  "problem tags": [
+    "Combinatorics",
+    "Grid Paths"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Focus on counting runs of identical moves and recall that the total number of direction changes is one less than the total number of runs.",
+  "problem firm": [
+    "SIG"
+  ],
+  "question id": "50245795765032251949"
+}

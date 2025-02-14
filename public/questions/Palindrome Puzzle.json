@@ -1,0 +1,16 @@
+{
+  "problem name": "Palindrome Puzzle",
+  "problem text": "In how many ways can the letters of the word $MISSISSIPPI$ be arranged to form palindromes? A palindrome is defined as a sequence that appears identical when read forwards and backwards.",
+  "problem solution": "To ensure the sequence is identical in both directions, given that $MISSISSIPPI$ contains $11$ characters, the $M$ must occupy the center position. Thus, the layout is $-----M-----$, where each $-$ is occupied by $S,I,$ or $P$. There are $4$ $S$s and $I$s, and $2$ $P$s. Therefore, for symmetry, each half must include $2$ $S$s and $I$s and $1$ $P$. Once letters are assigned to one half, the opposite half is determined, leading to $\\dfrac{5!}{2! \\cdot 2! \\cdot 1!} = 30$, considering the repetition of $S$ and $I$.",
+  "valid answer": "Valid Answers: $30$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "To form a palindrome, given $MISSISSIPPI$ has $11$ characters, $M$ should be at the center. This results in a pattern of $-----M-----$, where each $-$ is a placeholder for $S,I,$ or $P$.",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "10050741339259385815"
+}

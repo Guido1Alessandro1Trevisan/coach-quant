@@ -1,0 +1,15 @@
+{
+  "problem name": "Liquid Swap Mystery",
+  "problem text": "You possess a glass filled with orange juice and another with water, both having identical volumes. Some water is transferred into the orange juice glass, followed by an equal volume of the blended liquid being poured back into the water glass, restoring the original volumes. Define $x$ as the water percentage in the diluted water glass, and $y$ as the orange juice percentage in the diluted orange juice glass. Calculate $x-y$.",
+  "problem solution": "Let $V$ denote the initial and final volumes (in mL) of the two glasses, and let $w$ represent the volume of water (in mL) remaining in the orange juice glass after all transfers and mixing. Consequently, the water glass contains $V-w$ mL of water. Knowing the final volume is $V$, the remaining $w$ mL must consist of orange juice. Similarly, the orange juice glass contains $w$ mL of water, and since the final volume is $V$, the remainder $V-w$ mL is water. Therefore, the difference in concentrations between the two glasses is $\\frac{V-w}{V} - \\frac{V-w}{V} = 0$.",
+  "valid answer": "Valid Answers: $0$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "What role does the concept of displacement play in this scenario? Specifically, when some volume of water is added to the orange juice, what occurs to the now vacant volume in the water glass?",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "63964686896955271576"
+}

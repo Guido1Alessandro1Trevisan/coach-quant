@@ -1,0 +1,16 @@
+{
+  "problem name": "Coin Quest Countdown",
+  "problem text": "We have a fair coin that we flip repeatedly. We continue flipping until we have accumulated a total of two heads. Find the expected (average) number of flips needed to achieve these two heads.",
+  "problem solution": "We solve this rigorously. One method uses the negative binomial distribution: for a fair coin, the probability of heads is $$p = \\tfrac{1}{2}$$. We want to find the expected number of flips needed to get $$r = 2$$ heads. The negative binomial theorem tells us that the expected value is $$\\dfrac{r}{p} = \\dfrac{2}{\\tfrac{1}{2}} = 4$$. Alternatively, we can use a detailed state-based argument. Let $$E_0$$ be the expected number of flips needed from having zero heads so far, and let $$E_1$$ be the expected number of flips needed from having one head so far. Once we reach two heads (state $$E_2$$), no more flips are required, so the expectation there is zero. Starting from state $$E_0$$, each flip increments the expected count by 1. With probability $$\\tfrac{1}{2}$$, we get a head and move to state $$E_1$$; with probability $$\\tfrac{1}{2}$$, we get a tail and remain in state $$E_0$$. Hence, $$E_0 = 1 + \\tfrac{1}{2}E_1 + \\tfrac{1}{2}E_0$$. This rearranges to $$E_0 - \\tfrac{1}{2}E_0 = 1 + \\tfrac{1}{2}E_1 \\implies \\tfrac{1}{2}E_0 = 1 + \\tfrac{1}{2}E_1 \\implies E_0 = 2 + E_1.$$ From state $$E_1$$, we again add 1 flip for each coin toss. With probability $$\\tfrac{1}{2}$$, we get a head and finish (thus needing zero more flips), while with probability $$\\tfrac{1}{2}$$, we get a tail but still have one head in total, so we remain in state $$E_1$$. Thus, $$E_1 = 1 + \\tfrac{1}{2}\\times 0 + \\tfrac{1}{2}E_1 \\implies E_1 - \\tfrac{1}{2}E_1 = 1 \\implies \\tfrac{1}{2}E_1 = 1 \\implies E_1 = 2.$$ Substituting back gives $$E_0 = 2 + 2 = 4.$$ Thus, no matter what method is used, the expected number of flips is 4.",
+  "valid answer": "Valid Answers: 4",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider either a state-based approach (tracking how many heads have appeared) or directly using the negative binomial distribution formula.",
+  "problem firm": [
+    "Chicago Trading Company"
+  ],
+  "question id": "04657285427649630996"
+}

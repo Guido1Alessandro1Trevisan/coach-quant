@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Duel Dominance",
+  "problem text": "Two participants engage in a game by tossing a regular die. Player $1$ goes first. If the die displays a $1$ or $2$, then Player $1$ is victorious. If it shows another number, Player $2$ takes a turn. If Player $2$ rolls a $3$, $4$, $5$, or $6$, they win. Otherwise, the game repeats until a player wins. Let $p_1$ and $p_2$ denote the chances of each player winning, respectively. Determine $\\text{max}\\{p_1,p_2\\}$.",
+  "problem solution": "We will calculate $p_1$ as described. Player $1$ succeeds on the first roll with a probability of $\\frac{1}{3}$. If unsuccessful, which happens with a probability of $\\frac{2}{3}$, then Player $2$ must also fail their initial roll, occurring with a probability of $\\frac{1}{3}$. In this scenario, the probability that Player $1$ wins returns to $p_1$. Thus, $p_1 = \\dfrac{1}{3} + \\dfrac{2}{9}p_1 \\iff p_1 = \\dfrac{3}{7}$. Consequently, $p_2 = 1 - p_1 = \\dfrac{4}{7}$, leading to the solution $\\dfrac{4}{7}$.",
+  "valid answer": "Valid Answers: $4/7$",
+  "problem tags": [
+    "Conditional Probability",
+    "Games",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Determine $p_1$ by considering that with a $1/3$ chance, Player $1$ rolls a winning number initially.",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "55604426040358893045"
+}

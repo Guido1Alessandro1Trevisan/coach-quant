@@ -1,0 +1,16 @@
+{
+  "problem name": "Sum Shuffle",
+  "problem text": "Determine the count of non-negative integer solutions for $6 \\leq x_1 + \\dots + x_5 \\leq 10$.",
+  "problem solution": "To address this task, we aim to formulate a general solution. Initially, determine the count of non-negative integer solutions for: $n+1 \\leq x_1 + \\dots + x_n \\leq 2n$. According to stars and bars, for a specified $k$, the count of non-negative integer solutions for $x_1 + \\dots + x_n = k$ is $\\binom{n+k-1}{n-1}$. Thus, the count of non-negative integer solutions for $x_1 + \\dots + x_n \\leq 2n$ is the summation of non-negative integer solutions for $x_1 + \\dots + x_n = k$ over $0 \\leq k \\leq 2n$, resulting in $\\binom{n-1}{n-1} + \\dots + \\binom{2n-1}{n-1} + \\binom{2n}{n-1} + \\dots + \\binom{3n-1}{n-1}$. Applying the hockey stick identity $\\displaystyle \\sum_{i=k-1}^{r-1} \\binom{i}{k-1} = \\binom{r}{k}$, $1 \\leq k < r$, with $k = n$ and $r = 3n$, this simplifies to $\\displaystyle \\binom{3n}{n}$. Similarly, deduce that the count of non-negative integer solutions for $x_1 + \\dots + x_n \\leq n$ is $\\binom{n-1}{n-1} + \\dots + \\binom{2n-1}{n-1} = \\binom{2n}{n}$. Consequently, the count of non-negative integer solutions for $n+1 \\leq x_1 + \\dots + x_n \\leq 2n$ is merely the difference of the aforementioned expressions, as $x_1 + \\dots + x_n \\leq 2n$ encompasses solutions that also satisfy $\\leq n$. Therefore, the count of solutions is $\\binom{2n}{n-1} + \\dots + \\binom{3n-1}{n-1} = \\binom{3n}{n} - \\binom{2n}{n}$. Substituting $n = 5$ gives us the result $\\displaystyle \\binom{15}{5} - \\binom{10}{5} = 2751$.",
+  "valid answer": "Valid Answers: $2751$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "According to stars and bars, for a specific $k$, the number of non-negative integer solutions for $x_1 + \\dots + x_n = k$ is $\\displaystyle \\binom{n+k-1}{n-1}$. Apply the hockey stick identity $\\displaystyle \\sum_{i=k-1}^{r-1} \\binom{i}{k-1} = \\binom{r}{k}$, $1 \\leq k < r$.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "80560172081959875305"
+}

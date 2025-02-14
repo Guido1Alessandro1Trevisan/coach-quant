@@ -1,0 +1,16 @@
+{
+  "problem name": "Peak Predicting",
+  "problem text": "Fourteen sheets of paper labelled $1-14$ are laid out in a sequence randomly. A position $i$ is called a peak if the number at position $i$ is larger than the numbers on either side. Determine the expected count of peaks in the sequence. For instance, with $6$ numbers, $513246$ has $3$ peaks at the first, third, and last positions.",
+  "problem solution": "Define $I_j$ as the indicator variable that shows whether the number at position $j$ is a peak, where $1 \\le j \\le 14$. Then, $T = I_1 + \\ldots + I_{14}$ represents the total peaks. By using expectation linearity, $E[T] = E[I_1] + \\ldots + E[I_{14}]$. The expected value of an indicator variable equals the likelihood of the event it signifies, thus $E[I_j] = P[I_j=1]$. For positions $2 \\le j \\le 13$, numbers are present at both $j-1$ and $j+1$. Here, $I_j = 1$ when the $j$th number is larger than both the $(j-1)$th and $(j+1)$th numbers. From the $3!$ possible permutations of these three numbers, precisely 2 arrangements create a peak. For instance, with numbers 123, only 213 and 312 produce a peak at the middle position. Hence, $E[I_j] = \\frac{2}{3!} = \\frac{1}{3}$. At position $j=1$, there's just one neighbor at position 2, as $j=1$ is an edge. Among the $2!$ possible permutations of numbers at 1 and 2, only one forms a peak. Thus, $E[I_1] = \\frac{1}{2!} = \\frac{1}{2}$. The same logic applies to the opposite end at $j=14$, giving $E[I_{14}] = \\frac{1}{2}$. Consequently, $E[T] = \\frac{1}{2} \\cdot 2 + \\frac{1}{3} \\cdot 12 = 5$.",
+  "valid answer": "Valid Answers: $5$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define an indicator variable $I_j$ to show whether the $j$'th position is a peak, for $1 \\leq j \\leq 14$. Employ expectation linearity to estimate the total peaks.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "74917115857488165183"
+}

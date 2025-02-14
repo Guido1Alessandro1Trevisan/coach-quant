@@ -1,0 +1,16 @@
+{
+  "problem name": "Top Spot Quest",
+  "problem text": "Assume $X_1, X_2, X_3, X_4 \\sim \\text{Unif}(0, 4)$ are independent and identically distributed. Determine the likelihood that the highest value among these $4$ random variables falls within the range $(2, 3]$.",
+  "problem solution": "Define $$ M = \\text{max}\\{X_1, X_2, X_3, X_4\\} $$. We need to calculate $$\\mathbb{P}[2 < M \\leq 3] = \\mathbb{P}[M \\leq 3] - \\mathbb{P}[M \\leq 2]$$. The cumulative distribution function of $$ M $$ can be derived straightforwardly. The event $$\\{M \\leq x\\}$$ implies $$\\{X_1, X_2, X_3, X_4 \\leq x\\}$$. Given independence, $$\\mathbb{P}[M \\leq x] = \\mathbb{P}[X_1 \\leq x]\\mathbb{P}[X_2 \\leq x]\\mathbb{P}[X_3 \\leq x]\\mathbb{P}[X_4 \\leq x] = (\\mathbb{P}[X_1 \\leq x])^4 = \\dfrac{x^4}{4^4}$$. Thus, $$\\mathbb{P}[2 < M \\leq 3] = \\dfrac{3^4 - 2^4}{4^4} = \\dfrac{65}{256}$$.",
+  "valid answer": "Valid Answers: [ $20/\\text{mo}$ billed annually to Invest in your future today, $30/\\text{mo}$ billed monthly to try it out and see if its worth it ]",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $M = \\text{max}\\{X_1, X_2, X_3, X_4\\}$. Can you easily find the cumulative distribution function for $M$?",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "97600894922068802145"
+}

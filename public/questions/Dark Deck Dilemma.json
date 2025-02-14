@@ -1,0 +1,16 @@
+{
+  "problem name": "Dark Deck Dilemma",
+  "problem text": "You are choosing between two distinct decks of cards. The first deck contains 13 red cards and 13 black cards, while the second deck has 26 red cards and 26 black cards. You will draw two cards from your chosen deck, and you win if both drawn cards are black. Which deck should you pick to maximize your probability of success?",
+  "problem solution": "First, we determine the probability of drawing two black cards from the first deck (13 black and 13 red, 26 total). Without replacement, the probability of drawing a black card on the first draw is $$\\dfrac{13}{26}$$, followed by $$\\dfrac{12}{25}$$ on the second draw, for a combined probability of $$\\dfrac{13}{26}\\times\\dfrac{12}{25} = \\dfrac{6}{25}.$$ Next, we compute the probability of drawing two black cards from the second deck (26 black and 26 red, 52 total). Similarly, the probability of a black card on the first draw is $$\\dfrac{26}{52}$$, followed by $$\\dfrac{25}{51}$$ on the second draw, giving $$\\dfrac{26}{52}\\times\\dfrac{25}{51} = \\dfrac{25}{102}.$$ Comparing these two results, we find that $$\\dfrac{25}{102}$$ is slightly larger than $$\\dfrac{6}{25},$$ so choosing the deck with 26 black cards and 26 red cards maximizes the probability of winning. This is a direct application of the probability formula for drawing cards without replacement and comparing the resulting probabilities.",
+  "valid answer": "Valid Answers: Choose the second deck (26 black, 26 red).",
+  "problem tags": [
+    "Probability",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Compute the probability of drawing two black cards in each deck and compare them.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "99598763928041865766"
+}

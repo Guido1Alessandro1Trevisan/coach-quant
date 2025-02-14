@@ -1,0 +1,15 @@
+{
+  "problem name": "Digit Multiplier Quest",
+  "problem text": "What is the least positive integer whose digits multiply to $10000$?",
+  "problem solution": "The prime factorization of $10000$ gives $10000 = 10^4 = 2^4 \\cdot 5^4$. Thus, the number must contain $4$ of the digit $5$ and $4$ of the digit $2$. Since $2^3 = 8$, we can combine three of the $2$s into one digit. As a result, we want to form the smallest number using $4$ of the digit $5$ and one each of $2$ and $8$. Arranging these digits from smallest to largest ensures the number is minimized, since digits on the left have greater positional value. Therefore, the smallest number is $255558$.",
+  "valid answer": "Valid Answers: $255558$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Look at the prime factorization of $10000$. How can you arrange (and combine) the factors optimally to achieve the smallest number?",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "06736942673396727970"
+}

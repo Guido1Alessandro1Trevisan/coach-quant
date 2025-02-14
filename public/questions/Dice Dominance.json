@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Dominance",
+  "problem text": "Consider two fair six-sided dice that are rolled simultaneously. Determine the expected value of the larger outcome showing on these dice.",
+  "problem solution": "We denote the outcomes of the two dice by random variables X and Y, each uniformly distributed over {1, 2, 3, 4, 5, 6} with probability 1/6 for each face. Define Z = max(X, Y). To calculate $$E[Z]$$, we note that for k in {1, 2, 3, 4, 5, 6}, the probability $$P(Z = k) = P(Z \\le k) - P(Z \\le k-1).$$ Since $$Z \\le k$$ occurs exactly when X \\le k and Y \\le k, we have $$P(Z \\le k) = \\left(\\frac{k}{6}\\right)^2 = \\frac{k^2}{36}.$$ It follows that $$P(Z = k) = \\frac{k^2 - (k-1)^2}{36} = \\frac{2k - 1}{36}.$$ The expected value is thus $$E[Z] = \\sum_{k=1}^6 k\\,P(Z = k) = \\frac{1}{36} \\sum_{k=1}^6 (2k^2 - k).$$ Next, we compute the sum: $$\\sum_{k=1}^6 (2k^2 - k) = 2\\sum_{k=1}^6 k^2 - \\sum_{k=1}^6 k = 2(91) - 21 = 182 - 21 = 161.$$ Hence, $$E[Z] = \\frac{161}{36} \\approx 4.4722.$$ Therefore, the expected value of the maximum of two fair dice is $$\\frac{161}{36}.$$",
+  "valid answer": "Valid Answers: 161/36, 4.4722",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the probability that the maximum is at least k for k in $\\{1,...,6\\}$ and sum those probabilities.",
+  "problem firm": [
+    "DRW"
+  ],
+  "question id": "69703919835448526382"
+}

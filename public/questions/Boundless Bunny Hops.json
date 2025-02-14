@@ -1,0 +1,16 @@
+{
+  "problem name": "Boundless Bunny Hops",
+  "problem text": "A rabbit begins at the base of a staircase consisting of $10$ steps. With each move, the rabbit is allowed to jump up any quantity of steps. How many unique ways are there for the rabbit to reach the top of the staircase (that is, the $10$th step)?",
+  "problem solution": "Every route corresponds to choosing a subset of $\\{1, 2, \\dots, 9\\}$ where the rabbit makes contact. This is due to the fact that each route is uniquely identified by the steps the rabbit lands on. Hence, there are $2^9 = 512$ possible subsets of $\\{1, 2, \\dots, 9\\}$, resulting in the answer $512$.",
+  "valid answer": "Valid Answers: $512$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "How can you connect this to subsets of the steps: $\\{1,2,\\dots,9\\}$?",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "64103454510433437323"
+}

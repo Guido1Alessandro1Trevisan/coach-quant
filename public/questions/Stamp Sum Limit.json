@@ -1,0 +1,16 @@
+{
+  "problem name": "Stamp Sum Limit",
+  "problem text": "You have an unlimited number of stamps with values of $5$ and $21$. What is the largest sum that cannot be achieved using these stamp values?",
+  "problem solution": "The numbers $21$, $42$, $63$, and $84$ correspond to the smallest integers equal to $1$, $2$, $3$, and $4$ when divided by $5$, respectively. By adding multiples of $5$ to these numbers, any integer congruent to these modulo $5$ can be formed. The greatest number that cannot be expressed in this way is the largest number that is $4$ modulo $5$, which is $79$. Hence, $79$ is the largest integer that cannot be represented.",
+  "valid answer": "Valid Answers: $79$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "The numbers $21$, $42$, $63$, and $84$ are the smallest values congruent to $1$, $2$, $3$, and $4$ modulo $5$, respectively. Proceed from there...",
+  "problem firm": [
+    "Goldman Sachs",
+    "Jane Street"
+  ],
+  "question id": "61535169912818504223"
+}

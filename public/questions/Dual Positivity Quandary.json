@@ -1,0 +1,16 @@
+{
+  "problem name": "Dual Positivity Quandary",
+  "problem text": "Consider two independent random variables X and Y, each drawn from a standard normal distribution. What is the likelihood that both X and X+Y are simultaneously greater than zero?",
+  "problem solution": "We want to determine $$P(X>0, X+Y>0)$$ where X and Y are independent $$N(0,1)$$ random variables. First, note that $$X+Y>0$$ implies $$Y>-X$$. Geometrically, the point $$(X,Y)$$ lies in the two-dimensional plane with circular symmetry (each direction is equally likely), because X and Y are independent standard normals. We translate the condition $$X>0$$ into the right half of the plane, and the condition $$Y>-X$$ into the region above the line $$Y=-X$$. The angle subtended by these conditions can be analyzed in polar coordinates, or by a symmetry argument. Specifically: 1) $$X>0$$ restricts us to angles where $$\\cos(\\theta)>0$$, and 2) $$Y>-X$$ restricts us to angles above the line $$\\theta=\\frac{3\\pi}{4}$$ or below the line $$\\theta=-\\frac{\\pi}{4}$$ (when measured from the positive X-axis). The intersection of these angular regions is a wedge that spans a total angle of $$\\frac{3\\pi}{4}$$ out of the full circle of $$2\\pi$$. Hence, since the distribution is rotationally invariant, the probability is the ratio of these angles: $$\\frac{3\\pi/4}{2\\pi} = \\frac{3}{8}.$$ Therefore, $$\\displaystyle P(X>0, X+Y>0) = \\frac{3}{8}.$$",
+  "valid answer": "Valid Answers: 3/8, 0.375",
+  "problem tags": [
+    "Distribution",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Convert to polar coordinates or draw the lines X=0 and Y=-X. Analyze the sector of angles that satisfies both conditions.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "84112271861129639286"
+}

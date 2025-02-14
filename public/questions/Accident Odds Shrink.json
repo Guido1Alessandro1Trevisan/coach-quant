@@ -1,0 +1,19 @@
+{
+  "problem name": "Accident Odds Shrink",
+  "problem text": "At a particular busy intersection, the likelihood of experiencing at least one vehicle accident in a $1$ hour period is $\\dfrac{8}{9}$. Given that vehicle accidents happen independently and at a uniform rate over time, determine the probability of having at least one vehicle accident in a $30$ minute period.",
+  "problem solution": "Let the sought probability be $p$. We know that the probability of no vehicle accident occurring in the hour is $\\dfrac{1}{9}$ by using the complement. This is equivalent to having no vehicle accident in each of the two periods made up of the first and second $30$ minutes of the hour. As per the problem, the number of vehicle accidents in separate intervals are independent because they occur at a consistent rate over time and each event is independent. The likelihood of no vehicle accident in each of these intervals is $1-p$, hence the probability of no vehicle accident in both intervals is $(1-p)^2$. Therefore, $(1-p)^2 = \\dfrac{1}{9}$, which implies $p = \\dfrac{2}{3}$.",
+  "valid answer": "Valid Answers: $2/3$",
+  "problem tags": [
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Divide the hour into two separate $30$-minute periods. If there is no vehicle accident in the hour, then there is no accident in each of the independent $30$-minute periods.",
+  "problem firm": [
+    "Five Rings",
+    "Goldman Sachs",
+    "Jane Street",
+    "Optiver"
+  ],
+  "question id": "49109887483489541598"
+}

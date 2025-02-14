@@ -1,0 +1,17 @@
+{
+  "problem name": "Parity Probabilities",
+  "problem text": "You toss $100$ unbiased coins at the same time. Determine the likelihood of getting an odd count of heads.",
+  "problem solution": "Consider tossing $99$ coins initially. The outcome of the final coin always determines if the total number of heads is odd or even. Therefore, the probability of getting an odd count of heads is $\\frac{1}{2}$.",
+  "valid answer": "Valid Answers: $\\frac{1}{2}$",
+  "problem tags": [
+    "Conditional Probability",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Focus on the final coin tossed.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "93221134923841275065"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Cheesecake Geometry",
+  "problem text": "In what manner can a round cheesecake be sliced exactly three times to produce eight identical pieces?",
+  "problem solution": "We wish to divide a uniformly thick cylindrical cake into eight slices of equal volume using precisely three planar cuts. First, make a horizontal cut at half the cake's height so that the cylinder is divided into two cylindrical sections, each of height $$\\frac{h}{2}$$ (where $$h$$ is the total height of the cake). Then, make two radial cuts on the top surface of the cake (and thus through the entire height) that intersect at a right angle and pass through the center of the circular base. These two perpendicular radial cuts partition the circular cross-section into four equal 90-degree wedges. Because the bottom layer is similarly cut by those same two radial planes, each wedge in the top matches a corresponding wedge in the bottom, giving you eight slices of identical volume. Formally, each slice is a cylindrical sector with a central angle of $$90^{\\circ}$$ and height $$\\frac{h}{2}$$; thus, all eight resultant pieces are congruent and have the same volume.",
+  "valid answer": "Valid Answers: Make a single horizontal cut halfway up the cake, then two perpendicular cuts through its center, forming four wedges in each layer for a total of eight equally sized slices.",
+  "problem tags": [
+    "Geometry",
+    "Puzzle"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Attempt to halve the cake's height first, then consider how to portion the resulting circular cross-section evenly.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "71274117958068413973"
+}

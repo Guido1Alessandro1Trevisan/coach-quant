@@ -1,0 +1,17 @@
+{
+  "problem name": "Token Duel Strategy",
+  "problem text": "Two participants, labeled $X$ and $Y$, participate in a competitive game: Each starts with $100$ tokens and secretly selects how many tokens, between $1$ and $100$, to add to a common pool. After both players have made their selections, one token is randomly chosen from the pool. If the chosen token is from $X$, then assuming $X$ contributed $x$ tokens, $X$ receives $100 - x$ units of currency from $Y$. Similarly, if the chosen token is from $Y$, then assuming $Y$ contributed $y$ tokens, $Y$ receives $100 - y$ units of currency from $X$. Both players aim to maximize their individual monetary rewards and are assumed to play strategically. How many tokens should $X$ opt to contribute?",
+  "problem solution": "This game is symmetric, implying both participants will utilize the same optimal approach. Consider the expected monetary gain of one player, say $X$, when $X$ contributes $x$ tokens and $Y$ adds $y$ tokens. The expected gain is expressed by: $E(x, y) = \\frac{x}{x + y} \\cdot (100 - x) - \\frac{y}{x + y} \\cdot (100 - y).$ Here, $\\frac{x}{x + y}$ denotes the probability that a token from $X$ is picked, and $100 - x$ is the reward for $X$ if they succeed. Similarly, $\\frac{y}{x + y}$ and $100 - y$ represent $Y$'s probabilities and rewards. To determine the optimal $x$, we find the derivative of $E(x, y)$ with respect to $x$. Applying the quotient rule, we calculate: 1. First, differentiate the initial term: $\\frac{\\partial}{\\partial x} \\left( \\frac{x}{x + y} \\cdot (100 - x) \\right) = \\frac{(100 - x) \\cdot (x + y) - x \\cdot (-1 \\cdot (x + y))}{(x + y)^2} = \\frac{-x^2 - 2xy + 100y}{(x + y)^2}.$ 2. Then, differentiate the second term: $\\frac{\\partial}{\\partial x} \\left( \\frac{-y}{x + y} \\cdot (100 - y) \\right) = \\frac{-y \\cdot (x + y) + y \\cdot (100 - y)}{(x + y)^2} = \\frac{-y^2 + 100y}{(x + y)^2}.$ Combining these terms, we find: $\\frac{\\partial}{\\partial x} E(x, y) = \\frac{-x^2 - 2xy + 100y}{(x + y)^2} - \\frac{-y^2 + 100y}{(x + y)^2}.$ Simplify the numerator: $\\frac{\\partial}{\\partial x} E(x, y) = \\frac{-x^2 - 2xy - y^2 + 200y}{(x + y)^2}.$ To find the critical points, we set the derivative equal to zero: $-x^2 - 2xy - y^2 + 200y = 0.$ Rearranging and solving for $x$: $x^2 + 2xy + y^2 = 200y.$ Factoring gives: $x = 10\\sqrt{2y} - y.$ By symmetry, $Y$'s best contribution satisfies the same equation: $y = 10\\sqrt{2x} - x.$ At equilibrium, $x = y$, so substituting $x = y$ into the equation gives: $x = 10\\sqrt{2x} - x.$ Simplify and solve: $2x = 10\\sqrt{2x} \\implies 4x^2 = 200x \\implies x(x - 50) = 0.$ Since $x > 0$, the solution is $x = 50$. Conclusion: The best strategy for both players is to contribute $50$ tokens. This ensures neither player can unilaterally improve their outcome, making $(50, 50)$ the Nash equilibrium.",
+  "valid answer": "Valid Answers: $50$",
+  "problem tags": [
+    "Expected Value",
+    "Games",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Define an expected earnings function for $X$ based on $x$ and $y$, and determine the best contributions for both players by finding the equilibrium.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "06817300961802002790"
+}

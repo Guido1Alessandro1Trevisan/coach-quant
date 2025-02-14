@@ -1,0 +1,16 @@
+{
+  "problem name": "Last Roll Roulette",
+  "problem text": "A fair $6$-sided die is rolled repeatedly until the total of all rolls reaches or exceeds $1000$. Which number on the die is most likely to appear on the final roll?",
+  "problem solution": "This is because $6$ can achieve $1000$ from any total between $994-999$. In contrast, a $1$ is only feasible if the cumulative total is $999$. A smaller number on the final roll limits the possible sums prior to surpassing $1000$.",
+  "valid answer": "Valid Answers: $6$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "For what current totals can $1000$ be achieved if the die rolls an $i$, where $1 \\leq i \\leq 6$ on the last roll?",
+  "problem firm": [
+    "Optiver",
+    "Sig"
+  ],
+  "question id": "31644593770960793082"
+}

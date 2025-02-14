@@ -1,0 +1,16 @@
+{
+  "problem name": "Target Tower Takedown",
+  "problem text": "An archer is aiming at targets. There are $4$ sets of identical targets, with $2$, $3$, $3$, and $4$ targets stacked vertically in each set, respectively. The archer first chooses a set and then shoots at the lowest target in that set that has not been hit. Once a set is fully depleted of targets, it cannot be chosen again. In how many sequences can the archer hit all the targets?",
+  "problem solution": "No solution discovered",
+  "valid answer": "Valid Answers: $277200$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "There are $12$ total targets and $4$ sets. Number the sets $1-4$. How can each distinct sequence of hitting targets be determined?",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "39060168624312107841"
+}

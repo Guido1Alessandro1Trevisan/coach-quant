@@ -1,0 +1,24 @@
+{
+  "problem name": "Biased Flip Picks",
+  "problem text": "A group includes $98$ unbiased coins, one coin with heads on both sides, and another coin with tails on both sides. A coin is picked randomly and tossed once, landing on a head. What is the chance that the tossed coin is the one with two heads?",
+  "problem solution": "Let $$ D $$ represent the event of choosing the double-headed coin and $$ H $$ the event of observing heads. We seek $$ \\mathbb{P}[D \\mid H] $$. Using Bayes' Theorem, we find $$ \\mathbb{P}[D \\mid H] = \\dfrac{\\mathbb{P}[H \\mid D]\\mathbb{P}[D]}{\\mathbb{P}[H]} $$. For the denominator, consider the scenarios that could lead to a head. There are three coin types: fair coins, the double-headed coin, and the double-tailed coin. Let $$ F $$ denote selecting a fair coin and $$ T $$ denote selecting the double-tailed coin. Notice $$ \\mathbb{P}[H \\mid T] = 0 $$ since this coin can't show heads. We know $$ \\mathbb{P}[H \\mid F] = \\dfrac{1}{2} $$ for fair coins and $$ \\mathbb{P}[F] = \\dfrac{98}{100} $$ since there are 98 fair coins. Furthermore, $$ \\mathbb{P}[H \\mid D] = 1 $$ since both sides show heads and $$ \\mathbb{P}[D] = \\dfrac{1}{100} $$ as there is only one such coin. Putting this together, $$ \\mathbb{P}[D \\mid H] = \\dfrac{\\frac{1}{100} \\cdot 1}{\\frac{1}{100} \\cdot 1 + \\frac{98}{100} \\cdot \\frac{1}{2} + 0} = \\dfrac{1}{50} $$.",
+  "valid answer": "Valid Answers: $1/50$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $D$ as the event where the double-headed coin is chosen and $H$ as the event that the coin shows heads. You are looking for $\\mathbb{P}[D \\mid H]$. Consider applying Bayes' Theorem to find this.",
+  "problem firm": [
+    "Citadel",
+    "Drw",
+    "Five Rings",
+    "Hudson River Trading",
+    "Jane Street",
+    "Sig",
+    "Transmarket Group",
+    "Two Sigma",
+    "Worldquant"
+  ],
+  "question id": "26286980107785985011"
+}

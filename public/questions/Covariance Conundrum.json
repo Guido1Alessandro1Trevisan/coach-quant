@@ -1,0 +1,16 @@
+{
+  "problem name": "Covariance Conundrum",
+  "problem text": "Assume that $\\sigma_X = 4$, $\\sigma_Y = 7$, and $\\sigma_{X+Y} = 11$. Determine the value of $\\rho(X,Y)$.",
+  "problem solution": "We will extend this to the scenario where $\\sigma_X = a, \\sigma_Y = b,$ and $\\sigma_{X+Y} = a+b$. Knowing that $\\text{Var}(X + Y) = \\text{Var}(X) + \\text{Var}(Y) + 2 \\text{Cov}(X, Y) \\implies \\text{Cov}(X,Y) = \\frac{1}{2}((a+b)^2 - a^2 - b^2) = ab$. Consequently, we find that $\\rho(X,Y) = \\frac{\\text{Cov}(X,Y)}{\\sigma_X \\sigma_Y} = \\frac{ab}{ab} = 1$.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Covariance",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the formula for the $variance$ of the $sum$",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "16226548121085369357"
+}

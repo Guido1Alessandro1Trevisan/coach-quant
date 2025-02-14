@@ -1,0 +1,16 @@
+{
+  "problem name": "Double Headspin",
+  "problem text": "Three distinct coins are available, each equally likely to be selected. One coin has heads on both sides, another tails on both sides, and the third is fair, bearing one head and one tail. A coin is chosen randomly and flipped once, producing a head. If the same coin is flipped again, what is the probability that the result is another head?",
+  "problem solution": "We want the probability of flipping head again given that the first flip was head. Let the coins be: Coin A (double-headed), Coin B (double-tailed), and Coin C (fair). Each is chosen with probability $$\\frac{1}{3}$$. The probability of getting a head on the first flip is $$\\frac{1}{3}\\cdot1 + \\frac{1}{3}\\cdot0 + \\frac{1}{3}\\cdot\\frac{1}{2} = \\frac{1}{2}$$. By Bayes' theorem, the conditional probability that Coin A was chosen given that a head was observed is $$\\frac{\\left(\\frac{1}{3}\\cdot1\\right)}{\\frac{1}{2}} = \\frac{2}{3}$$, and the conditional probability that Coin C was chosen is $$\\frac{\\left(\\frac{1}{3}\\cdot\\frac{1}{2}\\right)}{\\frac{1}{2}} = \\frac{1}{3}$$. The probability of getting a head on the second flip is therefore $$\\frac{2}{3}\\cdot1 + \\frac{1}{3}\\cdot\\frac{1}{2} = \\frac{5}{6}$$.",
+  "valid answer": "Valid Answers: $$\\frac{5}{6}$$",
+  "problem tags": [
+    "Probability",
+    "Conditional Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Use conditional probability and consider how likely each coin was chosen after observing a head.",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "91407790780453022784"
+}

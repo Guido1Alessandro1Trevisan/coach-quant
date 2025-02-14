@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Climb Challenge",
+  "problem text": "A $10$-sided die is rolled $5$ times. The chance that the outcomes are in strictly increasing order can be expressed as: $\\frac{x}{10^5}$. Determine the value of $x$.",
+  "problem solution": "If the outcomes are strictly increasing, they must all be different. $$ \\mathbb{P}(\\text{strictly increasing}) = \\mathbb{P}(\\text{increasing} \\,|\\, \\text{unique}) \\cdot \\mathbb{P}(\\text{unique}) $$ For any group of $$ 5 $$ distinct integers between $$ 1 $$ and $$ 10 $$, there is exactly $$ 1 $$ sequence out of $$ 5! $$ total possibilities where the numbers are in increasing order. $$ \\mathbb{P}(\\text{strictly increasing} \\,|\\, \\text{unique}) = \\frac{1}{5!} $$ Now, compute $$ \\mathbb{P}(\\text{unique}) $$. $$ \\mathbb{P}(\\text{unique}) = \\frac{10 \\cdot 9 \\cdot 8 \\cdot 7 \\cdot 6}{10^5} $$ Therefore, combining these results, we have: $$ \\begin{aligned} \\mathbb{P}(\\text{strictly increasing}) &= \\frac{1}{5!} \\cdot \\frac{10 \\cdot 9 \\cdot 8 \\cdot 7 \\cdot 6}{10^5} \\ &= \\frac{252}{10^5} \\end{aligned} $$Thus, the value of $$ x $$ is $$ 252 $$.",
+  "valid answer": "Valid Answers: $252$",
+  "problem tags": [
+    "Combinatorics",
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "If the numbers are strictly increasing, they must be distinct: $ \\mathbb{P}(\\text{strictly increasing}) = \\mathbb{P}(\\text{increasing} \\,|\\, \\text{unique}) \\cdot \\mathbb{P}(\\text{unique}) $.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "11275899981317310165"
+}

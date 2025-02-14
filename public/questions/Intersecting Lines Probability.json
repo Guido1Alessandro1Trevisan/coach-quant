@@ -1,0 +1,16 @@
+{
+  "problem name": "Intersecting Lines Probability",
+  "problem text": "Assume that $X_1, X_2, X_3, X_4 \\sim \\text{Unif}(0,1)$ and they are IID. Construct two segments: one connecting $X_1$ to $X_2$ and another joining $X_3$ to $X_4$. Determine the likelihood that these two segments intersect.",
+  "problem solution": "There's a clever method here. The focus is on which endpoint is associated with the smallest of the four endpoints (in terms of value). If it is the second smallest, then there is no intersection. Otherwise, they intersect. Since the remaining three random variables can be arranged in any order with equal probability, the likelihood is just $\\dfrac{2}{3}$.",
+  "valid answer": "Valid Answers: $2/3$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "The key is identifying which endpoint is associated with the smallest of the four endpoints. Why is this important?",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "38297991175414719085"
+}

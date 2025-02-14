@@ -1,0 +1,17 @@
+{
+  "problem name": "Coin Clash Chase",
+  "problem text": "Two participants alternate flipping fair coins, trying to be the first to accumulate three heads. Assume the first player has already flipped once and obtained a head. We seek the probability that this initial player eventually wins.",
+  "problem solution": "We label $P(i,j)$ as the probability that I ultimately win given that I have $i$ heads, the opponent has $j$ heads, and it is my turn; similarly, $Q(i,j)$ is the probability that I ultimately win under the same head counts when it is the opponent's turn. We want $Q(1,0)$: the probability that I prevail given that I already have $1$ head and it is now my opponent's turn. We enforce boundary conditions: once a player has $3$ heads, that player has won. Thus $P(3,j) = 1$ for $j < 3$, $Q(i,3) = 0$ for $i < 3$, etc. We derive recursion relations: if it is my turn with state $(i,j)$ and $i<3, j<3$, then with probability $1/2$ I flip heads and go to $Q(i+1,j)$, and with probability $1/2$ I flip tails and go to $Q(i,j)$. This yields $P(i,j) = \\frac{1}{2}Q(i+1,j) + \\frac{1}{2}Q(i,j).$ If it is the opponent's turn with state $(i,j)$ (and neither has $3$ heads), then with probability $1/2$ the opponent gets heads and the state moves to $P(i,j+1)$, and with probability $1/2$ they get tails and the state moves to $P(i,j)$. Hence $Q(i,j) = \\frac{1}{2}P(i,j+1) + \\frac{1}{2}P(i,j).$ We solve these systems step by step, starting from simpler states such as $(2,2)$ and working backwards. The end result is $Q(1,0) = \\frac{19}{27}.$ Therefore, the probability that I eventually acquire three heads first, given that I have already gained one head on my opening flip, is $\\frac{19}{27}.$",
+  "valid answer": "Valid Answers: $19/27$",
+  "problem tags": [
+    "Probability",
+    "Game Theory"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define states for the number of heads each player currently has and use conditional probabilities for each player's turn.",
+  "problem firm": [
+    "Maple Analytics",
+    "Quantum Strategies"
+  ],
+  "question id": "64286194505061512519"
+}

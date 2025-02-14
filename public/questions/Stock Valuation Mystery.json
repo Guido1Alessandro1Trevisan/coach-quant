@@ -1,0 +1,16 @@
+{
+  "problem name": "Stock Valuation Mystery",
+  "problem text": "Your firm has a $20\\%$ probability of being bought out between Monday night and Tuesday morning. On Monday, the price of a single share is $30$, however, if the acquisition occurs, there is a $50\\%$ probability that a share will be valued at $50$ and a $50\\%$ probability that a share will be valued at $x$. If the acquisition does not occur, there is a $60\\%$ probability that a share will be valued at $0$ and a $40\\%$ probability that a share will be valued at $10$. A fair agreement that grants the purchaser the right but not the obligation to acquire the stock at $40$ on Tuesday is worth $15$. Find $x$.",
+  "problem solution": "We need to calculate the expected gain from acquiring the agreement. Specifically, if we obtain the agreement, we will only exercise our option to buy the stock at $40$ on Thursday if the stock's price surpasses $40$. Let $G$ signify the gain realized after acquiring the agreement.  $\\mathbb{E}[G] = -15 + 0.2 \\cdot 0.5 \\cdot (50 - 40) + 0.2 \\cdot 0.5 \\cdot (x - 40)$  A fair valuation for the agreement implies $\\mathbb{E}[G] = 0$.  $15 = 1 + 0.1x - 4$  $18 = 0.1x$  $x = 180.$",
+  "valid answer": "Valid Answers: $180$",
+  "problem tags": [
+    "Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "We need to calculate the expected gain from acquiring the agreement. Specifically, if we obtain the agreement, we will only exercise our option to buy the stock at $40$ on Thursday if the stock's price surpasses $40$.",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "94832002298067698332"
+}

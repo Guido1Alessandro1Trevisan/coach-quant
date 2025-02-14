@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Duel Choice",
+  "problem text": "Avoid using any writing tools for this task. We engage in a game where we continuously roll a fair $6$-sided die. The game ends when we roll two predetermined numbers consecutively; the reward equals the count of die rolls. Should we prefer (option $1$) $4$ followed by $5$, or (option $2$) $4$ followed by $4$, or (option $3$) does it make no difference? Answer with the option number.",
+  "problem solution": "Analyze the transition graph for each scenario, considering three states: (A) absence of specific numbers, (B) presence of the first specific number, and (C) occurrence of $2$ consecutive specific numbers. The two transition graphs differ slightly; specifically, there is a $\\frac{2}{3}$ chance of returning to state A in option $1$, while in option $2$ the probability is $\\frac{5}{6}$. To maximize the die rolls before finishing the game, option $2$ is preferable.",
+  "valid answer": "Valid Answers: $2$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Contemplate which scenario, on average, requires more time to manifest.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "80205104631067371656"
+}

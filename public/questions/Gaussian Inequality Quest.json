@@ -1,0 +1,16 @@
+{
+  "problem name": "Gaussian Inequality Quest",
+  "problem text": "Suppose $X, Y, Z \\sim N(12, 12)$ and are IID. Determine $\\mathbb{P}[X-Y > Z]$. The solution is expressed as $\\Phi(a)$ for some value $a$. Identify $a$.",
+  "problem solution": "Express this as $\\mathbb{P}[X-Y-Z > 0]$. The random variable $W = X - Y - Z \\sim N(-12, 36)$ due to the characteristics of independent normal variables. Hence, we have $\\mathbb{P}[W > 0]$, which can be standardized to $\\mathbb{P}\\left[\\dfrac{W+12}{6} > \\dfrac{12}{6}\\right]$. The left-hand side is now standard normal, leading to $\\Phi(-2)$ by the symmetry property of the normal distribution. Therefore, $a = -2$.",
+  "valid answer": "Valid Answers: $-2$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Reformulate this as $\\mathbb{P}[X-Y-Z > 0]$. What is the probability distribution of $X - Y - Z$?",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "29951240922441736921"
+}

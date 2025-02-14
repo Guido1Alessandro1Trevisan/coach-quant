@@ -1,0 +1,17 @@
+{
+  "problem name": "Ace Probability Playoff",
+  "problem text": "Tennis has the following rules: Scores progress as $0-15-30-40$. If Player $1$ achieves $40$ points while Player $2$ has fewer than $40$, Player $1$ wins with the next point. If both players reach $40$, it's deuce. The next point gives a player an advantage, and a subsequent win for the advantaged player secures the game. If the advantaged player loses, it reverts to $40-40$. Consider a match between Novak and Carlos starting at $30-30$. Novak has a $0.6$ probability of winning each serve, calculated independently. Determine the probability that Novak wins the game.",
+  "problem solution": "A player must win two consecutive points to win. Novak has a $0.6^2 = 0.36$ probability of winning two in a row, while Carlos has $0.4^2 = 0.16$. The probability they both win one point each is $2 \\cdot 0.6 \\cdot 0.4 = 0.48$. This returns them to a tie, requiring two consecutive wins again to decide the game. Hence, the problem becomes finding the probability that a player wins two consecutive serves. Given this, the probability that Novak is the winner is $\\dfrac{0.6^2}{0.6^2 + 0.4^2} = \\dfrac{9}{13}$.",
+  "valid answer": "Valid Answers: $9/13$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "What must occur for the game to end with a winner?",
+  "problem firm": [
+    "Goldman Sachs",
+    "Optiver"
+  ],
+  "question id": "14748737023525296047"
+}

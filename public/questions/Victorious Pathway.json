@@ -1,0 +1,17 @@
+{
+  "problem name": "Victorious Pathway",
+  "problem text": "A group of $50$ participants are engaged in a table tennis competition with a single table available. Each participant is labeled from $1$ to $50$. If any two participants face off, the one with the higher number wins. Two participants are selected randomly, and the one who loses is eliminated from the competition. The winner continues to the next round, where they are randomly paired with another opponent. This sequence continues until only one participant remains (a total of $49$ rounds are required). Determine the chance that participant $49$ remains in the competition after the first $10$ rounds are complete.",
+  "problem solution": "For participant $49$ to be in the competition after the initial $10$ rounds, either (1) participant $49$ must not compete until the $11$th round or later, or (2) participant $49$ competes for the first time within the initial $10$ rounds and participant $50$ does not compete within these $10$ rounds. Consider scenario $1$. There are $39$ rounds from the $11$th round to the $49$th round, inclusive. For participant $49$ to compete for the first time after the $10$th round, they must be positioned at $12$ or beyond ($39$ possible spots) in a random arrangement of the $50$ participants. The probability of scenario $1$ is then $\\dfrac{39}{50}$. Now, consider scenario $2$. Here, in a random ordering of $50$ participants, participant $49$ must be among the first $11$ participants, and participant $50$ must be among the remaining $39$ participants. This probability is $\\dfrac{\\binom{11}{1} \\binom{39}{1} 48!}{50!} = \\dfrac{429}{2450}$. By adding these probabilities, we conclude that the final answer is $\\dfrac{39}{50} + \\dfrac{429}{2450} = \\dfrac{234}{245}$.",
+  "valid answer": "Valid Answers: $234/245$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "For participant $49$ to remain in the competition after the first $10$ rounds, either (1) participant $49$ must not participate until the $11$th round or beyond, or (2) participant $49$ plays their initial match within the first $10$ rounds, and participant $50$ does not compete in the first $10$ rounds.",
+  "problem firm": [
+    "Five Rings",
+    "Two Sigma"
+  ],
+  "question id": "24836023387232998459"
+}

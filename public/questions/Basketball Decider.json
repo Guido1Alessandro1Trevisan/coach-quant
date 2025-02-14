@@ -1,0 +1,17 @@
+{
+  "problem name": "Basketball Decider",
+  "problem text": "Alice and Bob engage in basketball. They both start with $0$ points. In every game, Alice has a $30\\%$ probability to win, independent of other games. The winner of a game earns $1$ point and the loser loses $1$ point. The first to reach $2$ points wins the match. Determine the probability that Alice wins the match.",
+  "problem solution": "This can be interpreted as a classic Gambler's Ruin problem that lacks symmetry. Here, $p = 0.3$, $q = 1-p = 0.7$, and $n = 2$. The formula for Alice's probability of winning is given by $\\dfrac{1 - \\left(\\frac{q}{p}\\right)^{n}}{1 - \\left(\\frac{q}{p}\\right)^{2n}}$. Given $\\dfrac{q}{p} = \\dfrac{7}{3}$, substituting in the values, we find the result is $\\dfrac{1 - \\frac{49}{9}}{1 - \\frac{2401}{81}} = \\dfrac{81 - 441}{81 - 2401} = \\dfrac{9}{58}$. Alternatively, without using the above method, note that a sequence of two successive wins is needed for a player to succeed, occurring with probability $\\left(\\dfrac{3}{10}\\right)^2 = \\dfrac{9}{100}$ for Alice and $\\left(\\dfrac{7}{10}\\right)^{2} = \\dfrac{49}{100}$ for Bob. As these are mutually exclusive events per pair of turns, the probability Alice achieves this sequence first is $\\dfrac{9/100}{9/100 + 49/100} = \\dfrac{9}{58}$.",
+  "valid answer": "Valid Answers: $9/58$",
+  "problem tags": [
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "This can be seen as a typical Gambler's Ruin problem with asymmetry.",
+  "problem firm": [
+    "Citadel",
+    "Optiver"
+  ],
+  "question id": "69099027995957970841"
+}

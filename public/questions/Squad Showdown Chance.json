@@ -1,0 +1,16 @@
+{
+  "problem name": "Squad Showdown Chance",
+  "problem text": "Suppose there is a single-elimination contest with 8 squads. Each match is paired randomly from the remaining squads in a round, and each squad has an equal (0.5) chance of winning any match. What is the likelihood that two chosen squads will eventually face each other in the tournament?",
+  "problem solution": "First, label the two squads as A and B. We investigate the probability that A and B compete directly in one of the three rounds (quarterfinal, semifinal, or final). We break the calculation into cases by round. Let us denote the probability that A and B go head-to-head in the first round (quarterfinal) by $$P_{\\text{R1}}$$, in the second round (semifinal) by $$P_{\\text{R2}}$$, and in the final by $$P_{\\text{R3}}$$. 1) Round 1: When the 8 squads are randomly paired, squad A has 7 possible opponents, so the probability that B is that opponent is $$\\frac{1}{7}$$. Thus, $$P_{\\text{R1}} = \\frac{1}{7}.$$ 2) Round 2: If A and B do not meet in Round 1 (probability $$\\frac{6}{7}$$), they must both win their initial matches (each has probability 0.5, so combined probability $$\\frac{1}{2}\\times\\frac{1}{2} = \\frac{1}{4}$$). Among the 4 squads that advance to the semifinal, the pairings are also random, so the chance that those 4 are paired as A vs B is $$\\frac{1}{3}$$. Thus, $$P_{\\text{R2}} = \\frac{6}{7}\\times\\frac{1}{4}\\times\\frac{1}{3} = \\frac{1}{14}.$$ 3) Round 3 (Final): For them to meet there, A and B must not have met in earlier rounds and both must have kept winning. They fail to meet in Round 1 with probability $$\\frac{6}{7}$$, both survive Round 1 with probability $$\\frac{1}{4}$$, avoid meeting in Round 2 with probability $$\\frac{2}{3}$$, and both survive Round 2 with probability $$\\frac{1}{4}$$. Because only 2 squads remain in the final, A and B must face each other if both advance to that stage. Hence, $$P_{\\text{R3}} = \\frac{6}{7}\\times\\frac{1}{4}\\times\\frac{2}{3}\\times\\frac{1}{4} = \\frac{1}{28}.$$ Summing these mutually exclusive events: $$\\frac{1}{7}+\\frac{1}{14}+\\frac{1}{28} = \\frac{4}{28} + \\frac{2}{28} + \\frac{1}{28} = \\frac{7}{28} = \\frac{1}{4}.$$ Therefore, the probability that A and B meet at some point in the tournament is $$\\frac{1}{4}$$.",
+  "valid answer": "Valid Answers: $$\\frac{1}{4}$$",
+  "problem tags": [
+    "Probability",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the separate probabilities that the two squads meet in the quarterfinal, semifinal, or final and add those mutually exclusive outcomes.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "11521833522325661005"
+}

@@ -1,0 +1,15 @@
+{
+  "problem name": "Cubicle Crawl Quest",
+  "problem text": "An ant starts at one vertex of a unit cube and aims to reach the vertex diagonally opposite. Let $d$ represent the shortest path the ant must take to reach this destination. Determine $d^2$. The ant must maintain contact with a surface at all times and is not allowed to fly.",
+  "problem solution": "By unfolding and laying the cube flat into a plane, the shortest route can be visualized as a direct line connecting the two vertices. This path corresponds to the hypotenuse of a triangle with sides $1$ and $2$, resulting in a length of $\\sqrt{5}$.",
+  "valid answer": "Valid Answers: $5$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "By unfolding and flattening the cube into a plane, the shortest route can be more easily visualized.",
+  "problem firm": [
+    "Transmarket Group"
+  ],
+  "question id": "80603488377084201678"
+}

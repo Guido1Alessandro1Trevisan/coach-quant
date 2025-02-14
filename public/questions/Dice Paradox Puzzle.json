@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Paradox Puzzle",
+  "problem text": "A $$6-$$sided die with numbers $$1-6$$ is modified such that the chance of rolling the numbers $$2,3,4,5,$$ and $$6$$ remains the same whether we roll this die once or roll it two times and sum the results. Let $$p_1$$ denote the probability of rolling the number $$1$$ on this die. $$p_1$$ is the unique positive root of the polynomial equation $$\\sum_{k=1}^6 c_k p_1^k = 1$$ for certain real coefficients $$c_1,\\dots, c_6$$. Determine $$\\sum_{k=1}^6 c_k$$.",
+  "problem solution": "Let $$ p_i $$ be the probability of rolling $$ i $$ on this die. To achieve a sum of $$ 2 $$, we must roll $$ 1 $$ twice. Hence, $$ p_2 = p_1^2 $$. Similarly, for a sum of $$ 3 $$, we need a $$ 1 $$ and a $$ 2 $$ in any order, so $$ p_3 = 2p_1p_2 $$. For a sum of $$ 4 $$, we either roll $$ 1 $$ and $$ 3 $$ in any order or two $$ 2 $$s consecutively. Thus, $$ p_4 = 2p_1p_3 + p_2^2 $$. For a sum of $$ 5 $$, we must either roll a $$ 1 $$ and a $$ 4 $$ or a $$ 2 $$ and a $$ 3 $$ in any order. Hence, $$ p_5 = 2p_1p_4 + 2p_2p_3 $$. Finally, for a sum of $$ 6 $$, we must get either two $$ 3 $$s consecutively, a $$ 2 $$ and a $$ 4 $$ in any order, or a $$ 1 $$ and a $$ 5 $$ in any order. Thus, $$ p_6 = p_3^2 + 2p_2p_4 + 2p_1p_5 $$. Substituting, since $$ p_2 = p_1^2 $$, we have $$ p_3 = 2p_1^3 $$. Continuing this substitution pattern, $$ p_4 = 5p_1^4, p_5 = 14p_1^5, $$ and $$ p_6=  42p_1^6 $$. It is also known that $$ p_1 + \\dots + p_6 = 1 $$, covering all possible outcomes. Therefore, the equation $$ p_1 $$ satisfies is $$ 42p_1^6 + 14p_1^5 + 5p_1^4 + 2p_1^3 + p_1^2 + p_1 = 1 $$. Thus, we find that $$ \\displaystyle \\sum_{k=1}^6 c_k = 65 $$.",
+  "valid answer": "Valid Answers: $65$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Let $p_i$ represent the probability of rolling $i$ on this die. We know that to achieve a sum of $2$, we must roll $1$ twice. So, we have $p_2 = p_1^2$.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "63555115578446281751"
+}

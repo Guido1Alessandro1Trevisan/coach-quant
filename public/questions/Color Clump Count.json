@@ -1,0 +1,19 @@
+{
+  "problem name": "Color Clump Count",
+  "problem text": "Imagine a sequence of $25$ side-by-side uncolored squares. Each square is independently colored black or white with an equal chance. A connected component is defined as the longest consecutive sequence of squares sharing the same color. For instance, $BBWBWWWBBW$ contains $6$ connected components. Determine the expected quantity of connected components in this sequence.",
+  "problem solution": "Let $C_n$ represent the count of connected components for a sequence of $n$ squares. We will develop a recurrence relation for $\\mathbb{E}[C_n]$. To calculate $\\mathbb{E}[C_{n}]$, the expected number of connected components for $n$ squares, consider the $n-1$st square. With a probability of $\\dfrac{1}{2}$, it either matches or does not match the $n-1$st square. If they match, there are $\\mathbb{E}[C_{n-1}]$ components, as no new component is added. If they differ, there are $1 + \\mathbb{E}[C_{n-1}]$ components, as a new component is created. Thus, using the Law of Total Expectation, $\\mathbb{E}[C_n] = \\dfrac{1}{2}\\cdot \\mathbb{E}[C_{n-1}] + \\dfrac{1}{2} \\cdot (1 + \\mathbb{E}[C_{n-1}]) = \\mathbb{E}[C_{n-1}] + \\dfrac{1}{2}$. This recurrence and the initial condition $\\mathbb{E}[C_1] = 1$ (since there is 1 component) give the solution $\\mathbb{E}[C_n] = \\dfrac{n+1}{2}$. Specifically, for $n = 25$, $\\mathbb{E}[C_{25}] = 13$.",
+  "valid answer": "Valid Answers: $13$",
+  "problem tags": [
+    "Expected Value",
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about whether the final square's color matches the second-to-last square to establish a recurrence relation.",
+  "problem firm": [
+    "Akuna Capital",
+    "Goldman Sachs",
+    "Squarepoint Capital"
+  ],
+  "question id": "87450949458949577471"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Root Quest",
+  "problem text": "We want to determine a good approximation for the square root of 110. Which straightforward techniques could be applied?",
+  "problem solution": "To approximate $$\\sqrt{110}$$, we begin by noting that $$110$$ is situated between two perfect squares: $$100$$ and $$121$$. The square roots of these values are $$\\sqrt{100} = 10$$ and $$\\sqrt{121} = 11$$. Hence, $$\\sqrt{110}$$ lies between $$10$$ and $$11$$. One effective method to refine this estimate is to use a linear approximation or Newton's Method:\n\n1) Bounding Argument: Observing that $$110$$ is closer to $$100$$ than to $$121$$ (it is $$10$$ above $$100$$ but $$11$$ below $$121$$), we anticipate a result nearer to $$10$$.\n2) Linear Approximation: If we write $$\\sqrt{110} = \\sqrt{100 + 10} = \\sqrt{100} \\sqrt{1 + 0.1} = 10\\sqrt{1 + 0.1}$$, we can expand $$\\sqrt{1 + x} \\approx 1 + \\tfrac{x}{2}$$ for a small $$x$$ (specifically, $$x=0.1$$), yielding: $$10\\left(1 + \\tfrac{0.1}{2}\\right) = 10(1 + 0.05) = 10.5$$. This gives an approximate value of $$10.5$$.\n3) Newton's Method (Optional Refinement):\n   - We wish to solve $$f(x) = x^2 - 110 = 0$$.\n   - Starting with a guess $$x_0 = 10.5$$, we iterate: $$x_{n+1} = x_n - \\dfrac{f(x_n)}{f'(x_n)} = x_n - \\dfrac{x_n^2 - 110}{2x_n}.$$\n   - A single iteration typically refines the guess adequately for simple calculations, giving a value around $$10.488.$$ Further iterations produce similar or more precise approximations.\n\nThus, a reasonable estimate for $$\\sqrt{110}$$ is approximately $$10.488$$ (rounding to three decimal places).",
+  "valid answer": "Valid Answers: 10.488 (approx)",
+  "problem tags": [
+    "Arithmetic",
+    "Estimation"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Observe that 110 is caught between 100 and 121. Consider thinking about how to locate its square root in that range.",
+  "problem firm": [
+    "Belvedere Trading"
+  ],
+  "question id": "29267582949232623145"
+}

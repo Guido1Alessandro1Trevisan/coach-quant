@@ -1,0 +1,16 @@
+{
+  "problem name": "Area Gamble",
+  "problem text": "Pick two numbers, each uniformly and independently from the interval [0, 1], and use these as the lengths of the sides of a rectangle. Determine the likelihood that the resulting rectangular region has area at most 1/2.",
+  "problem solution": "We want the probability that randomly chosen $(x$) and $(y$) from $([0, 1]$) satisfy $(x y \\leq \\frac{1}{2}$). Geometrically, this corresponds to the subset of the unit square in the $(xy$)-plane for which the product $(x y$) is not greater than $(\\frac{1}{2}$). We can describe this region in two parts.\\n\\nFirst, observe that $(x = 0$) or $(y = 0$) trivially gives $(x y = 0 \\leq \\frac{1}{2}$), but we focus on the positive range:\\n\\n1. For $(0 < x < \\frac{1}{2}$), the condition $(x y \\leq \\frac{1}{2}$) translates to $(y \\leq \\frac{1}{2x}$). However, since $(\\frac{1}{2x}$) exceeds 1 in this range of $(x$), the entire vertical strip up to $(y = 1$) is allowed. Hence, for all $(x$) from 0 to $(\\frac{1}{2}$), every $(y$) in $([0,1]$) satisfies $(x y \\leq \\frac{1}{2}$). The area contributed by this portion is $(\\frac{1}{2} \\times 1 = \\frac{1}{2}$).\\n\\n2. For $(\\frac{1}{2} \\leq x \\leq 1$), the condition $(y \\leq \\frac{1}{2x}$) remains valid, but now $(\\frac{1}{2x}$) is at most 1. Thus we integrate to find the area:\\n\\n$$\\int_{x=\\frac{1}{2}}^{1} \\frac{1}{2x} \\, dx = \\left[ \\frac{1}{2} \\ln(x) \\right]_{x=\\frac{1}{2}}^{1} = \\frac{1}{2} \\bigl(\\ln(1) - \\ln(\\tfrac{1}{2})\\bigr) = \\frac{1}{2} \\ln(2).$$\\n\\nSumming these areas from the two regions, the total measure of $(x,y$) pairs satisfying $(x y \\leq \\frac{1}{2}$) is:\\n\\n$$\\frac{1}{2} + \\frac{1}{2} \\ln(2).$$\\n\\nHence, the probability that $(x y \\leq \\frac{1}{2}$) is exactly $(\\frac{1}{2} + \\frac{1}{2}\\ln(2)$).",
+  "valid answer": "Valid Answers: $$\\frac{1}{2} + \\frac{1}{2}\\ln(2) \\approx 0.8466$$",
+  "problem tags": [
+    "Probability",
+    "Integration"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the portion of the unit square for which the product xy does not exceed 1/2. Split the integration at x=1/2 to handle the constraint y ≤ 1/(2x).",
+  "problem firm": [
+    "Morgan Stanley"
+  ],
+  "question id": "24976588120297543808"
+}

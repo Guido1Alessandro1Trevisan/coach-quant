@@ -1,0 +1,17 @@
+{
+  "problem name": "Duel Mowers Dash",
+  "problem text": "There are two lawnmowers: Mr. Rabbit can complete mowing a lawn in $1$ hour, while Mr. Turtle takes $1$ hour and $15$ minutes. How long will it take them to finish mowing one lawn if they work simultaneously (in minutes)?",
+  "problem solution": "Based on the given data, we determine the mowing rate of each person per minute. Mr. Rabbit completes $\\frac{1}{60}$ of the lawn per minute. Mr. Turtle finishes $\\frac{1}{75}$ of the lawn per minute. By employing the formula $\\text{rate} \\cdot \\text{time} = \\text{work}$ done, we find the time required. Let $x$ represent the minutes needed for both to complete one lawn. Solving $\\left(\\frac{1}{60} + \\frac{1}{75}\\right) \\cdot x = 1$ lawn for $x$, we find $\\frac{100}{3}$ minutes.",
+  "valid answer": "Valid Answers: $100/3$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "rate $\\cdot$ time $=$ work",
+  "problem firm": [
+    "Jane Street",
+    "Sig",
+    "Transmarket Group"
+  ],
+  "question id": "04409218583078335700"
+}

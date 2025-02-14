@@ -1,0 +1,17 @@
+{
+  "problem name": "Cube Crawl Quest",
+  "problem text": "Imagine an insect positioned at one vertex of a cube. On each move, it randomly selects one of the three adjacent vertices with equal probability and walks there. Determine the average number of moves needed for the insect to reach the vertex that is diagonally opposite its starting point.",
+  "problem solution": "To begin, label the vertices of the cube as 1, 2, 3, 4, 5, 6, 7, and 8, where vertex 8 is the diagonal opposite of vertex 1. Define $$v\\_i$$ as the expected number of moves to reach vertex 8 starting from vertex $$i$$. Clearly, $$v\\_8 = 0$$ because if you start at the final vertex, no moves are needed. Each vertex has three adjacent vertices. For instance, vertex 1 has neighbors 2, 4, and 6, so we can write the expectation equation $$v\\_1 = 1 + \\frac{1}{3}(v\\_2 + v\\_4 + v\\_6).$$ We form analogous equations for the other vertices. Next, apply symmetry: notice that $$v\\_2 = v\\_4 = v\\_6$$ and $$v\\_3 = v\\_5 = v\\_7.$$ This shrinks the system to three equations: $$v\\_1 = 1 + v\\_2,\\quad v\\_2 = 1 + \\frac{1}{3}(v\\_1 + 2v\\_3),\\quad v\\_3 = 1 + \\frac{2}{3}v\\_2.$$ Solving these simultaneously yields $$v\\_1 = 10,\\; v\\_2 = 9,\\; v\\_3 = 7.$$ Therefore, starting at vertex 1, the expected number of moves to reach vertex 8 is $$10.$$",
+  "valid answer": "Valid Answers: 10",
+  "problem tags": [
+    "Probability",
+    "Expected Value",
+    "Random Walk"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Label each vertex with a variable for the expected time to the opposite corner, then apply symmetry to reduce the system before solving.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "58793713400457668021"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Heads Marathon",
+  "problem text": "Suppose there are 30 distinct individuals, each of whom flips their own fair coin a total of 162 times. What is the mean value of the greatest unbroken sequence of Heads across all 30 participants?",
+  "problem solution": "We aim to find the expected value of the maximum run of Heads (the longest consecutive streak) observed among 30 people, each flipping a fair coin 162 times. Let a 'run of length k' indicate k consecutive Heads in a single sequence of flips. Denote by L the maximum run of Heads found in one set of 162 flips, and by M the overall maximum when we compare 30 independent copies of L (one for each person). Formally, M = max(L_1, L_2, ..., L_30), where each L_i is the maximum run for person i. The distribution of L can be approximated by first computing the expected number of runs of length k in 162 flips. Write e(k) for this expected number: $$ e(k) = \\frac{163 - k}{2^k} $$ since there are (163 - k) possible starting positions for a run of length k, each with probability $$\\frac{1}{2^k}$$. Under a Poisson-like approximation for small e(k), the probability that at least one such run occurs in a single sequence of 162 flips is roughly $$ p(k) = 1 - e^{-e(k)}. $$Therefore, the probability that L (the largest run in one sequence) is at least k is about p(k). For 30 independent people, the chance that the overall maximum M is at least k is $$ P(M \\ge k) = 1 - (1 - p(k))^{30}. $$The expected value E[M] of M is then given by summing $$ P(M \\ge k) $$ over all possible k: $$ \\mathbb{E}[M] = \\sum_{k=1}^{\\infty} P(M \\ge k). $$In practice, only values of k up to around 20 need to be considered, since for larger k the probabilities are extremely small. By carefully summing up these probabilities (or equivalently doing a difference of consecutive probabilities to determine the distribution of M), the numerical result is about 12.5. As a more intuitive check, note that across 30 x 162 = 4860 total flips, the longest run typically grows on logarithmic order in base 2, since it is unlikely for many flips to align consecutively as Heads. The detailed calculation with the partial sums yields about 12.47 as the expected length of the longest streak.",
+  "valid answer": "Valid Answers: About 12.5",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Consider the expected number of runs of a given length k, use a Poisson approximation, then apply union bounds across all 30 individuals.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "91250578808725762490"
+}

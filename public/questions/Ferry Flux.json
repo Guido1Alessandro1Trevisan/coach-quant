@@ -1,0 +1,17 @@
+{
+  "problem name": "Ferry Flux",
+  "problem text": "A ferry begins with an unknown number of passengers. At the first stop, $\\dfrac{3}{4}$ of them disembark, while $7$ new passengers board. This sequence repeats at $2$ additional stops until the ferry reaches its final destination. Determine the minimum number of passengers that could be on the ferry when this sequence is concluded (final stop).",
+  "problem solution": "Let $x$ represent the initial number of passengers on the ferry. After the first stop, $\\frac{1}{4}x + 7$ passengers remain. Following the second stop, the number becomes $\\frac{1}{4}\\left(\\frac{1}{4}x + 7\\right) + 7 = \\frac{1}{16}x + \\frac{35}{4}$. After reaching the final stop, the total is $\\frac{1}{4}\\left(\\frac{1}{16}x + \\frac{35}{4}\\right) + 7 = \\frac{1}{64}x + \\frac{147}{16} = \\frac{x + 588}{64}$. We need to determine the smallest integer $x$ such that $x+588$ is a multiple of $64$. Note that: $10 \\cdot 64 = 640$, which is the smallest multiple of $64$ greater than $588$. Therefore, initially there were $640 - 588 = 52$ passengers, implying that there are $10$ passengers at the conclusion.",
+  "valid answer": "Valid Answers: $10$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Let $x$ be the initial passenger count. After the first stop, $\\dfrac{1}{4}x + 7$ passengers remain. Continue this method to find the smallest $x$ for which the outcome is an integer.",
+  "problem firm": [
+    "Imc",
+    "Jane Street",
+    "Sig"
+  ],
+  "question id": "92664705573333212421"
+}

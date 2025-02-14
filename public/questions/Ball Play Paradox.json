@@ -1,0 +1,16 @@
+{
+  "problem name": "Ball Play Paradox",
+  "problem text": "An urn contains $100$ balls. Alice and Bob alternately pick balls, and in each turn, a player may pick $2^k$ balls for any $k \\geq 0$, provided that many balls are still in the urn. The player who picks the final ball loses. Alice has the option to go first or second. Define $p$ as Alice's position ($p = 1$ if she should start first, $p = 2$ if she should start second). Let $b$ be the largest number of balls Alice should pick on her first move if Bob begins by picking $32$ balls. Compute $100p + b$.",
+  "problem solution": "If Alice can leave Bob with $3m+1$ balls for some integer $m$, she can ensure her victory. Given $100 = 3(33) + 1$, Alice should let Bob start. Hence, $p = 2$. Regardless of Bob's choice, Alice can always leave him with $3x+1$ balls for an integer $x$. Since Bob can pick $2^k = (3-1)^k = 3n + (-1)^k$ balls for some integer $n$, if Bob starts with $3m+1$ balls, then there will be $3(m - n) + 1 - (-1)^k = 3m' + 1 + (-1)^{k+1}$ balls left for an integer $m'$. Therefore, Alice should choose $2^y$ balls where $y \\equiv k+1 \\hspace{3pt} \\text{mod} \\hspace{3pt} 2$. This neutralizes the $(-1)^{k+1}$ term. Alice's optimal strategy is to let Bob start. If Bob picks $2^k$, Alice should pick $2^{k+1}$ if possible. If this is not feasible, she should choose a smaller power of $2$ with the same parity as $2^{k+1}$, such as $2^{k-1}, 2^{k-3}, \\dots$, that is feasible. In this case, since Bob picks $32$ initially, leaving $68$, Alice should take $64$ balls, as this is allowable. Thus, $b = 64$, leading to the answer $100 \\cdot 2 + 64 = 264$.",
+  "valid answer": "Valid Answers: $264$",
+  "problem tags": [
+    "Games",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "If Alice can leave Bob with $3m+1$ balls for some integer $m$, she can secure a winning strategy.",
+  "problem firm": [
+    "Worldquant"
+  ],
+  "question id": "02503956094054523564"
+}

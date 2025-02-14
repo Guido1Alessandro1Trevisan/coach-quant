@@ -1,0 +1,16 @@
+{
+  "problem name": "Lucky Flip Puzzle",
+  "problem text": "Five fair coins are tossed. Knowing that you got $3$ heads, calculate the chance of achieving the sequence $THHTH$.",
+  "problem solution": "There are $\\binom{5}{3} = 10$ different sequences of length $5$ with exactly three heads. Hence, the probability of getting this specific sequence is $\\dfrac{1}{10}$, since each sequence is equally probable.",
+  "valid answer": "Valid Answers: $1/10$",
+  "problem tags": [
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "What is the number of sequences of length $5$ that contain three heads?",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "67943238925971463108"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Equal Growth Riddle",
+  "problem text": "A circle's radius grows at a steady, positive pace from $0$. Determine the radius when the rates of change of the circle's circumference and area are identical.",
+  "problem solution": "Given that $A(r) = \\pi r^2$ and $C(r) = 2\\pi r$ denote the area and perimeter of a circle in terms of the radius. We are aware that $r'$, the rate of change of the radius, remains steady. Thus, $A' = 2\\pi r r'$ and $C' = 2\\pi r'$. Equating these, $2\\pi r r' = 2\\pi r' \\iff r = 1$.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Calculus",
+    "Pure Math"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The expressions $A(r) = \\pi r^2$ and $C(r) = 2\\pi r$ describe the area and circumference of a circle in terms of the radius. Differentiate them and equate the results.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "23171177421555684922"
+}

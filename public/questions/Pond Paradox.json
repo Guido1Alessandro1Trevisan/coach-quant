@@ -1,0 +1,15 @@
+{
+  "problem name": "Pond Paradox",
+  "problem text": "Consider a pond initially empty, with $1$ lily pad at its center. Every day, the lily pad expands to twice its size until it fills the entire pond. It is known that this process takes $10$ days for the lily pad to completely cover the pond. Now, imagine starting with $8$ lily pads on the first day. How many days will it take for the pond's surface to be fully covered, assuming no overlap?",
+  "problem solution": "To solve this, let's consider how long it takes for a single lily pad to expand to an area equivalent to $8$ times its initial size $(1 \\text{ unit})$. Since the area doubles daily, it will take $3$ days for $1$ lily pad to reach the size of $8$ $(2^3=8)$. The $8$ initial lily pads will expand at the same rate as a single lily pad that already has the size of $8$. Thus, it will require $10-3=7$ days for the pond's surface to be entirely covered.",
+  "valid answer": "Valid Answers: $7$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Each lily pad expands at the same rate, meaning they all have equal size on any given day. Consider how long it takes for $1$ lily pad to grow to the size equivalent to $8$.",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "18669754299209049347"
+}

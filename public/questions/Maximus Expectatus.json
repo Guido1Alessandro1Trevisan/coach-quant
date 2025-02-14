@@ -1,0 +1,16 @@
+{
+  "problem name": "Maximus Expectatus",
+  "problem text": "Suppose X and Y are jointly normal random variables with correlation p. Determine the expected value of max(X, Y) in terms of p.",
+  "problem solution": "We aim to compute $$\\mathbb{E}[\\max(X,Y)]$$ when X and Y are standard normal (mean 0, variance 1) with correlation p. We first write $$\\max(X,Y) = \\frac{X + Y + |X - Y|}{2}.$$ Hence, the expectation is $$\\mathbb{E}[\\max(X,Y)] = \\frac{\\mathbb{E}[X + Y]}{2} + \\frac{\\mathbb{E}[|X - Y|]}{2}.$$ Since X and Y each have mean 0, $$\\mathbb{E}[X + Y] = 0.$$ Thus, $$\\mathbb{E}[\\max(X,Y)] = \\frac{1}{2}\\mathbb{E}[|X - Y|].$$ Next, define W = X - Y. Because X and Y are jointly normal with correlation p, W is also normally distributed with mean 0 and variance $$2(1 - p).$$ That is, $$W \\sim \\mathcal{N}\\bigl(0, 2(1 - p)\\bigr).$$ For a normal random variable Z with mean 0 and variance \\(\\sigma^2\\), the expectation of its absolute value is $$\\sigma \\sqrt{\\frac{2}{\\pi}}.$$ Hence, if $$\\sigma^2 = 2(1 - p),$$ then $$\\sigma = \\sqrt{2(1 - p)},$$ and so, $$\\mathbb{E}[|W|] = \\sqrt{2(1 - p)} \\sqrt{\\frac{2}{\\pi}} = 2 \\sqrt{\\frac{1 - p}{\\pi}}.$$ Substituting this back, we obtain: $$\\mathbb{E}[\\max(X,Y)] = \\frac{1}{2} \\cdot 2 \\sqrt{\\frac{1 - p}{\\pi}} = \\sqrt{\\frac{1 - p}{\\pi}}.$$ Therefore, the desired expected value is $$\\sqrt{\\frac{1 - p}{\\pi}}.$$",
+  "valid answer": "Valid Answers: $$\\sqrt{\\frac{1 - p}{\\pi}}$$",
+  "problem tags": [
+    "Probability",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Rewrite max(X,Y) in terms of X+Y and the absolute value of X-Y, then recall how to find the mean of the absolute value of a normal distribution.",
+  "problem firm": [
+    "Morgan Stanley"
+  ],
+  "question id": "50798822886771663638"
+}

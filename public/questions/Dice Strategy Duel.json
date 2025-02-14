@@ -1,0 +1,18 @@
+{
+  "problem name": "Dice Strategy Duel",
+  "problem text": "A standard $6$-sided die is cast. You earn the face number if it is odd and double the face number if it is even. You can choose to roll the die one more time and keep the final outcome. Determine the expected earnings of this game using an optimal strategy.",
+  "problem solution": "The expected value of a single roll of this die is $\\dfrac{1 + 4 + 3 + 8 + 5 + 12}{6} = 5.5$. Thus, we should roll again if we get less than $5.5$. This means we only retain a $4$ or $6$. The probability that we do not re-roll is $\\dfrac{1}{3}$, and under this scenario, our expected value is $\\dfrac{8+12}{2} = 10$. Otherwise, we re-roll with probability $\\dfrac{2}{3}$, leading to an expected value of $\\dfrac{11}{2}$. Consequently, the game's expected payoff is $\\dfrac{2}{3} \\cdot \\dfrac{11}{2} + \\dfrac{1}{3} \\cdot 10 = 7$.",
+  "valid answer": "Valid Answers: $7$",
+  "problem tags": [
+    "Games",
+    "Expected Value",
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "What is the expected value of the $die$? Based on that, when should you choose to $re-roll$? What is the likelihood of a $re-roll$ with this $strategy$?",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "28138130171005502891"
+}

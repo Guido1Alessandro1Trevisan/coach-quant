@@ -1,0 +1,16 @@
+{
+  "problem name": "Birthday Paradox Maximization",
+  "problem text": "A company aims to increase the total hours their staff are not on duty each year. If no staff member has a birthday on any given day, all employees must work the entire $24$ hours that day. However, if at least one person celebrates a birthday on a specific day, then all staff are exempt from working that day. This company values work-life balance and seeks to employ a number of people that will maximize the expected total number of hours employees do NOT work annually. What is the ideal number of employees the company should employ? If an infinite number is needed, respond with $-1$.",
+  "problem solution": "No solution found",
+  "valid answer": "Valid Answers: $-1$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $Y_n$ as the yearly total hours employees have off when there are $n$ employees. Then $\\mathbb{E}[Y_n] = 24n \\mathbb{E}[T_n]$, where $T_n$ denotes the number of days employees are off in a year. To determine $\\mathbb{E}[T_n]$, let $X_1, X_2, \\dots, X_n$ represent the indicators for the event where the $i$th person, $1 \\leq i \\leq n$, has a unique birthday distinct from the other $n-1$ individuals. Thus, $T_n = X_1 + \\dots + X_n$ represents the total count of distinct birthdays within the year.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "14209183462302464360"
+}

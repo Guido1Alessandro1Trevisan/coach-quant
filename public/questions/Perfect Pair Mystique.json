@@ -1,0 +1,17 @@
+{
+  "problem name": "Perfect Pair Mystique",
+  "problem text": "Assume $X$ and $Y$ exhibit perfect correlation, meaning $\\rho(X,Y) = 1$ and $\\sigma_Y$ exceeds $\\sigma_X$. Determine the correlation between $X+Y$ and $X-Y$.",
+  "problem solution": "Let $X$ and $Y$ possess variances $\\sigma_X^2$ and $\\sigma_Y^2$ respectively. Thus, $\\text{Cov}(X+Y,X-Y) = \\text{Cov}(X,X) - \\text{Cov}(Y,Y) = \\sigma_X^2 - \\sigma_Y^2$. Similarly, observe that $\\text{Var}(X+Y) = \\sigma_X^2 + \\sigma_Y^2 - 2\\sigma_X\\sigma_Y = (\\sigma_X - \\sigma_Y)^2$. Therefore, $\\sigma_{X+Y} = |\\sigma_X - \\sigma_Y|$. The absolute value is crucial here since variance cannot be negative. By the same reasoning, $\\text{Var}(X-Y) = \\sigma_X^2 + \\sigma_Y^2 + 2\\sigma_X\\sigma_Y = (\\sigma_X + \\sigma_Y)^2$. Thus, $\\sigma_{X-Y} = \\sigma_X + \\sigma_Y$. Hence, $\\rho(X+Y,X-Y) = \\dfrac{\\sigma_X^2 - \\sigma_Y^2}{(\\sigma_X+\\sigma_Y)|\\sigma_X - \\sigma_Y|} = \\dfrac{\\sigma_X - \\sigma_Y}{|\\sigma_X - \\sigma_Y|} = -1$. The $-1$ arises from the fact that $\\sigma_Y > \\sigma_X$, rendering the numerator negative. Alternatively, if $X$ and $Y$ are perfectly correlated, then $Y = aX + b$ for some constants $a$ and $b$. Given $\\sigma_Y > \\sigma_X$, it follows that $|a| > 1$. Therefore, $X+Y = X(1+a) + b$ and $X-Y = X(1-a) + b$. Since $|a| > 1$, one constant between $1+a$ and $1-a$ is positive and the other is negative. Consequently, as both are linear transformations of $X$ with opposite signs, they must correlate at $-1$. Note that this reasoning is independent of whether the correlation between $X$ and $Y$ is $-1$ or $1$.",
+  "valid answer": "Valid Answers: $-1$",
+  "problem tags": [
+    "Covariance",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Assume $X$ and $Y$ have variances $\\sigma_X^2$ and $\\sigma_Y^2$ respectively. Calculate $\\text{Cov}(X+Y,X-Y)$ and their respective variances using standard formulas.",
+  "problem firm": [
+    "Five Rings",
+    "Transmarket Group"
+  ],
+  "question id": "17675328975493641152"
+}

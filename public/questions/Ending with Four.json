@@ -1,0 +1,16 @@
+{
+  "problem name": "Ending with Four",
+  "problem text": "Within the set of integers from 1 up to 1000, how many possess a final digit of 4?",
+  "problem solution": "To determine the quantity of numbers from 1 to 1000 whose final digit is 4, note that such a number can be expressed as $$10k + 4$$ for some integer $$k$$. The smallest such number in the interval is $$4\\,(k=0)$$, and the largest is $$994\\,(k=99)$$. Because $$k$$ takes all integer values from 0 to 99 inclusive, there are exactly $$100$$ numbers that finish with digit 4. Therefore, the total count is $$100$$.",
+  "valid answer": "Valid Answers: 100",
+  "problem tags": [
+    "Counting",
+    "Number Theory"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Group the integers into blocks of ten consecutive numbers; how many among each block end with digit 4?",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "81897787375517676895"
+}

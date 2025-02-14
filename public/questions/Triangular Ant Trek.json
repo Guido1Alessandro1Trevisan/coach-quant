@@ -1,0 +1,17 @@
+{
+  "problem name": "Triangular Ant Trek",
+  "problem text": "Three ants each start on a different side of an equilateral triangle. Each ant independently crawls along its side in a random direction (clockwise or counterclockwise). What is the probability that no ant collides with another?",
+  "problem solution": "We can formally confirm the probability using a counting argument:\\n\\n1) Observe that each of the three ants can choose either clockwise or counterclockwise. Thus, there are \\(2^3 = 8\\) total ways in which the directions can be selected.\\n2) A collision will occur when at least one ant is traveling in an opposite direction to an adjacent ant, causing them to meet.\\n3) To avoid collisions entirely, all three ants must move in the same rotation sense: either they all move clockwise or all move counterclockwise.\\n4) There are exactly 2 ways (all clockwise or all counterclockwise) out of the 8 possible direction assignments that avoid collisions.\\n\\nTherefore, the probability of no collision is given by:\\n$$\\dfrac{2}{8} = \\dfrac{1}{4}.$$",
+  "valid answer": "Valid Answers: $$\\frac{1}{4}$$",
+  "problem tags": [
+    "Probability",
+    "Geometry"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Count the total assignments of directions, then find how many of them result in no collisions.",
+  "problem firm": [
+    "JP Morgan",
+    "Citadel"
+  ],
+  "question id": "37131823215072475498"
+}

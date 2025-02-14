@@ -1,0 +1,17 @@
+{
+  "problem name": "Cash Grab Conundrum",
+  "problem text": "In a container, there is $1$ $100$ bill, $3$ $20$ bills, and $4$ $10$ bills. If you randomly choose $7$ bills from this container without replacement, determine the expected total value of the bills chosen.",
+  "problem solution": "The mean value of each bill is $\\dfrac{100 + 3 \\cdot 20 + 4 \\cdot 10}{8} = 25$. The expected outcome of each selection is identical due to the interchangeability of draws, leading to an expected total value of $25 \\cdot 7 = 175$. Alternatively, we can calculate this by considering the bill not chosen and subtracting this from $200$, the total sum of all bills. A $10$ bill remains with probability $\\dfrac{1}{2}$. A $20$ bill remains with probability $\\dfrac{3}{8}$. The $100$ bill remains with probability $\\dfrac{1}{8}$. Thus, the expected value of the bill not chosen is $\\dfrac{1}{2} \\cdot 10 + \\dfrac{3}{8} \\cdot 20 + \\dfrac{1}{8} \\cdot 100 = 25$. Hence, the expected total value of the chosen bills is $200 - 25 = 175$.",
+  "valid answer": "Valid Answers: $175$",
+  "problem tags": [
+    "Expected Value",
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The mean value of each chosen bill is $ \\text{sum of the bills} \\div \\text{number of bills} $.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "42999539979195078768"
+}

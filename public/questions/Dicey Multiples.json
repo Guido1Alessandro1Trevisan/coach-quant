@@ -1,0 +1,17 @@
+{
+  "problem name": "Dicey Multiples",
+  "problem text": "Consider the multiplication of the outcomes from $2$ unbiased dice. What is the likelihood that this result is a multiple of $6$?",
+  "problem solution": "If one die shows a $6$, the product will necessarily be a multiple of $6$. There are $11$ outcomes that include the number $6$ (5 combinations with different numbers × 2 arrangements + 1 scenario for rolling two $6$s). Another method for achieving a product that is a multiple of $6$ is to have a result with both $2$ and $3$ as factors. We have already accounted for rolls involving $6$, so we exclude those. Thus, we require a $2$ or $4$ on one die and a $3$ on the other. For this, there are $2$ options for the first die, $1$ option for the second die, and $2$ permutations. This yields $2×1×2 = 4$ combinations. By adding these $4$ to the previously determined $11$, we obtain $15$ rolls that generate a number divisible by $6$. Given there are $36$ total possible outcomes from $2$ dice, each equally likely, the probability is $15/36 = 42.5\\%$.",
+  "valid answer": "Valid Answers: [ $0.425$, $\\frac{15}{36}$, $\\frac{5}{12}$ ]",
+  "problem tags": [
+    "Events",
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Enumerate the potential outcomes; there are only $36$ possible results from rolling the dice.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "82028131234707779463"
+}

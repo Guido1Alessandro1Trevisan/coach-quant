@@ -1,0 +1,17 @@
+{
+  "problem name": "Odd Roll Odyssey",
+  "problem text": "What is the expected number of times a fair $12$-sided die, numbered $1-12$, must be rolled until an odd number is rolled?",
+  "problem solution": "With $12$ possible outcomes, $6$ are odd, giving a $\\dfrac{1}{2}$ chance of rolling an odd number on each roll. Therefore, the number of rolls needed to achieve an odd result follows $M \\sim \\text{Geom}(1/2)$, resulting in an expected value of $2$.",
+  "valid answer": "Valid Answers: $2$",
+  "problem tags": [
+    "Expected Value",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Half of the die's values are odd numbers",
+  "problem firm": [
+    "Imc"
+  ],
+  "question id": "80161036692206979676"
+}

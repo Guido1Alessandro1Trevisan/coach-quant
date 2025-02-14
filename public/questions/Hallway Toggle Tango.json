@@ -1,0 +1,16 @@
+{
+  "problem name": "Hallway Toggle Tango",
+  "problem text": "There are 100 closed doors in a hallway. Person 1 toggles each door (so all doors open). Then, Person 2 toggles every second door, Person 3 toggles every third door, and this pattern continues until Person 100 toggles only the 100th door. After all 100 people have taken their turns, how many doors are closed?",
+  "problem solution": "First, note that Door k is toggled once for every positive divisor of k, including 1 and k itself. So if a number k has d divisors, that door will be toggled d times.\\n\\n1) If d is even, the door ends in its original state: closed. Since all doors start closed, toggling any door an even number of times leaves it closed in the end.\\n2) If d is odd, the door ends in the opposite state: open.\\n\\nA key observation is that most integers have factors appearing in pairs. For instance, if a is a factor of k, then \\(k \\div a\\) is a distinct partner factor. Hence, almost all numbers have an even count of factors. The main exception is when k is a perfect square, like \\(n^2\\). In that case, \\(n\\) is a “partner” of itself, and thus perfect squares have an odd count of factors.\\n\\nConsequently, exactly the doors numbered by perfect squares (\\(1, 4, 9, 16, 25, 36, 49, 64, 81, 100\\)) are toggled an odd number of times and end up open. There are 10 perfect squares from 1 to 100, meaning 10 doors remain open.\\n\\nTherefore, the number of doors that remain closed is the total number of doors (100) minus the 10 that stay open, resulting in $$100 - 10 = 90$$ closed doors.",
+  "valid answer": "$$90$$",
+  "problem tags": [
+    "Citadel"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about factors of each door number. Which have an odd number of factors?",
+  "problem firm": [
+    "Maple Analytics",
+    "Quantum Strategies"
+  ],
+  "question id": "32518970878671659782"
+}

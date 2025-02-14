@@ -1,0 +1,16 @@
+{
+  "problem name": "Sum Surpass Quest",
+  "problem text": "Imagine drawing a sequence of random variables, U1, U2, U3,... each independently sampled from a uniform [0,1] distribution. We keep accumulating them until their total first exceeds 1. Determine the expected value of this stopping time T.",
+  "problem solution": "We denote T as the smallest integer n such that $$U_1 + U_2 + \\dots + U_n > 1$$. To compute its average value $\\mathbb{E}[T]$, observe that $(T > n)$ is equivalent to $$U_1 + U_2 + \\dots + U_n \\le 1$$. Since each \\(U_i\\) is uniformly distributed on [0,1], the probability of the event $$\\{U_1 + \\dots + U_n \\le 1\\}$$ corresponds to the volume of an n-dimensional simplex of side 1, which is $\\frac{1}{n!}$. Therefore, for nonnegative integers n, $ (\\mathbb{P}(T > n) = \\frac{1}{n!})$. By a well-known result for nonnegative integer-valued random variables, we have: $\\mathbb{E}[T] = \\sum_{n=0}^{\\infty} \\mathbb{P}(T > n) = \\sum_{n=0}^{\\infty} \\frac{1}{n!}.$ The infinite series $1 + 1 + \\frac{1}{2!} + \\frac{1}{3!} + \\dots$ sums to the mathematical constant e, leading to: $\\mathbb{E}[T] = e.$",
+  "valid answer": "Valid Answers: e",
+  "problem tags": [
+    "Stochastic Processes",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Focus on the condition that T exceeds n only if the sum of the first n uniform random variables does not surpass 1.",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "14632883855973935340"
+}

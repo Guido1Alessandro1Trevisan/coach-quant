@@ -1,0 +1,17 @@
+{
+  "problem name": "Cluster Count Chaos",
+  "problem text": "Imagine you arrange A copies of 1 and B copies of 0 into a single sequence in a random manner. A 'cluster' is a set of one or more adjacent 1s. For example, in [1,1,0,1], there are exactly 2 clusters. Determine the expected (average) number of clusters over all permutations of the list.",
+  "problem solution": "Let X be the number of clusters of 1s in the sequence. We can write X as the sum of indicator random variables. First, there is an indicator checking if the first position is a 1, which occurs with probability $$\\frac{A}{A+B}$$. Then, for each subsequent position i (from 2 up to A+B), we add another indicator for the event that position i is 1 and position i-1 is 0. The probability of that event in a random arrangement of A 1s and B 0s is $$\\frac{A\\times B}{(A+B)(A+B-1)}$$, and there are (A+B-1) such positions. Summing these expected values yields $$\\frac{A}{A+B} + \\frac{A\\times B}{A+B} = \\frac{A(B+1)}{A+B}$$, which is the expected number of clusters of 1s.",
+  "valid answer": "Valid Answers: $$\\frac{A(B+1)}{A+B}$$",
+  "problem tags": [
+    "Expected Value",
+    "Probability",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about using an indicator variable for whether each position starts a new block of 1s.",
+  "problem firm": [
+    "SIG"
+  ],
+  "question id": "70544947574622977118"
+}

@@ -1,0 +1,15 @@
+{
+  "problem name": "Cinema Seat Shuffle",
+  "problem text": "You are accompanying your $10$ students to a cinema, consisting of $5$ boys and $5$ girls, all seated in one line. To maintain their attention during the film, the teacher specifies that no two children of the identical gender should sit adjacent to each other. How many different ways can the students be seated?",
+  "problem solution": "Given there are $10$ positions, and the $5$ boys must sit separately, there are $2$ configurations where the boys can be placed (either spots $1, 3, 5, 7, 9$ or $2, 4, 6, 8, 10$); the girls must occupy the remaining spots. For each configuration, there are $5!$ different ways to arrange the boys in their $5$ seats and $5!$ ways to place the girls. Therefore, the total number of possible seating arrangements is: $2 \\times (5!)^2 = 28800$",
+  "valid answer": "Valid Answers: $28800$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "To make the problem easier, think about the positions where the boys can be seated and how that determines the locations for the girls. How many distinct arrangements of $5$ boys can be made in $10$ seats while keeping them separated?",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "44033443824051185215"
+}

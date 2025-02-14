@@ -1,0 +1,16 @@
+{
+  "problem name": "Even Quest Rolls",
+  "problem text": "You continue to roll a fair $6$-faced die until you achieve a $6$. What is the expected count of rolls made (including the one that results in $6$), given that all the rolls result in even numbers?",
+  "problem solution": "Considering the condition that every roll results in an even number, we are essentially inquiring: what is the expected number of times you can roll a $2$ or $4$ until another number appears, given that this different number is $6$. Define $X$ as the expected number of rolls before rolling a number that is not $2$ or $4$. Let $f$ represent the final number, so we seek $E[X \\mid f=6]$. Since the rolls are independent, $X$ and $f$ do not depend on each other, implying that $E[X \\mid f = 6] = E[X]$ and now $X$ is merely a geometric random variable with parameter $p=\\frac{4}{6}=\\frac{2}{3}$ because any number other than $(2,4)$ stops the rolling and counts as a success. Hence, $\\mathbb{E}[X] = \\frac{3}{2}$.",
+  "valid answer": "Valid Answers: $1.5$, $\\frac{3}{2}$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Define $X$ as the expected count of rolls until a number different from $2$ or $4$ is rolled, and $f$, which represents the last roll's value. We are looking for $\\mathbb{E}[X \\mid f=6]$.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "77476640849375854038"
+}

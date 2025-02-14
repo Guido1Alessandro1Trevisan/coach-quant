@@ -1,0 +1,16 @@
+{
+  "problem name": "Triple Cut Odds",
+  "problem text": "Imagine slicing a stick at two randomly chosen points, resulting in three segments. Determine the likelihood that these three segments can form a valid triangle.",
+  "problem solution": "First, label the stick of total length 1. Let the two cut points be chosen at random positions along the stick. Denote their positions by $$X$$ and $$Y$$, with the understanding that one may be smaller or larger than the other. After these cuts, the three segment lengths can be described as: (1) $$\\min(X, Y)$$, (2) $$|X - Y|$$, and (3) $$1 - \\max(X, Y)$$. For three lengths $$a, b, c$$ to form a triangle, each side length must be less than the sum of the other two, i.e. $$a < b + c,\\ b < a + c,\\ c < a + b.$$\\n\\nEquivalently, in this context, no single segment length should exceed $$\\tfrac{1}{2}$$ of the original stick's length. Hence, a simpler criterion is that the largest of the three segments must be strictly less than $$\\tfrac{1}{2}$$. Plotting the set of all possible pairs $$(X, Y)$$ in the unit square and enforcing that none of the three segments exceeds half the stick corresponds to a specific region whose area is $$\\tfrac{1}{4}$$ of the total region for all possible cuts. Since each position of the two cut points is equally likely, the probability is given by the area of this valid region divided by the total area, which yields $$\\frac{1}{4}$$.\\n\\nThus, the chance that three pieces from randomly chosen cut points on a stick can form a valid triangle is $$\\frac{1}{4}$$.",
+  "valid answer": "Valid Answers: $$\\frac{1}{4}$$",
+  "problem tags": [
+    "Geometry",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "A necessary and sufficient condition for three lengths to form a triangle is that no one length is greater than half the total.",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "99578307667697073653"
+}

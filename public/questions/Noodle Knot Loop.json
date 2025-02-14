@@ -1,0 +1,18 @@
+{
+  "problem name": "Noodle Knot Loop",
+  "problem text": "A bowl contains n noodles. Each noodle has two ends, so there are 2n ends in total. If these ends are randomly paired to form knots, determine the expected number of distinct loops formed.",
+  "problem solution": "We proceed with a rigorous analysis. Suppose we label the 2n ends arbitrarily. A random pairing of these 2n ends is called a random matching on 2n points. Our goal is to compute the expected number of loops (circles) created by this matching. First, consider small cases to detect any patterns. For n=1 (just one noodle), there is only one way to tie the two ends together, and we necessarily get a single circle. Thus, for n=1, the expected number of loops is 1. For n=2 (two noodles), the four ends can be paired in exactly 3 ways. By enumerating each pairing, we discover that in one configuration, we obtain two smaller loops, and in the other two configurations, we obtain a single larger loop; hence the total number of loops over all pairings is 2 + 1 + 1 = 4 loops, so the average is 4/3. In general, one can show by induction or linearity of expectation that the expected number of loops for any n is given by the sum of the reciprocals of the odd integers up to 2n - 1. Formally, the expected value is $$\\sum_{k=1}^{n} \\frac{1}{2k - 1}$$. This derivation follows from recognizing that each potential loop contributes a fraction of an expected value, and summing these contributions over all connections yields the final formula. Thus, the result is precisely the partial sum of the series of reciprocals of odd integers.",
+  "valid answer": "Valid Answers: $$1 + \\frac{1}{3} + \\frac{1}{5} + \\dots + \\frac{1}{2n - 1} = \\sum_{k=1}^{n} \\frac{1}{2k - 1}$$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability",
+    "Random Pairings"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Try to find the expected number of loops by examining small cases, using the total number of ways to pair 2n ends. Alternatively, consider the linearity of expectation approach, focusing on the random matching structure.",
+  "problem firm": [
+    "Maple Analytics",
+    "Quantum Strategies"
+  ],
+  "question id": "93860617928013912752"
+}

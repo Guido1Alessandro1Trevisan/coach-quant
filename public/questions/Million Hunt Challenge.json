@@ -1,0 +1,16 @@
+{
+  "problem name": "Million Hunt Challenge",
+  "problem text": "You are participating in a game show with $3$ doors presented to you. One door conceals $1$ million, while the other two have nothing. In the final stage, the host allows you to spin a wheel twice, potentially disclosing which door holds the $1$ million. For each spin, this wheel indicates the position of the $1$ million $\\frac{3}{5}$ of the time, independently of other spins. Otherwise, it provides no information about the money's location. After two spins, if the wheel hasn't shown you the $1$ million's location, you must make a random guess. What is the likelihood that you find the $1$ million door?",
+  "problem solution": "The door with $1$ million is not identified precisely when the wheel provides no information on both spins. This happens with a probability of $\\frac{2}{5}$ per spin, so the chance of not learning anything about the money's location is $\\dfrac{2}{5} \\cdot \\dfrac{2}{5} = \\dfrac{4}{25}$. This indicates that with a probability of $\\dfrac{21}{25}$, the wheel ensures you know the money's location. Otherwise, with a probability of $\\dfrac{4}{25}$, you guess randomly among the doors and find the money with a probability of $\\dfrac{1}{3}$. Thus, the overall probability of discovering the money is $\\dfrac{21}{25} + \\dfrac{1}{3} \\cdot \\dfrac{4}{25} = \\dfrac{67}{75}$.",
+  "valid answer": "Valid Answers: $67/75$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The door with $1$ million is not identified precisely when the wheel provides no information on both spins.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "53105596671697125524"
+}

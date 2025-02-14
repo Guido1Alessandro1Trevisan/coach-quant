@@ -1,0 +1,16 @@
+{
+  "problem name": "Even Heads Challenge",
+  "problem text": "Suppose we flip n fair coins. What is the chance that the total number of heads that appear is an even quantity?",
+  "problem solution": "First, let each coin flip be a Bernoulli random variable taking values 0 or 1 with probability 1/2 for each. The total number of heads, denoted by X, follows a Binomial(n, 1/2) distribution. A common derivation is to use the binomial expansion with generating functions or to note that for each configuration of heads, there is a 'complement' configuration flipping one coin's outcome, which toggles even and odd heads counts and thus splits possibilities evenly. A rigorous approach uses the identity $$P(X \\text{ is even}) = \\frac{1}{2}\\big(1 + (1 - 2p)^n\\big)$$ for a Binomial(n, p) distribution; if p=1/2, then (1 - 2p) = 0 and hence $$P(X \\text{ is even})=\\frac{1}{2}(1+0^n)=\\frac{1}{2}.$$ Therefore, the probability of getting an even number of heads is $$\\frac{1}{2}.$$",
+  "valid answer": "Valid Answers: $\\frac{1}{2}$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "You can exploit symmetry between heads and tails or expand using the binomial theorem to show an equal split between even and odd counts.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "51832452846007373329"
+}

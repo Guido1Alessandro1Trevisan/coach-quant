@@ -1,0 +1,16 @@
+{
+  "problem name": "Matrix Mismatch Magic",
+  "problem text": "Construct two square matrices A and B for which the difference AB - BA equals the identity matrix, if possible.",
+  "problem solution": "First, let us establish some notation. Let A and B be n×n matrices. We aim to solve $$AB - BA = I$$, where I is the n×n identity matrix. The key observation involves the trace of a product of matrices: for any square matrices X and Y of the same size, we have $$\\mathrm{trace}(XY) = \\mathrm{trace}(YX)$$. Therefore, $$\\mathrm{trace}(AB - BA) = \\mathrm{trace}(AB) - \\mathrm{trace}(BA) = 0.$$ However, for the identity matrix I, $$\\mathrm{trace}(I) = n,$$ since I has 1's on the main diagonal and 0's elsewhere. Thus, if we assumed that $$AB - BA = I$$, taking the trace of both sides gives $$\\mathrm{trace}(AB - BA) = \\mathrm{trace}(I),$$ which implies $$0 = n,$$ a clear contradiction for any finite dimensional n. As a result, there can be no such finite-dimensional square matrices A and B satisfying the equation $$AB - BA = I$$. Hence the desired matrices do not exist (over standard fields such as the real or complex numbers).",
+  "valid answer": "No finite-dimensional matrices A and B satisfy AB - BA = I; no solutions exist.",
+  "problem tags": [
+    "Algebra",
+    "Linear Algebra"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Compute the trace on both sides of the equation AB - BA = I. Recall that trace(XY) = trace(YX).",
+  "problem firm": [
+    "Morgan Stanley"
+  ],
+  "question id": "72298713735821434175"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Random Gap Chase",
+  "problem text": "You take a sample of $101$ numbers chosen uniformly at random from the range $(0,1)$. Determine the expected value of the shortest gap between any pair of chosen numbers.",
+  "problem solution": "In Spacious Uniform Values I, it was determined that the chance that no pair of values is within a separation of $x$ is $(1 - 100x)^{101}$. Essentially, the probability that the least separation between any two numbers is at least $x$ is given by that expression. Recall the formula for non-negative continuous random variables that states $\\mathbb{E}[X] = \\displaystyle \\int_{0}^{\\infty} \\mathbb{P}[X \\geq x]dx$. This is applied to $M$, the smallest spacing between the numbers. Thus, $\\mathbb{E}[M] = \\displaystyle \\int_0^{\\infty} \\mathbb{P}[M \\geq x]dx$. The greatest possible value for the minimal spacing between numbers is $\\dfrac{1}{100}$. If every number was further apart than $\\dfrac{1}{100}$, the total span of the interval would surpass $1$, contradicting their restriction to $(0,1)$. Hence, the upper bound for our integral is $\\dfrac{1}{100}$. This results in $\\mathbb{E}[M] = \\displaystyle \\int_0^{\\frac{1}{100}} \\left(1 - 100x\\right)^{101}dx$. Substituting $u = 1 - 100x$ gives $du = -100dx$. It's straightforward to check that the new bounds for our integral are $0$ and $1$. This transforms the integral to $\\displaystyle \\dfrac{1}{100} \\int_0^1 u^{101}du$, which evaluates to $\\dfrac{1}{10200}$.",
+  "valid answer": "Valid Answers: $1/10200$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Remember the formula for non-negative continuous random variables that states $\\mathbb{E}[X] = \\displaystyle \\int_{0}^{\\infty} \\mathbb{P}[X \\geq x]dx$. Use this for the random variable representing the minimal distance.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "39854223042444931189"
+}

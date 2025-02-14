@@ -1,0 +1,15 @@
+{
+  "problem name": "Remainder Riddles",
+  "problem text": "Identify the smallest positive integer that leaves a remainder of $n$ upon division by $n+1$ for each $1 \\leq n \\leq 9$.",
+  "problem solution": "Let $$ X $$ be the smallest positive integer we seek. Define $$ X_2, X_3, \\ldots, X_{10} $$ as positive integers such that: $$ X = 2 \\times X_2 + 1 $$ $$ X = 3 \\times X_3 + 2 $$ $$ \\vdots $$ $$ X = 10 \\times X_{10} + 10 $$ Define $$ X'_i = X_i + 1 \\forall i \\in \\{2, 3, \\ldots, 10\\} $$. Adding 1 to both sides of each equation gives: $$ X + 1 = 2 \\times X'_2 $$ $$ X + 1 = 3 \\times X'_3 $$ $$ \\vdots $$ $$ X + 1 = 10 \\times X'_{10} $$ Therefore, we need $$ X $$ such that $$ X+1 $$ is divisible by 2, 3, 4, 5, 6, 7, 8, 9, and 10. The least common multiple of these values is 2520, so $$ X $$ is 2519.",
+  "valid answer": "Valid Answers: $2519$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Formulate the mathematical expressions for what you have and what you need to find. How can the $least$ $common$ $multiple$ be applied to what you are given?",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "03835609949093259985"
+}

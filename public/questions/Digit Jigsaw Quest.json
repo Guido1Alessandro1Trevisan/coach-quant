@@ -1,0 +1,16 @@
+{
+  "problem name": "Digit Jigsaw Quest",
+  "problem text": "Determine the smallest positive integer such that the product of its digits is exactly 10000.",
+  "problem solution": "First, observe that $$10000 = 2^4 \\times 5^4$$. We require the digits of our sought integer to multiply to this value, and each digit must be an integer from 1 through 9. Clearly, we cannot use zeros (which annihilate the product) nor any digit above 9. Consequently, we factor 10000 into primes: $$10000 = 2^4 \\times 5^4.$$ Our goal is to form valid digits by grouping these prime factors.\nBecause we cannot form a digit 10 or higher (e.g., $$2 \\times 5 = 10$$ is invalid), 5's have to remain uncombined as separate digits (each digit '5'). However, the four 2's can be distributed into digits that do not exceed 9. Notice the following:\n• If we leave the four 2's as separate digits, we have 2,2,2,2,5,5,5,5 (eight digits), which might not yield the smallest number.\n• By grouping three of the 2's into an 8 (since $$2^3 = 8$$) and leaving the remaining 2 alone, we obtain the digits 2 and 8, along with four 5's. Thus, the digits are 2,8,5,5,5,5. The product is $$2 \\times 8 \\times 5 \\times 5 \\times 5 \\times 5 = 10000.$$ Many other combinations, such as 4,4,5,5,5,5, also yield a product of 10000, but the key is to arrange digits in ascending order to form the smallest possible integer.\nTo find the smallest integer, place the smallest digit to the left. Comparing 2,5,5,5,5,8 with 4,4,5,5,5,5 shows that rearranging 2,5,5,5,5,8 into ascending order as 255558 is smaller than 445555. Therefore, the least integer with digit product 10000 is $$255558$$.\nIn conclusion, by prime factorization and systematic grouping of factors into digits, we conclude that the smallest integer whose digits multiply to 10000 is $$255558$$.",
+  "valid answer": "Valid Answers: 255558",
+  "problem tags": [
+    "Number Theory",
+    "Digit Product"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Begin by factoring 10000 as $$2^4 \\times 5^4$$. Determine how to combine factors into single-digit numbers from 1 to 9.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "37221745406026309842"
+}

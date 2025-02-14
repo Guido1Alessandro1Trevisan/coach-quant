@@ -1,0 +1,17 @@
+{
+  "problem name": "Three Dice Tango",
+  "problem text": "Consider a standard $6$-sided die. Roll it once and let the top face be $N$. Next, roll $N$ standard $6$-sided dice and determine the sum of the top faces of all $N$ dice, calling this total $M$. Finally, roll $M$ standard $6$-sided dice and let the sum of their top faces be $S$. Calculate $\\mathbb{E}[S]$.",
+  "problem solution": "To determine the expected value of $S$, it is useful to begin by finding $\\mathbb{E}[M]$, which represents the average number of dice rolled in the final step. This involves conditioning on $N$, the count of dice rolled in the intermediate phase. Assuming $X_i$ is the result of a fair die roll, then $\\mathbb{E}[M] = \\mathbb{E}\\left[\\sum_{i=1}^N X_i\\right]$, as $N$ dice are rolled. To compute this, apply the Law of Total Expectation for $N$ to achieve $\\mathbb{E}[M] = \\mathbb{E}[\\mathbb{E}[M \\mid N]] = \\mathbb{E}[\\mathbb{E}\\left[X_1 + \\dots + X_N \\mid N\\right]] = \\mathbb{E}\\left[\\frac{7}{2}N\\right] = \\mathbb{E}[N]\\mathbb{E}[X_1] = \\left(\\frac{7}{2}\\right)^2 = \\frac{49}{4}$. Knowing that $S = \\sum_{i=1}^M X_i$, the same reasoning yields $\\mathbb{E}[S] = \\mathbb{E}[M]\\mathbb{E}[X_1] = \\left(\\frac{7}{2}\\right)^3 = \\frac{343}{8}$.",
+  "valid answer": "Valid Answers: $343/8$",
+  "problem tags": [
+    "Expected Value",
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "To determine the expected sum $S$, it is beneficial to initially calculate $\\mathbb{E}[M]$, the expected quantity of dice rolled in the final stage. Utilize the Law of Total Expectation regarding $N$ for this task. Apply a similar approach subsequently.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "04010872292128763529"
+}

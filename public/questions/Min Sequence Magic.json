@@ -1,0 +1,17 @@
+{
+  "problem name": "Min Sequence Magic",
+  "problem text": "Consider $X_1, X_2, \\dots \\sim \\text{Unif}(0, 1)$ IID. Let $N$ denote the first position $n$ such that $X_n eq \\text{min}\\{X_1, \\dots, X_n\\}$. Determine $\\mathbb{E}[X_{N-1}]$, meaning the smallest among the initial $N$ selected values. The solution is expressed as $a + be$ for integer values $a$ and $b$. Note that $e$ indicates Euler's number. Compute $a + b$.",
+  "problem solution": "Define $f(x)$ as the expected minimum when the current minimum is $x$. We seek $f(1)$, since we are selecting uniformly from $(0,1)$, so our starting value is $1$. We cannot select a starting value exceeding $1$ as values beyond $1$ cannot be generated. With probability $1-x$, the subsequent value surpasses $x$, maintaining $x$ as the minimum. If instead the next value $y<x$, then $y$ is distributed uniformly over $(0,x)$, and the expected minimum in this case is $f(y)$. We integrate over all $0 < y < x$, applying the Law of Total Probability. This equation is expressed as $f(x) = x(1-x) + \\displaystyle \\int_0^x f(y)dy$. By differentiating to form a differential equation, we obtain $f'(x) = f(x) + (1-2x)$. This can also be written as $f'(x) - f(x) = 1-2x$. An initial condition for this equation is $f(0) = 0$, as the minimum cannot be below $0$. This linear first order differential equation can be solved using integrating factors. Specifically, the integrating factor is $\\mu(x) = e^{\\int -1 dx} = e^{-x}$. Applying this to both sides, $(e^{-x}f(x))' = (1-2x)e^{-x}$, implying $e^{-x}f(x) = \\displaystyle \\int e^{-x} - 2xe^{-x} dx= (2x+1)e^{-x} + C$. This indicates that $f(x) = 1+2x+ Ce^x$. Utilizing our initial condition $f(0) = 0$, we find $C = -1$, therefore $f(x) = 1+2x - e^x$. Specifically, $f(1) = 3-e$, thus our solution is $3 - 1 =2$.",
+  "valid answer": "Valid Answers: $2$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Apply the Law of Total Expectation by conditioning on the subsequent value.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "13271655746405093970"
+}

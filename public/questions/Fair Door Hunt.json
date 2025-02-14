@@ -1,0 +1,17 @@
+{
+  "problem name": "Fair Door Hunt",
+  "problem text": "You've been chosen to participate in a television game show! The presenter informs you that $200$ is hidden behind one of $7$ doors, while the remaining $6$ doors are empty. You are unaware of which door conceals the prize. You will continue to pick doors at random until you locate the money. The cost for opening each door is $x$. For the game to remain equitable, what should $x$ be?",
+  "problem solution": "Since the chance of the money being behind each door is equal and selections are made randomly, the number of attempts required to find the money is distributed uniformly across $\\{1,2,\\dots,7\\}$. It is not a geometric distribution because the probability of success varies with each attempt (for more insights refer to the Monty Hall Problem). Hence, the expected number of attempts to discover the money is $4$. To ensure the game is fair, each attempt must cost $x = \\dfrac{200}{4} = 50$.",
+  "valid answer": "Valid Answers: $50$",
+  "problem tags": [
+    "Discrete Random Variables",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Given that the prize is behind a random door, the number of attempts required to uncover the prize follows a discrete uniform distribution on $\\{1,2,\\dots,7\\}$.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "28930844358325874817"
+}

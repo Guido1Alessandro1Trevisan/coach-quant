@@ -1,0 +1,16 @@
+{
+  "problem name": "Seven to Ten Magic",
+  "problem text": "Suppose you have access to a random procedure that, when called, returns an integer from 1 through 7, each outcome equally likely. Construct a method to generate integers from 1 through 10 with equal chance using only this 1-7 random function.",
+  "problem solution": "We aim to produce a uniform random outcome in the set $\\{1, 2, \\dots, 10\\}$ from a function that samples uniformly from $\\{1, 2, \\dots, 7\\}$. We can achieve this via rejection sampling. First, note that if we call this 1-7 random generator twice, we can represent outcomes from 1 up to 49 with equal probability, since $7 \\times 7 = 49$. Concretely, let $X$ and $Y$ each be uniformly distributed in $\\{1,2,\\dots,7\\}$, and form the integer $Z = 7(X-1) + Y$. Then $Z$ is uniformly distributed from $1$ to $49$. Because 10 does not divide 49 evenly, we designate the numbers $1$ through $40$ in $\\{1,2,\\dots,49\\}$ as acceptable draws, and the remaining values $41$ through $49$ are discards. To summarize, we (1) generate $Z$ from $1$ to $49$ uniformly, (2) if $Z$ exceeds $40$, discard it and repeat, (3) otherwise define the uniform 1-10 outcome as $((Z - 1) \\bmod 10) + 1$. Since we only accept with probability $\\frac{40}{49}$, the accepted outcome is uniformly distributed over the 1 through 10 range. This argument can be justified formally by noting that each of the numbers $1$ through $40$ is equally likely, leading to a perfect distribution of 1 to 10 each with probability $\\frac{1}{10}$. The process terminates almost surely (with probability 1) because each iteration has a strictly positive chance of acceptance. Hence, the approach yields a correct and well-defined method for generating uniform samples from $\\{1, 2, \\dots, 10\\}$.",
+  "valid answer": "A valid method is to use rejection sampling: convert each pair of 1-7 random draws into a uniform draw from 1 to 49, accept only if that number is 40 or below, and use that accepted result (modulo 10) plus 1 as the final number from 1 to 10.",
+  "problem tags": [
+    "Random Generation",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think of concatenating two calls to the 1-7 random procedure to get a larger uniform sample, then use a reject-and-retry approach if it exceeds the desired threshold.",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "16338817931848323209"
+}

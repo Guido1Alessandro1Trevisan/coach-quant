@@ -1,0 +1,17 @@
+{
+  "problem name": "Unhappy Countdown",
+  "problem text": "Each day is either pleasant $(G)$ or unpleasant $(B)$. If today happens to be $G$, the chance of tomorrow being $G$ is $\\dfrac{3}{5}$. If today is $B$, the probability that tomorrow is also $B$ is $\\dfrac{7}{10}$. You woke up to discover that today is an unpleasant day. Determine the expected count of days until the next unpleasant day.",
+  "problem solution": "Let $$ T $$ represent the count of days until the next unpleasant day and $$ X_1 $$ denote the result of the first day following today. Thus, $$\\mathbb{E}_B[T] = \\mathbb{E}_B[T \\mid B]\\mathbb{P}_B[B] + \\mathbb{E}_B[T \\mid G]\\mathbb{P}_B[G]$$. The subscript $$ B $$ indicates starting from an unpleasant day. We know $$\\mathbb{P}_B[B] = \\dfrac{7}{10}$$, therefore $$\\mathbb{P}_B[G] = \\dfrac{3}{10}$$. Furthermore, $$\\mathbb{E}_B[T \\mid G] = 1 + \\mathbb{E}_G[T]$$, since one step is taken followed by calculating the expected days from a pleasant day to an unpleasant day. Also, $$\\mathbb{E}_B[T \\mid B] = 1$$, because it takes just $$ 1 $$ day to reach another unpleasant day if the subsequent day is unpleasant. Consequently, $$\\mathbb{E}_B[T] = (1 + \\mathbb{E}_G[T]) \\cdot \\dfrac{3}{10} + 1 \\cdot \\dfrac{7}{10} = 1 + \\dfrac{3}{10} \\cdot \\mathbb{E}_G[T]$$. Notice that the distribution for the number of days until an unpleasant day starting from a pleasant day is $$\\text{Geom}\\left(\\dfrac{2}{5}\\right)$$, since there's a $$\\dfrac{2}{5}$$ probability daily of transitioning to an unpleasant day, making $$\\mathbb{E}_G[T] = \\dfrac{5}{2}$$. Hence, $$\\mathbb{E}_B[T] = 1 + \\dfrac{3}{10} \\cdot \\dfrac{5}{2} = \\dfrac{7}{4}$$.",
+  "valid answer": "Valid Answers: $7/4$",
+  "problem tags": [
+    "Conditional Probability",
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "How might you utilize the Law of Total Expectation to account for the first day's outcome?",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "35013729349142338270"
+}

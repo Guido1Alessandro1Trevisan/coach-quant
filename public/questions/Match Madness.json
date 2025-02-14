@@ -1,0 +1,17 @@
+{
+  "problem name": "Match Madness",
+  "problem text": "A single-elimination tournament has 9 competitors. In each stage, if the number of remaining teams is odd, exactly one team is randomly chosen to advance. All other remaining teams are paired randomly, and each match is decided with a 50/50 chance. Determine the probability that two specified teams will end up facing one another at some point in this tournament.",
+  "problem solution": "To establish this probability rigorously, observe that there will be exactly 8 matches in a single-elimination contest of 9 participants (since each team but one must eventually be eliminated). Let $$p$$ be the probability that a specific pair of teams meets. By symmetry, every one of the $$\\binom{9}{2}=36$$ different pairs has the same probability $$p$$ of playing against each other. Moreover, the total expected number of pairwise meetings must equal the total number of matches, which is 8. Therefore, if we sum $$p$$ over all 36 pairs, we obtain $$36\\,p=8$$, which gives $$p=\\dfrac{8}{36}=\\dfrac{2}{9}$$. Thus, the probability that two designated teams will eventually meet in the tournament is $$\\dfrac{2}{9}$$.",
+  "valid answer": "Valid Answers: 2/9",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Each team is equally likely to face any other team. Count the total number of matches and use symmetry.",
+  "problem firm": [
+    "Olympus Finance",
+    "Samurai Capital"
+  ],
+  "question id": "48536808243996407209"
+}

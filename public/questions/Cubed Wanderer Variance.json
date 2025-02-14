@@ -1,0 +1,16 @@
+{
+  "problem name": "Cubed Wanderer Variance",
+  "problem text": "Consider $$ B_t $$ as a standard Brownian Motion. Determine the variance of $$ X_t = \\displaystyle \\int_0^t s \\, dB_s $$ expressed as a function of $$ t $$. The solution will take the form $$ kt^3 $$ for some constant $$ t $$. Identify $$ k $$.",
+  "problem solution": "Here, the integrand is a deterministic function $f(s)$, making the integral have a normal distribution with a mean of $0$ and a variance given by $$ \\displaystyle \\int_0^t (f(s))^2 ds $$. In this scenario, we have $f(s) = s$, thus the variance becomes $$ \\displaystyle \\int_0^t s^2 ds = \\dfrac{t^3}{3} $$. This results in $$ k = \\dfrac{1}{3} $$.",
+  "valid answer": "Valid Answers: $\\frac{1}{3}$",
+  "problem tags": [
+    "Stochastic Calculus",
+    "Pure Math"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Notice that the integrand is a deterministic function $f(s)$, leading to the integral being normally distributed with a mean of $0$ and a variance described by $$ \\displaystyle \\int_0^t (f(s))^2 \\, ds $$.",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "01923438733497818153"
+}

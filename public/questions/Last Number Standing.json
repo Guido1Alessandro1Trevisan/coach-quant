@@ -1,0 +1,16 @@
+{
+  "problem name": "Last Number Standing",
+  "problem text": "Suppose all integers from 1 to 1000 are arranged in a circle in ascending order. Starting at 1, you eliminate 1, skip the following integer, eliminate the next, skip the following once more, and continue in this alternating fashion until only one integer remains. Identify which integer is left at the end.",
+  "problem solution": "We recognize this is a variation of the Josephus problem with step size equal to 2, but with an initial removal of the very first number (1). In the standard Josephus problem with step 2 and n individuals labeled from 1 to n, if the first number removed is 2, the position of the sole survivor, denoted $$J_s(n)$$, is known to be $$J_s(n) = 1 + 2\\bigl(n - 2^{\\lfloor \\log_2(n) \\rfloor}\\bigr).$$ For $$n = 1000,$$ the largest power of 2 not exceeding 1000 is $$2^9 = 512.$$ Hence, $$n - 2^9 = 1000 - 512 = 488,$$ and so in the standard Josephus problem where the second individual is removed first, the winning position is: $$J_s(1000) = 1 + 2\\times 488 = 1 + 976 = 977.$$ However, in this puzzle, the first number removed is 1, not 2. By shifting the labeling, a known result is that the safe seat in the puzzle is exactly one less than the safe seat in the standard formulation (mod 1000). Therefore, the last integer to survive in this particular problem is $$977 - 1 = 976.$$ Formally, if 977 is the sole survivor in the standard arrangement (where 2 is removed first), the shift that makes 1 the initial removal effectively changes the survivor to 976. Hence, the unique integer remaining at the end of the described procedure is 976.",
+  "valid answer": "Valid Answers: $976$",
+  "problem tags": [
+    "Combinatorics",
+    "Josephus Problem"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Observe the largest power of 2 that is no greater than 1000, and recall the standard Josephus formula. Then adjust for the fact that the very first number removed is 1 instead of 2.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "57955346489347004964"
+}

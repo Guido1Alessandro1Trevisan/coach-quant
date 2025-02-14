@@ -1,0 +1,17 @@
+{
+  "problem name": "Power Surprise",
+  "problem text": "Given the function f(x) = x^x, determine its derivative with respect to x.",
+  "problem solution": "To find the derivative of $$x^x$$, note that we can rewrite the function as: $$y = x^x = e^{x\\ln x}.$$ Differentiating both sides with respect to x involves an application of the chain rule. Let $$y = e^{u(x)}$$ where $$u(x) = x\\ln x.$$\\n\\nFirst, compute the derivative of $$u(x) = x\\ln x$$:\\n$$u'(x) = 1 \\cdot \\ln x + x \\cdot \\frac{1}{x} = \\ln x + 1.$$\\n\\nNext, since $$y = e^{u(x)}$$, by the chain rule we get:\\n$$\\frac{dy}{dx} = e^{u(x)} \\cdot u'(x).$$\\n\\nSubstituting back,\\n$$\\frac{dy}{dx} = e^{x\\ln x}\\bigl(\\ln x + 1\\bigr).$$\\n\\nBut $$e^{x\\ln x} = x^x,$$ so:\\n$$\\frac{d}{dx}\\bigl(x^x\\bigr) = x^x\\bigl(\\ln x + 1\\bigr).$$",
+  "valid answer": "Valid Answers: $ x^x(\\ln x + 1 ) $",
+  "problem tags": [
+    "Calculus",
+    "Differentiation"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Express x^x as e^(x ln x) and then apply the chain rule.",
+  "problem firm": [
+    "Cantab Capital",
+    "Jane Street"
+  ],
+  "question id": "55282964923278883957"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Shot Swapery",
+  "problem text": "Two football clubs, labeled A and B, have played exactly two independent matches. In the first match, team A's average shots exceed team B's average shots; the same situation occurs in the second match: team A again has a higher average than team B. Can we conclude that, over both matches considered as a whole, team A maintains a larger average number of shots than team B? If the statement does not hold, please provide an illustrative counterexample.",
+  "problem solution": "We wish to determine if team A's having a higher mean shot count in both individual matches guarantees a higher combined average. Formally, for match 1, team A's mean exceeds team B's mean, and for match 2 as well, team A's mean again exceeds team B's mean. We investigate whether this necessarily implies that team A's two-match overall average surpasses team B's two-match overall average.\\n\\nThe statement is, in general, false. Its failure can be demonstrated using what is known as Simpson's Paradox. The hallmark of this paradox arises when disproportionately large sample sizes (attempts or shots taken) in matches where team A does slightly better are overshadowed by the results of matches with drastically different total shots.\\n\\nHere is a concrete example in terms of shots made versus shots attempted (thus yielding an \"average\" akin to a success rate):\\n\\n1) In match 1:\\n- Team A takes 1 shot and succeeds on 1 (thus, an average of 1 out of 1 = $$1.0$$).\\n- Team B takes 10 shots and succeeds on 9 (an average of 9 out of 10 = $$0.9$$).\\nClearly, team A's average (1.0) exceeds team B's average (0.9).\\n\\n2) In match 2:\\n- Team A takes 50 shots and succeeds on 20 (an average of $$\\frac{20}{50} = 0.4$$).\\n- Team B takes 40 shots and succeeds on 15 (an average of $$\\frac{15}{40} = 0.375$$).\\nOnce again, team A's average (0.4) is greater than team B's average (0.375).\\n\\nCombining the two matches:\\n- Team A's total is $$1 + 20 = 21$$ successes out of $$1 + 50 = 51$$ total shots, giving a combined average of $$\\frac{21}{51} \\approx 0.4118.$$\\n- Team B's total is $$9 + 15 = 24$$ successes out of $$10 + 40 = 50$$ total shots, yielding a combined average of $$\\frac{24}{50} = 0.48.$$\\nThus, overall, team B's combined average ($$0.48$$) exceeds team A's ($$\\approx 0.4118$$) despite the fact that team A led in each separate match. This exemplifies that having a higher average in each of two distinct segments does not necessarily produce a larger overall average when the segments are pooled together.\\n\\nTherefore, it is not correct to conclude that team A's two-match combined average must surpass team B's average. The provided example demonstrates precisely how separate match averages can mislead us when we aggregate data.",
+  "valid answer": "Valid conclusion: No, it is not necessarily true. A suitable counterexample (such as above) disproves it.",
+  "problem tags": [
+    "Statistics",
+    "Paradox"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Try examining the relative proportions or totals in each match separately, then compare to the combined total rates.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "44457961255695117473"
+}

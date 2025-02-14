@@ -1,0 +1,17 @@
+{
+  "problem name": "Duplicated Data Mystery",
+  "problem text": "Imagine conducting OLS regression on a dataset and achieving an $R^2$ of $0.56$. If you were to perform linear regression again on a dataset where each original data point is repeated, what would the $R^2$ be? If it's indeterminable, input $-1$.",
+  "problem solution": "Remember that $R^2 = 1 - \\dfrac{SSE}{SST}$. With the data doubled by replicating each point, the new $SSE$ is exactly twice its original value since each data point is duplicated and the mean remains constant. Similarly, $SST$ also doubles for the same reason. Consequently, the fraction $\\dfrac{SSE}{SST}$ remains constant, indicating that $R^2$ remains the same as initially.",
+  "valid answer": "Valid Answers: $0.56$",
+  "problem tags": [
+    "Linear Regression",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Remember that $R^2 = 1 - \\dfrac{SSE}{SST}$. Consider how $SSE$ changes and how $SST$ changes.",
+  "problem firm": [
+    "Squarepoint Capital",
+    "Two Sigma"
+  ],
+  "question id": "47252582853994887631"
+}

@@ -1,0 +1,15 @@
+{
+  "problem name": "Big Mac Math",
+  "problem text": "In the year $2000$, the price of each Big Mac was $89$ cents. Define $x$ as the total number of Big Macs you are able to purchase with a $20$ bill and $y$ as the leftover change in cents. Calculate $xy$. Disregard taxes or any additional costs.",
+  "problem solution": "When converted to cents, we find that $89 \\cdot 20 = (89 \\cdot 2) \\cdot 10 = 1780$, hence $1780 + 89 \\cdot 2 = 1958 = 22 \\cdot 89$ is the maximum you can spend without exceeding $20$. Therefore, $x = 22$ and $y = 2000 - 1958 = 42$, giving $xy = 22 \\cdot 42 = (32 + 10)(32 - 10) = 32^2 - 10^2 = 924$.",
+  "valid answer": "Valid Answers: $924$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "First convert to cents and then identify a simple multiple that fits.",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "70632712212706840068"
+}

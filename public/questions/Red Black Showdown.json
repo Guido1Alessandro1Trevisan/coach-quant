@@ -1,0 +1,16 @@
+{
+  "problem name": "Red Black Showdown",
+  "problem text": "A standard 52-card deck is completely shuffled. Cards are removed from the deck in pairs. If the 2 cards in a pair are both red, then you score 1 pair. If the 2 cards in a pair are both black, then your opponent scores 1 pair. If the pair consists of 1 red card and 1 black card, that pair is simply discarded. After all 52 cards have been used, if your number of pairs exceeds that of your opponent, you receive 1 dollar; if your opponent has more pairs, they get 1 dollar. Determine the expected value of this game in the long run.",
+  "problem solution": "Proof Sketch: Let there be 26 red cards and 26 black cards, randomly ordered, forming 26 pairs. Define the random variables $$X$$ to be the number of red-red pairs and $$Y$$ the number of black-black pairs. Because the deck is uniformly shuffled, all permutations are equally likely. By symmetry, the distribution of red cards is identical to that of black cards, implying $$\\mathbb{E}[X] = \\mathbb{E}[Y].$$ Consequently, the probability that you obtain more red pairs than your opponent has black pairs equals the probability that your opponent obtains more black pairs than you have red pairs. Therefore, your expected profit (the difference in payoff considering you gain 1 dollar if $$X>Y$$ and lose 1 dollar if $$Y>X$$) is $$0$$. Thus, the long-term value of this game is $$0$$.",
+  "valid answer": "Valid Answers: 0",
+  "problem tags": [
+    "Probability",
+    "Card Games"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the symmetry between red and black cards when shuffled.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "11820072930266717684"
+}

@@ -1,0 +1,20 @@
+{
+  "problem name": "Random Max Quest",
+  "problem text": "Consider $X_1, X_2, \\dots \\sim \\text{Unif}(0,1)$ as independent and identically distributed. Let $N$ represent the smallest index $n$ such that $X_n = \\text{max}\\{X_1, \\dots, X_n\\}$. Determine $\\mathbb{E}[N]$. The solution will take the form $a + be$, where $a$ and $b$ are integers. Compute $a + b$.",
+  "problem solution": "We utilize the tail-sum formula for non-negative integer-valued random variables $$$\\mathbb{E}[N] = \\displaystyle \\sum_{n=0}^{\\infty} \\mathbb{P}[N > n]$$$. It is obvious that $$$\\mathbb{P}[N > 0] = \\mathbb{P}[N > 1] = 1$$$, as at least $$2$$ variables are necessary to find one that is not the maximum. Assume that $$n \\geq 2$$. The event $$\\{N > n\\}$$ implies that $$$X_1 < X_2 < \\dots < X_n$$$, which happens with probability $$$\\dfrac{1}{n!}$$$, since it is a specific permutation of the indices out of $$n!$$ possible permutations. Hence, $$$\\mathbb{P}[N > n] = \\dfrac{1}{n!}$$$. Notably, this also applies for $$n = 0,1$$, which is convenient. Therefore, summing, $$$\\mathbb{E}[N] = \\displaystyle \\sum_{n=0}^{\\infty} \\dfrac{1}{n!} = e$$$. Thus, the solution is $$0 + 1 = 1$$.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Expected Value",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider using the tail-sum formula for non-negative integer-valued random variables $ \\mathbb{E}[N] = \\displaystyle \\sum_{n=0}^{\\infty} \\mathbb{P}[N > n] $. How is the event $\\{N > n\\}$ related to the $X_i$ random variables?",
+  "problem firm": [
+    "Akuna Capital",
+    "Five Rings",
+    "Goldman Sachs",
+    "Hudson River Trading"
+  ],
+  "question id": "04277714453253747235"
+}

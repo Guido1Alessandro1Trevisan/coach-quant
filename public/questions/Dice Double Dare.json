@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Double Dare",
+  "problem text": "You participate in a game where you can wager on any number from $1$ to $6$. Three dice are rolled afterward. If the chosen number shows up on one, two, or three of the dice, you win $1$, $2$, or $3$ times your initial wager plus your wager back; otherwise, you forfeit your bet. What is the expected return from this game if you wager $20$?",
+  "problem solution": "No solution found",
+  "valid answer": "Valid Answers: $-\\frac{85}{54}$",
+  "problem tags": [
+    "Games",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "No hint found",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "12811402278664576447"
+}

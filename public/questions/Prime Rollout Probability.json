@@ -1,0 +1,16 @@
+{
+  "problem name": "Prime Rollout Probability",
+  "problem text": "When three fair six-sided dice are rolled, what is the probability that the product of their top faces turns out to be a prime number?",
+  "problem solution": "First, observe that the product of three integers is prime if and only if exactly one of the integers is that prime and the other two are 1. For three six-sided dice, the prime faces are 2, 3, and 5. Therefore, to obtain a prime product, we must pick one die to show one of these prime values while the remaining two dice both show 1. There are 3 ways to choose which die shows the prime result, and there are 3 possible primes for that chosen die (namely 2, 3, or 5). Thus, we have $3 \\times 3 = 9$ successful outcomes for the three dice. Since each die can take any of the 6 faces independently, the total number of equally likely outcomes is $6^3 = 216$. Hence, the probability is $\\dfrac{9}{216} = \\dfrac{1}{24}.$",
+  "valid answer": "Valid Answers: $\\frac{1}{24}$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Recall that a prime number has no other factors besides 1 and itself.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "02634488776445931676"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Prime Playoff",
+  "problem text": "Consider a scenario where an integer is chosen randomly from the set of numbers between $2$ and $10$, inclusive. You gain $n$ if the number is a prime and lose $\\frac{n}{2}$ if it is not (where $n$ represents the selected number). How much would you be willing to pay to participate in this game? If you choose not to participate, enter $0$.",
+  "problem solution": "We categorize the possibilities into prime and non-prime numbers. Prime numbers: $2, 3, 5, 7$ Non-prime numbers: $4, 6, 8, 9, 10$ The expected value (EV) for this game is calculated as $(2+3+5+7-2-3-4-4.5-5)/9 = -\\frac{1}{6}$. Given that the expected value is negative, the answer is $0$.",
+  "valid answer": "Valid Answers: $0$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "List all the possible outcomes and identify whether they are prime or non-prime.",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "71914936806253195210"
+}

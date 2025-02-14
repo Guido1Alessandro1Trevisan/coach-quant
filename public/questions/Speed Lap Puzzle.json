@@ -1,0 +1,16 @@
+{
+  "problem name": "Speed Lap Puzzle",
+  "problem text": "Imagine a vehicle travels two successive laps on a track: the first lap at 100 mph and the second lap at 200 mph. What is the combined average speed across both laps?",
+  "problem solution": "We calculate average speed by dividing total distance by total time. Let each lap be a distance d. The time for the first lap is $$\\dfrac{d}{100}$$ hours, and for the second lap is $$\\dfrac{d}{200}$$ hours. Thus, the total time is $$\\dfrac{d}{100} + \\dfrac{d}{200} = \\dfrac{3d}{200}$$ hours. Since the total distance is $$2d$$, the average speed is $$\\dfrac{2d}{\\tfrac{3d}{200}} = \\dfrac{2d}{1} \\times \\dfrac{200}{3d} = \\dfrac{400}{3}\\text{ mph} \\approx 133.33\\text{ mph}$$.",
+  "valid answer": "Valid Answers: 400/3 mph or 133.33 mph",
+  "problem tags": [
+    "Rates",
+    "Algebra"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Compute the durations of each lap and sum them, then divide the total distance by that total time.",
+  "problem firm": [
+    "Belvedere Trading"
+  ],
+  "question id": "18933875567663118016"
+}

@@ -1,0 +1,17 @@
+{
+  "problem name": "Cube Quest",
+  "problem text": "Consider a function $f(x)$ that meets the differential equation $f(x) - f'(x) = (x+1)^3$ along with the initial condition $f(0) = 16$. Determine $f(9)$.",
+  "problem solution": "Observe that the given differential equation suggests $f'(x) - f''(x) = 3(x+1)^2$, $f''(x) - f^{(3)}(x) = 6(x+1)$, $f^{(3)}(x) - f^{(4)}(x) = 6$, and for $k \\geq 4$, $f^{(k)}(x) - f^{(k+1)}(x) = 0$. The last equation indicates $f^{(4)}(x) = 0$ for every $x$. Thus, we need to substitute $x$ into the equations in reverse. Specifically, $f^{(3)}(9) = 6$. Following this, $f''(9) = 6 + 6(9+1) = 66$. Next, $f'(9) = 66 + 3(9+1)^2 = 366$. Finally, $f(9) = 366 + (9+1)^3 = 1366$.",
+  "valid answer": "Valid Answers: $1366$",
+  "problem tags": [
+    "Pure Math",
+    "Linear Algebra",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Differentiate the provided differential equation. Observe the results when you reach $f^{(4)}(x) - f^{(5)}(x)$.",
+  "problem firm": [
+    "Worldquant"
+  ],
+  "question id": "55011648271697630381"
+}

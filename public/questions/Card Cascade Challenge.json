@@ -1,0 +1,16 @@
+{
+  "problem name": "Card Cascade Challenge",
+  "problem text": "A deck consists of $83$ cards, each uniquely numbered from $1$ to $83$. After shuffling the deck randomly, the dealer draws the top $5$ cards. If these $5$ cards are either in a strictly increasing order or strictly decreasing order, the payout is \\$ $x$. Otherwise, you win nothing. If the entry fee is \\$ $1$ to participate in this scenario, what should the value of $x$ be for the game to be equitable?",
+  "problem solution": "The significance of the number $83$ is negligible, as we only concern ourselves with the top $5$ drawn cards. Each of these $5$ cards has a distinct value, leading to $5!$ different arrangements. Among these $5!$ arrangements, exactly two represent either a strictly increasing or strictly decreasing sequence. Thus, the likelihood of this occurrence is $\\dfrac{2}{5!} = \\dfrac{1}{60}$. Hence, the calculated expected value of the game is $(x-1) \\cdot \\dfrac{1}{60} - \\dfrac{59}{60}$, indicating that $x$ must be $60$ for the game to be fair.",
+  "valid answer": "Valid Answers: $60$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about the number of different sequences possible for the initial $5$ cards.",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "39883779646692943125"
+}

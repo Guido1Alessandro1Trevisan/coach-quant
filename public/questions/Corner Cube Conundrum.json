@@ -1,0 +1,17 @@
+{
+  "problem name": "Corner Cube Conundrum",
+  "problem text": "The surfaces of a $3 \\times 3 \\times 3$ cube (initially white) are colored red and then divided into $27$ $1 \\times 1 \\times 1$ miniature cubes. One small cube is chosen at random and is rolled. The face that lands face-up is red. What is the probability that the chosen cube was a corner cube?",
+  "problem solution": "We restrict our sample space to cubes with at least one red face. There are $54$ total red faces on the cube, as each face of the large cube has an area of $9$. There are $8$ corner cubes, each having $3$ red faces. These account for $24$ of the $54$ total red faces. Thus, the probability is $\\dfrac{24}{54} = \\dfrac{4}{9}$.",
+  "valid answer": "Valid Answers: $4/9$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "We restrict our sample space to cubes with at least one red face. How many red faces are there in total?",
+  "problem firm": [
+    "Citadel",
+    "Jane Street"
+  ],
+  "question id": "48703453711806195480"
+}

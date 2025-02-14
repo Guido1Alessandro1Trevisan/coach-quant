@@ -1,0 +1,17 @@
+{
+  "problem name": "Even Roll Whispers",
+  "problem text": "Three unbiased $6$-sided dice are tossed. Given that at least $2$ of the dice show an even number, find the probability that their total is at most $7$.",
+  "problem solution": "First, identify how many ways there are for at least $2$ of the dice to show an even number. Since the dice are unbiased, we can match each combination $(x,y,z)$ that satisfies our condition with $(7-x, 7-y, 7-z)$. This forms a symmetry between permutations with at least $2$ even numbers and those with fewer than $2$ even numbers. Hence, half of all potential outcomes will have at least $2$ even numbers. Since there are $6^3 = 216$ total possibilities, $\\dfrac{1}{2} \\cdot 216 = 108$ of them have at least $2$ even numbers. We can analyze all permutations with at least $2$ even numbers and a total of at most $7$ as $(1,2,4), (2,2,3), (2,2,1),$ or $(2,2,2)$. There are $3!$, $3$, $3$, and $1$ permutations for each sequence respectively, so this implies there are $6 + 3 + 3 + 1 = 13$ permutations that satisfy our criteria. Thus, our concluding probability is $\\dfrac{13}{108}$.",
+  "valid answer": "Valid Answers: $13/108$",
+  "problem tags": [
+    "Combinatorics",
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Determine the number of outcomes with at least $2$ even numbers. Among those, how many have a total of at most $7$. Compute that probability.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "37496226713415902482"
+}

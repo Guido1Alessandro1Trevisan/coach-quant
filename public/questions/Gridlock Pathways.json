@@ -1,0 +1,16 @@
+{
+  "problem name": "Gridlock Pathways",
+  "problem text": "A robotic device is initially located at the top-left square of a 5×5 grid. It may only move to the right or downward, and there is one square on the grid that is blacked out and cannot be traversed. What is the total number of distinct ways in which the robot can reach the bottom-right square if it is not permitted to pass through the blacked out square?",
+  "problem solution": "Let us assume the blacked out square is located in the center of the 5×5 grid, i.e., the square in row 3 and column 3 if we index rows and columns starting at 1 in the top-left corner. Our first step is to determine how many ways exist to travel from the top-left corner to the bottom-right corner with no restrictions. Since the grid has 5 rows and 5 columns of squares, a legal path must consist of exactly 4 moves to the right and 4 moves down in some order, for a total of 8 moves. The number of ways to arrange these 8 moves is given by the binomial coefficient $$\\binom{8}{4}$$, which evaluates to 70. Next, we count how many of these 70 paths pass through the blacked out middle square. To arrive at the blacked out square at (3,3), the robot must complete exactly 2 moves right and 2 moves down (in any order). The number of ways to arrange these 4 moves is $$\\binom{4}{2} = 6$$. From the blacked out square to the bottom-right corner, the robot must again make 2 moves right and 2 moves down in some order, giving another $$\\binom{4}{2} = 6$$ ways. Therefore, there are $$6 \\times 6 = 36$$ paths that would pass through the blacked out square. These must be excluded. Subtracting, we obtain the total number of valid paths as: $$70 - 36 = 34.$$ Thus, the number of permissible routes from the top-left corner to the bottom-right corner, avoiding this blacked out square, is $$34.$$",
+  "valid answer": "Valid Answers: 34",
+  "problem tags": [
+    "Combinatorics",
+    "Path Counting"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Compute the total number of routes ignoring the blacked out square, then subtract those that pass through it.",
+  "problem firm": [
+    "DRW"
+  ],
+  "question id": "05512945631385179548"
+}

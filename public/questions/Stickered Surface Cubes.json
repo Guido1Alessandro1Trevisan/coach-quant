@@ -1,0 +1,16 @@
+{
+  "problem name": "Stickered Surface Cubes",
+  "problem text": "A Rubik's Cube with dimensions $4 \\times 4 \\times 4$ consists of smaller $1 \\times 1 \\times 1$ cubes. The outermost layer of this cube has stickers to indicate its colors. How many of these smaller cubes have at least one sticker attached?",
+  "problem solution": "The Rubik's Cube is made up of $4^3$ smaller cubes. Among these, the central $2^3$ cubes, which are internal and not visible, lack stickers. Therefore, the number of smaller cubes that possess stickers is: $4^3-2^3=56$",
+  "valid answer": "Valid Answers: $56$",
+  "problem tags": [
+    "Combinatorics",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Rather than determining the number of smaller cubes with stickers, it might be simpler to find the number of cubes that are $unseen$ and hence lack stickers.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "48560635477776020142"
+}

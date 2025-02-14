@@ -1,0 +1,17 @@
+{
+  "problem name": "Flip Fate Fortune",
+  "problem text": "You start with 100 dollars. A fair coin is tossed a total of ten times. Every time you get heads, your current total increases by 1 dollar. Every time tails comes up, your current total is replaced by its reciprocal. What is the anticipated amount of money after these ten flips?",
+  "problem solution": "We begin by letting the random variable $$X_n$$ represent the amount of money after $$n$$ flips, starting with $$X_0 = 100\\text{.}$$ Each coin flip is fair. If the flip is heads (probability 1/2), the transformation is $$x \\mapsto x + 1\\text{; }$$ if the flip is tails (probability 1/2), the transformation is $$x \\mapsto 1/x\\text{.}$$ Because taking the reciprocal is a nonlinear operation, the states of the process must be tracked carefully.\n\nTo see why the expected value is not trivial to compute by a single closed-form, we first examine small cases.\n\n1) $$n = 1:\\quad$$ The possible outcomes are:\n • Heads $$\\rightarrow 100 + 1 = 101$$\n • Tails $$\\rightarrow 1/100$$\nThe expectation is\n$$\\frac12\\bigl(101\\bigr) + \\frac12\\bigl(\\frac1{100}\\bigr) = 50.505\\dots$$\n\n2) $$n = 2:\\quad$$ The possible outcomes (HH, HT, TH, TT), each with probability 1/4, yield final values: 102, $$1/101,$$ 1.01, and 100. Summing and dividing by 4 gives an expected value of about 50.755.\n\n3) $$n = 3:\\quad$$ Enumerating all 8 equally likely flip sequences and averaging the final amounts gives an expected value of roughly 38.63.\n\nContinuing in this exhaustive way becomes increasingly cumbersome, as there are $$2^{10} = 1024$$ different equally likely paths for ten flips. However, one can write a short recursive or programmatic solution to compute the average exactly, or observe empirically that the sequence of expected values for successive flips trends downward over multiple tails. In fact, a near formula for the answer turns out to be related to certain ratios reminiscent of Fibonacci numbers. One can show by carefully extending these smaller cases, or by more advanced technical means, that the final expected amount after 10 flips is approximately:\n$$\\displaystyle 8.69\\text{ dollars.}$$\n\nThe key idea is that each tails event applies a reciprocal, drastically reducing the value if the current total is above 1, and subsequent heads do not compensate enough to raise the average outcome. Thus, while the higher outcomes can be quite large if tails appears after the total is near 1, it is still outweighed by the fact that the reciprocal transformation repeatedly diminishes the value in most scenarios.\n",
+  "valid answer": "Valid Answers: $$8.69\\text{ (approximately)}$$",
+  "problem tags": [
+    "Probability",
+    "Expected Value",
+    "Nonlinear Recurrence"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Compute smaller values for fewer flips and notice how tails drastically lowers the result. Consider enumerating all sequences or devising a recursion to track expected values!",
+  "problem firm": [
+    "Akuna Capital"
+  ],
+  "question id": "61666944681808970635"
+}

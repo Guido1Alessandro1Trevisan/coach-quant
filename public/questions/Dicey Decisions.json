@@ -1,0 +1,26 @@
+{
+  "problem name": "Dicey Decisions",
+  "problem text": "A gambling establishment presents you with a game involving a $6$-sided die, where you receive payment equivalent to the number rolled. Initially, you roll the die once. If satisfied with the number, you may collect your payout. Otherwise, you have the option to roll a second time and accept the result of this roll. What is the fair value of this game?",
+  "problem solution": "The expected outcome of rolling a fair die is the mean of its faces, which is $\\frac{1+2+3+4+5+6}{6} = 3.5$. Consequently, you should opt to roll again only if your initial roll is less than $3.5$, since a second roll generally yields a higher average. Thus, you will retain your first roll if you get a $4$, $5$, or $6$, occurring $\\frac{1}{2}$ of the time with an expected result of $5$. Therefore, the fair value of this game is: $\\frac{1}{2} \\times 5 + \\frac{1}{2} \\times 3.5 = 4.25$.",
+  "valid answer": "Valid Answers: $4.25$",
+  "problem tags": [
+    "Expected Value",
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the expected value of the final roll when deciding whether to roll again.",
+  "problem firm": [
+    "Akuna Capital",
+    "Belvedere Trading",
+    "Citadel",
+    "Drw",
+    "Goldman Sachs",
+    "Hudson River Trading",
+    "Jane Street",
+    "Optiver",
+    "Sig",
+    "Transmarket Group"
+  ],
+  "question id": "95903656326318620822"
+}

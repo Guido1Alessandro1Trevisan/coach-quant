@@ -1,0 +1,16 @@
+{
+  "problem name": "Double Trouble Regression",
+  "problem text": "Imagine performing linear regression on a dataset, resulting in the coefficients $\\hat{y}_i = \\hat{\\beta}_0 + \\hat{\\beta}_1 x_i$. Let $t_0$ denote the $t-$statistic derived when testing the null hypothesis $H_0: \\beta_1 = 0$ versus the alternative hypothesis $H_A: \\beta_1 eq 0$. Next, suppose we duplicate each data point's value and conduct linear regression on this altered dataset. Define $\\hat{y}_i= \\hat{\\beta}_0' + \\hat{\\beta}_1' x_i$ as the updated coefficients. If $t_1$ represents the $t-$statistic when testing the null hypothesis $H_1: \\beta_1' = 0$ against $H_A: \\beta_1' eq 0$, determine $\\dfrac{t_1^2}{t_0^2}$. If this cannot be computed, respond with $-1$.",
+  "problem solution": "Having resolved Double Data Trouble V, it is established that the variance of our estimation remains constant, resulting in an unchanged standard error. Given that $t_0 = \\dfrac{\\hat{\\beta}_1}{s\\left\\{\\hat{\\beta}_1\\right\\}}$, we recognize from Double Data Trouble I that the estimate $\\hat{\\beta}_1'$ remains unchanged, and the standard error in the denominator is the same for $\\hat{\\beta}_1'$. Consequently, $t_1 = t_0$, implying $t_1^2 = t_0^2$. Hence, $\\dfrac{t_1^2}{t_0^2} = 1$.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Linear Regression",
+    "Statistics"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Recall from Double Data Trouble V that the variance of our estimator is reduced by $\\dfrac{1}{4}$, leading to a standard error reduction by $\\dfrac{1}{2}$.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "47565495596637841320"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Lilypad Countdown",
+  "problem text": "A pond begins with a single lilypad at time $t = 0$. The quantity of lilypads on the pond doubles every minute: 2 at $t = 1$, 4 at $t = 2$, 8 at $t = 3$, and so forth. By $t = 60$, the entire pond is covered. Determine the fraction of the pond that remains uncovered at $t = 58$.",
+  "problem solution": "We know the pond is fully covered at $t = 60$. Therefore at $t = 59$, the pond must be half covered, i.e. $\\frac{1}{2}$ of the pond is covered. Because the number of lilypads doubles every minute, at $t = 58$ the pond will be half of that coverage, or $\\frac{1}{4}$ covered. Consequently, $1 - \\frac{1}{4} = \\frac{3}{4}$ of the pond's surface is visible at $t = 58$. Formally, if $C_{60} = 1$ represents full coverage at time $t = 60$, then $C_{59} = \\frac{1}{2}$ and $C_{58} = \\frac{1}{4}$. Hence, $1 - C_{58} = \\frac{3}{4}$ remains uncovered at time $t = 58$.",
+  "valid answer": "Valid Answers: $\\frac{3}{4}$ or 75%",
+  "problem tags": [
+    "Exponential Growth",
+    "Doubling Puzzle"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Trace the coverage backwards from time $t = 60$.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "16939555247980043192"
+}

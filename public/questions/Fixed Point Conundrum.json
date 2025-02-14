@@ -1,0 +1,17 @@
+{
+  "problem name": "Fixed Point Conundrum",
+  "problem text": "Consider $F_n$ as the count of fixed points of a random function $f: S_n \\rightarrow S_n$, where $S_n = \\{1,2,\\dots,n\\}$. Determine $\\lim_{n \\rightarrow \\infty}\\mathbb{P}[F_n = 5]$. The solution is expressed as $\\dfrac{c}{e}$, with $e$ representing Euler's constant and $c$ as a constant. Calculate $c$.",
+  "problem solution": "The likelihood of each element being a fixed point is independent, given that $f$ is selected from the set of all functions. Since there are $n$ elements in $S_n$, each with a probability of $1/n$ of being a fixed point (since precisely one of the $n$ elements ensures it is fixed), it follows that $F_n \\sim \\text{Binom}(n,1/n)$. Using the Poisson Limit Theorem, we infer $F_n \\implies \\text{Poisson}(1)$, thus $\\mathbb{P}[F_n = 5] = \\dfrac{1}{5!}e^{-5}$, leading to the result of $1/120$.",
+  "valid answer": "Valid Answers: $1/120$",
+  "problem tags": [
+    "Discrete Random Variables",
+    "Limit Theorems",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "The probability that each individual value is a fixed point is independent, since $f$ can be selected from all possible functions.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "53450547306249600845"
+}

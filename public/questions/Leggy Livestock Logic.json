@@ -1,0 +1,15 @@
+{
+  "problem name": "Leggy Livestock Logic",
+  "problem text": "A collection of chickens (each with $2$ legs), cows (each with $4$ legs), and spiders (each with $8$ legs) is gathered together. Altogether, they have $440$ legs. There are twice as many chickens as there are cows and twice as many spiders as there are chickens. How many spiders are present?",
+  "problem solution": "Define $x$ as the quantity of cows. Thus, $2x$ represents the number of chickens while $2(2x) = 4x$ represents the number of spiders. Consequently, with $x$ cows, the total number of legs is $4x + 2(2x) + 8(4x) = 40x$. Therefore, $40x = 440$, leading to $x = 11$. Hence, the count of spiders is $4 \\cdot 11 = 44$.",
+  "valid answer": "Valid Answers: $44$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $x$ as the quantity of cows. Thus, $2x$ represents the number of chickens and $2(2x) = 4x$ represents the number of spiders.",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "44678627534965357025"
+}

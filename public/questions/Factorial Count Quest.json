@@ -1,0 +1,19 @@
+{
+  "problem name": "Factorial Count Quest",
+  "problem text": "Determine the number of digits present in $100!$.",
+  "problem solution": "Observe that $\\log_{10}(100) = 2$. To find the digit count, add $1$. We need to compute $\\log_{10}(100!) = \\log(1) + \\log(2) + \\dots + \\log(100)$ and then include $1$. This can be approximated by evaluating the integral of $\\log_{10}(x)$ from $1$ to $100$. Integrating $\\int_{1}^{100} \\log(x) \\ dx \\approx 157$. Adding $1$, we obtain $158$.",
+  "valid answer": "Valid Answers: $158$",
+  "problem tags": [
+    "Calculus",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Which function helps determine the digit count in a number? Consider $100$, which consists of $3$ digits.",
+  "problem firm": [
+    "Drw",
+    "Five Rings",
+    "Sig",
+    "Worldquant"
+  ],
+  "question id": "59986763021386993302"
+}

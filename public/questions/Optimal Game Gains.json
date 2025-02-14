@@ -1,0 +1,17 @@
+{
+  "problem name": "Optimal Game Gains",
+  "problem text": "Alice and Bob engage in a game: Alice picks a uniformly random integer from $1$ to $100$, inclusive. Bob can choose any number he desires between $1$ and $100$, inclusive. The player with the higher number pays the other player the value of the smaller number. For example, if Alice chooses $70$ and Bob chooses $50$, Alice pays Bob $50$. If both choose the same number, no payment is made. Assuming Bob plays optimally, what is his expected winnings?",
+  "problem solution": "Define $Z_x$ as Bob's profit if he opts for the number $x$. Let $Y$ be the randomly chosen number. The situation where $Y = x$ can be ignored as the payoff is $0$ for both parties. According to the Law of Total Expectation, we find $$ \\mathbb{E}[Z_x] = \\mathbb{E}[Z_x \\mid x > Y] \\mathbb{P}[x > Y] + \\mathbb{E}[Z_x \\mid x < Y] \\mathbb{P}[x < Y]$$ It follows that $\\mathbb{P}[x > Y] = (x - 1) / 100$ and $\\mathbb{P}[x < Y] = (100 - x) / 100$, since there are $x - 1$ numbers in $\\{1, \\dots, x - 1\\}$ and $100 - x$ numbers in $\\{x + 1, \\dots, 100\\}$. To determine $\\mathbb{E}[Z_x \\mid x > Y]$, observe that when $Y < x$, it is uniformly distributed over $\\{1, \\dots, x - 1\\}$, so the expected payout by Bob is $x / 2$. To find $\\mathbb{E}[Z_x \\mid x < Y]$, note that Bob receives his chosen number as the payment, which is $x$. Bringing all these together, $ \\mathbb{E}[Z_x] = \\left(\\frac{x - 1}{100}\\right)\\left(-\\frac{x}{2}\\right) + \\left(\\frac{100 - x}{100} \\right) (x) \\ = \\frac{201x - 3x^2}{200} . $ The derivative of this expression is $\\dfrac{1}{200}\\left(201 - 6x\\right)$, and this derivative equals $0$ exactly when $x^* = \\dfrac{201}{6} = \\dfrac{67}{2}$. As the parabola is symmetric about its axis of symmetry, located at the $x$-value of the maximum ($33.5$ here), we deduce that guessing $33$ and $34$ yields identical payouts. Specifically, $\\mathbb{E}[Z_{33}] = \\mathbb{E}[Z_{34}] = \\dfrac{1683}{100}$.",
+  "valid answer": "Valid Answers: $16.83$",
+  "problem tags": [
+    "Games",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Define $Z_x$ as Bob's profit if he opts for the number $x$. Let $Y$ be the randomly chosen number. The situation where $Y = x$ can be ignored as the payoff is $0$ for both parties. According to the Law of Total Expectation, we find $$ \\mathbb{E}[Z_x] = \\mathbb{E}[Z_x \\mid x > Y] \\mathbb{P}[x > Y] + \\mathbb{E}[Z_x \\mid x < Y] \\mathbb{P}[x < Y] $$ Find the maximum of this function.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "33657483193086275711"
+}

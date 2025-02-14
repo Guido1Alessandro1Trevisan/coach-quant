@@ -1,0 +1,20 @@
+{
+  "problem name": "Heads Wins",
+  "problem text": "Contestants $1$ and $2$ start with $1$ and $2$ respectively. A coin is tossed, with heads appearing with a chance of $\\dfrac{2}{3}$ on each flip. If it lands on heads, Player $2$ gives $1$ to Player $1$. Otherwise, Player $1$ gives $1$ to Player $2$. Determine the probability that Player $2$ runs out of funds first, meaning Player $1$ prevails.",
+  "problem solution": "Define $p$ as the likelihood that player $1$ is victorious. If the initial flip results in tails, player $1$ immediately loses. If the sequence $HT$ occurs, we return to the initial conditions, and player $1$ has a chance $p$ of winning. This sequence happens with probability $\\dfrac{2}{3} \\cdot \\dfrac{1}{3} = \\dfrac{2}{9}$ due to the independence of the coin tosses. If the sequence $HH$ occurs, player $1$ wins outright. This happens with a probability of $\\dfrac{2}{3} \\cdot \\dfrac{2}{3} = \\dfrac{4}{9}$. Hence, by the Law of Total Probability, $p = \\dfrac{2}{9}p + \\dfrac{4}{9}$. Solving this equation for $p$ gives $p = \\dfrac{4}{7}$.",
+  "valid answer": "Valid Answers: $4/7$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Let $p$ represent the probability of player $1$ winning. Analyze the outcomes for the two coin flip sequences $TT, TH, HT, HH$.",
+  "problem firm": [
+    "Citadel",
+    "Old Mission",
+    "Optiver",
+    "Sig",
+    "Squarepoint Capital"
+  ],
+  "question id": "37268052527861578589"
+}

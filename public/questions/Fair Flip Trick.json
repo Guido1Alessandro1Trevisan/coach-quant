@@ -1,0 +1,16 @@
+{
+  "problem name": "Fair Flip Trick",
+  "problem text": "Suppose you have a biased coin that produces heads with some unknown probability p. Describe a procedure to generate equally likely outcomes (0 and 1) solely from repeated flips of this coin.",
+  "problem solution": "We present a classical approach attributed to von Neumann. First, define $$p = P(\\text{heads})$$ and $$1 - p = P(\\text{tails})$$. We will create an unbiased bit from every pair of coin flips. Consider two consecutive flips of the biased coin: the probability of obtaining the sequence HT is $$p(1 - p)$$, and the probability of obtaining TH is also $$p(1 - p)$$. These two events occur with the same probability. By contrast, the probabilities of HH and TT are $$p^2$$ and $$(1 - p)^2$$, respectively, which, in general, do not match each other. Hence, the key observation is that HT and TH have the same probability, so we can assign HT = 1 and TH = 0. If we observe HH or TT, we discard both flips and sample two new flips, repeating until one of the two usable sequences (HT or TH) appears. This process therefore yields a fair bit (0 or 1) from each acceptable pair of flips. By concatenating many such fair bits, we generate an unbiased (uniform) distribution of bit strings. In a formal proof, we note that $$P(\\text{HT}) = p(1 - p) = P(\\text{TH})$$, forcing these two events to be equally likely, while discarding HH and TT removes any residual bias. Thus, as many times as we observe HH or TT, we simply ignore those results and continue, ensuring that every final accepted pair corresponds to an unbiased selection between HT and TH. This method is guaranteed to succeed with positive probability, as $$p(1 - p) > 0$$ for any coin with $$0 < p < 1$$. Consequently, repeated application of this procedure yields independent and identically distributed uniform bits, achieving the transformation from a biased coin to an unbiased distribution.",
+  "valid answer": "A valid procedure is to group flips in pairs and output 0 if the outcome is TH, 1 if the outcome is HT, and discard HH or TT, restarting until an acceptable pair occurs.",
+  "problem tags": [
+    "Probability",
+    "Algorithms"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Group your coin flips in pairs and only accept certain outcomes to remove the inherent bias.",
+  "problem firm": [
+    "Morgan Stanley"
+  ],
+  "question id": "03441005862425494867"
+}

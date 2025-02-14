@@ -1,0 +1,16 @@
+{
+  "problem name": "Door Dilemma",
+  "problem text": "You are chosen to participate in a contest show. Three doors are presented, where $1$ door hides a car and the other $2$ conceal goats. You opt for Door 1. A spectator, unaware of the contents behind the doors, picks Door 3 and unveils a goat. The host provides you with a choice: stick with your initial door or switch to the remaining closed door. What is the likelihood of obtaining the car if you decide to switch?",
+  "problem solution": "It is important to remember that a frequentist approach cannot be applied here, since the spectator would reveal the car $\\frac{1}{3}$ of the time over numerous trials, which is not applicable in this situation. Rather, an arbitrary door was opened by the spectator, revealing a goat. This action removes one possibility from the sample space. Therefore, the chance of winning the car by switching is $\\frac{1}{2}$.",
+  "valid answer": "Valid Answers: [ $20/\\text{mo}$ billed annually to Invest in your future today, $30/\\text{mo}$ billed monthly to try it out and see if it's worth it ]",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "After the spectator reveals a goat, what is the new size of the sample space, and how does this help in calculating the probability of winning the car by switching?",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "91017092528078479353"
+}

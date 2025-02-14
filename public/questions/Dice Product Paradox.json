@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Product Paradox",
+  "problem text": "Yungeun throws $9$ fair dice at once. Determine the likelihood that the product of the $9$ outcomes is a multiple of $4$.",
+  "problem solution": "The likelihood that the product is a multiple of 4 is $1$ minus the likelihood that the product is a multiple of $2$ (scenario $1$) or is entirely odd (scenario $2$). For scenario $1$ to happen, there must be precisely $1$ outcome divisible by $2$, with the rest being odd. This has a likelihood of $\\mathbb{P}(\\text{scenario 1}) = \\left( \\frac{1}{2} \\right)^8 \\frac{1}{3} \\binom{9}{1}$. Scenario $2$ occurs with a likelihood of $\\mathbb{P}(\\text{scenario 2}) = \\left( \\frac{1}{2} \\right)^9$. Thus, our answer is $1 - \\mathbb{P}(\\text{scenario 1}) - \\mathbb{P}(\\text{scenario 2}) = 1 - \\frac{3}{2^8} - \\frac{1}{2^9} = \\frac{2^9 - 6 - 1}{2^9} = \\frac{505}{512}$.",
+  "valid answer": "Valid Answers: $505/512$",
+  "problem tags": [
+    "Combinatorics",
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "The likelihood that the product is a multiple of $4$ equals $1$ minus the likelihood that the product is a multiple of $2$ (scenario $1$) or is entirely odd (scenario $2$).",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "63019005929227574704"
+}

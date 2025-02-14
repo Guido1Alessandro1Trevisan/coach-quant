@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Face Chase",
+  "problem text": "Consider two unbiased $6$-sided dice. In each round, both dice are rolled, and the faces that show up are noted. Determine the expected number of rounds required to see all $6$ faces of the dice.",
+  "problem solution": "The strategy involves constructing a Markov chain. Define $e_i$ as the expected number of rounds needed given that $i$ unique faces have been seen. We are interested in $e_0$. The initial condition is $e_6 = 0$, since all faces are already observed by then. We can solve this in reverse. We find $e_5 = 1 + \\dfrac{25}{36}e_5 + \\dfrac{11}{36}e_6$. This results from the fact that if $5$ unique values are already observed, then with a probability of $\\dfrac{5}{6}$ per die, a value already seen is rolled. This doesn't change the situation, hence $e_5 = \\dfrac{36}{11}$ after manipulating the equation. Similarly, $e_4 = 1 + \\dfrac{16}{36}e_4 + \\dfrac{18}{36}e_5 + \\dfrac{2}{36}e_6$ since with $4$ unique faces, there's a probability of $\\dfrac{4}{6}$ per die of rolling a value already seen. The factor $\\dfrac{2}{36}$ arises because the first die has $2$ potential new values, while the second die has $1$ new value. The probabilities add up to $1$, meaning the coefficient for $e_5$ is $\\dfrac{18}{36}$. Substituting gives $e_4 = \\dfrac{271}{55}$. Following this logic, $e_3 = 1 + \\dfrac{9}{36}e_3 + \\dfrac{21}{36}e_4 + \\dfrac{6}{36}e_5$ applies. To obtain $2$ new faces, the first die has $3$ options, and the second has $2$. Inserting the previous values results in $e_3 = \\dfrac{949}{165}$. For the remaining values, we have $e_2 = 1 + \\dfrac{4}{36}e_2 + \\dfrac{20}{36}e_3 + \\dfrac{12}{36}e_4$, $e_1 = 1 + \\dfrac{1}{36}e_1 + \\dfrac{15}{36}e_2 + \\dfrac{20}{36}e_3$, and $e_0 = 1 + \\dfrac{1}{6}e_1 + \\dfrac{5}{6}e_2$. Solving this system gives $e_0 = \\dfrac{70219}{9240} \\approx 7.6$. This is slightly higher than the $7.35$ obtained by dividing the solution for one die $(14.7)$ by two, serving as a reasonable check.",
+  "valid answer": "Valid Answers: $70219/9240$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "The strategy involves constructing a Markov chain. Define $e_i$ as the expected number of rounds needed given that $i$ unique faces have been seen. We are interested in $e_0$. The initial condition is $e_6 = 0$, since all faces are already observed by then.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "23201915979361667676"
+}

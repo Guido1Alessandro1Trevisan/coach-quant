@@ -1,0 +1,15 @@
+{
+  "problem name": "Circle Eviction Enigma",
+  "problem text": "Around the edge of a circle, the sequence of numbers $1, 2, \\dots, 2000$ is arranged in a clockwise manner. Beginning with the number $1$, remove it, then proceed clockwise to $2$ and retain it. Continue this process, alternating between removing and retaining numbers, until you complete a full cycle. Then, start anew by removing the first number in the subsequent cycle, retaining the second, and so on. Determine the final number to be removed from the circle.",
+  "problem solution": "In the initial cycle, you retain all numbers $n$ such that $n \\equiv 0 \\hspace{3pt} \\text{mod} \\hspace{3pt} 2$. In the following cycle, you retain numbers where $n \\equiv 0 \\hspace{3pt} \\text{mod} \\hspace{3pt} 4$. Generally, at the $k$-th cycle, you retain numbers $n \\equiv 0 \\hspace{3pt} \\text{mod} \\hspace{3pt} 2^k$. Thus, we need to identify the largest $k$ such that $2^k \\leq 2000$. This $2^k$ will be the final number. For $k = 10$, this equals $2^{10} = 1024$.",
+  "valid answer": "Valid Answers: [ $20/\\text{mo}$ billed annually to Invest in your future today, $30/\\text{mo}$ billed monthly to try it out and see if it's worth it ]",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "In the initial stage, you retain all numbers $n$ such that $n \\equiv 0 \\hspace{3pt} \\text{mod} \\hspace{3pt} 2$. At the second stage, can you establish a similar rule?",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "31289415186261700192"
+}

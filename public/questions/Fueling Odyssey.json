@@ -1,0 +1,16 @@
+{
+  "problem name": "Fueling Odyssey",
+  "problem text": "We have N fuel caches on a circular route, each cache holding some nonnegative quantity of fuel. The total fuel around the track is exactly sufficient to complete one full circuit. Show that there is at least one cache at which a traveler can begin and successfully circle back to the starting point without ever depleting their fuel.",
+  "problem solution": "Formal Proof: Consider the track indexed by 0,1,...,N-1 in clockwise order. Let each location i have a supplied amount of fuel $$s_i$$ and a travel cost $$d_i$$ to go from i to i+1 (with location N identified as 0). The condition $$\\sum_{i=0}^{N-1} s_i = \\sum_{i=0}^{N-1} d_i$$ ensures the total supply matches the total cost.\\n\\nSuppose we start at 0 with zero fuel in the tank, moving forward while keeping a running total of fuel. At any point, if the fuel level becomes negative at an index j when attempting to move on, we know we cannot have feasibly started from any location k for 0\\le k\\le j. Hence, we reset our start to j+1 and resume with a fresh total of zero.\\n\\nBy iterating this procedure around the track, if we exhaust all potential starting points, we must eventually identify a position at which the running total never goes negative. The key observation is that whenever we discard a start location, that segment would have failed for every potential start within it. Thus, upon completing the track scans, the last candidate start will succeed in sustaining nonnegative fuel.\\n\\nTherefore, there must exist at least one valid starting cache enabling the entire trip to be completed without running out of fuel.",
+  "valid answer": "Yes, such a starting cache always exists.",
+  "problem tags": [
+    "Existence Proof",
+    "Circular Track"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Attempt to travel from a chosen starting point and switch starting positions whenever your total fuel drops below zero.",
+  "problem firm": [
+    "World Quant"
+  ],
+  "question id": "49932619822378769751"
+}

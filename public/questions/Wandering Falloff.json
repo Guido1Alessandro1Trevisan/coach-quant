@@ -1,0 +1,16 @@
+{
+  "problem name": "Wandering Falloff",
+  "problem text": "A mechanical device, placed on a linear track of total length L, begins at a point x centimeters in from one boundary of the track. Each step it takes is to the left (toward 0) with probability p or to the right (toward L) with probability q = 1 - p. Once the device exits at either boundary 0 or L, it is considered to have fallen off. Determine the expected number of steps needed for the device to fall off the track.",
+  "problem solution": "We formalize the scenario as a one-dimensional random walk with absorbing boundaries at positions 0 and L. Define $E[T\\_i]$ to be the expected number of steps required to fall off the track starting from position i, where 0 \\le i \\le L. Clearly, $E[T\\_0] = 0$ and $E[T\\_L] = 0$, since at those boundaries the device has already fallen off, requiring zero further steps. For 0 < i < L, each move takes one step plus the expected time from the new position, leading to the difference equation $$E[T\\_i] = 1 + p\\,E[T\\_{i-1}] + q\\,E[T\\_{i+1}].$$ We solve this linear recurrence subject to the boundary conditions. If $p = \\tfrac12$, the solution is well-known to be $$E[T\\_i] = i\\,(L - i).$$ When $p \\neq \\tfrac12$, we substitute a general solution of the form $E[T\\_i] = A + B\\left(\\tfrac{q}{p}\\right)^i$ and apply the boundary conditions to find $$E[T\\_i] = \\dfrac{i}{q - p} \\; - \\; \\dfrac{L}{q - p} \\cdot \\dfrac{1 - \\left(\\tfrac{q}{p}\\right)\\^i}{1 - \\left(\\tfrac{q}{p}\\right)\\^L}.$$ In this problem, the initial position is i = x, so the expected time to fall off is given directly by substituting i = x. Therefore, if $p = \\tfrac12$, the expected time is $x\\,(L - x)$, while if $p \\neq \\tfrac12$, the expression above provides the required expectation. This completes the derivation and yields the exact average number of steps to reach either boundary.",
+  "valid answer": "Valid Answers: If p = 1/2, $E[T] = x\\,(L - x)$. Otherwise, $E[T] = \\dfrac{x}{q - p} - \\dfrac{L}{q - p}\\cdot\\dfrac{1 - \\left(\\tfrac{q}{p}\\right)\\^x}{1 - \\left(\\tfrac{q}{p}\\right)\\^L}.$",
+  "problem tags": [
+    "Probability",
+    "Random Walk"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Use the recurrence relation $E[T\\_i] = 1 + p\\,E[T\\_{i-1}] + q\\,E[T\\_{i+1}]$ with $E[T\\_0] = 0$ and $E[T\\_L] = 0$ to derive the closed-form solution.",
+  "problem firm": [
+    "IMC"
+  ],
+  "question id": "77547497494236286695"
+}

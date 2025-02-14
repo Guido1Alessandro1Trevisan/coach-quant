@@ -1,0 +1,17 @@
+{
+  "problem name": "Egg Drop Challenge",
+  "problem text": "You possess two identical eggs and must determine the highest floor (out of 100 possible levels) from which these eggs can be dropped without breaking, using the fewest drops in the worst-case scenario. What is the minimal number of trial drops required?",
+  "problem solution": "First, note that once one egg breaks, you must test every floor sequentially below the breaking floor, consuming potentially many attempts. To optimize, you seek a strategy balancing this sequential test against the initial drops of the first egg. A well-known approach is to decrease the interval by 1 after every drop of the first egg. Specifically, drop the first egg from floor $$x$$, then if it survives, drop it from floor $$(x + (x-1))$$, then $$(x + (x-1) + (x-2))$$, and so on. By decreasing the step size each time, the maximum number of trials in the worst case (the scenario of breaking near the upper interval) remains constant, namely $$x$$. Construct the smallest integer $$x$$ satisfying $$\\frac{x(x+1)}{2}\\ge100$$ since the sum of the first $$x$$ natural numbers must cover 100 floors. Solving $$\\frac{x(x+1)}{2}=100$$ yields $$x^2+x-200=0$$, whose positive root is approximately 13.65. We round upward to get $$x=14$$. Thus, 14 is the minimum number of throws required to guarantee finding the critical floor.",
+  "valid answer": "Valid Answers: 14",
+  "problem tags": [
+    "Logic",
+    "Dynamic Programming",
+    "Puzzle"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Try dropping the egg at descending intervals so that the total number of drops is balanced if it breaks or if it doesn't.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "57803055411220913426"
+}

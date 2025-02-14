@@ -1,0 +1,17 @@
+{
+  "problem name": "Speedy Trio Quest",
+  "problem text": "There are $25$ horses, each with a unique constant speed. The track accommodates $5$ lanes, allowing a maximum of $5$ horses to compete at one time. By organizing different groups of horses to race and noting their rankings without using a timer, what is the fewest number of races necessary to distinctly determine the top three fastest horses?",
+  "problem solution": "To identify the top three fastest horses, every horse must be evaluated. Initially, it is logical to organize the horses into five groups: $1-5$, $6-10$, $11-15$, $16-20$, and $21-25$. After conducting these five races, we determine the rankings within each group. Assuming the order within each group reflects the numerical order (e.g., $6$ is the quickest and $10$ is the slowest in the $6-10$ group), the fastest horses are $1$, $6$, $11$, $16$, and $21$. The slowest two horses in each group can be disregarded as they cannot be in the top three. Next, the top five horses race to find the fastest horse. Assume this group also follows the numerical ranking (e.g., $1$ is the quickest and $21$ the slowest). Consequently, from the first group $1-5$, only $2$ and $3$ remain contenders for second and third place; from the second group $6-10$, only $6$ and $7$ are contenders for these positions; and from the third group $11-15$, only $11$ is a contender for second or third. This is because if the fastest horse in a group ranks second or third, only one or no other horses from that group can be in the top three. Therefore, the final race will include $2$, $3$, $6$, $7$, and $11$, totaling $7$ races.",
+  "valid answer": "Valid Answers: $7$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "To determine the top three fastest horses, every horse must be assessed. An initial step would be to divide the horses into five groups for racing, labeled $1-5$, $6-10$, $11-15$, $16-20$, and $21-25$.",
+  "problem firm": [
+    "Goldman Sachs",
+    "Jane Street",
+    "Transmarket Group"
+  ],
+  "question id": "46835134484315748396"
+}

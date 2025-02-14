@@ -1,0 +1,17 @@
+{
+  "problem name": "Infant Gender Mystery",
+  "problem text": "Inside a room, there are $5$ infants: $2$ are boys and $3$ are girls. An infant of unknown gender is added to the group. A baby is chosen at random and turns out to be a boy. What is the chance that the added infant is a boy? Assume each gender is equally probable at birth.",
+  "problem solution": "Define $B$ as the event that the added infant was a boy. Define $S$ as the event that the chosen infant was a boy. We are looking for $\\mathbb{P}[B \\mid S] = \\dfrac{\\mathbb{P}[S \\mid B]\\mathbb{P}[B]}{\\mathbb{P}[S]}$. We know $\\mathbb{P}[B] = \\dfrac{1}{2}$, as this is without additional information. Additionally, if the added infant was a boy, then $\\mathbb{P}[S \\mid B] = \\dfrac{1}{2}$, since there are equal numbers of boys and girls. In the denominator, we condition on $B$ and $B^c$. Specifically, $\\mathbb{P}[S] = \\mathbb{P}[S \\mid B]\\mathbb{P}[B] + \\mathbb{P}[S \\mid B^c]\\mathbb{P}[B^c]$. The first component matches the numerator. We also know $\\mathbb{P}[B^c] = \\dfrac{1}{2}$. $B^c$ represents the event that a girl was added, so in this scenario, $\\mathbb{P}[S \\mid B^c] = \\dfrac{1}{3}$, since there are only $2$ boys out of $6$ total. Thus, the overall probability is $\\mathbb{P}[B \\mid S] = \\dfrac{1/2 \\cdot 1/2}{1/2 \\cdot 1/2 + 1/2 \\cdot 1/3} = \\dfrac{3}{5}$.",
+  "valid answer": "Valid Answers: $3/5$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $B$ as the event that the added infant was a boy. Define $S$ as the event that the chosen infant was a boy. We are looking for $\\mathbb{P}[B \\mid S] = \\dfrac{\\mathbb{P}[S \\mid B]\\mathbb{P}[B]}{\\mathbb{P}[S]}$.",
+  "problem firm": [
+    "Goldman Sachs",
+    "Imc"
+  ],
+  "question id": "48601190295316445580"
+}

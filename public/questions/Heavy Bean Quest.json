@@ -1,0 +1,15 @@
+{
+  "problem name": "Heavy Bean Quest",
+  "problem text": "You have a total of $18$ beans, $17$ of which are exactly the same and one that is noticeably heavier. What is the least number of weighings required on a balance scale to ensure the identification of the heavier bean?",
+  "problem solution": "Given that the distinct bean is heavier, with each weighing, we can separate the candidate beans into groups of $3$. Initially, we create $3$ sets containing $6$ beans each and weigh $2$ of these sets. If they are unequal in weight, the heavier set contains the bean in question. If they are equal, the bean is in the unweighed set. Repeating this process (dividing the $6$ beans into $3$ sets of $2$ each), we identify the pair containing the heavier bean. Finally, a single weighing of one bean against the other in the pair reveals the heavier one. Therefore, only $3$ weighings are necessary. For any $n$ beans where one bean is confirmed to be heavier, the solution is $\\text{ceiling}(\\log_3(n))$ weighings.",
+  "valid answer": "Valid Answers: $3$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "In each weighing, how should the beans be divided evenly?",
+  "problem firm": [
+    "Belvedere Trading"
+  ],
+  "question id": "22483594382195114898"
+}

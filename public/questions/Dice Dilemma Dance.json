@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Dilemma Dance",
+  "problem text": "You cast two fair six-sided dice, but you are only allowed to roll the second die if the outcome of the first die is 4 or lower. Compute the expected total of all tossed dice under these rules.",
+  "problem solution": "We wish to determine the expected value $$\\mathbb{E}[X]$$ of the final total. Let $$D_1$$ and $$D_2$$ represent the outcomes of the first and (possible) second die respectively. There are two cases: 1) If $$D_1\\in\\{5,6\\}$$, then we do not roll the second die, so the final total is simply $$D_1$$. The probability of this event is $$\\frac{2}{6}=\\frac{1}{3}$$, and the expected value in this scenario is $$\\mathbb{E}[D_1\\mid D_1\\in\\{5,6\\}] = \\frac{5+6}{2} = 5.5$$. 2) If $$D_1\\in\\{1,2,3,4\\}$$, then we do roll the second die, making the final total $$D_1+D_2$$. The probability of this event is $$\\frac{4}{6}=\\frac{2}{3}$$. Given this event, the expected value of $$D_1+D_2$$ is $$\\mathbb{E}[D_1\\mid D_1\\in\\{1,2,3,4\\}] + \\mathbb{E}[D_2] = \\frac{1+2+3+4}{4} + 3.5 = 2.5 + 3.5 = 6$$. Combining both cases, we obtain $$\\mathbb{E}[X] = \\left(\\frac{1}{3}\\right)\\bigl(5.5\\bigr) + \\left(\\frac{2}{3}\\right)(6) = \\frac{11}{6} + 4 = \\frac{35}{6} = 5.8333\\ldots$$.",
+  "valid answer": "Valid Answers: 35/6 or 5.8333...",
+  "problem tags": [
+    "Dice",
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Separate into two scenarios: if the first die is 5 or 6 you stop; else sum with a second roll.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "49525764715321875569"
+}

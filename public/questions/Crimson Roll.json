@@ -1,0 +1,18 @@
+{
+  "problem name": "Crimson Roll",
+  "problem text": "Bob coats the surfaces of a $ (5 \\times 5 \\times 5) $ cube in red and subsequently divides this cube into $ 125 $ $ (1 \\times 1 \\times 1) $ smaller cubes. You randomly select one of these cubes and roll it. Determine the likelihood that the cube displays a red face on top.",
+  "problem solution": "Consider the general scenario for a $ (n \\times n \\times n) $ cube. Specifically, there are $ 6n^2 $ sides with paint, since each face contains $ n^2 $ painted sections. The cube has a total of $ 6n^3 $ faces, given that each of the $ n^3 $ smaller cubes features $ 6 $ faces. Thus, the probability that a selected $ (1 \\times 1 \\times 1) $ cube shows a painted face when rolled is $ \\dfrac{6n^2}{6n^3} = \\dfrac{1}{n} $. Here, $ n = 5 $, resulting in an answer of $ \\dfrac{1}{5} $.",
+  "valid answer": "Valid Answers: $1/5$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "There are $6 \\cdot 5^2 = 150$ surfaces with paint, as each side contains $5^2 = 25$ painted sections.",
+  "problem firm": [
+    "Citadel",
+    "Jane Street",
+    "Sig"
+  ],
+  "question id": "26866994485733977452"
+}

@@ -1,0 +1,18 @@
+{
+  "problem name": "Royal Race Earnings",
+  "problem text": "Eve is involved in a card game where she thoroughly mixes a standard deck of cards. She stands to gain $100$ if the final queen shows up before the final king. Her friend Jenny inspects the sequence of cards and informs Eve that there are exactly two queens before the initial king in the deck. Based on Jenny's information, what is the expected amount Eve should win?",
+  "problem solution": "Let the positions $p$ represent the placement of all the kings and queens: $p_1, p_2, \\ldots, p_8$-th positions, with $1 \\leq p_1 < p_2 < \\cdots < p_8 \\leq 52$. Each arrangement among these $8$ positions is equally probable, so we only need to evaluate the possible sequences of queens and kings within these $8$ selected spots, considering Jenny's information. We know the first $2$ cards are queens, and the third card is a king. Now, we must ascertain how many sequences of the remaining $5$ cards ($3$ kings and $2$ queens) conclude with a king. This likelihood is simply $\\frac{3}{5}$, as there is a $\\frac{3}{5}$ probability that the final card is a king. Consequently, the expected winnings for Eve are $\\frac{3}{5} \\cdot 100 = 60$.",
+  "valid answer": "Valid Answers: $60$",
+  "problem tags": [
+    "Combinatorics",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Examine the new potential sequences of queens and kings within $8$ selected positions.",
+  "problem firm": [
+    "Citadel",
+    "Sig"
+  ],
+  "question id": "23518764777820429532"
+}

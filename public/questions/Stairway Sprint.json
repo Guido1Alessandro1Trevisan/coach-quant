@@ -1,0 +1,17 @@
+{
+  "problem name": "Stairway Sprint",
+  "problem text": "A rabbit starts at the base of a staircase with $10$ steps. The rabbit has the ability to leap $1$ or $2$ steps with each hop. Determine the total number of unique routes from the ground to the summit of the staircase (i.e. reaching the top of the $10$th step).",
+  "problem solution": "Define $x_n$ as the count of unique routes to the summit of a staircase of height $n$. Consider the scenario based on the last leap. If the final jump is $1$ step, we assess the number of methods to arrive at step $n-1$, represented by $x_{n-1}$, and if the final jump is $2$ steps, we evaluate the number of ways to reach step $n-2$, depicted by $x_{n-2}$. As these scenarios are mutually exclusive and collectively exhaustive, we formulate the number of unique hops as a recursive equation: $x_n = x_{n-1} + x_{n-2}$. The starting values are $x_1 = 1$ and $x_2 = 2$, which are directly computed, establishing our base cases. Consequently, we deduce that $x_n = F_{n+1}$, where $F_{n+1}$ denotes the $(n+1)$th Fibonacci number. Specifically, $x_{10} = F_{11} = 89$.",
+  "valid answer": "Valid Answers: $89$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $x_n$ as the count of unique paths to the top of a staircase with $n$ steps. Consider the last leap.",
+  "problem firm": [
+    "Five Rings",
+    "Goldman Sachs"
+  ],
+  "question id": "54880535932021152901"
+}

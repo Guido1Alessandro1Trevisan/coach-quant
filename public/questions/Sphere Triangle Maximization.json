@@ -1,0 +1,17 @@
+{
+  "problem name": "Sphere Triangle Maximization",
+  "problem text": "Two randomly chosen points A and B lie on a unit sphere. A third point C is also placed on the sphere so that the Euclidean area of triangle ABC is as large as possible. Determine the expected value of this maximal area.",
+  "problem solution": "Solution Explanation: First, by symmetry, fix point A at the “north pole,” which can be represented by the unit vector $\\mathbf{A}=(0,0,1)$. Let $\\mathbf{B}$ be a uniformly random point on the sphere, and let $\\theta$ be the angle between $\\mathbf{A}$ and $\\mathbf{B}$. Then $\\cos\\theta = \\mathbf{A}\\cdot\\mathbf{B}$ is distributed uniformly in $[-1,1]$. We want to choose $\\mathbf{C}$ on the sphere to maximize the Euclidean area of triangle ABC in three-dimensional space. One can show (through the vector cross product or pure geometric arguments) that the maximum area of triangle ABC as a function of $\\theta$ is given by $\\dfrac{1}{2}\\sqrt{3 - 2\\cos\\theta - \\cos^2\\theta}$. As $\\cos\\theta$ ranges from $-1$ to $1$ uniformly, we integrate this area expression with respect to that uniform distribution. In other words, if we let $c=\\cos\\theta$, then the expected area is $\\displaystyle \\mathbb{E}[\\text{Area}] = \\int_{-1}^{1}\\dfrac{1}{2}\\sqrt{3-2c-c^2}\\times\\dfrac{1}{2}\\ dc$. The extra factor of $\\tfrac{1}{2}$ is from the pdf of $c$ over $[-1,1]$. By the substitution $x = c+1$, the integral $\\int_{-1}^{1}\\sqrt{3-2c-c^2}\\ dc$ becomes $\\int_{0}^{2}\\sqrt{4-x^2}\\ dx$, which is the area under a quarter circle of radius 2 and thus equals $\\pi$. Including all factors, we get $\\dfrac{\\pi}{4}$. Therefore, the expected maximal area of triangle ABC is $\\boxed{\\dfrac{\\pi}{4}}$.",
+  "problem tags": [
+    "Geometry",
+    "Spheres",
+    "Integration"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Hint: Due to symmetry, place one point at the north pole. Express the triangle’s area in terms of the angle between the fixed point and the second random point.",
+  "problem firm": [
+    "Maple Analytics",
+    "Quantum Strategies"
+  ],
+  "question id": "71230076201741471048"
+}

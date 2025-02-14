@@ -1,0 +1,19 @@
+{
+  "problem name": "Quarter Time Twist",
+  "problem text": "Determine the angle made by the clock hands at $3:15$ PM (in degrees).",
+  "problem solution": "We understand that the two hands are nearly aligned, yet the hour hand is slightly ahead in the clockwise direction compared to the minute hand, since $15$ minutes have passed in the $3^{\\text{rd}}$ hour. Specifically, it is exactly one-fourth of the distance between $3$ and $4$. Considering there are $12$ sections on a clock, each section represents $30^{\\circ}$. Therefore, $\\frac{1}{4} \\cdot 30^{\\circ} = 7.5^{\\circ}$.",
+  "valid answer": "Valid Answers: $7.5$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "It's not $0$ degrees!",
+  "problem firm": [
+    "Akuna Capital",
+    "Belvedere Trading",
+    "Jane Street",
+    "Old Mission",
+    "Optiver"
+  ],
+  "question id": "82755927415166442510"
+}

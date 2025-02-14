@@ -1,0 +1,15 @@
+{
+  "problem name": "Power Play Modulo",
+  "problem text": "Determine $15^{2021} \\hspace{3pt} \\text{mod} \\hspace{3pt} 17$.",
+  "problem solution": "Observe that $15 \\equiv -2 \\hspace{3pt} \\text{mod} \\hspace{3pt} 17$, which implies $15^{2021} \\hspace{3pt} \\text{mod} \\hspace{3pt} 17 = (-2)^{2021} \\hspace{3pt} \\text{mod} \\hspace{3pt} 17$. Since $(-2)^4 = 16$, this simplifies as $16 \\equiv -1 \\hspace{3pt} \\text{mod} \\hspace{3pt} 17$, allowing us to express the result as $[(-2)^4]^{505} \\cdot (-2) \\hspace{3pt} \\text{mod} \\hspace{3pt} 17 = (-1)^{505} \\cdot (-2) \\hspace{3pt} \\text{mod} \\hspace{3pt} 17 = 2$.",
+  "valid answer": "Valid Answers: $2$",
+  "problem tags": [
+    "Pure Math"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Notice that $15 \\equiv -2 \\hspace{3pt} \\text{mod} \\hspace{3pt} 17$, thus $15^{2021} \\hspace{3pt} \\text{mod} \\hspace{3pt} 17 = (-2)^{2021} \\hspace{3pt} \\text{mod} \\hspace{3pt} 17$. Investigate various powers of $2$.",
+  "problem firm": [
+    "Belvedere Trading"
+  ],
+  "question id": "64702139780249611487"
+}

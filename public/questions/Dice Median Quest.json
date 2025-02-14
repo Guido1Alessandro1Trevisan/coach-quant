@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Median Quest",
+  "problem text": "Mike simultaneously rolls three unbiased $6$-sided dice. Determine the expected median outcome of the dice.",
+  "problem solution": "Due to the symmetry of the dice, the likelihood of the median being $3$ and $4$ is the same. Likewise, $2$ and $5$ have equal probabilities, as do $1$ and $6$. Since the average value of each pair of medians is $\\dfrac{7}{2}$, this indicates that the expected median is also $\\dfrac{7}{2}$.",
+  "valid answer": "Valid Answers: $7/2$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "In what way can symmetry be used to connect each value's probability of being the $median$?",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "65735904046434437094"
+}

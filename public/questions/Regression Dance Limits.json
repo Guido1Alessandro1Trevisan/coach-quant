@@ -1,0 +1,16 @@
+{
+  "problem name": "Regression Dance Limits",
+  "problem text": "We have three sets of data $X_1, X_2,$ and $Y$, and we perform two linear regressions to derive $y \\sim \\alpha_1 + \\beta_1 x_1$ and $y \\sim \\alpha_2 + \\beta_2 x_2$. Both regressions have an $R^2$ value of $0.05$. Determine the smallest possible upper limit on the $R^2$ value for the regression $y \\sim \\alpha + \\beta' x_1 + \\beta'' x_2$.",
+  "problem solution": "Consider the data set $Y$ that is perfectly sampled from a quadratic curve located far from the origin. Let $X_2$ be the dataset where each entry in $X_1$ is squared. If $Y$ is sufficiently distant from the origin, $y \\sim \\alpha_1 + \\beta_1 x_1$ will have a low $R^2$ because it is linear while $Y$ is quadratic. In addition, $y \\sim \\alpha_2 + \\beta_2 x_2 = \\alpha_2 + \\beta_2 x_1^2$ also has a low $R^2$ because, even though it forms a parabola, it cannot be horizontally adjusted to fit $Y$. This implies that, individually, these linear regressions have low $R^2$. However, the model $y \\sim \\alpha + \\beta' x_1 + \\beta'' x_2$ achieves $R^2 = 1$, as it is now possible to adjust the parabola within the plane to perfectly fit the noise-free dataset $Y$.",
+  "valid answer": "Valid Answers: $[1, 100]$",
+  "problem tags": [
+    "Linear Regression",
+    "Statistics"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Consider a dataset $Y$ that is perfectly sampled from a quadratic curve positioned far from the origin.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "05126098616046758603"
+}

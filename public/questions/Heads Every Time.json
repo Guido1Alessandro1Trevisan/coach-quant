@@ -1,0 +1,16 @@
+{
+  "problem name": "Heads Every Time",
+  "problem text": "Out of 1000 coins, 999 are unbiased, while 1 coin has heads on both its sides. One coin is chosen at random and tossed 10 times, producing a head in every flip. What is the likelihood that the selected coin is the double-headed one?",
+  "problem solution": "First, let $$D$$ denote the event that the chosen coin is the double-headed coin, and let $$H$$ denote the event of observing 10 consecutive heads. We seek $$P(D\\mid H)$$. By Bayes' Theorem: $$P(D\\mid H) = \\dfrac{P(D)\\,P(H\\mid D)}{P(H)}.$$ Since we pick the double-headed coin with probability $$\\tfrac{1}{1000}$$, we have $$P(D)=\\tfrac{1}{1000}.$$ The probability of getting 10 heads given the coin is double-headed is $$P(H\\mid D)=1.$$ For a fair coin, the probability of 10 heads in a row is $$\\left(\\tfrac{1}{2}\\right)^{10}=\\tfrac{1}{1024},$$ and the probability of choosing a fair coin is $$\\tfrac{999}{1000}.$$ Thus, the total probability of observing 10 heads is $$P(H)=\\tfrac{1}{1000}\\times1 + \\tfrac{999}{1000}\\times\\tfrac{1}{1024}=\\dfrac{1}{1000} + \\dfrac{999}{1000\\times1024}=\\dfrac{1024+999}{1000\\times1024}=\\dfrac{2023}{1024000}.$$ Therefore, $$P(D\\mid H)=\\dfrac{\\tfrac{1}{1000}}{\\tfrac{2023}{1024000}}=\\dfrac{1}{1000}\\times\\dfrac{1024000}{2023}=\\dfrac{1024}{2023}.$$ Hence, the probability that the chosen coin is the double-headed one, after seeing 10 heads in a row, is $$\\dfrac{1024}{2023}.$$",
+  "valid answer": "Valid Answers: $$\\frac{1024}{2023}\\approx0.506$$",
+  "problem tags": [
+    "Probability",
+    "Bayes' Theorem"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about conditional probability and use Bayes' Theorem to update the likelihood after seeing multiple heads.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "87997164743731167221"
+}

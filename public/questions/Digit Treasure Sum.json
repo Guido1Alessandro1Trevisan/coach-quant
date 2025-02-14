@@ -1,0 +1,15 @@
+{
+  "problem name": "Digit Treasure Sum",
+  "problem text": "Find the total of the digits for numbers ranging from $1$ to $1,000,000$, inclusive. For instance, for the number $46$, the digit total is $10$.",
+  "problem solution": "Consider each number as a six-digit number, ranging from $000000$ to $999999$. The digit sum of $1,000,000$ is $1$, which we can include later. The mean digit total for each number is: $6 \\times \\frac{9}{2} = 27$. There are $6$ digits, and the mean digit value from $0-9$ is $4.5$. With a million numbers from $0$ to $999999$, the complete digit sum is: $27 \\times 1000000 = 27000000$. Including the digit sum of $1000000$, $1$, the final answer is $27000001$.",
+  "valid answer": "Valid Answers: $27000001$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "View each number as a six-digit number, from $000000$ to $999999$. The digit sum for $1$ million is $1$, to be added later.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "39145286074509431154"
+}

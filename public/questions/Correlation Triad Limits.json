@@ -1,0 +1,17 @@
+{
+  "problem name": "Correlation Triad Limits",
+  "problem text": "Suppose you are aware of the correlation between X and Z and also between X and Y. What possible values can the correlation between Y and Z take?",
+  "problem solution": "First, recall that for any three random variables X, Y, and Z, their correlations can be interpreted as the cosines of angles between corresponding vectors in a high-dimensional inner product space (or, equivalently, by virtue of the Cauchy–Schwarz inequality, we can control the extent to which one correlation can vary given the other two). Let $\\rho(X,Y)$ be the correlation of X and Y, $\\rho(X,Z)$ the correlation of X and Z, and $\\rho(Y,Z)$ the correlation of Y and Z. We want to determine how small and how large $\\rho(Y,Z)$ can be when $\\rho(X,Y)$ and $\\rho(X,Z)$ are fixed.\\n\\nUsing geometric or analytic arguments, one obtains that:$$|\\rho(Y,Z) - \\rho(X,Y)\\rho(X,Z)| \\le \\sqrt{\\bigl(1 - \\rho(X,Y)^2\\bigr)\\bigl(1 - \\rho(X,Z)^2\\bigr)}.$$\\n\\nRewriting this inequality to isolate $\\rho(Y,Z)$, we conclude that:$$\\rho(Y,Z) \\in \\Bigl[\\rho(X,Y)\\rho(X,Z) - \\sqrt{\\bigl(1-\\rho(X,Y)^2\\bigr)\\bigl(1-\\rho(X,Z)^2\\bigr)},\\;\\rho(X,Y)\\rho(X,Z) + \\sqrt{\\bigl(1-\\rho(X,Y)^2\\bigr)\\bigl(1-\\rho(X,Z)^2\\bigr)}\\Bigr].$$\\n\\nIn other words, the correlation $\\rho(Y,Z)$ must lie in this closed interval, governed by the given two correlations $\\rho(X,Y)$ and $\\rho(X,Z)$. This result follows primarily from the Cauchy–Schwarz inequality, which bounds how close or how far a vector (Y) can be from another (Z) given their respective angles with a third (X). Thus, we arrive at the required range for $\\rho(Y,Z)$.",
+  "valid answer": "Valid Answers: $\\rho(Y,Z) \\in \\bigl[\\rho(X,Y)\\rho(X,Z)-\\sqrt{(1-\\rho(X,Y)^2)(1-\\rho(X,Z)^2)},\\;\\rho(X,Y)\\rho(X,Z)+\\sqrt{(1-\\rho(X,Y)^2)(1-\\rho(X,Z)^2)}\\bigr]$",
+  "problem tags": [
+    "Statistics",
+    "Correlation",
+    "Inequalities"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the relationship between correlation and the dot product of vectors, or apply the Cauchy–Schwarz inequality to bound the possible values of $\\rho(Y,Z)$.",
+  "problem firm": [
+    "JP Morgan"
+  ],
+  "question id": "99951055426738564018"
+}

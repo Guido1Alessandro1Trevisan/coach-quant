@@ -1,0 +1,16 @@
+{
+  "problem name": "Bacterial Roulette",
+  "problem text": "A single bacterium exists on a petri dish. Every minute, it has an equal chance to die, remain unchanged, divide into two, or divide into three. Assuming each bacterium acts independently and identically, determine the probability that the entire bacterial colony will become extinct. The solution is expressed as $\\sqrt{a} - b$ where $a$ and $b$ are integers. Calculate $a + b$.",
+  "problem solution": "Let $x$ represent the probability of the bacterial colony going extinct. The initial bacterium has $4$ possible actions: dying, remaining unchanged, splitting into two, or splitting into three. If it dies, the colony is extinct with probability $1$. If it remains unchanged, the extinction probability is $x$, since extinction occurs if the unchanged bacterium eventually dies, which happens with probability $x$. If it splits into two, extinction occurs with probability $x^2$, as both offspring must die. If it splits into three, extinction happens with probability $x^3$, as all three offspring must perish. Therefore, we formulate $x = \\frac{1}{4} \\times 1 + \\frac{1}{4}x + \\frac{1}{4}x^2 + \\frac{1}{4}x^3 = \\sqrt{2} - 1 \\approx 0.41$. Consequently, the answer is $2 + 1 = 3$.",
+  "valid answer": "Valid Answers: $3$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Consider how you can find the probability based on the outcome of the initial bacterium's action in the subsequent minute.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "52781105190109234231"
+}

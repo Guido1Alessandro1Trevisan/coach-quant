@@ -1,0 +1,15 @@
+{
+  "problem name": "Rapid Growth",
+  "problem text": "You have an initial amount of $100$ in your savings account today. You place it in an investment that provides $1\\%$ interest compounded on a daily basis. To the nearest whole dollar, determine how much will be in your savings after $100$ days.",
+  "problem solution": "The calculation is $100(1 + 0.01)^{100}$ as per the simple interest equation. Estimating this requires some expertise. Utilizing the approximation $(1+1/n)^n \\approx e$ for large $n$, it is roughly $100e \\approx 271$. However, we should adjust slightly downward, so an estimate might be $270$. Indeed, $270$ is correct, being on the cusp between $270$ and $271$.",
+  "valid answer": "Valid Answers: $270$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The result is $100(1 + 0.01)^{100}$ according to the simple interest formula. How would you approximate this expression?",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "37251038717886415277"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Decay Delay",
+  "problem text": "Plutonium undergoes decay at an average frequency of $1$ event per second. Determine the likelihood that a Plutonium atom remains undecayed over the next $3$ seconds. The solution should be expressed as $e^{a}$ for some $a$. Calculate $a$.",
+  "problem solution": "Given that the decay occurs at an average rate of $1$ per second, the interval between decay events follows $T \\sim \\text{Exp}(1)$. We seek $\\mathbb{P}[T > 3]$. This equals $\\displaystyle \\int_3^{\\infty} e^{-x}dx = e^{-3}$, hence $a = -3$.",
+  "valid answer": "Valid Answers: $-3$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "How is the time between decay events distributed?",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "56272189543114022684"
+}

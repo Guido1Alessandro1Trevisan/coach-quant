@@ -1,0 +1,17 @@
+{
+  "problem name": "Approaching Infinity",
+  "problem text": "If you take the expression $(1 + \\frac{1}{n})^n$, and allow $n$ to grow larger and larger, what value will it converge upon?",
+  "problem solution": "We are interested in evaluating the limit $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n.$$ One standard approach relies on the definition of the number $e$. By definition, $e$ is the unique real number for which the sequence $$\\left(1 + \\frac{1}{n}\\right)^n$$ converges to $e$ as $n$ tends to infinity. Alternatively, we can provide a more formal argument:\\\\\n1. Show that the sequence is monotonically increasing.\\\\\n2. Prove it is bounded above by a fixed value (for instance, using the binomial theorem to establish upper bounds).\\\\\nFrom these properties, by the Monotone Convergence Theorem, the limit exists and can be shown to be $e$. Thus, $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e.$$",
+  "valid answer": "Valid Answers: e",
+  "problem tags": [
+    "Limits",
+    "Calculus",
+    "ExponentialFunction"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Recall the definition of the constant e or investigate how $(1+1/n)^n$ behaves for large n.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "53336148488177564631"
+}

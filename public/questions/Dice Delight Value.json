@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Delight Value",
+  "problem text": "Imagine you have a fair six-sided die and a mechanism that permits you to optionally reroll instead of accepting the result of your initial roll, with the second roll being compulsory. Determine the amount you would value this game. Then consider the scenario of having up to two optional rerolls. What is the game's value in that case?",
+  "problem solution": "We start by examining the single reroll case. Label the faces of the die as 1 through 6, each with probability $\\frac{1}{6}$. If you have exactly one opportunity to reroll at your discretion, it is optimal to adopt a threshold strategy: let $T$ be the smallest integer outcome for which you do not reroll. Since the expected value of any new fair roll is $3.5$, the threshold $T$ must be the smallest integer greater than $3.5$, so $T=4$. Thus, you keep the first roll if it is 4, 5, or 6, and reroll if it is 1, 2, or 3. The probability of rolling 4, 5, or 6 is $\\frac{3}{6} = \\frac{1}{2}$, and the average of 4, 5, 6 is $\\frac{4+5+6}{3} = 5$. Hence, this portion contributes $\\frac{1}{2}\\times 5 = 2.5$ to the expected value. With probability $\\frac{1}{2}$, you roll 1, 2, or 3 and then take the reroll, whose expectation is $3.5$. That part contributes $\\frac{1}{2}\\times 3.5 = 1.75$. Summing yields an overall expected value of $2.5 + 1.75 = 4.25$. Therefore, you would pay up to $4.25$ for the option to roll the die with one possible reroll.\n\nNext, suppose you can reroll up to two times. We use backward reasoning, noting that the expected value with just one reroll remaining is $4.25$. Denote the expected value with two rerolls by $E_2$. We again adopt a threshold, $T_2$, such that you keep your first roll if it is at least $T_2$, and otherwise proceed to use the remaining one-reroll strategy. Since the one-reroll strategy has an expected value of $4.25$, $T_2$ is the smallest integer exceeding $4.25$, namely $5$. The probability of rolling 5 or 6 on the first attempt is $\\frac{2}{6} = \\frac{1}{3}$, and the average of those two faces is $\\frac{5 + 6}{2} = 5.5$. Thus, from rolling a 5 or 6 you get $\\frac{1}{3}\\times 5.5 = \\frac{11}{6}$. With probability $\\frac{2}{3}$, you roll 1, 2, 3, or 4 and then invoke the one-reroll strategy, which is worth $4.25$. This yields $\\frac{2}{3}\\times 4.25 = 2.8333\\ldots = \\frac{17}{6}$. Summing, $$E_2 = \\frac{11}{6} + \\frac{17}{6} = \\frac{28}{6} = \\frac{14}{3}\\approx 4.6667.$$ Therefore, you would pay up to $$\\frac{14}{3}$$ for the option to roll the die with up to two possible rerolls.",
+  "valid answer": "Valid Answers: Single Reroll: 4.25; Double Reroll: $$\\frac{14}{3}$$",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the expected value when you have a certain number of rerolls left, then determine a threshold for keeping or rerolling.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "30145278673696432109"
+}

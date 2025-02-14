@@ -1,0 +1,17 @@
+{
+  "problem name": "Quiz Fate Gamble",
+  "problem text": "Suppose there is a known probability p that you know the correct answer while on a television quiz program. If you win n dollars for a correct response and m dollars for an incorrect one, should you opt to answer?",
+  "problem solution": "We begin by defining the expected value of choosing to answer. If you decide to respond, your random payoff will be n dollars with probability p and m dollars with probability 1 - p. Therefore, the expected monetary outcome is given by $E = p\\,n + (1-p)\\,m$. If $E \\ge 0$, it is advantageous for you to attempt the answer; otherwise, it is better to refrain. Thus the critical decision criterion is whether $p\\,n + (1-p)\\,m$ is nonnegative, guaranteeing a nonnegative expected profit.",
+  "valid answer": "Answer if $p\\,n + (1-p)\\,m \\ge 0$, otherwise do not answer.",
+  "problem tags": [
+    "Probability",
+    "Decision Theory",
+    "Game Theory"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Compute the expected value of answering in terms of p, n, and m, then decide if that value is at least 0.",
+  "problem firm": [
+    "Omega Probability"
+  ],
+  "question id": "84220342592572269318"
+}

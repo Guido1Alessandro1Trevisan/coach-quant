@@ -1,0 +1,19 @@
+{
+  "problem name": "Inner Circle Chance",
+  "problem text": "You aim $3$ darts that hit at random on a circular dartboard made up of three concentric circles with radii $1$ft, $2$ft, and $3$ft. Given that each dart hits the board, what is the likelihood that at least one dart strikes within the inner circle (inside the $1$ft area)?",
+  "problem solution": "Initially, we need to determine the chance of a single dart landing in the inner circle. Since the darts hit randomly on the board, we calculate this probability as the ratio of the area of the inner circle to the area of the entire dartboard. The total board area is $9\\pi$, and the inner circle's area is $1\\pi$. Thus, the probability of a dart landing in the inner circle is: $\\frac{\\pi}{9\\pi} = \\frac{1}{9}$. Next, we find the probability that none of the $3$ darts land in the inner circle. This is: $\\left(\\frac{8}{9}\\right)^3 = \\frac{512}{729}$. Applying the complement rule, $1 - P(A^c) = P(A)$, we obtain: $1 - \\frac{512}{729} = \\frac{217}{729}$.",
+  "valid answer": "Valid Answers: $217/729$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "What is the chance that none of the three darts hit inside the inner circle? How can complementary probability help you find the solution?",
+  "problem firm": [
+    "Belvedere Trading",
+    "Citadel",
+    "Drw"
+  ],
+  "question id": "68968980868888150808"
+}

@@ -1,0 +1,15 @@
+{
+  "problem name": "Sum Pair Puzzle",
+  "problem text": "Consider the set $S = \\{a, b, c, d, e\\}$ of $5$ real numbers, where repetition is allowed. The sums of each pair from $S$ are given as: $5, 11, 11, 13, 13, 14, 16, 19, 22, 22$. Determine $a^2 + b^2 + c^2 + d^2 + e^2$.",
+  "problem solution": "We can assume an order such that $a \\leq b \\leq c \\leq d \\leq e$. Thus, $a + b = 5$ and $d + e = 22$, because the smallest two numbers yield the smallest sum, and the largest two numbers yield the largest sum. Furthermore, each of $a, b, c, d, \\text{ and } e$ appears in $4$ of the $10$ pair sums since each number pairs with every other number. Summing all the pairwise sums gives $5 + 11 + 11 + 13 + 13 + 14 + 16 + 19 + 22 + 22 = 146$, which means $4 \\cdot (a + b + c + d + e) = 146$. We know $a + b = 5$ and $d + e = 22$, so we find $4 \\cdot (5 + c + 22) = 146 \\iff c = 9.5$. Given the ordering, $a + c$ must be the second smallest sum after $a + b$, so $a + c = 11$, implying $a = 1.5$. Since $a + b = 5$, it follows that $b = 3.5$. The second largest sum, after $d + e$, is $c + e$, so $c + e = 22$, leading to $e = 12.5$. Since $d + e = 22$, we find $d = 9.5$. Thus, we have $(a, b, c, d, e) = (1.5, 3.5, 9.5, 9.5, 12.5)$. Therefore, $a^2 + b^2 + c^2 + d^2 + e^2 = \\dfrac{3^2 + 7^2 + 19^2 + 19^2 + 25^2}{2^2} = \\dfrac{1405}{4}$.",
+  "valid answer": "Valid Answers: $1405/4$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "We can assume an order such that $a \\leq b \\leq c \\leq d \\leq e$. How does this ordering relate to the smallest and largest sums $5$ and $22$?",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "52992261247494086012"
+}

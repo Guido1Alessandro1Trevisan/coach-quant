@@ -1,0 +1,16 @@
+{
+  "problem name": "Blue Cube Mystery",
+  "problem text": "A $3×3×3$ cube, painted blue on the exterior, is divided into $27$ $1×1×1$ smaller cubes. You pick one cube at random from the $27$ and observe $5$ faces that lack color. Determine the probability that this cube has a single face that is painted.",
+  "problem solution": "We revise the probability that the selected cube has a painted face, given the knowledge that $5$ faces are unpainted. By applying Bayes theorem, let $B$ be the event where the five visible faces are unpainted, and let $C$ represent the event that the cube has exactly one painted face. Thus, we have $\\mathbb{P}[C \\mid B] = \\dfrac{\\mathbb{P}[B \\mid C]\\cdot\\mathbb{P}[C]}{\\mathbb{P}[B]}$. If one face of the cube is painted, the likelihood that the painted face is not observed is $\\frac{1}{6}$. Therefore, $\\mathbb{P}[B \\mid C] = \\frac{1}{6}$. Additionally, note that there are $6$ cubes with just one painted face out of $27$, hence $\\mathbb{P}[C] = \\frac{6}{27} = \\frac{2}{9}$. Ultimately, the probability that a cube shows five unpainted faces is $\\frac{1}{6}\\cdot\\frac{2}{9}$ for cubes with a single painted face and $1\\cdot\\frac{1}{27}$ for the center cube with no painted faces. Incorporating these together, we find $\\mathbb{P}[C \\mid B] = \\dfrac{\\mathbb{P}[B \\mid C]\\cdot\\mathbb{P}[C]}{\\mathbb{P}[B]} = \\dfrac{\\frac{1}{6}\\cdot\\frac{2}{9}}{\\frac{1}{6}\\cdot\\frac{2}{9}+1\\cdot\\frac{1}{27}}=\\dfrac{1}{2}$.",
+  "valid answer": "Valid Answers: $1/2$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Since we are refining probabilities based on new information, consider applying Bayes Theorem.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "38500868529587159411"
+}

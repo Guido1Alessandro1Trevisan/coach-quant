@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Logic Dance",
+  "problem text": "Suppose you need to generate a uniform random integer from $1$ to $10$ using only the rolls of a fair $6$-sided die. How can you accomplish this? The core idea is to map die rolls onto a binary digit, use multiple rolls to form a binary number, and accept that number if it lies within a target range. Otherwise, you repeat the process so that each valid outcome is equally likely.",
+  "problem solution": "We require a uniform selection from $\\{1,2,\\dots,10\\}$ by only rolling a fair $6$-sided die. First, note that we need at least $\\lceil \\log_2(10) \\rceil = 4$ binary digits, since $2^3 = 8$ is too small but $2^4 = 16$ is sufficient. We convert each die roll into a binary digit (bit) by mapping $\\{1,2,3\\}$ to $0$ and $\\{4,5,6\\}$ to $1$.\\n\\nThus, one roll gives a random bit with probability $\\tfrac{1}{2}$ for $0$ and $\\tfrac{1}{2}$ for $1$. Four rolls produce a random $4$-bit number in $\\{0,1,\\dots,15\\}$, each with probability $\\tfrac{1}{16}$. If the number is between $0$ and $9$ inclusive, assign the result to be that number plus $1$ (thus generating $1$ to $10$). If the number is between $10$ and $15$, discard the entire outcome and roll four more times. This guarantees that all numbers from $1$ to $10$ will be selected with probability $\\tfrac{1}{10}$.\\n\\nFormal justification: We require each possible final outcome to have an equal probability. By rejecting (and rerolling) any outcome not in the desired range, we preserve uniformity among the accepted possibilities. Specifically, each of the $16$ binary outcomes from four die rolls has probability $\\tfrac{1}{16}$. Accepting only $10$ equally-likely outcomes ensures that each appears with probability $\\tfrac{1}{10}$.",
+  "valid answer": "Valid Answers: Convert each roll to $0$ or $1$, form a 4-bit binary number, check if it is in $\\{0,\\dots,9\\}$, accept if so, otherwise reroll.",
+  "problem tags": [
+    "Combinatorics",
+    "Randomness"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think in terms of generating enough bits to represent the numbers from $1$ to $10$. What will you do if the bits yield a number beyond $10$?",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "15299970877441595576"
+}

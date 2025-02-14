@@ -1,0 +1,16 @@
+{
+  "problem name": "Ball Color Parade",
+  "problem text": "In how many unique ways can you line up $3$ red balls, $7$ blue balls, and $9$ green balls?",
+  "problem solution": "This problem is akin to an anagram puzzle, where we have three different categories (the three colors) and each sequence represents an order of red, green, and blue balls. There are $19$ balls altogether, so if each were unique, there would be $19!$ possible arrangements. However, this assumes every ball is different, which isn't the case for balls of the same color. Therefore, we must adjust by dividing by the number of indistinguishable arrangements. There are $9!$ ways to arrange the $9$ green balls. Similarly, there are $7!$ and $3!$ arrangements for the blue and red balls, respectively, so the solution is $\\dfrac{19!}{9!7!3!} = 11085360$.",
+  "valid answer": "Valid Answers: $11085360$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider this problem as similar to creating anagrams, where each arrangement corresponds to a sequence of $$ \\text{red} $$, $$ \\text{green} $$, and $$ \\text{blue} $$.",
+  "problem firm": [
+    "Imc"
+  ],
+  "question id": "08053967909159469694"
+}

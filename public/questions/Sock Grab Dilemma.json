@@ -1,0 +1,16 @@
+{
+  "problem name": "Sock Grab Dilemma",
+  "problem text": "You're running late for work! In your drawer are $2$ black socks, $4$ blue socks, and $5$ grey socks. If you randomly pick socks, what's the least number of socks you need to pick to ensure you have a matching pair of the same color?",
+  "problem solution": "Think about the least favorable situation, where the first $3$ socks picked are each a different color. The $4$th sock picked will have to match one of the earlier socks. Therefore, by using the Pigeon Hole Principle, at least $4$ socks need to be picked.",
+  "valid answer": "Valid Answers: $4$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Apply the Pigeon Hole Principle",
+  "problem firm": [
+    "Jane Street",
+    "Transmarket Group"
+  ],
+  "question id": "60902427785839749335"
+}

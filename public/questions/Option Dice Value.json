@@ -1,0 +1,16 @@
+{
+  "problem name": "Option Dice Value",
+  "problem text": "A fair $12$-sided die displays the numbers $1,3,\\dots,12$. Determine the fair market value of an option with a strike price of $12$, where the payout in dollars is the face value shown after rolling the die.",
+  "problem solution": "We understand that with a probability of $\\dfrac{1}{2}$, the outcome is less than $12$, and thus the option is not exercised. In the alternative scenario, where the result is greater than $12$, each outcome occurs with probability $\\dfrac{1}{12}$, and yields a profit of $1, 3, 5, 7, 9, 11$. This is derived by subtracting $12$ from each number greater than $12$. Consequently, the fair price is $\\dfrac{1}{2} \\cdot 0 + \\dfrac{1 + 3 + 5 + 7 + 9 + 11}{12} = 3$.",
+  "valid answer": "Valid Answers: $3$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about scenarios when the die results in a number less than or greater than $12$. Calculate the expected earnings in each situation.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "77160257902398722337"
+}

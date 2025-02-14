@@ -1,0 +1,16 @@
+{
+  "id": "mig_cu78bqim1u3p8dmsu8pg",
+  "parentID": "mig_cu78bnjisf7cfs2ln6d0",
+  "checksum": "1:b91e61ecb88bffade3c1b485ab77d1452e6b48cb48ba3f6adb4a135610b72913",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "userquestion",
+          "type": "text"
+        },
+        "table": "questions-completed"
+      }
+    }
+  ]
+}

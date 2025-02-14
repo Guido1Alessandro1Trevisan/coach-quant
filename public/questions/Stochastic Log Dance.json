@@ -1,0 +1,16 @@
+{
+  "problem name": "Stochastic Log Dance",
+  "problem text": "Assume $S_t$ evolves according to: $dS_t = 3 S_t \\, dt + 4 S_t \\, dW_t$, where $W_t$ represents a standard Brownian motion. Determine the evolution of $X_t = \\ln(S_t)$, expressed as: $dX_t = a \\, dt + b \\, dW_t$. Calculate $a^2 + b^2$.",
+  "problem solution": "Ito's Lemma can be applied to $f(x) = \\ln(x)$. We find $f'(x) = \\frac{1}{x}$ and $f''(x) = -\\frac{1}{x^2}$. According to Ito's Lemma, $df = f'(S_t) dS_t + \\frac{1}{2}f''(S_t) (dS_t)^2$. Substituting the given dynamics into $dS_t$, the calculated derivatives, and using $(dS_t)^2 = 16 S_t^2 dt$, we derive the following. Consequently, $a = -5$ and $b = 4$. Substituting these values, $(-5)^2 + 4^2 = 41$.",
+  "valid answer": "Valid Answers: $41$",
+  "problem tags": [
+    "Stochastic Calculus",
+    "Pure Math"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Apply Ito's Lemma",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "35743551293502083784"
+}

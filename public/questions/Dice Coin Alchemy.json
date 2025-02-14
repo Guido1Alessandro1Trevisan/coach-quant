@@ -1,0 +1,15 @@
+{
+  "problem name": "Dice Coin Alchemy",
+  "problem text": "Imagine we aim to replicate an occurrence $X$ where $\\mathbb{P}[X] = p$. We possess only two tosses of a fair die and one trial of a fair coin. Identify the minimal $p$ for which we can emulate $X$.",
+  "problem solution": "To address this issue, we are essentially seeking the least frequent scenario with $2$ die tosses and one coin trial. Each face of the die is equally likely to appear, and each coin side is equally probable, so this is about assigning specific outcomes for each toss and trial. Simulate a scenario with probability $\\dfrac{1}{72}$ by stipulating that event $X$ happens if we get $(A,B)$ on the dice and the coin shows $C$. 1. $A$ is a number you chose beforehand within $(1,6)$. 2. $B$ is a number you selected beforehand within $(1,6)$. 3. $C$ is a condition you decided beforehand of $(\\text{heads}, \\text{tails})$. In this context, we cannot divide our $36$ outcomes space for the dice any further, nor can we divide our $2$ outcomes space for the coin further. e.g., Probability(first die shows $6$, second die shows $6$, coin lands on heads) = $\\frac{1}{(6 \\times 6 \\times 2)} = \\frac{1}{72}$.",
+  "valid answer": "Valid Answers: $1/72$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "No hint found.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "35484460173808254462"
+}

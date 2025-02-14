@@ -1,0 +1,16 @@
+{
+  "problem name": "Doubled Data Dilemma",
+  "problem text": "Imagine performing a linear regression on a dataset to find the coefficients $\\hat{\\beta}_{OLS}$. Remember that if $X$ represents the data and $\\sigma^2$ denotes the variance of the identically distributed normal errors, then $\\text{Var}\\left(\\hat{\\beta}_{OLS}\\right) = \\sigma^2(X^TX)^{-1}$. If you conduct linear regression again on the data where each value is doubled from your initial dataset, resulting in new coefficients $\\hat{\\beta}_{OLS}'$, determine the constant $c$ such that $\\text{Var}\\left(\\hat{\\beta}_{OLS}'\\right) = c\\text{Var}\\left(\\hat{\\beta}_{OLS}\\right)$. If there is no such constant, input $-1$.",
+  "problem solution": "Upon doubling the data, we substitute the matrix $X$ with the matrix $X' = 2X$. Additionally, $\\sigma$ is replaced with $2\\sigma$. Consequently, $X'^TX' = 4X^TX$ through straightforward matrix multiplication. Hence, $(2\\sigma)^2 (4X^T X)^{-1} = \\frac{1}{4} \\cdot 4 \\cdot \\sigma^2 (X^TX)^{-1} = \\sigma^2 (X^TX)^{-1}$, which confirms our conclusion.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Linear Regression",
+    "Statistics"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Doubling the data implies substituting the matrix $X$ with the matrix $X' = 2X$. Consequently, $X'^TX' = 4X^TX$ through straightforward matrix multiplication. Consider the effect on $\\sigma$?",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "37374053971253661747"
+}

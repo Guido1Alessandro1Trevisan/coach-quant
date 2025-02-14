@@ -1,0 +1,16 @@
+{
+  "problem name": "Streak Flip Fun",
+  "problem text": "Determine the likelihood of getting the same coin side on $4$ consecutive tosses.",
+  "problem solution": "The first toss outcome sets the needed results for the following tosses. Therefore, the initial flip can be any result. After this first flip, the next three tosses must match this outcome, each with a probability of $\\dfrac{1}{2}$. Consequently, the total probability is $\\dfrac{1}{2^3} = \\dfrac{1}{8}$.",
+  "valid answer": "Valid Answers: $1/8$",
+  "problem tags": [
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "The outcome of the first toss decides the side that all subsequent flips must replicate.",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "65347903136830572093"
+}

@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Duel Dilemma",
+  "problem text": "You have a choice between two games that involve fair standard $6$-sided dice. Which option offers a greater chance of winning? Choose $1$ for the first game, $2$ for the second game, or $3$ if both have equal chances of success. Game 1: You have $4$ attempts with one die and must roll a $6$ at least once. Game 2: You have $24$ attempts with two dice and must roll $66$ at least once.",
+  "problem solution": "The chance of success in game $1$ is $1 - \\left(\\dfrac{5}{6}\\right)^4$ using the complement rule, because to lose, you must roll one of the other $5$ numbers on each try. In game $2$, the chance of success is $1 - \\left(\\dfrac{35}{36}\\right)^{24}$, since to lose, you must roll any of the $35$ other combinations on each attempt with two dice. We need to find out which of these probabilities is higher, which means determining which of $\\left(\\dfrac{5}{6}\\right)^4$ and $\\left(\\dfrac{35}{36}\\right)^{24}$ is smaller. We know that $\\dfrac{35^2}{36^2} = \\dfrac{1225}{1296} \\approx \\dfrac{1225}{1300} = \\dfrac{49}{52}$. Then, squaring this results in $\\dfrac{2401}{2704} \\approx \\dfrac{8}{9}$. Therefore, $\\left(\\dfrac{35}{36}\\right)^8 \\approx \\dfrac{64}{81} \\approx \\dfrac{4}{5}$. We then compare $\\left(\\dfrac{5}{6}\\right)^4$ to $\\dfrac{4^3}{5^3} = \\dfrac{64}{125}$. It's clear that $\\dfrac{5^4}{6^4} = \\dfrac{625}{1296} < \\dfrac{1}{2} < \\dfrac{64}{125}$. Thus, we can conclude, at least approximately, that $\\left(\\dfrac{5}{6}\\right)^4$ is smaller, making Game $1$ the one with better chances. A calculator confirms this result.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Combinatorics",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The chance of success in game $1$ is $1 - \\left(\\dfrac{5}{6}\\right)^4$ using the complement rule, because to lose, you must roll one of the other $5$ numbers on each try. In game $2$, the chance of success is $1 - \\left(\\dfrac{35}{36}\\right)^{24}$, since to lose, you must roll any of the $35$ other combinations on each attempt with two dice. Use approximations to reason out which probability is higher.",
+  "problem firm": [
+    "Goldman Sachs",
+    "Jane Street"
+  ],
+  "question id": "49028371725283897644"
+}

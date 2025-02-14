@@ -1,0 +1,15 @@
+{
+  "problem name": "Card Flip Gambit",
+  "problem text": "You are participating in a card game at a casino involving a standard deck of $52$ cards arranged face down. Each round, you flip over two cards; if both cards are black, they go to the dealer's collection, if both are red, they go to your collection, otherwise, they are discarded. This continues for $26$ rounds until all the cards are used. If your collection has more cards, you earn $10$. Otherwise, if you lose or tie, you receive nothing. What is the fair value of playing this game?",
+  "problem solution": "Consider the probabilities for you and the dealer in this game. Regardless of the card order, both you and the dealer will always collect an equal number of cards because each discarded pair consists of one black and one red card, ensuring an equal number of each color is discarded. This implies that the game invariably ends in a draw! The count of red cards you have matches the count of black cards the dealer has, leading to an expected tie (no win). Thus, you should pay $0$ to engage in this game.",
+  "valid answer": "Valid Answers: $0$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Look for symmetry within the problem, knowing that each discarded pair contains one black and one red card. What does each discard reveal about the remaining black and red card counts?",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "50793821628392665139"
+}

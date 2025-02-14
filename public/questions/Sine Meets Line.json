@@ -1,0 +1,16 @@
+{
+  "problem name": "Sine Meets Line",
+  "problem text": "Consider the equation sin(x) + x - 1 = 0. Determine whether there is at least one real solution, justify why such a solution exists, and approximate its value.",
+  "problem solution": "Let $$f(x)=\\sin(x)+x-1$$. Observe that $$f(x)$$ is continuous for all real $$x$$ since both $$\\sin(x)$$ and $$x$$ are continuous. First, evaluate $$f(0)=\\sin(0)+0-1=-1<0$$ and $$f(1)=\\sin(1)+1-1=\\sin(1)>0$$, since $$\\sin(1)\\approx0.84>0$$. Because $$f(0)<0$$ and $$f(1)>0$$, by the Intermediate Value Theorem, there must be at least one root in the interval $$(0,1)$$. Moreover, the derivative is $$f'(x)=\\cos(x)+1$$. Since $$-1\\le\\cos(x)\\le1$$ for all real $$x$$, we have $$0\\le\\cos(x)+1\\le2\\!.\\!$$ Hence $$f'(x)\\ge0$$ for all $$x$$, implying that $$f(x)$$ is non-decreasing. Therefore, the zero in $$(0,1)$$ is the unique real solution. A numerical approximation yields $$x\\approx0.51\\!.\\!$$",
+  "valid answer": "Valid Answers: $$x\\approx0.51$$",
+  "problem tags": [
+    "Trigonometry",
+    "Real Analysis"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Use the Intermediate Value Theorem on sin(x) + x - 1, checking its sign at convenient points.",
+  "problem firm": [
+    "Wells Fargo"
+  ],
+  "question id": "53117012972557791800"
+}

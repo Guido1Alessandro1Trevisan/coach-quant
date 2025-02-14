@@ -1,0 +1,17 @@
+{
+  "problem name": "Prime Roll Luck",
+  "problem text": "A typical fair $6$-sided die is rolled $6$ times. We define a successful outcome as rolling a prime number; otherwise, it’s unsuccessful. What is the likelihood of having exactly $3$ successful outcomes?",
+  "problem solution": "This follows a straightforward binomial distribution, with the probability of success being $\\frac{1}{2}$, meaning we roll a $2, 3,$ or $5$, and the probability of failure is also $\\frac{1}{2}$. Hence, if $S$ represents the number of successful outcomes, $S \\sim \\text{Binom}(6,0.5)$. Consequently, we find $\\mathbb{P}[S = 3] = \\binom{6}{3} \\cdot \\left(\\frac{1}{2}\\right)^6 = \\frac{20}{64} = \\frac{5}{16}$.",
+  "valid answer": "Valid Answers: $\\frac{5}{16}$",
+  "problem tags": [
+    "Discrete Random Variables",
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The count of successful outcomes follows a $binomial$ distribution. What are its parameters?",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "12113430936115299034"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Heads Below Five",
+  "problem text": "We repeatedly toss a fair coin ten times. Determine the probability that the total number of heads obtained is no more than four.",
+  "problem solution": "Designate the random variable X to be the number of heads appearing in the 10 coin flips. Since each flip is fair, X follows a binomial distribution with parameters n=10 and p=$\\frac{1}{2}$. The probability that exactly k heads occur is given by $P(X=k)=\\binom{10}{k}\\Bigl(\\frac{1}{2}\\Bigr)^{10}$. We seek $P(X\\le4)$, which is the sum $P(X=0)+P(X=1)+P(X=2)+P(X=3)+P(X=4)$. In symbols,$\\displaystyle P(X\\le4)=\\sum_{k=0}^{4}\\binom{10}{k}\\Bigl(\\frac{1}{2}\\Bigr)^{10}.$We compute the relevant binomial coefficients:$\\binom{10}{0}=1,\\quad\\binom{10}{1}=10,\\quad\\binom{10}{2}=45,\\quad\\binom{10}{3}=120,\\quad\\binom{10}{4}=210.$Summing these gives $1+10+45+120+210=386$. Therefore,$\\displaystyle P(X\\le4)=\\frac{386}{1024}=\\frac{193}{512}\\approx0.376953125.$Hence, the probability that four or fewer heads are observed in 10 flips is $\\frac{193}{512}$ (approximately 0.377).",
+  "valid answer": "Valid Answers: $\\dfrac{193}{512}\\approx0.377$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Use the binomial distribution for 10 flips. Sum the probabilities for 0, 1, 2, 3, and 4 heads.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "06858348178219841507"
+}

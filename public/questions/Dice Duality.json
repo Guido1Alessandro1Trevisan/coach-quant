@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Duality",
+  "problem text": "Emma possesses two dice, each with $6$ sides showing numbers $1-6$. One die is unbiased, while the other is biased such that the frequency of each side is proportional to its number. Emma rolls the pair. Determine the likelihood that the total of the results is odd.",
+  "problem solution": "Emma can achieve an odd total in two scenarios: The unbiased die shows an even number and the biased shows an odd number OR The unbiased die shows an odd number and the biased shows an even number. **Scenario 1:** The unbiased die is even with a likelihood of $\\dfrac{1}{2}$. The chance that the biased die is odd is $\\dfrac{1+3+5}{1+2+3+4+5+6} = \\dfrac{3}{7}$. **Scenario 2:** The unbiased die shows an odd number with a probability of $\\dfrac{1}{2}$. The possibility that the biased die is even is $\\dfrac{2+4+6}{21} = \\dfrac{4}{7}$. Combining these, the probability of an odd total is $\\dfrac{1}{2} \\cdot \\dfrac{3}{7} + \\dfrac{1}{2} \\cdot \\dfrac{4}{7} = \\dfrac{1}{2}$.",
+  "valid answer": "Valid Answers: $\\frac{1}{2}$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Emma can achieve an odd total in two scenarios: The unbiased die is $\\text{even}$ and the biased is $\\text{odd}$ OR The unbiased die is $\\text{odd}$ and the biased is $\\text{even}$.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "05408246369607579082"
+}

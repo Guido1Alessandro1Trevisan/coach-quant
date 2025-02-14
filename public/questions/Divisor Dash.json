@@ -1,0 +1,16 @@
+{
+  "problem name": "Divisor Dash",
+  "problem text": "Determine the likelihood that a randomly chosen positive divisor of $10^{99}$ is a multiple of $10^{80}$.",
+  "problem solution": "The factorization into primes of $10^{99}$ is $2^{99} \\cdot 5^{99} = (2^{80} \\cdot 5^{80}) \\cdot 2^{19} \\cdot 5^{19}$. The part in parentheses represents $10^{80}$. As there are $100$ possible exponents for each of $2$ and $5$ (choosing from $0$ through $99$, inclusive), there are a total of $100^2 = 10000$ divisors available. Among these, we need to find those where the exponent for both $2$ and $5$ is no less than $80$. Based on our previous factorization, this means selecting exponents for both $2$ and $5$ from $80$ to $99$, inclusive. This provides $20$ choices for each, leading to $20^2 = 400$ divisors that fit the condition. As a result, the probability is $\\dfrac{400}{10000} = \\dfrac{1}{25}$.",
+  "valid answer": "Valid Answers: [ $1/25$, $0.04$ ]",
+  "problem tags": [
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about the prime factorization of $10^{99}$. How many possible divisors exist?",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "69885478721518677991"
+}

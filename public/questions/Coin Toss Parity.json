@@ -1,0 +1,16 @@
+{
+  "problem name": "Coin Toss Parity",
+  "problem text": "A fair coin is tossed $5$ times. Determine the probability that the count of tails in the first $3$ tosses matches the count of tails in the last $2$ tosses.",
+  "problem solution": "We analyze based on the number of tails in both parts. The only way to have $0$ tails in both parts is $HHHHH$, resulting in $1$ outcome. To achieve one tail in each part, there are $3$ possible sequences in the first $3$ tosses with $1$ tail ($THH$, $HTH$, and $HHT$) and $2$ sequences in the last two tosses with $1$ head ($TH$ and $HT$). This results in $3 \\cdot 2 = 6$ outcomes here. For two tails in each part, there are $3$ possible sequences in the first $3$ tosses with $2$ tails ($TTH$, $THT$, and $HTT$). Only one sequence has $2$ tails in the last two tosses, which is $TT$. Thus, this results in $3 \\cdot 1 = 3$ sequences. Adding these together, we find $1 + 6 + 3 = 10$ sequences fulfilling this condition. There are $2^5 = 32$ total sequences of $5$ tosses, so the answer is $\\dfrac{10}{32} = \\dfrac{5}{16}$.",
+  "valid answer": "Valid Answers: $5/16$",
+  "problem tags": [
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Analyze based on the number of tails in each segment.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "44149462713978320199"
+}

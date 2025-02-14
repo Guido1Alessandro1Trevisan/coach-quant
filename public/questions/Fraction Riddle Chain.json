@@ -1,0 +1,16 @@
+{
+  "problem name": "Fraction Riddle Chain",
+  "problem text": "Consider the following chain of fractions: 3/5, 1/10, 23/30, 1/60, 49/60, -1/60. Determine what fraction appears next in this list.",
+  "problem solution": "First, we compute the consecutive differences among the terms to detect a pattern. We have $$\\frac{1}{10} - \\frac{3}{5} = -\\frac{1}{2},\\quad \\frac{23}{30} - \\frac{1}{10} = \\frac{2}{3},\\quad \\frac{1}{60} - \\frac{23}{30} = -\\frac{3}{4},\\quad \\frac{49}{60} - \\frac{1}{60} = \\frac{4}{5},\\quad -\\frac{1}{60} - \\frac{49}{60} = -\\frac{5}{6}.$$ Notice how the differences alternate between negative and positive, and in each case, the absolute value of the difference is $$\\frac{n}{n+1}$$ for consecutive integer values of n=1,2,3,4,5. Therefore, the next difference must be $$+\\frac{6}{7}$$. Adding this difference to the last term $$-\\frac{1}{60}$$ yields $$-\\frac{1}{60} + \\frac{6}{7} = -\\frac{7}{420} + \\frac{360}{420} = \\frac{353}{420}.$$ Consequently, the next term in the sequence is $$\\frac{353}{420}.$$",
+  "valid answer": "Valid Answers: 353/420",
+  "problem tags": [
+    "Sequences",
+    "Pattern Recognition"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Examine how each term changes from one fraction to the next. Watch how the sign and magnitude of these changes evolve.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "02800831760541274155"
+}

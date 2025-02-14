@@ -1,0 +1,17 @@
+{
+  "problem name": "Rolling to Twenty",
+  "problem text": "Determine the likelihood that the total of the face values is $20$ when $4$ fair $6$-sided dice are rolled.",
+  "problem solution": "Evidently, there are $6^4 = 1296$ possible results for the $4$ dice throws. We must categorize these into all permutations that total to $20$, and then count each of their configurations. By manual calculation, the permutations that result in $20$ are $6,6,6,2$, $6,6,5,3$, $6,6,4,4$, $6,5,5,4$, $5,5,5,5$. Note that we now need to enumerate all arrangements for each set, as our sample space includes all $4$-tuples. For $6,6,6,2$, there are $4$ configurations corresponding to the position of the $2$. For $6,6,5,3$, there are $12$ configurations found by dividing $4!$ (total configurations) by $2!$ for the repeated sixes. Similarly, $6,6,4,4$ has $6$ configurations, $6,5,5,4$ has $12$ configurations, and $5,5,5,5$ has $1$ configuration. Summing these, we obtain $35$ configurations that sum to $20$. Consequently, the probability is $\\dfrac{35}{1296}$.",
+  "valid answer": "Valid Answers: $35/1296$",
+  "problem tags": [
+    "Combinatorics",
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Count the distinct configurations that add up to $20$. Alternatively, consider the sum of the first $2$ dice.",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "29847719396096827915"
+}

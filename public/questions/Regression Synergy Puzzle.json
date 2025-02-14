@@ -1,0 +1,17 @@
+{
+  "problem name": "Regression Synergy Puzzle",
+  "problem text": "Given three datasets $X_1, X_2,$ and $Y$, we conduct two separate linear regressions resulting in $y \\sim \\alpha_1 + \\beta_1 x_1$ and $y \\sim \\alpha_2 + \\beta_2 x_2$. Both regressions yield an $R^2$ value of $0.05$. Determine the greatest lower bound for the $R^2$ value of the regression $y \\sim \\alpha + \\beta' x_1 + \\beta'' x_2$.",
+  "problem solution": "$R^2$ is the fraction of the total variance in $Y$ that the model on the right-hand side accounts for. Given that the total variance in $Y$ remains unchanged, and including additional variables captures more variance, the $R^2$ for the new regression must be at least $0.05$. This value can be reached by making $X_2 = X_1$ as a limiting scenario, ensuring the new regression contains the same information as the initial one.",
+  "valid answer": "Valid Answers: $[ 0.05, 5 ]$",
+  "problem tags": [
+    "Linear Regression",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider $R^2$ as the portion of the total variance in $Y$ that the model on the $RHS$ explains.",
+  "problem firm": [
+    "Squarepoint Capital",
+    "Two Sigma"
+  ],
+  "question id": "64321897460197922146"
+}

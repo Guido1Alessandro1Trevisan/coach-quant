@@ -1,0 +1,16 @@
+{
+  "problem name": "Roll Dollar Deeds",
+  "problem text": "You roll a standard, unbiased six-sided die and earn in dollars the number that shows up. Determine the amount you should pay to participate in this game, ensuring the expected net outcome is zero.",
+  "problem solution": "Let X be the value of the die roll, taking one of the values 1, 2, 3, 4, 5, or 6 with equal probability of 1/6. The expected value is $$E[X] = \\frac{1+2+3+4+5+6}{6} = 3.5$$. Because the fair entry fee is the expected payout, you should pay 3.5 dollars to play, resulting in an expected net profit of zero.",
+  "valid answer": "Valid Answers: 3.5",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Compute the average of all die face values.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "82785361823654272216"
+}

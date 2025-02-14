@@ -1,0 +1,17 @@
+{
+  "problem name": "Correlated Contrasts",
+  "problem text": "Assume $X$ and $Y$ are completely correlated meaning $\\rho(X,Y) = 1$ with $\\sigma_Y < \\sigma_X$. Determine the correlation between $X+Y$ and $X-Y$.",
+  "problem solution": "Assume $X$ and $Y$ possess variances $\\sigma_X^2$ and $\\sigma_Y^2$ respectively. Then $\\text{Cov}(X+Y,X-Y) = \\text{Cov}(X,X) - \\text{Cov}(Y,Y) = \\sigma_X^2 - \\sigma_Y^2$. Similarly, we have $\\text{Var}(X+Y) = \\sigma_X^2 + \\sigma_Y^2 + 2\\sigma_X\\sigma_Y = (\\sigma_X + \\sigma_Y)^2$, so $\\sigma_{X+Y} = \\sigma_X + \\sigma_Y$. Using a similar approach, we find $\\text{Var}(X-Y) = \\sigma_X^2 + \\sigma_Y^2 - 2\\sigma_X\\sigma_Y = (\\sigma_X - \\sigma_Y)^2$, so $\\text{Var}(X-Y) = |\\sigma_X - \\sigma_Y|$. Note the need for absolute values here since variance cannot be negative.\\n\\nThus, it follows that $\\rho(X+Y,X-Y) = \\frac{\\sigma_X^2 - \\sigma_Y^2}{(\\sigma_X+\\sigma_Y)|\\sigma_X - \\sigma_Y|} = \\frac{\\sigma_X - \\sigma_Y}{|\\sigma_X - \\sigma_Y|} = 1$. The value $1$ arises from the fact that $\\sigma_X > \\sigma_Y$, ensuring the numerator is positive.\\n\\nAn alternative perspective is that if $X$ and $Y$ are perfectly correlated, then $Y = aX + b$ for some constants $a$ and $b$. Given $\\sigma_X > \\sigma_Y$, it follows that $|a| < 1$. Consequently, $X+Y = X(1+a) + b$ and $X-Y = X(1-a) + b$. As $|a| < 1$, the constants $1+a$ and $1-a$ are both positive. Hence, as these are linear transformations of $X$ with identical signs, they exhibit correlation $1$.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Covariance",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Assume $X$ and $Y$ have variances $\\sigma_X^2$ and $\\sigma_Y^2$. Calculate $\\text{Cov}(X+Y,X-Y)$ and their respective variances using standard formulas.",
+  "problem firm": [
+    "Five Rings",
+    "Transmarket Group"
+  ],
+  "question id": "92353150481996026576"
+}

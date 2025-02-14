@@ -1,0 +1,15 @@
+{
+  "problem name": "Jug Puzzle Quest",
+  "problem text": "Anna's parents found a 120-quart beer container and are upset, intending to dispose of it. Anna pleads to save some of the beer, and her parents agree, provided she can exactly measure 1 quart into both a $7$-quart and a $5$-quart container. You have one of each type of container. Anna can pour beer from any container back into the original beer barrel. Define a transaction as pouring liquid from one container to another. Determine the minimum number of transactions required to meet the condition. If it cannot be done, return $-1$.",
+  "problem solution": "To complete the task in the least number of transactions, which is $17$, carry out these actions: 1. Fill the $7$-quart container. 2. Fill the $5$-quart container. 3. Remove $108$ quarts from the container. 4. Pour the contents of the $5$-quart container back into the barrel. 5. Transfer beer from the $7$-quart to the $5$-quart container until it is full. 6. Pour the $5$-quart container back into the barrel. 7. Move $2$ quarts from the $7$-quart into the $5$-quart container. 8. Refill the $7$-quart from the barrel. 9. Top off the $5$-quart container from the $7$-quart container. 10. Empty the $5$-quart container back into the barrel. 11. Transfer $4$ quarts from the $7$-quart into the $5$-quart container. 12. Refill the $7$-quart from the barrel. 13. Top off the $5$-quart container from the $7$-quart container. 14. Discharge the contents of the $5$-quart container. 15. Fill the $5$-quart container from the barrel. 16. Remove $5$ quarts from the $5$-quart container. 17. Pour $1$ quart from the barrel into the $5$-quart container. By adhering to these steps, the task is achieved in just $17$ transactions, which is the fewest possible.",
+  "valid answer": "Valid Answers: [ $20/\\text{mo}$ billed annually to Invest in your future today, $30/\\text{mo}$ billed monthly to try it out and see if its worth it ]",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "To achieve the goal with the minimum number of transactions, follow these initial steps (Here are the first $4$): 1. Fill the $7$-quart container. 2. Fill the $5$-quart container. 3. Remove $108$ quarts from the barrel. 4. Pour the $5$-quart container back into the barrel.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "42848134873618601831"
+}

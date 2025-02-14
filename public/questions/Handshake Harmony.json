@@ -1,0 +1,16 @@
+{
+  "problem name": "Handshake Harmony",
+  "problem text": "Imagine four couples are in a room, and everyone exchanges greetings by shaking hands. Each individual shakes hands with everyone except their own partner. How many handshakes happen in total? To find this, consider the total number of individuals and the condition that partners do not shake hands. There are $8$ individuals, each shaking hands with $6$ others (excluding themselves and their partner). The total handshakes can be found using the combination formula for selecting $2$ individuals from $8$, which is $\\binom{8}{2}$. But since each handshake is counted twice (once for each participant), we must divide by $2$. Hence, the final count of handshakes is:$$\\frac{\\binom{8}{2}}{2} = \\frac{28}{2} = 14$$Thus, the overall number of handshakes is $14$.",
+  "problem solution": "Every handshake involves $2$ people. The sequence of people in a handshake is not important, so there are $\\binom{8}{2} = 28$ possible pairs of individuals shaking hands. However, since no person shakes hands with their own partner, one handshake for each couple must be deducted. With $4$ couples, we subtract $4$ handshakes, resulting in $28 - 4 = 24$ handshakes in total.",
+  "valid answer": "Valid Answers: $24$",
+  "problem tags": [
+    "Combinatorics",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "How many possible pairs of individuals can be formed? How many of these pairs consist of partners?",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "22564474030041764429"
+}

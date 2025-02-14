@@ -1,0 +1,15 @@
+{
+  "problem name": "Circular Puzzle Quandary",
+  "problem text": "At a round table with $5$ chairs, five individuals labeled $1, 2, 3, 4, 5$ are positioned. $4$ desires to be directly to the right of $2$, and $2$ should be directly to the right of $5$. Furthermore, $1$ prefers not to be adjacent to either $2$ or $5$. Who occupies the seat directly to the left of $5$?",
+  "problem solution": "Based on the conditions given, from left to right, the sequence is $XY524$, where $X$ and $Y$ are either $1$ or $3$. As $1$ does not wish to sit beside $5$, $Y = 3$, thus person $3$ is seated to the left of person $5$.",
+  "valid answer": "Valid Answers: $3$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The provided text does not include any LaTeX math, numbers, symbols, expressions, or equations requiring dollar sign formatting. Therefore, no changes in formatting are needed.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "02618775542603015336"
+}

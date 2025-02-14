@@ -1,0 +1,16 @@
+{
+  "problem name": "Chamber Challenge",
+  "problem text": "You and a companion choose to engage in a game of Russian Roulette. The weapon used is a revolver with six chambers, containing one bullet. At the start of each turn, the cylinder is spun to randomize which chamber is next. You both alternate pulling the trigger until someone fires the bullet and loses. Considering the cylinder is spun again after each attempt, what is the probability that you win if your companion takes the first turn?",
+  "problem solution": "Let's denote $p$ as the likelihood of your companion, who plays first, losing. Consequently, $1-p$ is the likelihood that you, as the second player, lose. We will evaluate the probability $p$ based on the initial trigger pull. The first player loses definitively $\\frac{1}{6}$ of the time. Otherwise, they effectively become the second player with a conditional probability $1-p$ of losing. Therefore, $p = \\frac{1}{6} \\times 1 + \\frac{5}{6} \\times (1-p) \\Rightarrow p = \\frac{6}{11}$",
+  "valid answer": "Valid Answers: $6/11$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "How can you express the probability that you lose based on the first trigger pull?",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "18572068303076670685"
+}

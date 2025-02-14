@@ -1,0 +1,16 @@
+{
+  "problem name": "Twist Correlation",
+  "problem text": "Consider any random variables $X$ and $Y$ with finite mean and variance $16$. Determine $\\text{Corr}(X+Y, X-Y)$.",
+  "problem solution": "Due to bilinearity, we find $\\text{Cov}(X+Y, X-Y) = \\text{Var}(X) - \\text{Cov}(X,Y) + \\text{Cov}(X,Y) - \\text{Var}(Y)$. Given that $X$ and $Y$ share the same variance, all components cancel out, leaving the RHS as $0$, indicating $\\text{Corr}(X+Y, X-Y) = 0$.",
+  "valid answer": "Valid Answers: $0$",
+  "problem tags": [
+    "Covariance",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Apply bilinearity to $X+Y$ and $X-Y$.",
+  "problem firm": [
+    "Transmarket Group"
+  ],
+  "question id": "71221366752030490487"
+}

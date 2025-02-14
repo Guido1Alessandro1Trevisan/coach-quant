@@ -1,0 +1,17 @@
+{
+  "problem name": "Six Streak Quest",
+  "problem text": "Consider the process of rolling a fair die repeatedly. Compute the average count of rolls required to see two consecutive sixes appear for the first time.",
+  "problem solution": "We define three states based on how many consecutive sixes have been observed most recently: Let $S_0$ represent having no consecutive sixes yet (or the consecutive count has been broken), $S_1$ mean the most recent roll was a single six (so we have one six in a row), and $S_2$ mean that two consecutive sixes have just been rolled. We let $E_0$, $E_1$, and $E_2$ be the expected number of additional rolls required from each of these states to eventually reach two consecutive sixes for the first time. Once we reach $S_2$, the event has occurred, so $E_2 = 0$. From $S_0$, each roll either follows with a six (probability $\\frac{1}{6}$), transitioning us to state $S_1$, or it is not a six (probability $\\frac{5}{6}$), keeping us in $S_0$. This yields the relation $$E_0 = 1 + \\frac{1}{6}E_1 + \\frac{5}{6}E_0.$$ Rearranging, we get $$E_0 - \\frac{5}{6}E_0 = 1 + \\frac{1}{6}E_1 \\implies \\frac{1}{6}E_0 = 1 + \\frac{1}{6}E_1 \\implies E_0 = 6 + E_1.$$ From $S_1$, a roll of six (probability $\\frac{1}{6}$) finishes the process and leads to $S_2$ ($E_2=0$), whereas a non-six (probability $\\frac{5}{6}$) brings us back to $S_0$. Hence $$E_1 = 1 + \\frac{1}{6}E_2 + \\frac{5}{6}E_0 = 1 + \\frac{5}{6}E_0.$$ Plugging that into $E_0 = 6 + E_1$, we get $$E_0 = 6 + \\left(1 + \\frac{5}{6}E_0\\right) = 7 + \\frac{5}{6}E_0.$$ Therefore, $$E_0 - \\frac{5}{6}E_0 = 7 \\implies \\frac{1}{6}E_0 = 7 \\implies E_0 = 42.$$ This value $E_0=42$ is the expected number of dice rolls required, from the beginning (with no sixes rolled yet), to first get two sixes in a row.",
+  "valid answer": "Valid Answers: 42",
+  "problem tags": [
+    "Markov Chains",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Divide the scenario into states depending on how many consecutive sixes you have so far; then derive equations for the expected values from each state.",
+  "problem firm": [
+    "Belvedere Trading"
+  ],
+  "question id": "47727095212816487561"
+}

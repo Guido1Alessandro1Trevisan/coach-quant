@@ -1,0 +1,18 @@
+{
+  "problem name": "Prime Dice Quest",
+  "problem text": "You throw a pair of standard $6$-sided dice. The faces of each die are marked with the first $6$ prime numbers. Determine the probability that the total of the numbers on the top faces is a prime number.",
+  "problem solution": "The faces will show $2,3,5,7,11,$ and $13$. Thus, the total of the numbers on the top faces ranges from $4$ to $26$, inclusive. The prime numbers within this range are $5,7,11,13,17,19,$ and $23$. We must now find how each prime total can be formed from the dice. Note that one die must show $2$, because all other numbers on the dice are odd primes greater than $2$. Hence, the total must be a prime $p$ such that $p-2$ is also prime and $p-2 \\leq 13$. The possible values of $p$ are $p = 5,7,$ and $13$. Each of these results from two different arrangements of the dice, giving $6$ successful outcomes out of $6^2 = 36$ total possibilities, leading to a probability of $\\dfrac{6}{36} = \\dfrac{1}{6}$.",
+  "valid answer": "Valid Answers: $1/6$",
+  "problem tags": [
+    "Combinatorics",
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The numbers on the faces are $2, 3, 5, 7, 11,$ and $13$. Thus, the total of the numbers on the top faces is between $4$ and $26$, inclusive. What must one die display for the total to be a prime number?",
+  "problem firm": [
+    "Jane Street",
+    "Sig"
+  ],
+  "question id": "00246659758078783417"
+}

@@ -1,0 +1,19 @@
+{
+  "problem name": "Orb Forecast Challenge",
+  "problem text": "You have a bag containing a total of $4$ orbs, with $2$ being blue and $2$ being red. You will draw them one at a time, without putting any back. Before each draw, you can predict the color of the next orb. If your prediction is right, you earn $1$. What is the expected value of your winnings if you use the best possible strategy?",
+  "problem solution": "Let $I_1, \\dots, I_4$ be the indicator variables for correctly predicting the color of the $i$th orb drawn. Then $T = I_1 + I_2 + I_3 + I_4$ represents the total winnings. By the linearity of expectation, $\\mathbb{E}[T] = \\sum_{i=1}^4 \\mathbb{P}[A_i]$, where $A_i$ is the event of correctly guessing the $i$th orb's color. We need a strategy that optimizes $\\mathbb{P}[A_i]$. For the first draw, there is no prior information, so the probability of a correct guess is $\\mathbb{P}[A_1] = \\dfrac{1}{2}$. After observing the first orb's color, the chance that the second orb is a different color is $\\dfrac{2}{3}$, and the same color is $\\dfrac{1}{3}$. Thus, guessing the opposite color is optimal for the second draw, giving $\\mathbb{P}[A_2] = \\dfrac{2}{3}$. For the third draw, review the previous outcomes. If the first two are the same color, with probability $\\dfrac{1}{3}$, the colors of the remaining orbs are known, so guess accordingly. If they differ, occurring with probability $\\dfrac{2}{3}$, the third draw is random, with a correct guess probability of $\\dfrac{1}{2}$. Thus, using the Law of Total Probability, $\\mathbb{P}[A_3] = \\dfrac{2}{3} \\cdot \\dfrac{1}{2} + \\dfrac{1}{3} \\cdot 1 = \\dfrac{2}{3}$. By the third draw, the last orb's color is known, so $\\mathbb{P}[A_4] = 1$. This leads to an expected total of $\\mathbb{E}[T] = \\dfrac{1}{2} + \\dfrac{2}{3} + \\dfrac{2}{3} + 1 = \\dfrac{17}{6}$. Random guessing would yield an expected value of $2$, so this strategy is better.",
+  "valid answer": "Valid Answers: $17/6$",
+  "problem tags": [
+    "Games",
+    "Conditional Probability",
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Base your color predictions on the colors already drawn.",
+  "problem firm": [
+    "Five Rings",
+    "Jane Street"
+  ],
+  "question id": "17134618048819503838"
+}

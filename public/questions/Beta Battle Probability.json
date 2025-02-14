@@ -1,0 +1,17 @@
+{
+  "problem name": "Beta Battle Probability",
+  "problem text": "Suppose $X_1, \\dots, X_{324}, Y_1, \\dots, Y_{324} \\sim \\text{Beta}(1, 2)$ are IID. Let $S_{324} = X_1 + \\dots + X_{324}$ and $T_{324} = Y_1 + \\dots + Y_{324}$. Estimate $\\mathbb{P}[S_{324} - T_{324} > 10]$. Express your answer as $\\Phi(a)$, where $\\Phi$ is the cumulative distribution function of the standard normal distribution. Determine the value of $a$.",
+  "problem solution": "As both $$ S_{324} $$ and $$ T_{324} $$ are sums of $$ 324 $$ IID $$\\text{Beta}(1,2)$$ variables, they are also IID. By applying the Central Limit Theorem, they can be approximated as normally distributed due to being sums of many IID variables. We need to find their means and variances. We calculate these for $$ S_{324} $$, and since they are IID, this also applies to $$ T_{324} $$. Using Linearity of Expectation and knowing that $$ X_i $$ are IID, we find $$\\mathbb{E}[S_{324}] = 324\\mathbb{E}[X_1] = 324 \\cdot \\frac{1}{3} = 108$$. Similarly, since $$ X_i $$ are IID, $$\\text{Var}(S_{324}) = 324\\text{Var}(X_1) = 324 \\cdot \\frac{1}{18} = 18$$. Thus, $$ S_{324} $$ and $$ T_{324} $$ are suitably approximated by independent $$ N(108,18) $$ variables. Since they are individually approximated by independent normal variables, their difference is also approximated by a normal variable. Specifically, $$ S_{324} - T_{324} $$ is approximately $$ N(108 - 108, 18 + 18) $$, or $$ N(0,36) $$. Thus, $$\\mathbb{P}[S_{324} - T_{324} > 10] = \\mathbb{P}\\left[\\frac{(S_{324} - T_{324}) - 0}{6} > \\frac{10}{6}\\right]$$. The left-hand side inside the probability now follows $$ Z \\sim N(0,1) $$, so the sought probability is $$\\mathbb{P}\\left[Z > \\frac{5}{3}\\right] = \\mathbb{P}\\left[Z \\leq -\\frac{5}{3}\\right] = \\Phi\\left(-\\frac{5}{3}\\right)$$. Symmetry is used to flip the direction and sign. Therefore, $$ a = -\\frac{5}{3} $$.",
+  "valid answer": "Valid Answers: $\\frac{-5}{3}$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Limit Theorems",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Using the Central Limit Theorem, how can $S_{324}$ and $T_{324}$ be approximated? What are their respective means and variances?",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "24418390227645560234"
+}

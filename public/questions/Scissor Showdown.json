@@ -1,0 +1,16 @@
+{
+  "problem name": "Scissor Showdown",
+  "problem text": "You engage in a game of rock, paper, scissors with an adversary who is unable to select rock. Each victory earns you $1$, each defeat costs you $1$, and a tie results in no change. With optimal strategy, what is your anticipated gain per round?",
+  "problem solution": "Observe that choosing paper is futile, as it neither beats scissors nor paper. Thus, assume you opt for rock with probability $a$ and scissors with probability $1-a$. Likewise, assume your opponent selects paper with probability $b$ and scissors with probability $1-b$. If $P(a,b)$ denotes your expected gain given $a$ and $b$ as specified, it follows that $P(a,b) = ab(-1) + a(1-b)(1) + (1-a)b(1) + (1-a)(1-b)(0) = a + b - 3ab$. Maintaining $b$ constant, the partial derivative shows $\\dfrac{\\partial P}{\\partial a} = 1 - 3b$. Similarly, deriving with respect to $b$ gives $\\dfrac{\\partial P}{\\partial b} = 1 - 3a$. Setting these equations to zero results in an equilibrium at $a = b = \\dfrac{1}{3}$. Consequently, your expected gain per round is $P(1/3,1/3) = \\dfrac{1}{3} + \\dfrac{1}{3} - \\dfrac{1}{3} = \\dfrac{1}{3}$.",
+  "valid answer": "Valid Answers: $\\frac{1}{3}$",
+  "problem tags": [
+    "Games",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Realize that playing paper serves no purpose, as it does not conquer scissors or paper. Consequently, assume you choose rock with probability $a$ and scissors with probability $1-a$. Also, assume your opponent selects paper with probability $b$ and scissors with probability $1-b$. Formulate a function $P(a,b)$ that quantifies your reward as a function of $a$ and $b$. Determine the equilibrium.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "80726714785922063734"
+}

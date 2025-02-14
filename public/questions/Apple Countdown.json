@@ -1,0 +1,16 @@
+{
+  "problem name": "Apple Countdown",
+  "problem text": "A basket contains $4$ green apples and $50$ red apples. They are taken out one at a time, without replacement, until all $4$ green apples have been picked. What is the expected number of apples remaining in the basket?",
+  "problem solution": "Observe that the $4$ green apples segment the $50$ red apples into $5$ sections. Without additional details about these sections, they are assumed to be of equal size on average. Thus, each section should contain about $10$ apples. Specifically, one section will follow the last green apple, so we anticipate $10$ red apples remaining after the final green apple is drawn.",
+  "valid answer": "Valid Answers: $10$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Apply a First Ace strategy where the aces represent Apples.",
+  "problem firm": [
+    "Worldquant"
+  ],
+  "question id": "18834866963117368725"
+}

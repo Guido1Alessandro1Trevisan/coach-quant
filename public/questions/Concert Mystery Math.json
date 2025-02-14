@@ -1,0 +1,17 @@
+{
+  "problem name": "Concert Mystery Math",
+  "problem text": "$ \\frac{5}{12} $ of those attending the concert are grown-ups. A bus with $ 50 $ individuals arrives at the venue. Now, $ \\frac{11}{25} $ of the attendees are grown-ups. Determine the minimum count of grown-ups who were present at the concert prior to the bus's arrival.",
+  "problem solution": "Let $x$ represent the total attendees at the concert before the bus's arrival. $x \\equiv 0 \\mod 12$. Then, $x + 50 \\equiv 0 \\mod 25$. Since $50 \\equiv 0 \\mod 25$, we can express the prior statement as $x \\equiv 0 \\mod 25$. The smallest possible $x$ that satisfies these conditions is $x = 300$. $x \\cdot \\frac{5}{12} = 125$.",
+  "valid answer": "Valid Answers: $125$",
+  "problem tags": [
+    "Combinatorics",
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider $x$ as the total number of individuals at the concert prior to the bus's arrival. From the problem, $x \\equiv 0 \\mod 12$. What can be deduced about $x + 50$?",
+  "problem firm": [
+    "Jane Street",
+    "Two Sigma"
+  ],
+  "question id": "96520934194402026859"
+}

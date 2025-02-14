@@ -1,0 +1,16 @@
+{
+  "problem name": "Sum of Slopes",
+  "problem text": "Given these ordered pairs $(x, y)$: $(-2, 3), (-1, 2), (0, 1), (1, 1), (2, 0.5)$, determine the total of the least-squares estimates for the coefficients $\\beta_0, \\beta_1$ in the equation $Y = \\beta_0 + \\beta_1 x + \\epsilon$, assuming $\\mathbb{E}[\\epsilon] = 0$.",
+  "problem solution": "Remember that $\\hat{\\beta}_0 = \\bar{y} - \\hat{\\beta}_1 \\bar{x}$, and $\\hat{\\beta}_1 = \\frac{S_{xy}}{S_{xx}}$, where $S_{xy} = \\sum_{i = 1}^n (x_i - \\bar{x})(y_i - \\bar{y})$ and $S_{xx} = \\sum_{i = 1}^n (x_i - \\bar{x})^2$. We calculate $\\bar{x} = 0, \\bar{y} = 1.5$. Substituting these, we obtain: $$\\begin{aligned}    S_{xy} &= -6, \\    S_{xx} &= 10, \\    \\hat{\\beta}_1 &= -0.6, \\    \\hat{\\beta}_0 &= 1.5\\end{aligned}$$Thus, $\\mathbb{E}[Y] = \\hat{y} = 1.5 - 0.6x$, leading to the result $1.5 - 0.6 = 0.9$.",
+  "valid answer": "Valid Answers: $0.9$",
+  "problem tags": [
+    "Linear Regression",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Recall $\\hat{\\beta}_0 = \\bar{y} - \\hat{\\beta}_1 \\bar{x}$, and $\\hat{\\beta}_1 = \\frac{S_{xy}}{S_{xx}}$, where $S_{xy} = \\sum_{i = 1}^n (x_i - \\bar{x})(y_i - \\bar{y})$ and $S_{xx} = \\sum_{i = 1}^n (x_i - \\bar{x})^2$.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "97547273899548898198"
+}

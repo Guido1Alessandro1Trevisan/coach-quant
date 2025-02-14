@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Delta Dance",
+  "problem text": "Imagine rolling two fair six-sided dice. Determine the mean value of the absolute difference between the results of these two dice throws.",
+  "problem solution": "We formalize the problem by defining two random variables $$X$$ and $$Y$$, each representing the outcome of a fair six-sided die (values from 1 through 6). We are interested in the random variable $$D = |X - Y|$$. To find $$E(D)$$, the expected value of this absolute difference, we note that there are $$36$$ equally likely outcomes $$(x,y)$$ with $$x, y \\in \\{1,2,3,4,5,6\\}$$. For each difference $$d=|x-y|$$, we count the number of outcomes leading to that difference. Specifically, $$|X - Y|=0$$ happens in exactly $$6$$ cases (namely, when $$x=y$$). For a positive difference $$d > 0$$, there are $$2(6 - d)$$ pairs $$(x,y)$$ that satisfy $$|x-y|=d$$, as you can shift a number from 1 to 6 by $$d$$ within the bounds of 1 to 6 in two possible directions. Therefore, the probability that $$D=d$$ is $$\\dfrac{2(6-d)}{36}$$ for $$d>0$$, and $$\\dfrac{6}{36}$$ when $$d=0$$. We compute the expected value: $$E(D)=\\sum_{d=0}^{5} d\\times P(D=d).$$ Substituting: $$E(D) = 0\\times\\dfrac{6}{36} + 1\\times\\dfrac{10}{36} + 2\\times\\dfrac{8}{36} + 3\\times\\dfrac{6}{36} + 4\\times\\dfrac{4}{36} + 5\\times\\dfrac{2}{36}.$$ Summing yields $$\\dfrac{10 + 16 + 18 + 16 + 10}{36} = \\dfrac{70}{36} = \\dfrac{35}{18}.$$ Thus, the mean value of the absolute difference is $$\\dfrac{35}{18}.$$",
+  "valid answer": "Valid Answers: $$\\dfrac{35}{18} \\text{ (approximately }1.9444\\dots\\text{)}$$",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Enumerate the possible values of the difference and count how often they appear among the 36 equally likely outcomes.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "89253071555318488184"
+}

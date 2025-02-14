@@ -1,0 +1,15 @@
+{
+  "problem name": "Critter Parade",
+  "problem text": "As you stroll along an endless avenue, you observe that $6$ out of every $7$ cats on the pavement are succeeded by a dog, whereas $1$ out of every $4$ dogs is succeeded by a cat. What fraction of the creatures on the pavement are dogs?",
+  "problem solution": "Let $$ c $$ and $$ d $$ be the fractions of cats and dogs on the pavement, respectively. We have $$ c+d = 1 $$. We need to express $$ d $$ in terms of $$ c $$. Observe that of all the cats, $$ \\frac{6}{7} $$ are succeeded by a dog. Then, of those dogs, $$ \\frac{3}{4} $$ are succeeded by another dog. This pattern continues, so we can express $$ d = \\frac{6}{7}c + \\frac{6}{7} \\cdot \\frac{3}{4}c + \\frac{6}{7} \\cdot \\left(\\frac{3}{4}\\right)^2 c + \\dots = \\frac{6c}{7} \\displaystyle \\sum_{k=0}^{\\infty} \\left(\\frac{3}{4}\\right)^k = \\frac{24c}{7} $$. Plugging this into our original equation, $$ \\frac{31c}{7} = 1 $$, hence $$ c = \\frac{7}{31} $$. Therefore, $$ d = \\frac{24}{31} $$. Alternatively, using a Markov chain to model this situation, where state $$ 1 $$ is dog and state $$ 2 $$ is cat, the Markov chain is $$\\begin{bmatrix} \\frac{3}{4} & \\frac{1}{4} \\ \\frac{6}{7} & \\frac{1}{7} \\end{bmatrix}$$ The steady state of this Markov chain gives the same result as above.",
+  "valid answer": "Valid Answers: $24/31$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Let $c$ and $d$ be the fractions of cats and dogs on the pavement, respectively. Note that of all the cats, $\\dfrac{6}{7}$ are succeeded by a dog. Continue using this reasoning.",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "55014715690399576843"
+}

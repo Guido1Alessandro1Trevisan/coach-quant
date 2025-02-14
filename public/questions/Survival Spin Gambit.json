@@ -1,0 +1,16 @@
+{
+  "problem name": "Survival Spin Gambit",
+  "problem text": "A revolver with 6 chambers has one bullet randomly loaded. Two players, A and B, alternately pull the trigger while aiming the revolver at themselves. With each trigger pull, the chamber advances to the subsequent position. Calculate the probability that player A or B survives.",
+  "problem solution": "In the second round, include the term $P(B_2|A_1^c,B_1,A_2^c)P(A_1^c,B_1,A_2^c)=1 \\cdot P(A_1^c)=\\frac{1}{6}$, which is non-zero. After including this term, $P(B_2)=P(A_2)=\\frac{2}{3}$. In the third round, the calculation of $P(A_3)$ should incorporate the term $P(A_3|A_1,B_1^c,A_2,B_2^c)P(A_1,B_1^c,A_2,B_2^c)=\\frac{1}{6}$, while the calculation of $P(B_3)$ should involve the terms $P(B_3|A_1,B_1,A_2,B_2,A_3^c)P(A_1,B_1,A_2,B_2,A_3^c)=\frac{1}{6}$ and $P(B_3|A_1,B_1,A_2,B_2,A_3^c)P(A_1,B_1,A_2,B_2,A_3^c)=\\frac{1}{6}$. Including these terms ensures $P(A_3)=P(B_3)=\\frac{1}{2}$, which represents the probability that each player survives in the end.",
+  "valid answer": "Valid Answers: $\\frac{1}{15}$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Considering your partner has just pulled the trigger on a safe chamber, how does this influence your probability of facing a bullet if you decide against re-spinning?",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "27214098312366593101"
+}

@@ -1,0 +1,17 @@
+{
+  "problem name": "Cylindrical Crossroads",
+  "problem text": "Two cylinders, each with a radius of $1$, intersect perpendicularly with their central axes meeting at a point. Determine the volume of the region created by their overlap.",
+  "problem solution": "This can be represented by two equations for the cylinders: $$x^2 + y^2 = 1$$ and $$y^2 + z^2 = 1$$. Consider a fixed value for $$y$$. We need to identify the coordinates $$(x,z)$$ satisfying $$x^2 \\leq 1-y^2$$ and $$z^2 \\leq 1-y^2$$. This can be expressed as $$-\\sqrt{1-y^2} \\leq x,z \\leq \\sqrt{1-y^2}$$. The region is a square with a side length of $$2\\sqrt{1-y^2}$$, yielding an area of $$4(1-y^2)$$. To find the total volume, integrate these cross-sectional areas from $$y = -1$$ to $$1$$, which are the limits for $$y$$ in the overlapping region. Thus, the solution is $$\\int_{-1}^1 4(1-y^2) \\, dy = \\frac{16}{3}$$.",
+  "valid answer": "Valid Answers: $16/3$",
+  "problem tags": [
+    "Calculus",
+    "Pure Math"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Represent this as two cylinders given by $x^2 + y^2 = 1$ and $y^2 + z^2 = 1$. Fix a particular $y$. What is the configuration of points $(x,z)$ that you need to consider? What is the geometric figure formed?",
+  "problem firm": [
+    "Citadel",
+    "Worldquant"
+  ],
+  "question id": "68920530940812515931"
+}

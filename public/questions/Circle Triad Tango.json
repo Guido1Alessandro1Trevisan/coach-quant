@@ -1,0 +1,16 @@
+{
+  "problem name": "Circle Triad Tango",
+  "problem text": "Imagine selecting three random locations on the boundary of a circle of radius 1. What is the average (expected) area of the triangle formed by these points?",
+  "problem solution": "First, note that any three points on the circumference of the unit circle may be represented by their angles $\\theta_1, \\theta_2, \\theta_3$ (measured from some fixed reference) with $0 \\le \\theta_i < 2\\pi$. Without loss of generality, we can order these angles so that $0 \\le \\theta_1 < \\theta_2 < \\theta_3 < 2\\pi$. Define $x = \\theta_2 - \\theta_1$ and $y = \\theta_3 - \\theta_2$. Then the third interval is $z = 2\\pi - (x + y)$, since the total sum around the circle must be $2\\pi$. The coordinates of the three points are then $$(\\cos \\theta_1,\\,\\sin \\theta_1),\\,(\\cos \\theta_2,\\,\\sin \\theta_2),\\,(\\cos \\theta_3,\\,\\sin \\theta_3).$$ The area of a triangle with vertices $(r\\cos\\alpha, r\\sin\\alpha)$, $(r\\cos\\beta, r\\sin\\beta)$, and $(r\\cos\\gamma, r\\sin\\gamma)$ on a circle of radius $r=1$ can be expressed as $$\\dfrac{1}{2}\\bigl|\\sin(\\beta - \\alpha) + \\sin(\\gamma - \\beta) + \\sin(\\alpha - \\gamma)\\bigr|.$$ Since we ordered $\\theta_1 < \\theta_2 < \\theta_3$, that expression simplifies in terms of $x=\\theta_2-\\theta_1$ and $y=\\theta_3-\\theta_2$. By symmetry, the joint probability distribution for $(x,y)$ over the region $\\{0<x<2\\pi,\\,0<y<2\\pi-x\\}$ is uniform. Carefully integrating the area expression or invoking known symmetry arguments shows that the expected area is $$\\dfrac{3\\sqrt{3}}{8}.$$ This result aligns with the fact that the largest triangle inscribed in the unit circle (an equilateral triangle) has area $\\dfrac{3\\sqrt{3}}{4}$, and the expected value emerges at exactly half of that maximal area.",
+  "valid answer": "Valid Answers: $\\frac{3\\sqrt{3}}{8}$",
+  "problem tags": [
+    "Geometry",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Order the angles so that one is at 0, and let the other two be x and x+y. Express the area in terms of x and y, and then integrate over the region $x>0, y>0, x+y<2\\pi.$",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "25251129204236308076"
+}

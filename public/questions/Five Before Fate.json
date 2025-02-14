@@ -1,0 +1,18 @@
+{
+  "problem name": "Five Before Fate",
+  "problem text": "James repeatedly rolls a fair $6$-sided die until the first occurrence of a $6$. Determine the probability that James rolls the number $5$ precisely four times before stopping.",
+  "problem solution": "There's a clever shortcut to simplify this problem significantly. On each roll, we're interested only if it's a $5$ or $6$, as the other outcomes don't affect the result. With a fair die, both $5$ and $6$ are equally probable. Therefore, we're effectively determining the probability of the sequence $55556$, provided the die only results in $5$ or $6$. This method disregards the irrelevant outcomes. Since every result in this modified scenario is equally probable, the probability is simply $\\dfrac{1}{2^5} = \\dfrac{1}{32}$.",
+  "valid answer": "Valid Answers: $1/32$",
+  "problem tags": [
+    "Combinatorics",
+    "Conditional Probability",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "After every roll, focus on whether the result is a $5$ or $6$, as the other outcomes aren't considered.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "70548620566241490322"
+}

@@ -1,0 +1,15 @@
+{
+  "problem name": "Pipe Trio Puzzle",
+  "problem text": "Alice and Bob can individually construct a pipeline in $120$ minutes and $100$ minutes, respectively. Instead, they collaborate on constructing a pipe. After working for $40$ minutes, Charlie joins them in the construction. Together, they complete the pipe $10$ minutes after Charlie begins helping. How many minutes would it take Charlie to construct the pipe alone?",
+  "problem solution": "Assume $600$ total units are required to fully construct the pipe. Consequently, Alice constructs at a rate of $5$ units per minute and Bob at $6$ units per minute (since, respectively, their completion times are $120$ and $100$ minutes). After $40$ minutes, Alice and Bob together would have finished $40 \\cdot (5 + 6) = 440$ of the $600$ units. When Charlie joins, they complete the remaining $160$ units in $10$ minutes, indicating they were building at a rate of $16$ units per minute with all three working. Since they were at $11$ per minute before Charlie's arrival, it implies that Charlie constructs at $5$ units per minute, matching Alice's rate, so Charlie would also require $120$ minutes to construct the pipe independently.",
+  "valid answer": "Valid Answers: $120$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Evaluate the construction rate of each individual and assume a scenario where $600$ units are needed to fully construct the pipe. This implies Alice constructs at $5$ units per minute and Bob at $6$ units per minute (given their respective completion times of $120$ and $100$ minutes). What impact does Charlie have on the process?",
+  "problem firm": [
+    "Transmarket Group"
+  ],
+  "question id": "93904424998921657004"
+}

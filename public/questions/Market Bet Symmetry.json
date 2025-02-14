@@ -1,0 +1,15 @@
+{
+  "problem name": "Market Bet Symmetry",
+  "problem text": "As an investor, you observe that stock $XYZ$ will either decrease by $50\\%$ or increase twofold by tomorrow's earnings announcement. You have the option to wager with a friend on the stock's direction with a $1:1$ payout ratio. Let $A$ and $B$ denote the minimum integer amounts you wager on the stock increasing (long) and decreasing (short) with your friend, respectively. Your goal is to secure the same profit regardless of the stock's movement tomorrow, ensuring that your account balance remains unchanged no matter the result. What is the profit obtained from betting $A$ and $B$? If a profit cannot be guaranteed, provide $0$.",
+  "problem solution": "A key consideration in this scenario is that maintaining a long position on the stock is advantageous compared to wagering with your friend on its increase. This is because, even if the stock loses value, you still hold $50\\%$ of your investment. Therefore, the optimal strategy is to take a long position on the stock while simultaneously betting against your friend on a decrease. The profit equations, including returned bets, are: 1. Stock rises: $A-B$ 2. Stock falls: $B-0.5A$ Equating these two expressions, we derive $A = \\frac{4B}{3}$. Thus $A$ and $B$ are $4$ and $3$, respectively, allowing for a consistent profit of $1$.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Formulate profit equations, taking into account returned bets, for each possible outcome.",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "85814521621464632475"
+}

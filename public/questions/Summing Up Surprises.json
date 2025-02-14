@@ -1,0 +1,16 @@
+{
+  "problem name": "Summing Up Surprises",
+  "problem text": "Consider $X_1,X_2,\\dots \\sim \\text{Unif}(0,1)$ independently and identically distributed and let $N_2 = \\text{min}\\{n : X_1 + \\dots + X_n > 2\\}$. Calculate $\\mathbb{E}[N_2]$. Your solution will be in the format $ae^2 + be$ with integers $a$ and $b$. Here, $e$ is Euler's number. Determine $a + b$.",
+  "problem solution": "We will employ the result from Sum Exceedance I, which indicates that for any $$0 < x < 1$$, if $$f(x) = \\mathbb{E}[N_x]$$, with $$N_x = \\text{min}\\{n : X_1 + \\dots + X_n > x\\}$$, then $$f(x) = e^x$$. We aim to find $$f(2)$$. We should condition on $$X_1$$, as it will dictate the additional sum needed to surpass the threshold. Specifically, $$f(2) = \\mathbb{E}[N_2] = \\mathbb{E}[\\mathbb{E}[N_2 \\mid X_1]]$$. Given $$X_1$$, we need to exceed $$2 - X_1$$ starting from the next step, having already used $$1$$ step, so $$\\mathbb{E}[N_2 \\mid X_1] = 1 + N_{2-X_1}$$. Thus, $$\\mathbb{E}[N_2] = 1 + \\mathbb{E}[N_{2-X_1}]$$ by substituting back into the previous expression. Equivalently, $$f(2) = 1 + f(2-X_1)$$. Next, we must condition on $$X_1 = x_1$$ and perform integration. This implies $$f(2) = \\int_0^1 \\left(1 + f(2-x_1)\\right)dx_1 = 1 + \\int_0^1 f(2 - x_1)dx_1$$. By substituting $$u = 2-x_1$$, we find $$f(2) = 1 + \\int_1^2 f(u)du$$. More generally, for $$1 < x < 2$$, replacing $$2$$ with $$x$$, note that the integration limits change to $$x-1$$ to $$x$$, so $$f(x) = 1 + \\int_{x-1}^x f(u)du$$. Differentiating, we obtain $$f'(x) = f(x) - f(x-1)$$. However, for $$1 < x < 2$$, $$0 < x-1 < 1$$, where $$f$$ is known in the interval $$(0,1)$$. Therefore, using the initial result, $$f'(x) = f(x) - e^{x-1}$$, since $$f(x) = e^x$$ in $$(0,1)$$. Rearranging this differential equation, we get $$f'(x) - f(x) = -e^{x-1}$$. The initial condition is $$f(1) = e$$, ensuring continuity with $$f$$ on $$(0,1)$$. This represents a first order linear differential equation solvable by integrating factors. The integrating factor is $$\\mu(t) = e^{\\int (-1)dx} = e^{-x}$$. Multiplying through gives $$e^{-x}f'(x) - e^{-x}f(x) = -e^{-1}$$. The left side simplifies to $$(e^{-x}f(x))'$$. Thus, integrating both sides, $$e^{-x}f(x) = \\int -e^{-1}dx = -xe^{-1} + C$$. Multiplying by $$e^x$$, we have $$f(x) = -xe^{x-1} + Ce^x$$. Knowing $$f(1) = e$$, we find $$e = -1 + Ce$$, leading to $$C = 1 + e^{-1}$$. Consequently, $$f(x) = -xe^{x-1} + \\left(1 + e^{-1}\\right)e^x$$. Substituting $$x = 2$$ gives $$f(2) = e^2 - e$$. Thus, $$a = 1$$ and $$b = -1$$, so $$a + b = 0$$.",
+  "valid answer": "Valid Answers: $0$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Formulate a delayed differential equation for $f(x) = \\mathbb{E}[N_x]$ over the interval $(1,2)$. This can be derived by applying the Law of Total Expectation to $X_1$ and differentiating the outcome. Consider what is a suitable initial condition for $f(1)$. Recall that $f(x) = e^x$ within $(0,1)$.",
+  "problem firm": [
+    "Akuna Capital"
+  ],
+  "question id": "66157823695107216060"
+}

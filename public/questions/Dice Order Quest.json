@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Order Quest",
+  "problem text": "Imagine continually rolling two fair dice. Determine the expected $(average)$ number of total rolls required to observe a sum of 4 immediately followed by a sum of 5, in exactly that order.",
+  "problem solution": "We seek the expected number of throws until a 4 is followed by a 5 on consecutive rolls. This problem can be solved using a Markov chain (or states) to encapsulate our progress toward achieving the sequence. Let us define: State 0: We have not just rolled a 4. State 1: The previous roll produced a 4; we are waiting for a 5. State 2: The sequence '4 followed by 5' has been completed. We denote by $(E_0)$ the expected number of additional rolls starting from State 0, and by $(E_1)$ the expected number of additional rolls starting from State 1. Once we reach State 2, no further rolls are needed, so its expected value is 0. 1 Probability details per roll: The probability of rolling a 4 is $(\\frac{3}{36} = \\frac{1}{12})$. The probability of rolling a 5 is $(\\frac{4}{36} = \\frac{1}{9})$. - The probability of rolling neither 4 nor 5 is $(1 - \\frac{1}{12} - \\frac{1}{9} = 1 - \\frac{3}{36} - \\frac{4}{36} = \\frac{29}{36})$. Equations for the expectations: From State 0: If we roll once from State 0, with probability $(\\frac{1}{12})$ we move to State 1 because we rolled a 4, and with probability $(\\frac{11}{12})$ we remain in State 0 (we did not roll a 4. Therefore, $(E_0 = 1 + \\frac{1}{12}E_1 + \\frac{11}{12}E_0)$. Rearranging the terms gives: $(E_0 - \\frac{11}{12}E_0 = 1 + \\frac{1}{12}E_1)$ implies $(\\frac{1}{12}E_0 = 1 + \\frac{1}{12}E_1)$ implies $(E_0 = 12 + E_1)$. From State 1: We have just rolled a 4 and look for a 5 on the next throw. - With probability $(\\frac{1}{9})$, we roll a 5 and thus finish (going to State 2, whose expected rolls are 0). - With probability $(\\frac{1}{12})$, we roll a 4 again, effectively remaining in State 1 (still 'poised' with a recently rolled 4. With probability $(\\frac{29}{36})$, we roll something else (not 4 or 5), reverting back to State 0. Hence the equation: $(E_1 = 1 + \\frac{1}{9} \\cdot 0 + \\frac{1}{12}E_1 + \\frac{29}{36}E_0)$. Rearrange this to isolate $(E_1)$: $(E_1 - \\frac{1}{12}E_1 = 1 + \\frac{29}{36}E_0)$ implies $(\\frac{11}{12}E_1 = 1 + \\frac{29}{36}E_0)$. Solve the system: From State 0, we have: $( E_0 = 12 + E_1)$. Plug $( E_0 )$ into the State 1 equation: $(\\frac{11}{12}E_1 = 1 + \\frac{29}{36}$(E_1 + 12)). Rewrite in terms of common denominators (36 is the LCM): $(\\frac{11}{12}E_1 = \\frac{33}{36}E_1)$, so: $(\\frac{33}{36}E_1 - \\frac{29}{36}E_1 - \\frac{29}{36} \times 12 = 1)$. Combine like terms: $(\\frac{4}{36}E_1 - \\frac{29}{3} = 1)$ implies $(\\frac{1}{9}E_1 = 1 + \\frac{29}{3} = \\frac{32}{3})$ implies $(E_1 = \\frac{32}{3} \times 9 = 96)$. Then from $( E_0 = 12 + E_1 )$, we obtain: $( E_0 = 12 + 96 = 108)$. Thus, starting with no prior rolls (State 0), the expected number of rolls required is 108.",
+  "valid answer": "108",
+  "problem tags": [
+    "Probability",
+    "Markov Chain",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider a short list of states: \"haven't seen a 4,\" \"just saw a 4,\" and \"completed the sequence.\" Then form equations for the expected values from each state.",
+  "problem firm": [
+    "JP Morgan"
+  ],
+  "question id": "71707842999625672372"
+}

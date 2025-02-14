@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Duel",
+  "problem text": "Dave and Buster each possess a fair $6$-sided die, and they roll them at the same time. Buster emerges victorious if both dice show the same number. If Buster's die displays a number that is strictly greater than Dave's, then Dave claims the win. However, if Dave's number is strictly greater than Buster's, they must roll again until one of the other outcomes occurs. What is the probability that Buster wins this contest?",
+  "problem solution": "Let $p$ denote the probability that Buster secures a victory. They win without fail when both dice display the same number, an event with a likelihood of $\\frac{1}{6}$, resulting in a probability of $1$. Due to the symmetry inherent in the dice, the chances that Buster's number is strictly greater or smaller than Dave's are equal, each being $\\frac{1 - \\frac{1}{6}}{2} = \\frac{5}{12}$. If Dave's number is strictly greater than Buster's, Buster's chance of winning is $p$. Conversely, if Buster's number is strictly greater than Dave's, he does not win, resulting in a probability of $0$. Therefore, using the Law of Total Probability, this can be expressed as: $p = \\frac{1}{6} \\cdot 1 + \\frac{5}{12} \\cdot p$. Solving this equation gives $p = \\frac{2}{7}$, indicating that Buster wins with a probability of $\\frac{2}{7}$.",
+  "valid answer": "Valid Answers: $2/7$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Let $p$ denote the probability that Buster wins, occurring when both dice show the same number. Notice how the probability that Buster's die shows a strictly larger or smaller number than Dave's is equal due to the symmetry of dice rolls.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "88286019274608639328"
+}

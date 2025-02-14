@@ -1,0 +1,16 @@
+{
+  "problem name": "Odd Faces Quest",
+  "problem text": "Abdelrahman tosses $2$ unbiased coins. For each head obtained, Abdelrahman rolls a fair $6$-sided die. Determine the probability that the total of all visible faces is odd.",
+  "problem solution": "The quantity of dice thrown depends on how many heads are achieved. Therefore, we should analyze based on the number of heads observed. We can have $0$, $1$, and $2$ heads with probabilities $\\dfrac{1}{4}$, $\\dfrac{1}{2}$, and $\\dfrac{1}{4}$ respectively. If there are no heads, then the total is $0$, which is even, so the probability here is $0$. If there is $1$ head, then $3$ out of the $6$ possible outcomes are odd, giving a probability of $\\dfrac{1}{2}$ in this scenario. With $2$ heads, $2$ dice are rolled. The potential totals are $3$, $5$, $7$, $9$, and $11$. The number of combinations leading to these sums is $2+4+6+4+2 = 18$. There are $6^2 = 36$ possible outcomes, resulting in a probability of an odd total of $\\dfrac{1}{2}$ in this situation. Thus, according to the Law of Total Probability, the probability of an odd total is $\\dfrac{1}{4} \\cdot 0 + \\dfrac{1}{2} \\cdot \\dfrac{1}{2} + \\dfrac{1}{4} \\cdot \\dfrac{1}{2} = \\dfrac{3}{8}$.",
+  "valid answer": "Valid Answers: $3/8$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The number of dice rolled depends on the number of $heads$ obtained. Condition on the number of $heads$ flipped.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "72150638016696036185"
+}

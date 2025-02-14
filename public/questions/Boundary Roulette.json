@@ -1,0 +1,16 @@
+{
+  "problem name": "Boundary Roulette",
+  "problem text": "Imagine producing $X_1, X_2, \\dots, X_n \\sim \\text{Unif}(0,1)$ as independent identically distributed variables. Define $U = \\text{min}\\{X_1, \\dots, X_n\\}$ and $V = \\text{max}\\{X_1, \\dots, X_n\\}$. Determine $\\mathbb{P}[U + V > 1]$.",
+  "problem solution": "Define $$ \\alpha = \\mathbb{P}[U + V > 1] $$ and $$ \\beta = \\mathbb{P}[U + V < 1] $$. It follows that $$ \\alpha + \\beta = 1 $$ because $$ U $$ and $$ V $$ are continuous, making the probability of their sum being exactly $$ 1 $$ equal to $$ 0 $$. Considering $$ X \\sim \\text{Unif}(0,1) $$, we find $$ 1-X \\sim \\text{Unif}(0,1) $$ as well. Using this, let $$ U' = \\text{min}\\{1 - X_1,\\dots,1-X_n\\} $$ and $$ V' = \\text{max}\\{1 - X_1,\\dots,1-X_n\\} $$. As we are still considering maxima and minima of uniform random variables, $$ \\mathbb{P}[U' + V' > 1] = \\alpha $$ and $$ \\mathbb{P}[U' + V' < 1] = \\beta $$. Note that $$ U' = 1 - V $$, because to minimize $$ 1 - X_i $$, one maximizes $$ X_i $$ and subtracts from $$ 1 $$. Similarly, $$ V' = 1 - U $$. Thus, \\n$$ \\n\\alpha = \\mathbb{P}[U' + V' > 1] = \\mathbb{P}[(1-V) + (1-U) > 1] = \\mathbb{P}[U + V < 1] = \\beta \\n$$ \\nThese relationships show that $$ \\alpha = \\beta = \\frac{1}{2} $$.",
+  "valid answer": "Valid Answers: [ $1/2$, $0.5$ ]",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Think about $U' = \\text{min}\\{1 - X_1,\\dots,1-X_n\\}$ and $V' = \\text{max}\\{1 - X_1,\\dots,1-X_n\\}$. Investigate their connection to $U$ and $V$.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "26774334407496721048"
+}

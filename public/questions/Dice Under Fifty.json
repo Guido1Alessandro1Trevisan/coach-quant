@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Under Fifty",
+  "problem text": "Alex rolls a pair of dice $n$ times. The chance that the total on the two dice is $4$ or less in at least one of the $n$ rolls is $p$. Determine the largest $n$ for which $p < 0.5$.",
+  "problem solution": "Define $$ X $$ as the total of the numbers on the dice. Let $$ p(x) $$ be the probability mass function for $$ X $$. Observe the following: $$ p(x) = \\begin{cases} \\frac{1}{36} & \\text{ if } x = 2 \\ \\frac{2}{36} & \\text{ if } x = 3 \\ \\frac{3}{36} & \\text{ if } x = 4 \\ \\frac{4}{36} & \\text{ if } x = 5 \\ \\frac{5}{36} & \\text{ if } x = 6 \\ \\frac{6}{36} & \\text{ if } x = 7 \\ \\frac{5}{36} & \\text{ if } x = 8 \\ \\frac{4}{36} & \\text{ if } x = 9 \\ \\frac{3}{36} & \\text{ if } x = 10 \\ \\frac{2}{36} & \\text{ if } x = 11 \\ \\frac{1}{36} & \\text{ if } x = 12 \\ 0 & \\text{ otherwise} \\end{cases} $$The chance the sum of the dice is at most $$ 7 $$ for a single roll is $$ \\mathbb{P}(X \\leq 5) = \\sum_{x = 2}^4 p(x) = \\frac{1}{6} $$. The opposite event is $$ \\mathbb{P}(X > 5) = \\frac{5}{6} $$. Since each round of rolling the two dice is independent, the likelihood that no total is $4$ or less after $$ n $$ rounds is $$ \\left( \\frac{5}{6} \\right)^n $$. The probability that at least one total is $4$ or less is then $$ 1 - \\left( \\frac{5}{6} \\right)^n $$. $$ \\begin{aligned} 1 - \\left( \\frac{5}{6} \\right)^n &< 0.5 \\ \\left( \\frac{5}{6} \\right)^n &> \\frac{1}{2} \\ \\left( \\frac{5}{6} \\right)^4 < \\frac{1}{2} &< \\left( \\frac{5}{6} \\right)^3 \\ \\Rightarrow n = 3. \\end{aligned} $$",
+  "valid answer": "Valid Answers: $3$",
+  "problem tags": [
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $$ X $$ as the total of the numbers on the dice. Let $$ p(x) $$ be the probability mass function for $$ X $$. Observe the following: $$ p(x) = \\begin{cases} \\frac{1}{36} & \\text{ if } x = 2 \\ \\frac{2}{36} & \\text{ if } x = 3 \\ \\frac{3}{36} & \\text{ if } x = 4 \\ \\frac{4}{36} & \\text{ if } x = 5 \\ \\frac{5}{36} & \\text{ if } x = 6 \\ \\frac{6}{36} & \\text{ if } x = 7 \\ \\frac{5}{36} & \\text{ if } x = 8 \\ \\frac{4}{36} & \\text{ if } x = 9 \\ \\frac{3}{36} & \\text{ if } x = 10 \\ \\frac{2}{36} & \\text{ if } x = 11 \\ \\frac{1}{36} & \\text{ if } x = 12 \\ 0 & \\text{ otherwise} \\end{cases} $$",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "90950221394021026744"
+}

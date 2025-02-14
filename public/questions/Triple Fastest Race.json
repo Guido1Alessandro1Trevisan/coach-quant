@@ -1,0 +1,17 @@
+{
+  "problem name": "Triple Fastest Race",
+  "problem text": "Suppose you are given 25 distinct horses, and you can run a race with only 5 horses participating at one time. Determine, in the fewest total races, which 3 horses are the fastest overall.",
+  "problem solution": "We shall partition the 25 horses into 5 groups, each containing 5 horses. Label these groups G1, G2, G3, G4, and G5. First conduct 5 separate races, one for each group, to rank the horses within that group. Label the horses in each group according to their speeds: for group G1, the result of the race gives G1's order as A1 \\(\\lt\\) A2 \\(\\lt\\) A3 \\(\\lt\\) A4 \\(\\lt\\) A5, with A1 being the fastest in G1. Do the same for G2, G3, G4, and G5, naming their horses B1 \\(\\lt\\) B2 \\(\\lt\\) B3, C1 \\(\\lt\\) C2 \\(\\lt\\) C3, and so on, where the subscript 1 consistently denotes the fastest in its group, subscript 2 the next fastest, etc. This uses 5 races so far.\n\nNext, conduct a 6th race among the 5 winners: A1, B1, C1, D1, and E1. Label the finishing order of this race as A1 \\(\\lt\\) B1 \\(\\lt\\) C1 \\(\\lt\\) D1 \\(\\lt\\) E1, so we know that the group G1 produced the overall fastest horse A1, group G2 produced the second fastest winner B1, group G3 produced the third fastest winner C1, etc. The top three overall horses must be selected from among those with a plausible chance to outrun or match the top finishers A1, B1, and C1.\n\nObserve that A1 is the absolute fastest overall, so we only need to figure out the 2nd and 3rd places from among these horses: A2, A3, B1, B2, and B3, and possibly C1. This is because B1 ranked higher than C1 and can at most be beaten by B2 or B3; likewise, A2 and A3 might be second or third fastest if they are close behind A1. Horse C1 remains under consideration as well. Horses from groups ranked 4th or 5th in the winners' race (D1 and E1) cannot be in the top three once we account for the horses from groups A and B that outran them, along with A2 or A3, and B2 or B3.\n\nWe collect these finalists (A2, A3, B1, B2, B3, C1) and conduct one more race (the 7th race) to decisively find the 2nd and 3rd fastest overall. In total, we have 5 initial races to rank each group, 1 race to rank the group winners, and 1 race to settle among the remaining possible contenders. Therefore, the minimum number of total races required is 7.",
+  "valid answer": "Valid Answers: 7",
+  "problem tags": [
+    "Combinatorics",
+    "Ranking"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Group the 25 horses into sets of 5, race these sets, then compare the winning horses to narrow down the possible top three.",
+  "problem firm": [
+    "Jane Street",
+    "Combinatorial Studies"
+  ],
+  "question id": "53884155611999639120"
+}

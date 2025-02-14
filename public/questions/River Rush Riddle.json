@@ -1,0 +1,15 @@
+{
+  "problem name": "River Rush Riddle",
+  "problem text": "Imagine you are in a river with unknown width and flow speed. When you stay still in the water (not swimming), you take $6$ seconds to get to the other side. In contrast, if you swim with the current at a speed of $3$ feet per second, it takes $4$ seconds to cross. Determine the river's width (in feet).",
+  "problem solution": "Let $v$ represent the current's speed and $l$ the river's width. From the initial scenario, we find: $l = 6v$. Additionally, when swimming downstream, we have $l = 4(v+3)$. Solving these equations together gives $6v = 4(v+3) \\iff 2v = 12 \\iff v = 6$. Consequently, the width is $l = 6 \\cdot 6 = 36$",
+  "valid answer": "Valid Answers: $36$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $v$ as the river's speed and $l$ as the width. From the first case, we see that $l = 6v$.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "81354757620064521150"
+}

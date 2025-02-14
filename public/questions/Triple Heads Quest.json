@@ -1,0 +1,16 @@
+{
+  "problem name": "Triple Heads Quest",
+  "problem text": "A fair coin is tossed $6$ times. Determine the probability that there will be exactly $3$ heads in a row at some point during the $6$ tosses.",
+  "problem solution": "Solution not provided",
+  "valid answer": "Valid Answers: $3/16$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Hint not provided",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "78958269607204082313"
+}

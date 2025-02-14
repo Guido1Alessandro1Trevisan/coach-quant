@@ -1,0 +1,16 @@
+{
+  "problem name": "Duo Draw Drama",
+  "problem text": "Marissa possesses a pack of $40$ cards: $4$ cards with the number $1$, $4$ with the number $2$, continuing up to $4$ with the number $10$. A matching duo—$2$ cards showing the same digit—is taken out from the deck without replacement. What is the chance that Marissa, when drawing $2$ more cards at random, finds another matching duo?",
+  "problem solution": "With a matching duo already out, $38$ cards are left in the deck. There remain $9$ groups of $4$ cards with the same number, and $1$ group of $2$ cards with the same number. The probability sought is simply $\\frac{9\\binom{4}{2} + 1}{\\binom{38}{2}} = \\frac{55}{703}$.",
+  "valid answer": "Valid Answers: $55/703$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "You can acquire a matching duo either by choosing one of the numbers that didn't have a duo removed or by selecting the number that had the duo removed.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "12490248035867367836"
+}

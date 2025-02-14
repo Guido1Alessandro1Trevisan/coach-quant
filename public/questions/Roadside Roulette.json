@@ -1,0 +1,15 @@
+{
+  "problem name": "Roadside Roulette",
+  "problem text": "You are sitting beside a road and note that on average 1 car passes every 20 minutes. Based on this consistent observation, determine the chance that exactly one car will be observed over any 5-minute interval.",
+  "problem solution": "Solution Explanation: 1) Reformulated Assumption: A common way to interpret such problems is to model car arrivals with a Poisson process. Since we observe that on average there is 1 car in every 20-minute interval, the rate (cars per minute) is given by $\\lambda = \\frac{1}{20}$. Over a 5-minute window, the expected number of cars would then be $\\lambda \\times 5 = \\frac{5}{20} = \\frac{1}{4}$. 2) Poisson Framework: For a Poisson process with parameter $\\lambda_5 = \\frac{1}{4}$, the probability of seeing exactly one car, i.e. $k = 1$, in 5 minutes is given by the formula for a Poisson random variable with mean $\\lambda_5:$ $\\displaystyle P(X = 1) = e^{-\\lambda_5} \\, \\frac{\\lambda_5^1}{1!} = e^{-\\frac{1}{4}} \\, \\biggl(\\frac{1}{4}\\biggr).$ 3) Exact Numeric Calculation: We compute $ e^{-1/4}\\approx 0.7788 $. Thus, the probability becomes: $\\displaystyle 0.7788 \\times 0.25 \\approx 0.1947, \\text{ or about } 19.47\\%.$ Conclusion: Hence, under the Poisson assumption, the probability of observing exactly one car in a 5-minute interval is $\\displaystyle e^{-\\frac{1}{4}}\\cdot\\frac{1}{4}\\,$ which is approximately $19.47\\%.$ Valid Answer: $0.25 \\cdot e^{-0.25}$ (approximately 0.1947)",
+  "problem tags": [
+    "Probability",
+    "Poisson Process"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about the average number of cars in 20 minutes and translate it into a 5-minute rate.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "14580655734554532184"
+}

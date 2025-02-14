@@ -1,0 +1,16 @@
+{
+  "problem name": "Cubist Color Clash",
+  "problem text": "Imagine painting the $6$ faces of a cube, each in a unique color from the set: red, blue, green, yellow, purple, and pink. Determine the likelihood that the red, green, and blue faces all meet at a single vertex of the cube.",
+  "problem solution": "The total number of ways to color the faces is $6!$. There are $8$ possible vertices where the intersection can occur. For each of these vertices, there are $3! = 6$ permutations of the $3$ colors on the intersecting faces. The remaining $3$ faces can also be arranged in $3! = 6$ ways. Consequently, the probability is calculated as $\\dfrac{8 \\cdot 6^2}{6!} = \\dfrac{2}{5}$. Another approach is to fix one color on any face. The probability that the second color among red, green, and blue shares an edge with this face is $\\dfrac{4}{5}$ (since only the face directly opposite does not share an edge). Then, $2$ of the $4$ remaining faces share a vertex with these two colored faces. Therefore, the probability is $\\dfrac{4}{5} \\cdot \\dfrac{1}{2} = \\dfrac{2}{5}$.",
+  "valid answer": "Valid Answers: $2/5$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "A cube has $8$ corners. Select one color to fix without loss of generality.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "62255913625624561213"
+}

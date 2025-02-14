@@ -1,0 +1,17 @@
+{
+  "problem name": "Charmed Circlets",
+  "problem text": "We have two circles that share the same center. A chord of length 8 in the outer circle touches the inner circle at exactly one point. Find the area of the region between these two circles.",
+  "problem solution": "Label the smaller circle's radius as $$r$$ and the larger circle's radius as $$R$$. The chord of length $$8$$ in the outer circle is tangent to the inner circle, so the distance from the center to the chord is $$r$$. Dropping a perpendicular from the center to the midpoint of the chord splits the chord into two segments each of length $$4$$, forming a right triangle with legs $$r$$ and $$4$$ and hypotenuse $$R$$. By the Pythagorean theorem, $$R^{2} = r^{2} + 4^{2}$$, which implies $$R^{2} - r^{2} = 16$$. Therefore, the area of the annulus is $$\\pi\\bigl(R^{2} - r^{2}\\bigr) = 16\\\\pi$$, and the region between the two circles has area $$16\\\\pi$$.",
+  "valid answer": "16\\pi",
+  "problem tags": [
+    "Geometry",
+    "Annulus",
+    "Circle"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Focus on the right triangle formed by the circle's center, the midpoint of the chord, and one endpoint of the chord.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "70334173708936926317"
+}

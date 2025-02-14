@@ -1,0 +1,15 @@
+{
+  "problem name": "Binary Fifteen Quest",
+  "problem text": "Identify the smallest positive multiple of $15$ that is composed solely of the digits $1$ and $0$.",
+  "problem solution": "To ensure a number is a multiple of $15$, it needs to be divisible by both $3$ and $5$. For divisibility by $5$, the number must conclude with either $0$ or $5$, requiring our number to end with $0$. For divisibility by $3$, the digits' sum must be a multiple of $3$, so we incorporate three $1$'s in the number. Therefore, the smallest positive multiple of $15$ consisting only of $1$'s and $0$'s is $1110$.",
+  "valid answer": "Valid Answers: $1110$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "A number is a multiple of $15$ if it is divisible by both $3$ and $5$. How can you construct a number with $1$'s and $0$'s that meets this condition?",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "37455127162594930277"
+}

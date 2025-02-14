@@ -1,0 +1,16 @@
+{
+  "problem name": "Birthday Bonanza",
+  "problem text": "Suppose you have a gathering of people. What is the smallest number you must have in that room so that, no matter how birthdays are distributed, there will definitely be five people born in the same month?",
+  "problem solution": "We wish to guarantee that at least five people share the same birth month. By the pigeonhole principle, if we arrange people into 12 'pigeonholes' (one for each month), to avoid having five people in the same month, the maximum we can have is 4 in each month. That configuration leads to a total of $$4 \\times 12 = 48$$ people. Once we add one more person (the 49th), it becomes impossible to avoid a fifth person ending up in one of those 12 months. Therefore, the smallest number required is $$49$$.",
+  "valid answer": "Valid Answers: $$49$$",
+  "problem tags": [
+    "Combinatorics",
+    "Pigeonhole Principle"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about distributing people across months. Use the pigeonhole principle.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "41669323492974664044"
+}

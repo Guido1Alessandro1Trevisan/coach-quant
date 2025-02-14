@@ -1,0 +1,17 @@
+{
+  "problem name": "Scaling Mysteries",
+  "problem text": "Imagine performing a linear regression on a dataset, resulting in the coefficients $\\hat{\\beta}_{OLS}$. Remember that if $X$ represents the data and $\\sigma^2$ is the variance of the IID normal errors, then $\\text{Var}\\left(\\hat{\\beta}_{OLS}\\right) = \\sigma^2(X^TX)^{-1}$. If you repeat the linear regression on a dataset created by doubling each entry in the original and derive new coefficients $\\hat{\\beta}_{OLS}'$, determine the constant $c$ such that $\\text{Var}\\left(\\hat{\\beta}_{OLS}'\\right) = c\\text{Var}\\left(\\hat{\\beta}_{OLS}\\right)$. If such a constant is not found, use $-1$.",
+  "problem solution": "Duplicating the dataset involves substituting matrix $X$ with $X' = \\begin{bmatrix} X \\ X \\end{bmatrix}$, so it follows that $X'^TX' = 2X^TX$. Thus, $\\sigma^2 (2X^T X)^{-1} = \\frac{1}{2} \\cdot \\sigma^2 (X^TX)^{-1}$, confirming our conclusion.",
+  "valid answer": "Valid Answers: $1/2$",
+  "problem tags": [
+    "Linear Regression",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "By duplicating the data, we change the matrix $X$ into $X' = \\begin{bmatrix} X \\ X \\end{bmatrix}$, leading to $X'^TX' = 2X^TX$.",
+  "problem firm": [
+    "Squarepoint Capital",
+    "Two Sigma"
+  ],
+  "question id": "18504229797122819187"
+}

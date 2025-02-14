@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Reimagined",
+  "problem text": "In how many unique ways can a six-sided die be numbered if all numbers are removed first? Configurations that can be achieved by rotating the die are not considered unique.",
+  "problem solution": "Begin by placing the number $1$ on one face, treating it as the top. There are $5$ possible numbers that can be placed on the face directly opposite. For the remaining $4$ numbers, there are $4!$ permutations, but this counts identical sequences starting at different faces, so we need to divide by $4$. For instance, consider $1$ on the top and $6$ on the bottom. The other $4$ numbers are $2, 3, 4,$ and $5$. There are $4!$ sequences of these numbers. However, the sequence $2, 3, 4, 5$ is the same as $5, 2, 3, 4$, $4, 5, 2, 3$, and $3, 4, 5, 2$. Every sequence has $4$ equivalent sequences, so we divide by $4$. Therefore, $5 \\times 4! / 4 = 5 \\times 3! = 30$.",
+  "valid answer": "Valid Answers: $30$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Secure one face of the die and determine the options for the opposite face. Then calculate the permutations for the remaining $4$ faces.",
+  "problem firm": [
+    "Two Sigma"
+  ],
+  "question id": "98440142649698502409"
+}

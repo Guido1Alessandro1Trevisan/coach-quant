@@ -1,0 +1,16 @@
+{
+  "problem name": "Tardy Pair Probability",
+  "problem text": "Three individuals, labeled A, B, and C, have distinct probabilities of arriving late: A and B are each late with probability 1/2, and C is late with probability 1/3. Assuming the lateness of each person is independent, what is the likelihood that exactly two individuals arrive late?",
+  "problem solution": "To determine the probability that exactly two individuals are late, we enumerate the events in which exactly two of A, B, and C are late. First, note that $$P(A\\text{ late})=\\frac12,\\ P(B\\text{ late})=\\frac12,\\ P(C\\text{ late})=\\frac13,$$ and these events are mutually independent. We compute $$P(\\text{A,B late, C not late})=\\left(\\frac12\\right)\\left(\\frac12\\right)\\left(\\frac23\\right)=\\frac16,$$ $$P(\\text{A,C late, B not late})=\\left(\\frac12\\right)\\left(\\frac12\\right)\\left(\\frac13\\right)=\\frac1{12},$$ and $$P(\\text{B,C late, A not late})=\\left(\\frac12\\right)\\left(\\frac12\\right)\\left(\\frac13\\right)=\\frac1{12}.$$ Adding these results yields $$\\frac16 + \\frac1{12} + \\frac1{12} = \\frac13.$$ Hence, the probability that exactly two individuals are late is $$\\frac13.$$",
+  "valid answer": "Valid Answers: $1/3$",
+  "problem tags": [
+    "Probability",
+    "Independence"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider all ways to pick exactly two of the three individuals to be late.",
+  "problem firm": [
+    "SIG"
+  ],
+  "question id": "51042331665862930543"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Correlate Twins",
+  "problem text": "Assume you possess two independent standard normal variables. Describe a linear construction that forms two new random variables, each with variance 1, such that their correlation is $$\\rho$$.",
+  "problem solution": "Consider two independent unit Gaussian random variables $$X$$ and $$Y$$, each following a $$N(0,1)$$ distribution. We aim to build two new variables $$U$$ and $$V$$ with correlation $$\\rho$$ and variance 1 each. We begin by defining $$U = X$$. Next, we let $$V = \\rho X + \\sqrt{1 - \\rho^2}\\,Y$$.\\n\\nTo show that $$U$$ and $$V$$ indeed have correlation $$\\rho$$, we compute their covariance and individual variances.\\n\\nFirst, note that $$E[U] = E[X] = 0$$ and $$E[V] = E[\\rho X + \\sqrt{1 - \\rho^2}\\,Y] = 0$$, because both $$X$$ and $$Y$$ have mean 0.\\n\\n1) Variance of $$U$$:\\n$$\\mathrm{Var}(U) = \\mathrm{Var}(X) = 1.$$\\n\\n2) Variance of $$V$$:\\n$$\\mathrm{Var}(V) = \\mathrm{Var}(\\rho X + \\sqrt{1 - \\rho^2}\\,Y).$$\\nSince $$X$$ and $$Y$$ are independent,\\n$$\\mathrm{Var}(V) = \\rho^2\\,\\mathrm{Var}(X) + (1 - \\rho^2)\\,\\mathrm{Var}(Y) = \\rho^2 \\cdot 1 + (1 - \\rho^2) \\cdot 1 = 1.$$\\n\\n3) Covariance of $$U$$ and $$V$$:\\n$$\\mathrm{Cov}(U, V) = E[(U - E[U])(V - E[V])] = E[X(\\rho X + \\sqrt{1-\\rho^2}\\,Y)].$$\\nBecause the expectation of a product of independent mean-zero variables is zero and $$E[X^2] = 1$$, it follows that:\\n$$\\mathrm{Cov}(U, V) = \\rho E[X^2] + \\sqrt{1-\\rho^2}\\,E[X\\,Y] = \\rho \\cdot 1 + \\sqrt{1-\\rho^2}\\cdot 0 = \\rho.$$\\n\\nThus, by the definition of correlation,\\n$$\\rho_{U,V} = \\frac{\\mathrm{Cov}(U, V)}{\\sqrt{\\mathrm{Var}(U)}\\,\\sqrt{\\mathrm{Var}(V)}} = \\frac{\\rho}{1 \\cdot 1} = \\rho.$$\\nHence, the two new random variables $$U = X$$ and $$V = \\rho X + \\sqrt{1 - \\rho^2}\\,Y$$ each have variance 1 and correlation $$\\rho$$.",
+  "valid answer": "Valid Answers: $$U = X \\text{ and } V = \\rho X + \\sqrt{1 - \\rho^2}\\,Y$$",
+  "problem tags": [
+    "Probability",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Use a linear combination of the two independent Gaussians to construct the correlated pair.",
+  "problem firm": [
+    "HRT"
+  ],
+  "question id": "32746494576946866896"
+}

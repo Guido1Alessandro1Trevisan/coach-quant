@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Surpass",
+  "problem text": "A fair 4-sided die is repeatedly rolled, with each result added to a cumulative total. If the initial total is 0, what is the expected value of the first total that strictly exceeds 100? Additionally, how would this expected value change if instead the starting total were 96?",
+  "problem solution": "We will derive the expected final total (the first time the running sum surpasses 100) by setting up a system of equations for $$E_s$$, the expected final total given that the current sum is $$s$$. Once the sum is above 100, the process ceases and the final total is exactly that amount, so for any integer $$s>100$$, $$E_s = s$$. For any integer $$0\\le s\\le100$$, the next roll is equally likely to be 1, 2, 3, or 4, so we get the recurrence $$E_s = \\frac{1}{4}\\bigl(E_{s+1}+E_{s+2}+E_{s+3}+E_{s+4}\\bigr).$$ In particular, we know the boundary conditions $$E_{101}=101,\\, E_{102}=102,\\, E_{103}=103,\\, E_{104}=104.$$ By iterating backwards (or by noting a standard result that if increments are chosen uniformly from 1 to 4, the final total, once above a large threshold, is equally likely to exceed that threshold by 1, 2, 3, or 4), we find that $$E_0 = 102.5$$. In other words, starting from 0, the expected first total above 100 is 102.5. For the case starting at 96, we must similarly calculate $$E_{96}$$ by the same recurrence with the same boundary conditions. One can compute this step by step from 100 down to 96: \\( E_{100} = 102.5,\\, E_{99} = 102.125,\\, E_{98} = 101.90625,\\, E_{97} = 101.8828125,\\, E_{96} = 102.103515625. \\) Thus, beginning from 96 yields an expected final total of $$102.103515625 = \\frac{52277}{512}.$$",
+  "valid answer": "Valid Answers: Starting at 0 → 102.5, Starting at 96 → 102.103515625",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider setting up a function $$E_s$$ that captures the expected final sum if your current total is $$s$$. Use boundary values for sums above 100 and solve the resulting recurrence.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "96529844616644460156"
+}

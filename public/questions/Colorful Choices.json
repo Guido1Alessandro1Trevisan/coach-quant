@@ -1,0 +1,17 @@
+{
+  "problem name": "Colorful Choices",
+  "problem text": "A bag has $6$ red jellybeans and $10$ blue jellybeans. A child intends to eat $4$ of these candies, reaching into the bag to pick $4$ jellybeans randomly, one at a time, without putting any back. Determine the probability that the first two jellybeans chosen are red and the last two are blue.",
+  "problem solution": "To choose two red jellybeans first, the child has $6 \\cdot 5 = 30$ possible selections. For picking two blue jellybeans afterward, there are $10 \\cdot 9 = 90$ possible choices. Therefore, there are $2700$ different sequences for this arrangement. The total number of ways to pick $4$ jellybeans without replacement is $16 \\cdot 15 \\cdot 14 \\cdot 13$. Hence, the probability is $\\dfrac{2700}{16 \\cdot 15 \\cdot 14 \\cdot 13} = \\dfrac{45}{728}$.",
+  "valid answer": "Valid Answers: $45/728$",
+  "problem tags": [
+    "Combinatorics",
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "To start with two red jellybeans, the child has $6 \\cdot 5 = 30$ possible combinations for red jellybeans. How many choices are available for selecting the blue jellybeans?",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "50108033661168153808"
+}

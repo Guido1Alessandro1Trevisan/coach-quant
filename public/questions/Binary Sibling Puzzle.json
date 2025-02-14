@@ -1,0 +1,16 @@
+{
+  "problem name": "Binary Sibling Puzzle",
+  "problem text": "Imagine you have two offspring. You are told that at least one is female. What is the probability that the other child is male?",
+  "problem solution": "We begin by listing all possible gender combinations for two children: $$BB, BG, GB, GG.$$ Each pair is equally likely. Next, we incorporate the additional piece of information that at least one child is a girl. This knowledge instantly excludes the combination $$BB,$$ leaving us with $$BG, GB, GG.$$ We claim each of these three outcomes is equally probable under the condition that at least one child is female. Two of these three outcomes, $$BG\\text{ and }GB,$$ feature a boy. Thus, the probability that the other child is male is given by $$\\dfrac{2}{3}.$$ Since we formulated the sample space of equally likely events and removed only those that contradict the condition (having no girls), we have accurately calculated the conditional probability. This completes our reasoning and yields the final result of $$\\dfrac{2}{3}.$$",
+  "valid answer": "Valid Answers: 2/3",
+  "problem tags": [
+    "Probability",
+    "Conditional Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Enumerate the different gender combinations (BB, BG, GB, GG) and remove the combination with no girls.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "29845404600146193213"
+}

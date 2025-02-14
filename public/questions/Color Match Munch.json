@@ -1,0 +1,16 @@
+{
+  "problem name": "Color Match Munch",
+  "problem text": "A youngster possesses a collection of $6$ green jellybeans and $10$ yellow jellybeans. The youngster wishes to consume $4$ jellybeans, so they randomly select $4$ jellybeans sequentially, without replacing them, from the collection. Determine the probability that the initial pair and the final pair of jellybeans match in colors (not necessarily in sequence). For instance, $GYYG$ and $GGGG$ are acceptable, whereas $GGYG$ is not.",
+  "problem solution": "Examine the scenario where the initial two jellybeans drawn share the same color. This situation occurs in the cases $GGGG$ and $YYYY$. The respective probabilities are $\\dfrac{6\\cdot 5\\cdot 4\\cdot 3}{16 \\cdot 15 \\cdot 14 \\cdot 13}$ and $\\dfrac{10\\cdot 9 \\cdot 8 \\cdot 7}{16 \\cdot 15 \\cdot 14 \\cdot 13}$. The alternative scenario arises when the first two colors differ, such as $GY$ or $YG$. Since the yellow and green can be arranged as $GY$ or $YG$ in both the first and last two positions, we multiply the number of methods to achieve a fixed sequence of one green and one yellow in both the first and last two positions by $4$. For simplicity, assume the fixed sequence is $GYGY$. This results in: $4 \\cdot \\dfrac{10 \\cdot 6 \\cdot 9 \\cdot 5}{16 \\cdot 15 \\cdot 14 \\cdot 13}$ total ways to achieve this case. Summing our three scenarios, the overall probability is $\\dfrac{6\\cdot 5\\cdot 4\\cdot 3 + 10\\cdot 9 \\cdot 8 \\cdot 7 + 4 \\cdot 10 \\cdot 6 \\cdot 9 \\cdot 5 }{16 \\cdot 15 \\cdot 14 \\cdot 13} = \\dfrac{135}{364}$.",
+  "valid answer": "Valid Answers: $135/364$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Reflect on the potential configurations for the colors in the initial $2$ positions.",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "14850285006658919368"
+}

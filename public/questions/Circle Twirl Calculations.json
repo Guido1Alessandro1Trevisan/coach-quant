@@ -1,0 +1,16 @@
+{
+  "problem name": "Circle Twirl Calculations",
+  "problem text": "How many distinct bracelet patterns can be created using $3$ red beads and $3$ blue beads? Patterns that can be transformed into each other through rotation are considered the same. Do not account for symmetry by flipping the bracelet. For instance, $RRBRBB = RRBBRB$",
+  "problem solution": "We can evaluate all $3$ scenarios. In the first scenario, all $3$ red beads are adjacent. Here, there is only $1$ unique bracelet, as others are just rotations. In the second scenario, $2$ red beads are adjacent and separated from the third one. This implies that blue beads are positioned at both ends of the $2$ consecutive red beads. Thus, you obtain $2$ unique bracelets by arranging the remaining red and blue bead. The final scenario involves each red bead being separated by blue beads, leading to $1$ alternating color pattern. Therefore, considering all scenarios, there are $4$ distinct bracelet designs.",
+  "valid answer": "Valid Answers: $4$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Analyze scenarios based on the number of separate groups formed by the red beads.",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "27019672485214047913"
+}

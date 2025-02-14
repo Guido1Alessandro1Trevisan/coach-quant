@@ -1,0 +1,16 @@
+{
+  "problem name": "Flip Symmetry",
+  "problem text": "Suppose you flip four fair coins at once. What is the probability that the total number of heads obtained is an even number?",
+  "problem solution": "We seek the probability that the sum of heads among four fair coins is an even integer. Let X be the random variable representing the number of heads. Each of the four coins has two equally likely outcomes, so the sample space size is 2^4 = 16. We compute directly using the binomial formula: $$\\displaystyle \\Pr(X = k) = \\binom{4}{k}\\left(\\dfrac{1}{2}\\right)^4.$$ The event of interest is X being 0, 2, or 4. Consequently, $$\\displaystyle \\Pr(X \\text{ is even}) = \\Pr(X=0) + \\Pr(X=2) + \\Pr(X=4) = \\binom{4}{0}\\left(\\dfrac{1}{2}\\right)^4 + \\binom{4}{2}\\left(\\dfrac{1}{2}\\right)^4 + \\binom{4}{4}\\left(\\dfrac{1}{2}\\right)^4.$$ Evaluating the binomial coefficients: $$\\binom{4}{0} = 1, \\quad \\binom{4}{2} = 6, \\quad \\binom{4}{4} = 1.$$ Therefore, $$\\displaystyle \\Pr(X \\text{ is even}) = \\dfrac{1}{16} + \\dfrac{6}{16} + \\dfrac{1}{16} = \\dfrac{8}{16} = \\dfrac{1}{2}.$$ Hence, the probability that the number of heads is an even integer is $$\\dfrac{1}{2}.$$",
+  "valid answer": "Valid Answers: 1/2",
+  "problem tags": [
+    "Probability",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Try listing all possible outcomes or use the binomial coefficients to calculate the total ways to get 0, 2, or 4 heads.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "72041558622024122265"
+}

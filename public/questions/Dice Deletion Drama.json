@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Deletion Drama",
+  "problem text": "Imagine rolling a standard $6$-sided die and removing the number rolled from the die, leaving five sides with numbers. Roll again until one of these five numbers appears. What is the expected total of these two rolls?",
+  "problem solution": "The outcome of the second roll depends on the number removed after the first roll. Considering the number removed from the first roll, we calculate based on that. Each number on the die has an equal chance of being rolled, so if $T$ represents the sum of the two rolls, $\\mathbb{E}[T] = \\mathbb{E}[\\mathbb{E}[T \\mid X_1]] = \\dfrac{1}{6}\\sum_{i=1}^6 \\mathbb{E}[T \\mid X_1 = i]$. We need to determine $\\mathbb{E}[T \\mid X_1 = i]$. The number $i$ contributes to the total from the first roll. Once $i$ is removed, the sum of the remaining numbers is $21 - i$ and there are $5$ equally-probable numbers. Hence, the expected value of the second roll given the first is $i$ is $\\dfrac{21 - i}{5}$. Thus, $\\mathbb{E}[T \\mid X_1 = i] = \\dfrac{21-i}{5} + i = \\dfrac{21+4i}{5}$. Substituting this, $$\\begin{aligned}\\mathbb{E}[T] &= \\dfrac{1}{6} \\sum_{i=1}^6 \\dfrac{21+4i}{5} \\&= \\dfrac{7}{10} \\sum_{i=1}^6 1 + \\dfrac{2}{15} \\sum_{i=1}^6 i \\&= \\dfrac{42}{10} + \\dfrac{2}{15} \\cdot \\dfrac{6(7)}{2} = \\dfrac{21}{5} + \\dfrac{14}{5} = 7\\end{aligned}$$Another perspective is that the expected number removed from the first roll is $3.5$, so the expected sum of the leftover numbers is $17.5$. With $5$ equally-likely numbers on the die, the expected outcome of the second roll remains $3.5$, thus the total is $7$.",
+  "valid answer": "Valid Answers: $7$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the outcome of the first roll.",
+  "problem firm": [
+    "Hudson River Trading"
+  ],
+  "question id": "67755464420647574273"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Coin Toss Puzzle",
+  "problem text": "A fair coin is tossed $n$ times. It happens that no two heads appear one after another in the sequence. Based on this, find the likelihood that the first toss resulted in heads, expressed as a function $p(n)$. Compute $p(10)$.",
+  "problem solution": "Define $$ A(n) $$ as the count of sequences of length $$ n $$ without consecutive heads. We have $$ A(1) = 2 $$ and $$ A(2) = 3 $$ (the sequence $$ HH $$ fails this condition). For a sequence of length $$ n $$ to adhere to this rule, it starts with either $$ T $$ or $$ HT $$. It cannot begin with $$ HH $$, as that breaches the rule. There are $$ A(n-1) $$ sequences beginning with $$ T $$ that meet the requirement, given the first flip is $$ T $$ and the remaining $$ n-1 $$ positions must avoid consecutive heads. Similarly, there are $$ A(n-2) $$ sequences starting with $$ HT $$ following the same principle, with $$ n-2 $$ remaining positions. Therefore, $$ A(n) = A(n-1) + A(n-2) $$ with $$ A(1) = 2 $$ and $$ A(2) = 3 $$. This mirrors the Fibonacci sequence but shifted. Specifically, $$ A(n) = F_{n+2} $$, where $$ F_k $$ is the $$ k $$th Fibonacci number. Given this, every sequence fulfilling the condition is equally probable. We discern that $$ A(n-2) $$ sequences commence with $$ HT $$ (thus starting with $$ H $$) out of the $$ A(n) $$ total. Consequently, $$ p(n) = \\dfrac{A(n-2)}{A(n)} = \\dfrac{F_n}{F_{n+2}} $$. In particular, $$ p(10) = \\dfrac{F_{10}}{F_{12}} = \\dfrac{55}{144} $$.",
+  "valid answer": "Valid Answers: $55/144$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the sequence starting with $T$ or $HT$ to establish a recurrence relation.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "37542267912563095157"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Splash Ranking Showdown",
+  "problem text": "There are 6 swimmers of equal skill, named $1-6$, competing in a race. Determine the likelihood that swimmer $2$ finishes in $2$nd position and swimmer $5$ secures a position within the top $3$.",
+  "problem solution": "Given that all swimmers have the same level of skill, and due to their interchangeability, each participant lands in any of the $6$ positions with a chance of $\\dfrac{1}{6}$. The chance that swimmer $2$ secures the $2$nd position is $\\dfrac{1}{6}$. With this condition, $2$ positions remain in the top $3$ for swimmer $5$ to occupy. Since swimmer $2$ occupies one spot, the chance that swimmer $5$ is within the top $3$ is $\\dfrac{2}{5}$. Thus, the final result is $\\dfrac{1}{6} \\cdot \\dfrac{2}{5} = \\dfrac{1}{15}$.",
+  "valid answer": "Valid Answers: $\\frac{1}{15}$",
+  "problem tags": [
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "As each swimmer has equal skill, by the principle of exchangeability, each has a probability of $\\dfrac{1}{6}$ to finish in any of the $6$ positions.",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "67565748278711934529"
+}

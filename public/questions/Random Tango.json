@@ -1,0 +1,16 @@
+{
+  "problem name": "Random Tango",
+  "problem text": "Suppose $X$ and $Y$ are random variables with standard deviations $1$ and $3$, respectively. The standard deviation of the sum $X+Y$ is $4$. Determine $\\text{Corr}(X,Y)$.",
+  "problem solution": "Using the formula for the variance of a sum, we have $\\text{Var}(X+Y) = \\text{Var}(X) + \\text{Var}(Y) + 2\\text{Cov}(X,Y)$. Substituting the given values, $4^2 = 1^2 + 3^2 + 2\\rho (3)(1)$, which simplifies to $6\\rho = 6$, thus $\\rho = 1$.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Covariance",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Apply the formula $\\text{Var}(X+Y) = \\text{Var}(X) + \\text{Var}(Y) + 2\\text{Cov}(X,Y)$",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "48703162175933822637"
+}

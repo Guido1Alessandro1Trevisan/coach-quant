@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Deja Vu 2",
+  "problem text": "Suppose you have a fair 100-sided die, and you keep rolling it. On average, how many rolls must you perform until you first see a face value that has previously appeared?",
+  "problem solution": "We want the expected number of rolls until we get a duplicated outcome. Let X be the roll count at which we first see any repeat. If we denote by P(X \\ge k) the probability that the first k - 1 rolls are all distinct, then the expected value E[X] equals the sum of those probabilities for k from 1 up to 101 (since 101 rolls will surely produce a repeat by the pigeonhole principle). Formally, let n = 100 be the number of possible die faces. Then P(X \\ge 1) = 1, and for k \\ge 2, we have P(X \\ge k) = $\\frac{n \\times (n - 1) \\times (n - 2) \\times \\cdots \\times (n - (k - 2))}{n^{k-1}}$. Consequently, $E[X] = \\sum_{k=1}^{n+1} P(X \\ge k).$ Substituting n = 100 and summing numerically gives approximately 13.21. An alternative approach is to note that the probability of a repeat on the k-th roll is the probability that the first k - 1 rolls are distinct, multiplied by the probability that the k-th roll matches one of those k - 1 outcomes, namely $\\frac{k-1}{n}$. Summing k times that probability over k = 2 to k = 101 leads to the same result. Therefore, the expected number of rolls needed until the first repeated value is about 13.21.",
+  "valid answer": "Valid Answers: Approximately 13.21",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Sum the probabilities that no duplicate has appeared by each roll, or directly compute the probability that the first repeat takes place on roll k.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "50037564424377624281"
+}

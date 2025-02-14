@@ -1,0 +1,16 @@
+{
+  "problem name": "Color Conundrum",
+  "problem text": "There are three boxes. One contains two white balls, another contains two black balls, and the last one contains a white ball and a black ball. One box is chosen randomly, and then one ball is selected at random from that chosen box. If the selected ball is white, what is the probability that the other ball in the same box is also white?",
+  "problem solution": "Denote the boxes as WW (two whites), BB (two blacks), and WB (one white and one black). Let A be the event that the selected ball is white. The probability of choosing each box is $\\frac{1}{3}$. Then the probability of picking a white ball from each box is: from WW, $1$; from BB, $0$; from WB, $\\frac{1}{2}$. Using the law of total probability, we get $$P(A) = \\frac{1}{3}\\times1 + \\frac{1}{3}\\times0 + \\frac{1}{3}\\times\\frac{1}{2} = \\frac{1}{2}.$$ Now let B be the event that we picked from the WW box. We want $P(B\\mid A)$. By Bayes' Theorem, $$P(B\\mid A) = \\frac{P(B)\\,P(A\\mid B)}{P(A)} = \\frac{\\frac{1}{3}\\times1}{\\frac{1}{2}} = \\frac{2}{3}.$$ Therefore, given that a white ball was drawn, the probability that it came from the box with two white balls (and hence that the remaining ball in that box is also white) is $\\frac{2}{3}.$",
+  "valid answer": "Valid Answers: $\\frac{2}{3}$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider enumerating all ways to draw a white ball from each of the three boxes and then apply conditional probability.",
+  "problem firm": [
+    "Citi"
+  ],
+  "question id": "77091027864729795490"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Coprime Collection Quest",
+  "problem text": "From the set of integers \\{1, 2, 3, \u2026, 30\\}, find a subset yielding the largest possible total if every pair of distinct elements in the subset must share no common factors other than 1.",
+  "problem solution": "We aim to build a subset of \\{1,2,\\ldots,30\\} where every pair of numbers is coprime and the total sum is maximized. First, note that maximizing the sum naturally suggests including large numbers. Because they must be pairwise coprime, no two chosen numbers can share a prime factor. Observe that the meaningful prime factors up to 30 are 2, 3, 5, 7, 11, 13, 17, 19, 23, and 29. A systematic approach is to choose the largest prime powers among the smaller primes and then add primes that do not overlap in factors:\n\n1) Include 25 = 5\\(^2\\) and 27 = 3\\(^3\\). These remove the possibility of choosing any other multiples of 3 or 5.\n2) Include 28 = 2\\(^2\\) \\times 7. This removes any multiples of 2 or 7 apart from itself.\n3) We can still choose all primes that have none of the prime factors 2, 3, 5, or 7. These primes up to 30 are 11, 13, 17, 19, 23, and 29.\n4) Lastly, 1 can always be included since it is coprime with every integer.\n\nHence, the subset\n$$\\{1, 25, 27, 28, 11, 13, 17, 19, 23, 29\\}$$\nis pairwise coprime. Its total is:\n$$1 + 25 + 27 + 28 + 11 + 13 + 17 + 19 + 23 + 29 = 193.$$ \n\nOne can argue no larger sum is possible. Any attempt to replace or add to these numbers introduces a repeated prime factor, violating the pairwise coprimality condition. Therefore, the maximum sum is 193.",
+  "valid answer": "193",
+  "problem tags": [
+    "Number Theory",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Try combining large prime powers from 2, 3, 5, and 7 with as many remaining primes as you can, plus 1.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "44041145205385825939"
+}

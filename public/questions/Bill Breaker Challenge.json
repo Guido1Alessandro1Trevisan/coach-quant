@@ -1,0 +1,15 @@
+{
+  "problem name": "Bill Breaker Challenge",
+  "problem text": "With the bill values of $1$, $5$, $20$, and $100$ dollars, determine the minimum number of bills required to create any value from $1$ to $100$ using a selection of these bills. In other terms, how many bills are necessary to represent any number from $1$ to $100$ with the possibility of reusing bills?",
+  "problem solution": "Rationally, the most challenging value to create will tend to be relatively large. For instance, forming any amount from $80$ to $90$ by merely adding $10$ can be more difficult (it needs two extra bills). By evaluating some options, you will find that $99$ is the hardest value to create as it demands $4$ $20$ bills, $3$ $5$ bills, and $4$ $1$ bills, totaling $11$ bills. However, $100$ cannot be formed yet, so we can either include an additional $1$ bill or a $100$ bill, increasing our total to $12$ bills.",
+  "valid answer": "Valid Answers: [ $20/\\text{mo}$ \\text{ billed annually to Invest in your future today, } $30/\\text{mo}$ \\text{ billed monthly to try it out and see if its worth it } ]",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "The quantity that requires the greatest number of bills will likely be a large $number$.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "54813541971958564435"
+}

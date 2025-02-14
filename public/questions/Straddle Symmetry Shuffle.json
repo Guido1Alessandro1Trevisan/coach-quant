@@ -1,0 +1,17 @@
+{
+  "problem name": "Straddle Symmetry Shuffle",
+  "problem text": "Consider a straddle strategy where the strike is $K = 0$. The asset price $S$ follows $N(0,1)$. First, determine the expected outcome of the straddle, $v$. Given that $v^2$ can be expressed as $\\dfrac{a}{\\pi}$ for some rational $a$, find $a$.",
+  "problem solution": "To begin with, calculate the expected outcome of the straddle. Since $$ K = 0 $$, we have: $$ \\mathbb{E}[|S-K|] = \\mathbb{E}[|S|] $$ We will extend this computation for $$ S \\sim N(0,\\sigma^2) $$.$$ \\begin{aligned} E[|S|] &= \\int_{-\\infty}^{\\infty} \\frac{1}{\\sqrt{2 \\pi \\sigma^2}}|x| \\exp \\left(-\\frac{x^2}{2 \\sigma^2}\\right) dx \\ &= \\frac{2}{\\sqrt{2 \\pi \\sigma^2}} \\int_0^{\\infty} x \\exp \\left(-\\frac{x^2}{2 \\sigma^2}\\right) dx \\ &= \\left.\\sqrt{\\frac{2}{\\pi \\sigma^2}}\\left(-\\sigma^2 \\exp \\left(-\\frac{x^2}{2 \\sigma^2}\\right)\\right)\\right|_0^{\\infty} \\ &= \\sqrt{\\frac{2}{\\pi}} \\sigma,\\end{aligned}$$ From line $$ 1 $$ to line $$ 2 $$, the symmetry of the integrand around $$ 0 $$ is used. From line $$ 2 $$ to line $$ 3 $$, a $$ u-$$substitution simplifies the indefinite integral. Specifically, with $$ \\sigma = 1 $$, the result is $$ v = \\sqrt{\\dfrac{2}{\\pi}} $$, leading to $$ v^2 = \\dfrac{2}{\\pi} $$, hence $$ a = 2 $$.",
+  "valid answer": "Valid Answers: $2$",
+  "problem tags": [
+    "Expected Value",
+    "Continuous Random Variables",
+    "Finance"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "With $K = 0$, the expected outcome of the straddle is $\\mathbb{E}[|S-K|] = \\mathbb{E}[|S|]$. Transform this into a probability question.",
+  "problem firm": [
+    "Goldman Sachs"
+  ],
+  "question id": "36427027527885104225"
+}

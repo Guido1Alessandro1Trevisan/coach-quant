@@ -1,0 +1,16 @@
+{
+  "problem name": "Uniform Uncertainty",
+  "problem text": "Assume $X \\sim \\text{Unif}(0,1)$. Determine $\\text{Var}(X)$.",
+  "problem solution": "It's straightforward to determine that the expectation of $X$ is $\\dfrac{1}{2}$ because $X$ is uniformly distributed over the range $(0,1)$, placing the expectation at the midpoint due to the even spread of probability density. We apply LOTUS to find $\\mathbb{E}[X^2]$. Specifically, the density function of $X$ is $f(x) = I_{(0,1)}(x)$, so $\\mathbb{E}[X^2] = \\int_{\\mathbb{R}} x^2 I_{(0,1)}(x)dx = \\int_0^1 x^2 dx = \\dfrac{1}{3}$. Thus, using the relation $\\text{Var}(X) = \\mathbb{E}[X^2] - (\\mathbb{E}[X])^2 = \\dfrac{1}{3} - \\left(\\dfrac{1}{2}\\right)^2 = \\dfrac{1}{12}$.",
+  "valid answer": "Valid Answers: $1/12$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "It's straightforward to determine that the expectation of $X$ is $\\dfrac{1}{2}$ because $X$ is uniformly distributed over the range $(0,1)$, placing the expectation at the midpoint due to the even spread of probability density. Apply LOTUS to find $\\mathbb{E}[X^2]$.",
+  "problem firm": [
+    "Imc"
+  ],
+  "question id": "98146452892757094480"
+}

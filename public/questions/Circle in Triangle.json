@@ -1,0 +1,16 @@
+{
+  "problem name": "Circle in Triangle",
+  "problem text": "Determine the area of the largest circle that can be fitted inside a triangle with sides measuring $16$, $16$, and $24$. The solution should be expressed as $\\dfrac{p\\pi}{q}$, where $\\dfrac{p}{q}$ is in its simplest form. Determine $p + q$.",
+  "problem solution": "From Euclidean geometry, we know that the triangle's area equals the product of its inradius and semiperimeter. Using the Pythagorean theorem, the height from the base of $24$ is calculated as $4\\sqrt{7}$, giving the triangle an area of $48\\sqrt{7}$. The semiperimeter, which is half of the perimeter, is $28$, allowing us to calculate the inradius as $\\dfrac{12\\sqrt{7}}{7}$. The incircle's area is $\\dfrac{144\\pi}{7}$, leading to an answer of $144 + 7 = 151$.",
+  "valid answer": "Valid Answers: $151$",
+  "problem tags": [
+    "Pure Math",
+    "Pure Math"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about the triangle's area. How does it connect to what we are trying to find?",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "46988121751937120980"
+}

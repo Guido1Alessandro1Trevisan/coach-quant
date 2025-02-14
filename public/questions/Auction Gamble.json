@@ -1,0 +1,17 @@
+{
+  "problem name": "Auction Gamble",
+  "problem text": "You are participating in an auction for a painting. The value of the painting is uniformly distributed between $0$ and $100,000$. If your offer exceeds the painting's value, you acquire it and sell it to a museum for $1.5$ times its worth. Determine your offer to maximize your gain. If profiting is impossible, offer $0$.",
+  "problem solution": "If your offer is below the painting's value, you incur no loss. Assume you do win the painting, meaning your offer exceeded its real value. Let $x$ be your offer. Knowing you won the auction, the value does not exceed $x$. Thus, the conditional distribution of the painting's value is $\\text{Unif}(0,x)$. On average, the painting's value is $\\frac{x}{2}$, and you can sell it for an average of $\\frac{1.5 \\cdot x}{2} = \\frac{3}{4}x$. This is less than $x$, the amount spent on the painting. Consequently, the best strategy is not to bid, so the answer is $0$.",
+  "valid answer": "Valid Answers: $0$",
+  "problem tags": [
+    "Expected Value",
+    "Games",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Will you suffer any loss if your offer doesn't win the painting?",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "54505492111830353384"
+}

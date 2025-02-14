@@ -1,0 +1,17 @@
+{
+  "problem name": "Prime Roll Showdown",
+  "problem text": "We have a competition involving two participants. The first participant throws a $6$-sided die $10000$ times, while the second participant does it $10001$ times. What is the probability that the second participant rolls more prime numbers than the first?",
+  "problem solution": "Define $X$ as the probability that the scores are equal after each has rolled $10000$ times. There are two scenarios where player $2$ can win: **Scenario 1:** Player $2$ leads after both have rolled $10000$ times, with probability $\\frac{1}{2} \\cdot (1-X)$. **Scenario 2:** They are tied after $10000$ rolls, and player $2$ rolls a prime on the $10001$st attempt, with probability $\\frac{1}{2} \\cdot X$. Therefore, the overall probability that player $2$ emerges victorious is $\\frac{1}{2} \\cdot (1-X) + \\frac{1}{2} \\cdot X = \\frac{1}{2}$.",
+  "valid answer": "Valid Answers: $\\frac{1}{2}$",
+  "problem tags": [
+    "Events",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "There is a $\\frac{1}{2}$ chance that either player will win after an equal number of rolls. What advantage does an additional roll provide to player 2?",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "74710396544722152776"
+}

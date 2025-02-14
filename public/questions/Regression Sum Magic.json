@@ -1,0 +1,15 @@
+{
+  "problem name": "Regression Sum Magic",
+  "problem text": "Consider $X$ and $Y$ as random variables where $E[X]=6$, $V[X]=2$, $E[Y]=8$, $V[Y]=10$, and $Cov[X,Y]=0$. Perform a simple linear regression of $X$ on $Y$ leading to a model $Y = aX + b$. Calculate $a+b$.",
+  "problem solution": "Since the covariance between $X$ and $Y$ equals zero, $a$ becomes $0$. Therefore, the intercept of the regression line is $E[Y]$, resulting in $b$ being $8$. Thus, $a+b=8$.",
+  "valid answer": "Valid Answers: $8$",
+  "problem tags": [
+    "Statistics"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Remember the maximum likelihood estimators for the slope and the intercept. Which of them depends on covariance, and how does that assist in finding the value of the other parameter?",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "37063785211101459101"
+}

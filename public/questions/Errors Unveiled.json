@@ -1,0 +1,16 @@
+{
+  "problem name": "Errors Unveiled",
+  "problem text": "Consider the dataset, $(x, y)$: $(-2, 0), (-1, 0), (0, 1), (1, 1), (2, 3)$. Bob performs a basic linear regression using the model $Y = \\beta_0 + \\beta_1 x + \\epsilon$, where $\\mathbb{E}[\\epsilon] = 0$ and $\\text{Var}[\\epsilon] = \\sigma^2$. Calculate $\\sigma^2$.",
+  "problem solution": "It is possible to demonstrate that $ s^2 = \\frac{\\text{SSE}}{n - 2} $ serves as an unbiased estimate for $ \\sigma^2 $ when there exist 2 $ \\beta $ coefficients. We first need to find the least-squares estimates for the $ \\beta $ coefficients. It is known that $ \\hat{\\beta}_1 = \\frac{S_{xy}}{S_{xx}}, \\hat{\\beta}_0 = \\bar{y} - \\hat{\\beta}_1 \\bar{x}. $ For our dataset, we find $ S_{xy} = \\sum_{i = 1}^n (x_i - \\bar{x})(y_i - \\bar{y}) = 7 $, and $ S_{xx} = \\sum_{i = 1}^n (x_i - \\bar{x})^2 = 10 $. Therefore, $ \\hat{\\beta}_1 = \\frac{7}{10} $, and $ \\hat{\\beta}_0 = 1 - 0 = 1 $. We then calculate the sum of squared errors (SSE) using this formula: $ \\text{SSE} = S_{yy} - \\hat{\\beta}_1 S_{xy} = 6 - \\frac{7}{10} \\cdot 7 = \\frac{11}{10} \\Rightarrow \\frac{\\text{SSE}}{n - 2} = \\frac{11/10}{5 - 2} = \\frac{11}{30} $.",
+  "valid answer": "Valid Answers: $11/30$",
+  "problem tags": [
+    "Linear Regression",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Apply $ \\hat{\\beta}_1 = \\frac{S_{xy}}{S_{xx}}, \\; \\hat{\\beta}_0 = \\bar{y} - \\hat{\\beta}_1 \\bar{x}. $ Utilize $ s^2 $ as an unbiased approximation for $ \\sigma^2 $.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "38119798199120299416"
+}

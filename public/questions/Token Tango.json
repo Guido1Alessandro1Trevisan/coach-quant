@@ -1,0 +1,16 @@
+{
+  "problem name": "Token Tango",
+  "problem text": "Suppose you possess a jar containing 3 tokens each worth +1 dollar and 2 tokens each worth -1 dollar. You extract tokens one at a time, without putting any back, and you may stop at any moment. What is the maximum price you would be willing to pay for the chance to play this game given that you use the optimal stopping strategy?",
+  "problem solution": "We formalize the problem by letting $$E(k,l)$$ denote the maximal expected payoff from a jar with $$k$$ tokens worth +1 dollar and $$l$$ tokens worth -1 dollar, assuming optimal play. At each state $$(k,l)$$, if you choose to continue, you gain +1 with probability $$\\frac{k}{k+l}$$ (and move to $$(k-1,l)$$) or -1 with probability $$\\frac{l}{k+l}$$ (and move to $$(k,l-1)$$). Thus, continuing yields the expected value $$\\frac{k}{k+l}\\bigl(1 + E(k-1,l)\\bigr) + \\frac{l}{k+l}\\bigl(-1 + E(k,l-1)\\bigr).$$ You may also opt to stop and lock in an immediate payoff of 0 from that point on, so: $$E(k,l) = \\max\\Bigl\\{0,\\,\\frac{k}{k+l}\\bigl(1 + E(k-1,l)\\bigr) + \\frac{l}{k+l}\\bigl(-1 + E(k,l-1)\\bigr)\\Bigr\\}.$$ The boundary conditions are $$E(k,0) = k$$ (since only +1 tokens remain, you draw them all), and $$E(0,l)=0$$ (it is better to stop rather than draw a guaranteed -1). By calculating systematically, one obtains $$E(3,2) = 1.5$$ dollars. Consequently, the optimal strategy has a 1.5 dollar expected return, so a fair cost to participate in this game is $$1.50$$ dollars.",
+  "valid answer": "Valid Answers: $1.50",
+  "problem tags": [
+    "Game Theory",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider defining a function that encodes the expected return for a given number of +1 and -1 tokens, then use backward induction to find its value.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "14612492225708146563"
+}

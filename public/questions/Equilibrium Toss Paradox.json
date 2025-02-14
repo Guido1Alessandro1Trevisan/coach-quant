@@ -1,0 +1,16 @@
+{
+  "problem name": "Equilibrium Toss Paradox",
+  "problem text": "Jacob tosses a fair coin until the number of heads matches the number of tails. For instance, $HHTHTT$ results in $6$ tosses. What is the inverse of the expected number of tosses Jacob makes?",
+  "problem solution": "After the initial toss, the difference between the counts of heads ($H$) and tails ($T$) becomes $1$. Let $H_n$ and $T_n$ denote the counts of heads and tails after $n$ tosses. Define $N$ as the time when $H_n = T_n$, or $N = \\text{min}\\{n > 0 : H_n = T_n\\}$. Next, let $S_n = |H_n - T_n|$, representing the absolute difference between heads and tails after $n$ tosses. $S_n$ behaves as a symmetric random walk over non-negative integers with a reflecting boundary at $0$, shifting by $\\pm 1$ at each step with equal likelihood. The absolute value indicates that a head advances us one step, while a tail retreats us by one step. As we're interested in the first instance $S_n = 0$, the task reduces to calculating the expected recurrence time to $0$, starting from $1$ (since after the initial toss, you're at $+1$ or $-1$, with an absolute value of $1$). We aim for $\\mathbb{E}[N]$, where $N = \\text{min}\\{n > 0 : S_n = 0\\}$ and $S_0 = 1$. Given the walk's shift-invariance, this matches finding the expected time to reach $1$ in a symmetric random walk starting at $0$. Let $R_n$ represent this walk, and we want $\\mathbb{E}[N_1]$, where $N_1 = \\text{min}\\{n : R_n = 1\\}$. Assuming $\\mathbb{E}[N_1] < \\infty$, $R_n = \\displaystyle \\sum_{i=1}^n X_i$, where $X_i$ are IID random variables with values $\\pm 1$ with equal chances. By employing Wald's Identity, $\\mathbb{E}[R_{N_1}] = \\mathbb{E}[N_1] \\mathbb{E}[X_1]$. Given $R_{N_1} = 1$ and $\\mathbb{E}[X_1] = 0$, this results in a contradiction. Consequently, $\\mathbb{E}[N_1]$ is infinite, yielding an answer of $0$.",
+  "valid answer": "Valid Answers: $0$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "What is the absolute disparity between the number of $heads$ and $tails$.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "33402342259096724173"
+}

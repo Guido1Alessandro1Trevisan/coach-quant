@@ -1,0 +1,18 @@
+{
+  "problem name": "Circle Randomness",
+  "problem text": "To approximate $\\pi$, you choose to draw $N$ independent points from the unit square $[0,1] \\times [0,1]$. Let $I_i$ be the indicator variable for the event that the $i$th point, where $1 \\leq i \\leq N$, falls within the area defined by $x^2 + y^2 = 1$ in the first quadrant. Given $T_N = \\dfrac{I_1 + \\dots + I_N}{N}$ as part of your approximation for $\\pi$, determine the variance of this approximation for $\\pi$. The variance is expressed as $\\dfrac{a\\pi^2 + b\\pi}{N}$ where $a$ and $b$ are integers. Calculate $a + b$. Note that this variance is somewhat impractical since $\\pi$ is needed to compute the variance.",
+  "problem solution": "No solution found",
+  "valid answer": "Valid Answers: $3$",
+  "problem tags": [
+    "Expected Value",
+    "Limit Theorems",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "No hint found",
+  "problem firm": [
+    "Goldman Sachs",
+    "Sig"
+  ],
+  "question id": "04173991193915296488"
+}

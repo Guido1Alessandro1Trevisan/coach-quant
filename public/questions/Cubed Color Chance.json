@@ -1,0 +1,17 @@
+{
+  "problem name": "Cubed Color Chance",
+  "problem text": "Imagine a 3$\\times $3 $\\times $3 cube whose external faces are fully painted. The cube is then cut into twenty-seven 1 $\\times $1 $\\times$ 1 cubes. One of these smaller cubes is chosen at random, and it is rolled once. What is the probability that the face on top after the roll is painted?",
+  "problem solution": "First, note that there are 27 unit cubes in total. We categorize them according to the number of painted faces each smaller cube holds: (1) Corner cubes. There are 8 corners, each with 3 painted faces. (2) Edge cubes. There are 12 edge cubes, each with 2 painted faces. (3) Face-center cubes. There are 6 face cubes, each with 1 painted face. (4) The interior cube. There is 1 such cube, which has 0 painted faces. Next, we compute the probability of picking each type of cube, and then the conditional probability that a painted face ends up on top when rolled. Picking a corner cube occurs with probability $\\dfrac{8}{27}$. A corner cube has 3 painted faces out of 6 total, so the probability of rolling a painted face up is $\\dfrac{3}{6} = \\dfrac{1}{2}$. Picking an edge cube occurs with probability $\\dfrac{12}{27}$. Each edge cube has 2 painted faces out of 6, so the probability of rolling a painted face up is $\\dfrac{2}{6} = \\dfrac{1}{3}$. Picking a face cube occurs with probability $\\dfrac{6}{27}$. A face cube has 1 painted face out of 6, so the probability of rolling a painted face up is $\\dfrac{1}{6}$. Lastly, the interior cube is chosen with probability $\\dfrac{1}{27}$. An interior cube has no painted faces, so the probability of rolling a painted face up is 0. Summing these over all possibilities: $\\dfrac{8}{27} \\times \\dfrac{1}{2} + \\dfrac{12}{27} \\times \\dfrac{1}{3} + \\dfrac{6}{27} \\times \\dfrac{1}{6} + \\dfrac{1}{27} \\times 0 = \\dfrac{4}{27} + \\dfrac{4}{27} + \\dfrac{1}{27} + 0 = \\dfrac{9}{27} = \\dfrac{1}{3}$. Thus, the probability that the top face is painted is $\\dfrac{1}{3}$.",
+  "valid answer": "Valid Answers: 1/3",
+  "problem tags": [
+    "Combinatorics",
+    "Probability",
+    "Geometry"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Classify the small cubes by corners, edges, face centers, and the unpainted interior cube, and then consider how many painted faces each type has.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "71120330831797244577"
+}

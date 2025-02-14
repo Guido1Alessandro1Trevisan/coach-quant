@@ -1,0 +1,17 @@
+{
+  "problem name": "Twin Shuffle",
+  "problem text": "Imagine you possess $20$ cards, each numbered from $1$ to $10$, with each number appearing twice. You randomly select $2$ cards from the $20$ available cards. If they are identical in value, they are removed from the deck. If not, they are returned to the deck. The game ends when no cards remain for drawing. Each pair of cards drawn counts as one turn. Determine the expected number of turns required to complete the game.",
+  "problem solution": "Define $$T$$ as the total length of the game. We will extend this to $$n$$ pairs of cards. Thus, $$T = T_1 + T_2 + \\dots + T_{n}$$, where $$T_i$$ represents the number of draws necessary to move from $$i-1$$ matched pairs to $$i$$ matched pairs. By the principle of linearity of expectation, $$\\mathbb{E}[T] = \\displaystyle \\sum_{i=1}^{n} \\mathbb{E}[T_i]$$. Our task is to determine $$\\mathbb{E}[T_i]$$. If there are $$i-1$$ pairs already matched, then there remain $$2n - 2(i-1) = 2(n-i+1)$$ cards in the deck. For any draw, fix the first card. The probability that the second card matches this first card is $$\\dfrac{1}{2(n-i+1) - 1}$$, since there are $$2(n-i+1)-1$$ cards remaining after the first is drawn, with only $$1$$ card matching the first in value. Therefore, as this process is independent across trials, $$T_i \\sim \\text{Geom}\\left(\\dfrac{1}{2(n-i+1)-1}\\right)$$, implying $$\\mathbb{E}[T_i] = 2(n-i+1)-1$$. Consequently, $$\\mathbb{E}[T] = \\displaystyle \\sum_{i=1}^n 2(n-i+1)-1 = \\sum_{i=1}^{n} (2i-1) = n^2$$. Specifically, with $$n = 10$$ here, the solution is $$100$$.",
+  "valid answer": "Valid Answers: $100$",
+  "problem tags": [
+    "Expected Value",
+    "Discrete Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Define $T$ as the complete duration of the game. Then $T = T_1 + T_2 + \\dots + T_{10}$, where $T_i$ indicates the number of draws required to progress from $i-1$ matched pairs to $i$ matched pairs.",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "76436306976379346321"
+}

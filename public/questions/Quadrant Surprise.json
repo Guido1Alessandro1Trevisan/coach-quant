@@ -1,0 +1,18 @@
+{
+  "problem name": "Quadrant Surprise",
+  "problem text": "Assume $X$ and $Y$ are standard normal random variables that are independent. Determine $\\mathbb{P}[Y > 4X]$.",
+  "problem solution": "Since $X$ and $Y$ are normal random variables with mean $0$, the random variable $Y - 4X$ is also normal with a mean of $0$. Thus, $\\mathbb{P}[Y > 4X] = \\mathbb{P}[Y - 4X > 0]$ represents the probability that a normal random variable exceeds its mean. By the symmetry of the normal distribution around its mean, this probability is $\\dfrac{1}{2}$.",
+  "valid answer": "Valid Answers: $\\frac{1}{2}$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "What is the probability distribution of $Y - 4X$?",
+  "problem firm": [
+    "Five Rings",
+    "Hudson River Trading",
+    "Squarepoint Capital"
+  ],
+  "question id": "78168499944691287888"
+}

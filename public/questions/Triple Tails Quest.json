@@ -1,0 +1,17 @@
+{
+  "problem name": "Triple Tails Quest",
+  "problem text": "On average, how many flips of a fair coin are needed to get $3$ heads in a row?",
+  "problem solution": "Let $$ x $$ denote the average number of coin flips necessary to obtain three sequential heads. Initially, there is a $$ \\frac{1}{2} $$ chance of flipping a tail, effectively resetting to $$ 0 $$ consecutive heads. This increases the expected number of flips to $$ x+1 $$ due to the wasted flip on the tail. There is a $$ \\frac{1}{4} $$ chance of flipping $$ HT $$, resetting again to $$ 0 $$ consecutive heads, increasing the expected flips to $$ x+2 $$ after wasting two flips on $$ HT $$. A $$ \\frac{1}{8} $$ chance exists for flipping $$ HHT $$, also resetting to $$ 0 $$ consecutive heads, increasing the expected flips to $$ x+3 $$ after wasting three flips on $$ HHT $$. Finally, there is a $$ \\frac{1}{8} $$ probability of achieving $$ HHH $$, which requires exactly three flips. Hence, the equation is: $ x = \\frac{1}{2}(x+1) + \\frac{1}{4}(x+2) + \\frac{1}{8}(x+3) + \\frac{1}{8} \\cdot 3  x = 14 $",
+  "valid answer": "Valid Answers: $14$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "This can be approached in several ways: Markov chains, recursive formulas, Law of Total Probability, binary trees, among others.",
+  "problem firm": [
+    "Imc",
+    "Worldquant"
+  ],
+  "question id": "71406886527620509257"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Divisors Delight",
+  "problem text": "Consider rolling two standard six-sided dice. Determine the probability that the total of the two dice is divisible by 6.",
+  "problem solution": "We begin by observing there are $$6 \\times 6 = 36$$ equally likely outcomes for rolling a pair of dice. For their sum to be divisible by 6, the total must be a multiple of 6. The only feasible sums in this case are $$6$$ and $$12$$, since $$2$$ is the minimum and $$12$$ is the maximum sum of two dice. We now count the possible ways: to get a sum of $$6$$, the rolls could be $$(1,5), (2,4), (3,3), (4,2), (5,1)$$, making $$5$$ ways. To get a sum of $$12$$, the only possibility is $$(6,6)$$, resulting in $$1$$ way. Hence, there are $$5 + 1 = 6$$ outcomes favorable to giving a sum divisible by 6. Consequently, the probability is $$\\dfrac{6}{36} = \\dfrac{1}{6}$$.",
+  "valid answer": "Valid Answers: $$\\dfrac{1}{6}$$",
+  "problem tags": [
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "List all possible sums from 2 to 12. Identify those that are multiples of 6, and count their occurrences.",
+  "problem firm": [
+    "SIG"
+  ],
+  "question id": "94588403702359535522"
+}

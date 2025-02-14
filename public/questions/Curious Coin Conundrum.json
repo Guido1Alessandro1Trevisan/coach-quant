@@ -1,0 +1,17 @@
+{
+  "problem name": "Curious Coin Conundrum",
+  "problem text": "Imagine you have two fair coins, but you want to fashion an experiment such that the probability of getting a 'heads' event is 2/5 while the probability of getting a 'tails' event is 3/5. How can this be arranged using only unbiased (fair) coin flips?",
+  "problem solution": "We wish to construct an event with probability $$\\frac{2}{5}$$ for heads (H) and $$\\frac{3}{5}$$ for tails (T). To do this rigorously, we rely on a rejection-sampling method that uses repeated flips of our fair coins until a suitable configuration appears. We outline a thorough argument as follows: First, observe that we need to form outcomes that occur with probability $$\\frac{2}{5}$$ and $$\\frac{3}{5}$$ using unbiased flips that individually yield heads or tails with probability $$\\frac{1}{2}$$ each. Notice that $$\\frac{2}{5}$$ is difficult to create by a single fixed number of coin tosses, because the total number of equally likely outcomes for N coin tosses is $$2^N$$, and 2/5 is not generally a fraction of the form K / $$2^N$$ for small N. Hence, we use a standard rejection scheme. Specifically, flip your coins sufficiently many times to get a uniform selection from a set with a size that is at least 5. For example, flip three coins (or equivalently, flip two coins multiple times until you generate three fair coin bits). This gives us 8 equally likely outcomes, corresponding to numbers 0 through 7 in binary. Label the outcomes 0 through 7. If your outcome is in the set {0,1,2,3,4}, then keep it, interpreting each of those five possibilities as a distinct number 1 through 5 with equal probability $$\\frac{1}{5}$$. If the outcome is in {5,6,7}, discard it and repeat the entire three-coin-flips step. This ensures that whenever you do keep a result, you have a uniform integer from 1 to 5. Next, choose outcomes 1 and 2 to correspond to 'heads' and outcomes 3, 4, and 5 to correspond to 'tails.' Consequently, whenever you accept a result, 'heads' happens with probability $$\\frac{2}{5}$$ and 'tails' with probability $$\\frac{3}{5}$$. By discarding (and reflipping) any outcome not in {0,1,2,3,4}, we enforce that every accepted sample achieves exactly a 2:3 ratio for H:T. This process is well-defined and will terminate eventually with probability 1, thus guaranteeing a perfect $$\\frac{2}{5}$$ chance of heads and $$\\frac{3}{5}$$ chance of tails, all using only fair coin flips. The justification is that each flip sequence is independent, and the repeated rejection does not affect the relative probabilities on the accepted set.",
+  "valid answer": "Valid Answers: Provide any valid rejection-sampling or equivalent procedure yielding Heads with probability $$\\frac{2}{5}$$ and Tails with probability $$\\frac{3}{5}$$.",
+  "problem tags": [
+    "Probability",
+    "Coin Flips",
+    "Rejection Sampling"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Think about uniformly generating an integer from 1 to 5 by flipping coins, then assigning two of those outcomes to 'heads' and three to 'tails.'",
+  "problem firm": [
+    "Akuna Capital"
+  ],
+  "question id": "30607992612224638700"
+}

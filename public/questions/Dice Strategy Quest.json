@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Strategy Quest",
+  "problem text": "Consider a game where you are given a fair $20$-sided die and allowed to perform $100$ moves. The die initially shows $1$ on its top face. You can choose either to roll or to take. Rolling changes the current top face of the die to a new random value. Taking allows you to collect the current top face value as your score. Importantly, the game continues after taking, and you do not need to roll between takes. Thus, you could simply perform $100$ takes on the starting $1$ top face and secure a total of $100$. Your plan is to collect the top face value the first time it reaches at least some threshold $n$. You decide on this $n$ before starting the game. Given a rational approach to choosing $n$, what is your expected score from this game?",
+  "problem solution": "If you decide to take once the top face shows at least $$ x $$ for the first time, your expected top face value is $$\\dfrac{20+x}{2}$$. Considering there are $$ 21-x $$ values on the die that are at least $$ x $$, the likelihood of rolling at least $$ x $$ on any given try is $$\\dfrac{21-x}{20}$$. Thus, the average number of rolls required to achieve a value of at least $$ x $$ is $$\\dfrac{20}{21-x}$$. Consequently, you can take on $$ 100 - \\dfrac{20}{21-x} $$ moves. Thus, your anticipated payout is $$ p(x) = \\dfrac{20+x}{2} \\cdot \\left(100 - \\dfrac{20}{21-x}\\right) $$. To maximize this, treat $$ p(x) $$ as continuous, differentiate with respect to $$ x $$, and analyze the two integers $$ x $$ lies between for maximization. Applying the product rule and simplifying, $$ p'(x) = \\dfrac{10}{(x-21)^2} \\cdot (5x^2 - 210x + 2164) $$. Solving this polynomial using the quadratic formula gives $$ x^* = \\dfrac{105 \\pm \\sqrt{205}}{5} $$. The root with addition exceeds $$ 20 $$, so $$ x^* = \\dfrac{105 - \\sqrt{205}}{5} \\approx 18.137 $$ is our optimal point. During an assessment, one may observe that $$ 14^2 < 205 < 15^2 $$, leading to the conclusion that $$ 18 < x^* < 19 $$. Finally, checking $$ x = 18 $$ and $$ x = 19 $$ shows that $$ x = 18 $$ gives the best result with $$\\dfrac{5320}{3}$$.",
+  "valid answer": "Valid Answers: $\\frac{5320}{3}$",
+  "problem tags": [
+    "Expected Value",
+    "Games",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Your stopping strategy will involve taking after achieving a value of at least $k$ for the first time, as re-rolling could risk losing potential earnings. Therefore, if you decide to take when you reach at least $k$ initially, your expected top face value is $\\dfrac{20+k}{2}$. Furthermore, since there are $21-k$ values on the die that are at least $k$, the chance of rolling at least $k$ on one roll is $\\dfrac{21-k}{20}$.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "05250296373170154746"
+}

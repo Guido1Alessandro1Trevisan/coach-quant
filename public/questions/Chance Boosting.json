@@ -1,0 +1,18 @@
+{
+  "problem name": "Chance Boosting",
+  "problem text": "A uniformly random number is produced within the interval $(0, 1)$. You have the option to generate more random numbers as often as you wish, paying $0.02$ for each additional number. This choice can be made using all previously generated values. Your reward is the highest number you generate. Determine the expected reward from this game using the best strategy.",
+  "problem solution": "The best approach involves receiving a payout when a number $x \\geq T$ is generated, with $T$ being a specific threshold. This is because each generation can be seen as a fresh game with a particular stopping point we aim to reach. Consequently, our payout should be a function $f(T)$ that we aim to optimize. Let's determine $f(T)$ now. If a number greater than $T$ is generated, the value follows a Unif$(T,1)$ distribution, and its expected value is $\\dfrac{1+T}{2}$. However, the expected cost to generate such a number is $0.02 \\cdot \\left(\\dfrac{1}{1-T} - 1\\right)$, because the chance of getting a number at least $T$ in any trial is $1-T$, making the distribution of trials needed to reach a number at least $T$ a Geom$(1-T)$. The average of this distribution is $\\dfrac{1}{1-T}$. The additional cost per trial beyond the first is $0.02$, which gives us the equation above. Thus, the expected reward is $f(T) = \\dfrac{1+T}{2} - \\dfrac{1}{50} \\cdot \\left(\\dfrac{1}{1-T} - 1\\right)$. To maximize this with respect to $T$, we differentiate and set the result to $0$. Specifically, $f'(T) = \\dfrac{1}{2} - \\dfrac{1}{50(1-T)^2} = 0$. Solving this gives $(1-T)^2 = \\dfrac{1}{25} = \\dfrac{1}{5^2}$, so since $0 < T < 1$, the solution is $T = 0.8$. Substituting back, $f(0.8) = 0.82$.",
+  "valid answer": "Valid Answers: $0.82$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Expected Value",
+    "Games",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "The best strategy involves a payout when a number $x \\geq T$ is generated, with the threshold $T$ ensuring the payout if you stop matches the expected value of continuing without stopping.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "40163669446020313282"
+}

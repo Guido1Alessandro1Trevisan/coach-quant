@@ -1,0 +1,16 @@
+{
+  "problem name": "Square Expectation Quest",
+  "problem text": "Suppose $\\text{Var}(X) = 25$ and $\\mathbb{E}[X] = 3$, determine $\\mathbb{E}[X^2]$.",
+  "problem solution": "By applying the formula $\\text{Var}(X) = \\mathbb{E}[X^2] - (\\mathbb{E}[X])^2$, we obtain $25 = \\mathbb{E}[X^2] - 3^2$, hence $\\mathbb{E}[X^2] = 34$.",
+  "valid answer": "Valid Answers: $34$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Apply the formula $\\text{Var}(X) = \\mathbb{E}[X^2] - (\\mathbb{E}[X])^2$",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "92733434826746298398"
+}

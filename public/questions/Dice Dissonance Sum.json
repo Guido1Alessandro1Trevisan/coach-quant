@@ -1,0 +1,17 @@
+{
+  "problem name": "Dice Dissonance Sum",
+  "problem text": "Consider two fair six-sided dice rolled simultaneously, ignoring any outcomes where both dice show the same face. What is the expected value of their sum, given that matching outcomes are disregarded?",
+  "problem solution": "We note there are $$6 \\times 6 = 36$$ total equally likely outcomes when rolling two dice. Of these, $$6$$ are doubles (where both dice show the same number). Hence, we only consider the remaining $$36 - 6 = 30$$ outcomes with distinct faces. The sum of all possible pairs of faces (both matching and distinct) is computed by $$\\sum_{i=1}^{6} \\sum_{j=1}^{6} (i + j) = 252.$$ The sum of the doubles (1,1), (2,2), ..., (6,6) is $$2 + 4 + 6 + 8 + 10 + 12 = 42.$$ Subtracting this from 252 yields $$210$$ for the sum of the distinct-face pairs. Dividing by the 30 distinct outcomes provides the expected sum: $$\\frac{210}{30} = 7.$$ Therefore, the expected value of the sum, given that we discount outcomes where both dice match, is $$7.$$",
+  "valid answer": "Valid Answers: 7",
+  "problem tags": [
+    "Combinatorics",
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Compute the total of all distinct (i,j) pairs, then divide by the number of such pairs.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "25196617724958006269"
+}

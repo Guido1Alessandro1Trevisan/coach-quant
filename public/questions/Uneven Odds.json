@@ -1,0 +1,17 @@
+{
+  "problem name": "Uneven Odds",
+  "problem text": "Assume $X, Y \\sim \\text{Unif}(0,1)$ are independent and identically distributed. Find $\\mathbb{P}[X - Y > 1/2 \\mid X + Y < 1]$.",
+  "problem solution": "Plotting this problem on the XY coordinate plane (Note: A Unif(0,1) is depicted as $y = 1$), the area restricted by the axes and $x + y = 1$ is a right triangle with sides of length $1$. The desired event's region lies under $y = x - \\frac{1}{2}$. By shading this area, we find it forms another triangle. The intersection occurs at $\\left(\\frac{3}{4}, \\frac{1}{4}\\right)$, with the equal sides of this right triangle measuring $\\frac{\\sqrt{2}}{4}$. Since $A$ and $B$ are independent and identically distributed $\\text{Unif}(0,1)$, their conditional joint distribution is uniform across the larger triangle determined by $x+y = 1$ and the axes. We can compare areas, noting that the larger triangle's area is ($\\text{big} = \\frac{1}{2}$), while the smaller area's region of interest is ($\\text{small} = \\frac{1}{16}$), leading to a probability of $\\frac{\\text{small}}{\\text{big}} = \\frac{1}{8}$.",
+  "valid answer": "Valid Answers: $1/8$",
+  "problem tags": [
+    "Conditional Probability",
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Sketch the region in the $X-Y$ coordinate system and compare areas.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "41532245877724968632"
+}

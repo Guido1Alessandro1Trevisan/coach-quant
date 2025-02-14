@@ -1,0 +1,16 @@
+{
+  "problem name": "Spherical Harmony",
+  "problem text": "We want to draw a random point on the 3-dimensional unit sphere. A common way is to take three independent standard normal variables X1, X2, X3 and normalize by the Euclidean length r = sqrt(X1^2 + X2^2 + X3^2). Show that this process yields a point uniformly distributed on the sphere and determine the variance of each coordinate (X1/r, X2/r, X3/r).",
+  "problem solution": "First, observe that the distribution (X1, X2, X3) is rotationally symmetric in three dimensions, as each component is an i.i.d. normal random variable. Normalizing by r = $$\\sqrt{X_1^2 + X_2^2 + X_3^2}$$ ensures the resulting vector $$Y = \\bigl(\\tfrac{X_1}{r}, \\tfrac{X_2}{r}, \\tfrac{X_3}{r}\\bigr)$$ lies on the unit sphere, and the symmetry of the normal distribution implies Y is uniformly distributed on the sphere. Next, note that for a point Y uniformly distributed on the unit sphere in three dimensions, we have $$Y_1^2 + Y_2^2 + Y_3^2 = 1$$ always. By symmetry, the expectation of each squared coordinate is the same, so let $$m = E\\bigl[Y_1^2\\bigr] = E\\bigl[Y_2^2\\bigr] = E\\bigl[Y_3^2\\bigr].$$ Since the sum of their squares is exactly 1, it follows that $$E\\bigl[Y_1^2 + Y_2^2 + Y_3^2\\bigr] = 3m = 1,$$ hence $$m = 1/3.$$ Also, each coordinate has mean zero by symmetry, so the variance of each coordinate is simply $$m - 0^2 = 1/3.$$ Therefore, Var(X1/r) = Var(X2/r) = Var(X3/r) = $$1/3.$$",
+  "valid answer": "Valid Answers: 1/3",
+  "problem tags": [
+    "Probability",
+    "Geometry"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Use rotational symmetry. The sum of squares on the unit sphere is 1, and the expectation of each coordinate must be the same.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "79874981590151207467"
+}

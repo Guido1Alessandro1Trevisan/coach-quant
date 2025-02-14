@@ -1,0 +1,17 @@
+{
+  "problem name": "Triangular Trisection",
+  "problem text": "A rod of $1$ metre is randomly divided into three parts. Assuming each division point is uniformly distributed along the rod, what is the likelihood that the three parts can form a triangle?",
+  "problem solution": "Visualize this in a 2D coordinate system, where $x$ represents the first division and $y$ the second division with the condition $x < y$. This results in segment lengths of $x$, $y-x$, and $1-y$. From geometry, for these to create a triangle, each side length must be less than the sum of the other two. This can be expressed as: $x < (y-x) + (1-y) \\Rightarrow x < \\frac{1}{2}$, $y-x < x + (1-y) \\Rightarrow y < x + \\frac{1}{2}$, $1-y < x + (y-x) \\Rightarrow y > \\frac{1}{2}$. These conditions (including $x < y$) occupy $\\frac{1}{8}$ of the $x,y \\in [0, 1]$ space, a conclusion visible through a diagram, with the constraint $x < y$ covering only half of the scenarios since $x$ has equal probability of being greater than or less than $y$. Thus, the resulting probability is $2 \\times \\frac{1}{8} = \\frac{1}{4}$.",
+  "valid answer": "Valid Answers: $1/4$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Plot the set of possible outcomes in a 2D coordinate space. Let $x \\in [0,1]$ denote the first division and $y \\in [0,1]$ the second division. Which points are valid, and which are not? From here, how can you express this with equations? (Note: for a triangle to be valid, each side length must be shorter than the sum of the other two.)",
+  "problem firm": [
+    "Citadel",
+    "Worldquant"
+  ],
+  "question id": "59176357883036139037"
+}

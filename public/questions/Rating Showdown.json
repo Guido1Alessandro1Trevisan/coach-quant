@@ -1,0 +1,17 @@
+{
+  "problem name": "Rating Showdown",
+  "problem text": "In a chess competition with $128$ participants, each player has a unique ranking score. Suppose that whenever two players face off, the one with the higher rating will always win, and the victor advances to the next round. Determine the likelihood that the top-rated player and the player with the second-highest rating will encounter each other in the final match.",
+  "problem solution": "The top-rated player $$ P_1 $$ will definitely reach the final round as no other participant can eliminate them. The second-highest rated player $$ P_2 $$ will reach the final only if they do not face $$ P_1 $$ in any earlier rounds, as such a matchup would result in $$ P_2 $$ being eliminated before the final. Initially, the 128 players are split into two groups of 64. $$ P_2 $$ can reach the final if they are placed in a different group than $$ P_1 $$. Specifically, $$ P_2 $$ has 127 pairing options, with 64 of these not being in the same group as $$ P_1 $$. Therefore, the probability that $$ P_1 $$ and $$ P_2 $$ face each other in the final is $$ \\frac{64}{127} $$.",
+  "valid answer": "Valid Answers: $64/127$",
+  "problem tags": [
+    "Events",
+    "Combinatorics",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Try visualizing the scenario as two divisions of $64$ players, where each division halves every round until a finalist emerges.",
+  "problem firm": [
+    "Five Rings"
+  ],
+  "question id": "32910891696607821200"
+}

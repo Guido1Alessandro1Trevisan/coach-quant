@@ -1,0 +1,16 @@
+{
+  "problem name": "Lucky Six Hunt",
+  "problem text": "Two unbiased $6$-sided dice are thrown and the sum of the numbers on the top faces equals $8$. Determine the likelihood that one of the dice displays a $6$.",
+  "problem solution": "There are $5$ possible results for the dice that total $8$. These combinations are: $(6,2), (5,3), (4,4), (3,5), (2,6)$. Among these, two scenarios are $(6,2)$ and $(2,6)$. Thus, $2$ out of the $5$ situations include a $6$, giving us a probability of $\\dfrac{2}{5}$.",
+  "valid answer": "Valid Answers: $2/5$",
+  "problem tags": [
+    "Events",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "A straightforward method is to enumerate all potential outcomes for the dice that result in a sum of $8$.",
+  "problem firm": [
+    "Old Mission"
+  ],
+  "question id": "83699618232986937508"
+}

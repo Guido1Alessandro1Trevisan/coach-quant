@@ -1,0 +1,17 @@
+{
+  "problem name": "Circle Survivor",
+  "problem text": "One hundred people stand in a circle labeled from 1 to 100. Starting with person 1, we proceed in steps where the current person eliminates the next living person in clockwise order. So, 1 eliminates 2, then 3 eliminates 4, and so on around the circle. Which label survives at the end?",
+  "problem solution": "We recognize this as a variant of the classical Josephus problem with step size 2 (every second person is eliminated). In general, for n people labeled 1 to n standing in a circle, if each person eliminates the next person (skipping exactly 1 person each time), the final survivor can be found using a known formula. Let n be expressed as $n = 2^m + l$, where $2^m$ is the largest power of 2 not exceeding n, and $0 \\leq l < 2^m$. The Josephus problem tells us that the label of the final survivor is given by $$J(n, 2) = 2l + 1.$$\\n\\nFor n=100, the largest power of 2 less than or equal to 100 is $2^6 = 64$. Then $l = 100 - 64 = 36$. We substitute into the formula:\\n$$2l + 1 = 2 \\times 36 + 1 = 72 + 1 = 73.$$\\n\\nHence, person labeled 73 is the last one remaining after everyone else is eliminated. This process can be justified by induction or by explicitly tracking the positions in a step-by-step fashion. However, years of mathematical study have shown that Josephus-type problems often have neat closed-form solutions like the one above. Therefore, the last person alive is number 73.",
+  "valid answer": "Valid Answers: 73",
+  "problem tags": [
+    "Combinatorics",
+    "Josephus Problem"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Express 100 as 2^m + l, then use the Josephus solution formula for step size 2.",
+  "problem firm": [
+    "Maple Analytics",
+    "Quantum Strategies"
+  ],
+  "question id": "11404170631281383864"
+}

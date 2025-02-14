@@ -1,0 +1,15 @@
+{
+  "problem name": "Pooling Paradox",
+  "problem text": "Imagine you are filling an inflatable kiddie pool. One hose fills it in $20$ minutes, while another takes $10$ minutes. If the pool is full, draining it takes $15$ minutes once the drain is opened. How many minutes will it take to fill the pool with both hoses running and the drain open?",
+  "problem solution": "This problem involves rates, so let's solve it accordingly. Each minute, the first hose adds $\\frac{1}{20}^{\\text{th}}$ of the pool's volume, the second hose adds $\\frac{1}{10}^{\\text{th}}$, and the drain subtracts $\\frac{1}{15}^{\\text{th}}$. Therefore, the net rate is $\\frac{1}{20}+\\frac{1}{10}-\\frac{1}{15} = \\frac{1}{12}$. With both hoses and the drain open, the pool fills at a rate of $\\frac{1}{12}^{\\text{th}}$ per minute. Hence, filling the pool completely takes $12$ minutes.",
+  "valid answer": "Valid Answers: $12$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Express the rates for each of these elements.",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "77523651969743192312"
+}

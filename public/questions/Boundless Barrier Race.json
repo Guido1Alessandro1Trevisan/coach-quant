@@ -1,0 +1,17 @@
+{
+  "problem name": "Boundless Barrier Race",
+  "problem text": "You are on a random journey along a discrete line with $11$ points, from $0$ to $10$. Each step, you have an equal chance of moving up or down. Once you hit either $10$ or $0$, your movement stops. If you start at position $6$, what is the likelihood of arriving at $10$ before hitting $0$?",
+  "problem solution": "This represents a typical symmetric random walk scenario. The likelihood of arriving at $10$ before reaching $0$ when commencing at $6$ is $\\dfrac{6}{10}$. This is found by comparing the distance from the lower boundary $(0)$ to the starting position $(6)$ against the total span of the interval $(10)$.",
+  "valid answer": "Valid Answers: [ $3/5$, $6/10$, $0.6$, $0.60$ ]",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "symmetric random walk scenario.",
+  "problem firm": [
+    "Five Rings",
+    "Goldman Sachs"
+  ],
+  "question id": "44112805013669039142"
+}

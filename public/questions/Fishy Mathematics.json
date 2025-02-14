@@ -1,0 +1,15 @@
+{
+  "problem name": "Fishy Mathematics",
+  "problem text": "At a pond, you catch $50$ fish and mark them with tags. On the following day, you catch another $40$ fish and find that $10$ of them are tagged. Estimate the total number of fish in the pond.",
+  "problem solution": "$ \\frac{1}{4} $ of the fish caught had tags, suggesting that approximately $ \\frac{1}{4} $ of the entire fish population is tagged. Consequently, there are an estimated $ 50 \\cdot 4 = 200 $ fish in the pond.",
+  "valid answer": "Valid Answers: $200$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "$\\dfrac{1}{4}$ of the fish caught had tags.",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "21426727175579112403"
+}

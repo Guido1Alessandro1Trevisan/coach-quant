@@ -1,0 +1,18 @@
+{
+  "problem name": "Fives Roulette",
+  "problem text": "Abd persistently rolls a fair $6$-sided die until the first occurrence of a $6$. Determine the expected count of times Abd rolls a $5$ before halting.",
+  "problem solution": "Define $N$ as the number of attempts needed to achieve the initial $6$, and $T$ as the total count of times the value $5$ is rolled. Utilizing the Law of Total Expectation, $\\mathbb{E}[T] = \\mathbb{E}[\\mathbb{E}[T \\mid N]]$. Calculating $\\mathbb{E}[T \\mid N]$ is straightforward with minor techniques. Observe that if $N$ marks the first $6$, then $N-1$ attempts occur where $6$ is absent. Given $6$ does not appear, each of the remaining $5$ outcomes is equally likely in each of the $N-1$ positions. Consequently, $\\mathbb{E}[T \\mid N] = \\frac{N-1}{5}$. We acknowledge that $N \\sim \\text{Geom}\\left(\\frac{1}{6}\\right)$, since $N$ represents the wait time for a $6$. Summing this up, $\\mathbb{E}[T] = \\mathbb{E}\\left[\\frac{N-1}{5}\\right] = \\frac{\\mathbb{E}[N] - 1}{5} = 1$.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Discrete Random Variables",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Define $N$ as the number of attempts needed to achieve the initial $6$, and $T$ as the total count of times the value $5$ is rolled. Utilizing the Law of Total Expectation, $\\mathbb{E}[T] = \\mathbb{E}[\\mathbb{E}[T \\mid N]]$.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "66624548075197220313"
+}

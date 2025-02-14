@@ -1,0 +1,15 @@
+{
+  "problem name": "Factorial Zero Quest",
+  "problem text": "Determine the number of trailing zeros in $100!$.",
+  "problem solution": "A zero is formed by a factor of $10$. Since there are more numbers divisible by $2$ than by $5$ within the first $100$ numbers, it's sufficient to find the power of $5$ in the prime factorization of $100!$. Each of the numbers $5, 10, 15, \\dots, 100$ contributes one factor of $5$, giving a total of $20$. Additionally, numbers like $25, 50, 75,$ and $100$ contribute an extra factor of $5$ since they are divisible by $25$. This results in an additional $4$ factors, making it $5^{24}$. Thus, the solution is $24$.",
+  "valid answer": "Valid Answers: $24$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "A zero is formed by a factor of $10$. Since there are more numbers divisible by $2$ than by $5$ within the first $100$ numbers, it's sufficient to find the power of $5$ in the prime factorization of $100!$.",
+  "problem firm": [
+    "Sig"
+  ],
+  "question id": "68474516153542003159"
+}

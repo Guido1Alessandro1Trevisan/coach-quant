@@ -1,0 +1,16 @@
+{
+  "problem name": "Slope Sum Quest",
+  "problem text": "Using least squares, determine a linear equation that fits this set of $(x, y)$ coordinates: $(-2, 0), (-1, 0), (0, 1), (1, 1), (2, 3)$. Calculate the total of the line's slope and y-intercept.",
+  "problem solution": "Suppose $\\mathbb{E}[Y] = \\beta_0 + \\beta_1 x$. Through least squares, we determine $\\hat{\\beta}_0, \\hat{\\beta}_1$, the estimates for $\\mathbb{E}[Y]$. We have: $\\begin{aligned} \\hat{\\beta}_1 &= \\dfrac{S_{xy}}{S_{xx}}, \\ \\hat{\\beta}_0 &= \\bar{y} - \\hat{\\beta}_1 \\bar{x}. \\end{aligned}$ For this dataset, we find $S_{xy} = \\sum_{i = 1}^n (x_i - \\bar{x})(y_i - \\bar{y}) = 7$, and $S_{xx} = \\sum_{i = 1}^n (x_i - \\bar{x})^2 = 10$. Therefore, $\\hat{\\beta}_1 = \\frac{7}{10}$, and $\\hat{\\beta}_0 = 1 - 0 = 1$. The total of these estimates is $\\dfrac{17}{10}$.",
+  "valid answer": "Valid Answers: $17/10$",
+  "problem tags": [
+    "Linear Regression",
+    "Statistics"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Suppose $\\mathbb{E}[Y] = \\beta_0 + \\beta_1 x$. Least squares will help us find $\\hat{\\beta}_0, \\hat{\\beta}_1$, the estimates for $\\mathbb{E}[Y]$. We have: $$\\begin{aligned} \\hat{\\beta}_1 &= \\dfrac{S_{xy}}{S_{xx}}, \\ \\hat{\\beta}_0 &= \\bar{y} - \\hat{\\beta}_1 \\bar{x}.\\end{aligned}$$",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "11784790978114039622"
+}

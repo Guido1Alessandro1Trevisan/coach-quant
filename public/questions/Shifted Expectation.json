@@ -1,0 +1,18 @@
+{
+  "problem name": "Shifted Expectation",
+  "problem text": "Assume $X_1 \\sim N(0,9)$ and $X_2 \\sim N(0,16)$ are independent variables. Find $\\mathbb{E}[X_1 \\mid X_1 + X_2 = 5]$.",
+  "problem solution": "Let $\\phi_1$ and $\\phi_2$ represent the probability density functions of $X_1$ and $X_2$, respectively. Since $X_1$ and $X_2$ are independent, $X_1 + X_2 \\sim N(0,25)$, achieved by summing the variances. We proceed to determine the conditional distribution of $X_1 \\mid X_1 + X_2 = 5$. Using the formula for conditional probability density functions, we have $f_{X_1 \\mid X_1 + X_2 = 5}(x) = \\dfrac{f_{X_1,X_1 + X_2}(x,5)}{f_{X_1+X_2}(5)}$. The numerator simplifies significantly by realizing that if $X_1 = x$, then $X_2 = 5 - x$, which results in a total of $5$. Thus, $f_{X_1,X_1+X_2}(x,5) = \\phi_1(x)\\phi_2(5-x)$. Substituting the PDFs, $f_{X_1 \\mid X_1 + X_2 = 5}(x) = \\dfrac{\\dfrac{1}{3\\sqrt{2\\pi}} e^{-\\frac{x^2}{18}} \\cdot \\dfrac{1}{4\\sqrt{2\\pi}}e^{-\\frac{(5-x)^2}{32}}}{\\dfrac{1}{5\\sqrt{2\\pi}}e^{-\\frac{25}{50}}}$. Upon simplifying considerably, you see that $X_1 \\mid X_1 + X_2 = 5 \\sim N\\left(\\dfrac{9}{5},\\dfrac{144}{25}\\right)$. Specifically, this indicates the expected value is $\\dfrac{9}{5}$, completing the solution. Intuitively, this result aligns with the idea that the contribution from each normal distribution is proportional to the variance, implying $\\dfrac{9}{9 + 16} \\cdot 5$ is attributed to the normal with variance $9$.",
+  "valid answer": "Valid Answers: $9/5$, $1.8$",
+  "problem tags": [
+    "Continuous Random Variables",
+    "Conditional Expectation",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Determine the conditional distribution of $X_1 \\mid X_1 + X_2 = 5$ and observe that if $X_1 = x$, then $X_2 = 5 - x$.",
+  "problem firm": [
+    "Citadel",
+    "Two Sigma"
+  ],
+  "question id": "54829369984476447590"
+}

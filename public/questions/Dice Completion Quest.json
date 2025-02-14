@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Completion Quest",
+  "problem text": "Imagine tossing a fair six-sided die repeatedly. On average, how many times must you roll so that all six faces have appeared at least once in total? Additionally, on average, how many rolls are required so that each face shows up at least twice?",
+  "problem solution": "We treat this as a generalized coupon collector problem. First, we determine the number of rolls needed so that every face is observed at least once. For a standard coupon collector with n=6 distinct faces, the expected time T for collecting all types is given by the summation $$T = 6 \\left( \\frac{1}{6} + \\frac{1}{5} + \\frac{1}{4} + \\frac{1}{3} + \\frac{1}{2} + 1 \\right) = 14.7\\text{ (approximately)}$$. Formally, we note that to get the i-th new face (after having i\\!\\! -\\!1 faces already), the probability of rolling a new face is $$\\frac{6-(i-1)}{6}$$, leading to the expected number of additional rolls to see the i-th distinct face as $$\\frac{6}{6-(i-1)}$$. By linearity of expectation and summing from i=1 to 6, the result is $$14.7$$. For the second part, where each face must appear at least twice, we again apply a generalized coupon collector analysis: we now need to acquire 2 copies of each of the 6 faces, for a total of 12 'useful' appearances. When k of these useful appearances (0 \\le k < 12) have already been collected, exactly $$6 - \\lfloor k/2 \\rfloor$$ faces are still 'active' (i.e., not yet at 2 copies). Thus, the probability of rolling a face that is still needed is $$\\frac{6 - \\lfloor k/2 \\rfloor}{6}$$, and the expected time to get one more useful appearance is the reciprocal of this probability, namely $$\\frac{6}{6 - \\lfloor k/2 \\rfloor}$$. Summing from k=0 to 11, we obtain a value of approximately $$29.4$$ total rolls needed to have each face appear at least twice.",
+  "valid answer": "Valid Answers: At least once: $$14.7$$ rolls (approximately). At least twice: $$29.4$$ rolls (approximately).",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the coupon collector framework, and extend it by recognizing that once you have all faces at least once, you still need additional occurrences for each face.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "24611367954153783002"
+}

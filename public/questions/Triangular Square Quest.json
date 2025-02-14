@@ -1,0 +1,16 @@
+{
+  "problem name": "Triangular Square Quest",
+  "problem text": "Suppose you have a right triangle whose legs measure 15 and 10. Determine the greatest possible area of a square that fits entirely inside this triangle.",
+  "problem solution": "First, position the right triangle in a Cartesian coordinate system such that the right angle is at the origin, one cathetus lies along the x-axis from (0,0) to (15,0), and the other along the y-axis from (0,0) to (0,10). The hypotenuse then runs from (15,0) to (0,10). Let the side length of the inscribed square be denoted by $$s$$. Place the bottom-left corner of the square at the origin, so its top-right corner is at $$(s, s)$$. For this point to lie on the hypotenuse, we use the line's equation, which is $$y=-\\frac{2}{3}x+10$$. Substituting $$(x, y)=(s, s)$$ produces: $$s = -\\frac{2}{3}s + 10.$$ Rearranging gives: $$s + \\frac{2}{3}s = 10 \\implies \\frac{5}{3}s = 10 \\implies s=6.$$ Thus, the maximum side length of the square is $$6$$, and its maximal area is $$s^2 = 36$$.",
+  "valid answer": "Valid Answers: $$36$$",
+  "problem tags": [
+    "Geometry",
+    "Optimization"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Set up a coordinate plane so the right triangle occupies the first quadrant, then let the square's vertices coincide with both axes and the hypotenuse.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "51037109310699596725"
+}

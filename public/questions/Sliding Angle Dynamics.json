@@ -1,0 +1,16 @@
+{
+  "problem name": "Sliding Angle Dynamics",
+  "problem text": "A $50$-ft ladder leans against the vertical side of a tall building. Due to oil on the ground, the bottom of the ladder starts to slide away, causing the top to move down along the wall. The bottom of the ladder moves away from the wall at a steady pace of $4$ feet per minute. Determine how fast the angle between the ladder and the ground is decreasing (in radians per minute) when the foot of the ladder is $30$ feet from the wall.",
+  "problem solution": "Consider the ladder as the hypotenuse of a right triangle with the wall and ground as the other two sides. Applying the Pythagorean Theorem yields $30^2 + y^2 = 50^2 \\iff y = 40$. Thus, the top of the ladder is $40$ feet above the ground at this moment. From Slippery Ladder I, we know that $y' = -3$ at this point. To find the rate of change of the angle, use $\\tan\\theta = \\frac{y}{x}$. Differentiating both sides results in $\\sec^2\\theta \\theta' = \\frac{xy' - yx'}{x^2}$. Given $y = 40$ and $x = 30$, we find that $\\sec^2\\theta = 1 + \\tan^2\\theta = 1 + \\frac{y^2}{x^2} = \\frac{25}{9}$. Substituting these values gives $\\frac{25}{9}\\theta' = \\frac{30(-3) - 40(4)}{30^2} \\iff \\theta' = -\\frac{1}{10}$.",
+  "valid answer": "Valid Answers: $ \\frac{1}{10}, -\\frac{1}{10} $",
+  "problem tags": [
+    "Calculus",
+    "Pure Math"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Utilize the result from Slippery Ladder I along with $\\tan\\theta = \\dfrac{y}{x}$.",
+  "problem firm": [
+    "Transmarket Group"
+  ],
+  "question id": "91840011568732667487"
+}

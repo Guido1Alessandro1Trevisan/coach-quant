@@ -1,0 +1,17 @@
+{
+  "problem name": "Unlinked Puzzle",
+  "problem text": "If two random variables exhibit no correlation, must they be statistically independent? Provide an illustrative counterexample.",
+  "problem solution": "We investigate whether zero correlation between two random variables necessarily implies their independence. Let $$X$$ be a normally distributed random variable with mean 0 and variance 1, written as $$X \\sim N(0,1).$$ Define $$Y = X^2.$$ We demonstrate that these variables have zero correlation yet are not independent.\\n\\nFirst, the correlation of two random variables $$X$$ and $$Y$$ is given by\\n$$\\mathrm{Corr}(X, Y) = \\frac{\\mathrm{Cov}(X, Y)}{\\sqrt{\\mathrm{Var}(X)\\mathrm{Var}(Y)}}.$$\\n\\nNote that\\n$$\\mathrm{Cov}(X, Y) = E[XY] - E[X]E[Y].$$\\n\\nBecause $$X$$ is symmetrically distributed around 0, we have $$E[X] = 0.$$ Therefore,\\n$$E[XY] = E[X \\cdot X^2] = E[X^3],$$\\nwhereas\\n$$E[X]E[Y] = 0 \\cdot E[X^2] = 0.$$\\n\\nFor a standard normal variable, the odd moments such as $$E[X^3]$$ are 0 due to symmetry. Hence,\\n$$\\mathrm{Cov}(X, Y) = E[X^3] - 0 = 0.$$\\n\\nSince the covariance is 0, the correlation is also 0. Therefore, $$Y = X^2$$ and $$X$$ have zero correlation.\\n\\nHowever, these variables are not independent. Indeed, if one knows the value of $$X,$$ then one knows $$Y = X^2$$ exactly. This direct functional relationship means $$X$$ and $$Y$$ share information, so they are certainly dependent.\\n\\nConsequently, zero correlation does not guarantee independence. Instead, it only means that the linear relationship between the variables is absent, but more complicated relationships may still exist.",
+  "valid answer": "Valid Answers: No. For example, let X \\sim N(0,1) and Y = X^2; these have zero correlation yet are dependent.",
+  "problem tags": [
+    "Statistics",
+    "Probability",
+    "Random Variables"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider a random variable symmetric around zero, then define a function of that variable that breaks independence without altering the mean or certain moments.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "58511523984125238478"
+}

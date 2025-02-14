@@ -1,0 +1,18 @@
+{
+  "problem name": "Coin Flip Paradox",
+  "problem text": "$n$ coins are placed before you. One coin is unbiased, while the other $n-1$ have a chance $0 < \\lambda < 1$ of landing on heads. Determine the probability of obtaining an even number of heads when all $n$ coins are tossed.",
+  "problem solution": "To achieve an even number of heads, there are two scenarios. If the unbiased coin lands on $H$, then there must be an odd number of heads among the other $n-1$ coins to make the total even. Conversely, if the unbiased coin lands on $T$, then there must be an even number of heads among the other $n-1$ coins. Let $p$ be the likelihood of achieving an even number of heads among the $n-1$ biased coins. Using the Law of Total Probability, the probability we seek is $\\dfrac{1}{2}\\cdot p + \\dfrac{1}{2} \\cdot (1-p) = \\dfrac{1}{2}$. This results because the opposite of an even number of heads is an odd number, and these probabilities balance each other, resulting in a final probability of $\\dfrac{1}{2}$.",
+  "valid answer": "Valid Answers: $\\frac{1}{2}$",
+  "problem tags": [
+    "Conditional Probability",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider conditioning on the result of the unbiased coin. To obtain an even number of heads, either the unbiased coin must show heads with the other $n-1$ coins showing an odd number of heads, or the unbiased coin must show tails with the other $n-1$ coins showing an even number of heads.",
+  "problem firm": [
+    "Citadel",
+    "Jane Street",
+    "Sig"
+  ],
+  "question id": "72823616723808367098"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Logs and Logic",
+  "problem text": "Compute the indefinite integral of x log(x) with respect to x.",
+  "problem solution": "We seek $$\\int x\\,\\log(x)\\,dx$$. We proceed by integration by parts, letting $$u=\\log(x)\\implies du=\\frac{1}{x}\\,dx$$ and $$dv=x\\,dx\\implies v=\\frac{x^2}{2}$$. By the integration by parts formula $$\\int u\\,dv = uv - \\int v\\,du$$, we have $$\\int x\\,\\log(x)\\,dx = \\frac{x^2}{2}\\,\\log(x) - \\int\\frac{x^2}{2}\\cdot\\frac{1}{x}\\,dx = \\frac{x^2}{2}\\,\\log(x) - \\frac{1}{2}\\int x\\,dx = \\frac{x^2}{2}\\,\\log(x) - \\frac{x^2}{4} + C$$, where $$C$$ is the constant of integration. Hence, the solution is $$\\frac{x^2}{2}\\log(x) - \\frac{x^2}{4} + C$$.",
+  "valid answer": "Valid Answers: $$\\frac{x^2}{2}\\log(x) - \\frac{x^2}{4} + C$$",
+  "problem tags": [
+    "Integration",
+    "Calculus"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Use integration by parts by designating the logarithm function as u.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "44062704630949289736"
+}

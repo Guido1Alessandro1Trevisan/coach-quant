@@ -1,0 +1,16 @@
+{
+  "problem name": "Shuffled Unions",
+  "problem text": "There are 9 married pairs standing in a row. They shuffle around and form $9$ pairs randomly and uniformly. Determine the expected number of married pairs that end up together. Note that pairs may also include individuals of the same gender (having $9$ males and $9$ females).",
+  "problem solution": "Assign numbers $1-9$ to the married pairs and let $I_i$ represent the indicator that the $i$th married pair is together. Define $T = I_1 + \\dots + I_9$ as the total number of married pairs correctly matched. The pairing is done randomly and uniformly, so by using linearity of expectation and the symmetry of the pairs: $\\mathbb{E}[T] = 9\\mathbb{E}[I_x]$. For a particular $x \\in (1,9)$. Consequently, $\\mathbb{E}[I_x]$ is simply the probability that pair $x$ is together. Place one member of the pair in a random pairing. Out of the $17$ other individuals that could be this person's partner, only $1$ is their spouse, thus $\\mathbb{E}[I_x] = \\dfrac{1}{17}$. Therefore, substituting back, $\\mathbb{E}[T] = \\dfrac{9}{17}$.",
+  "valid answer": "Valid Answers: $9/17$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Assign numbers $1-9$ to the pairs and let $I_i$ be the indicator that the $i$th pair is together.",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "34173283192220048139"
+}

@@ -1,0 +1,17 @@
+{
+  "problem name": "Stone Showdown Strategy",
+  "problem text": "Suppose you have a single pile of rocks, and each turn you can remove from 1 to 6 stones. How can you guarantee a win, assuming you make the first move?",
+  "problem solution": "First, let us consider the remainder of the current number of stones when divided by 7. Label the total number of stones as $$N$$. We observe that if you ever confront your opponent with a position where $$N \\\\equiv 0 \\\\pmod{7}$$, then any move they make (removing between 1 and 6 rocks, inclusive) leads to a position where the new total $$N' = N - k$$ (with $$1 \\leq k \\leq 6$$) satisfies $$N' \\\\not\\\\equiv 0 \\\\pmod{7}$$. After their move, you can then remove precisely $$7 - k$$ rocks, thereby returning the game to a state where the new total number of stones is again a multiple of 7. By repeating this cycle, you will eventually force a situation where the opponent must take the last rock and lose. Formally: 1. If the initial $$N$$ is already a multiple of 7, you are in a winning position. 2. If $$N \\\\not\\\\equiv 0 \\\\pmod{7}$$, remove exactly $$N \\\\% 7$$ stones (where $$N \\\\% 7$$ represents the positive remainder when dividing $$N$$ by 7) on your first move. This reduction yields a new pile size multiple of 7. 3. On each subsequent turn, remove $$7 - k$$ stones to undo your opponent's previous move of $$k$$ stones (where $$1 \\leq k \\leq 6$$). Thus, you maintain the multiple-of-7 state. Eventually, you will collect the final stone, guaranteeing victory.",
+  "valid answer": "Valid Answers: Always reduce the total stones to a multiple of 7 and maintain that strategy to force your opponent to take the last stone.",
+  "problem tags": [
+    "Game Theory",
+    "Nim"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "If you always leave a multiple of 7 stones to your opponent, they cannot avoid losing.",
+  "problem firm": [
+    "Global Logic",
+    "Async Solutions"
+  ],
+  "question id": "41043432369114463152"
+}

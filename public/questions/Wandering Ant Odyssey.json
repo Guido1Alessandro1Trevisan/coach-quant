@@ -1,0 +1,17 @@
+{
+  "problem name": "Wandering Ant Odyssey",
+  "problem text": "An ant is positioned at a vertex of a $3D$ cube and at each step, it chooses one of the three neighboring vertices with equal likelihood. Determine the expected number of steps necessary for the ant to return to the initial vertex.",
+  "problem solution": "While this problem might initially seem intricate, utilizing Markov Chains offers a solution. The cube's symmetry allows us to simplify the number of states involved. Let the initial state be $E_{00}$. Due to symmetry, no matter the ant's direction, it will always be at a position equidistant from the starting point, specifically $1$ side length away. Let the expected time to return to the start be $E_{1}$. This means $E_{00} = E_{1}+1$. Define $E_{2}$ as the expected steps when $2$ side lengths away from the start, and $E_{3}$ as the expected steps from the vertex diagonally opposite the start. The equations for these states are: $E_{00} = E_{1}+1$, $E_{1} = \\frac{2}{3}E_{2}+\\frac{1}{3}E_{0}+1$, $E_{2} = \\frac{2}{3}E_{1}+\\frac{1}{3}E_{3}+1$, $E_{3} = E_{2}+1$. We know $E_{0}=0$. Solving these equations, we find $E_{00}=8$. Thus, the ant needs $8$ steps to return to the starting vertex on the cube.",
+  "valid answer": "Valid Answers: $8$",
+  "problem tags": [
+    "Conditional Expectation",
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider the possible states involved in this scenario.",
+  "problem firm": [
+    "Worldquant"
+  ],
+  "question id": "52084572366969967135"
+}

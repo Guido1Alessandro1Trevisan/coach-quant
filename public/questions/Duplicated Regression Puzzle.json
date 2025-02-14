@@ -1,0 +1,16 @@
+{
+  "problem name": "Duplicated Regression Puzzle",
+  "problem text": "Imagine performing linear regression on a dataset, resulting in the coefficients $\\hat{y}_i = \\hat{\\beta}_0 + \\hat{\\beta}_1 x_i$. Let $t_0$ be the $t$-statistic calculated while testing the null hypothesis $H_0: \\beta_1 = 0$ versus the alternative $H_A: \\beta_1 eq 0$. Assume the data is duplicated, and linear regression is re-run on this enlarged dataset. Let $\\hat{y}_i= \\hat{\\beta}_0' + \\hat{\\beta}_1' x_i$ denote the newly obtained coefficients. If $t_1$ is the $t$-statistic computed for testing the null hypothesis $H_1: \\beta_1' = 0$ against $H_A: \\beta_1' eq 0$, determine $\\dfrac{t_1^2}{t_0^2}$. If indeterminable, provide $-1$.",
+  "problem solution": "Solution unavailable",
+  "valid answer": "Valid Answers: $2$",
+  "problem tags": [
+    "Linear Regression",
+    "Statistics"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "No hint provided.",
+  "problem firm": [
+    "Citadel"
+  ],
+  "question id": "17803478910872442535"
+}

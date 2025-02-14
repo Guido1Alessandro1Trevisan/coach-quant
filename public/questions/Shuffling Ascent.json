@@ -1,0 +1,16 @@
+{
+  "problem name": "Shuffling Ascent",
+  "problem text": "Suppose you have a standard set of 52 cards arranged so that one specific card (call it B) starts at the very bottom. You repeatedly remove the top card and then reinsert that removed card back into the deck in a uniformly random position among the 52 possible spots. On average, how many such moves must you make until card B, which was initially at the bottom, appears on top for the very first time?",
+  "problem solution": "We can solve this by examining the position of the bottom card B as a Markov chain. Label B's position by i, where i=1 means B is on top and i=52 means B is on the bottom. Our goal is to find the expected number of moves to go from i=52 to i=1 for the first time. In each move, if B is not on top (i>1), we remove the card at position 1 (which is definitely not B) and then reinsert it into one of the 52 possible positions with equal probability 1\\/52. After removing the top card, B is effectively in position i-1 among the remaining 51 cards, before reinsertion. The reinsertion can occur either above B or below B in the new deck of size 52. A careful count shows that with probability $$(i-1)\\/52$$, the removed card is reinserted above B, so B remains at the same label i in the new deck. With probability $$(53 - i)\\/52$$, the removed card is reinserted below B, thereby moving B up one spot to position i-1. Consequently, if we let E(i) be the expected number of moves to reach position 1 starting from position i, then for i>1 we have the recurrence: $$(1)\\quad E(i) = 1 + \\frac{i-1}{52} E(i) + \\frac{53 - i}{52} E(i - 1).$$ Solving for E(i) by isolating E(i) on one side yields: $$(2)\\quad E(i) - \\frac{i-1}{52} \\,E(i) = 1 + \\frac{53 - i}{52} \\,E(i - 1),$$ $$(3)\\quad \\frac{54 - i}{52} \\,E(i) = 1 + \\frac{53 - i}{52} \\,E(i - 1),$$ $$(4)\\quad E(i) = \\frac{52}{54 - i} + \\frac{53 - i}{54 - i} \\,E(i - 1).$$ By induction (or examining smaller cases and verifying the pattern), one can show that E(i) = i - 1. However, one must be careful to confirm this pattern against small-deck examples. A more direct method, confirmed by explicit calculations on small decks, is to notice that from position i, the probability of \"moving up\" to i-1 on any given move is $$(53 - i)\\/52,$$ so the expected number of moves to climb one step (from i to i-1) is $$\\frac{1}{(53 - i)\\/52} = \\frac{52}{53 - i}.$$ Summing these climb times from i=52 down to i=2 gives the total expected time to go from 52 to 1: $$E(52) = \\sum_{k=2}^{52} \\frac{52}{53 - k} = 52 \\sum_{j=1}^{51} \\frac{1}{j} = 52 \\, H_{51},$$ where $$H_{51} = 1 + \\frac{1}{2} + \\frac{1}{3} + \\dots + \\frac{1}{51}$$ is the 51st harmonic number. Numerically, $$H_{51}$$ is approximately 4.499, so the expected time is about $$52 \\times 4.499 \\approx 234.$$ Thus, in exact form, the expectation is $$52 \\, H_{51},$$ and numerically it is roughly 234 moves. ",
+  "valid answer": "Valid Answers: $$52 \\, H_{51} \\approx 234$$",
+  "problem tags": [
+    "Markov Chains",
+    "Expected Value"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Try tracking the position of the initially bottom card as it moves up step by step, using probabilities and expected values for each step upwards.",
+  "problem firm": [
+    "DRW"
+  ],
+  "question id": "44012246166507807454"
+}

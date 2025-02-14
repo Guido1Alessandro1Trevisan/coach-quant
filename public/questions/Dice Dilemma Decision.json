@@ -1,0 +1,16 @@
+{
+  "problem name": "Dice Dilemma Decision",
+  "problem text": "Imagine you have an unbiased $8$-sided die and you roll it a single time. You can choose to retain the number shown on this die or roll a fair $12$-sided die once. The payout corresponds to the final die you roll. Determine your expected payout with the best strategy.",
+  "problem solution": "The expected value of the $12$-sided die is $\\dfrac{1+12}{2} = \\dfrac{13}{2}$. Thus, it is preferable to keep the initial roll if it shows a $7$ or $8$. Otherwise, we choose to roll the $12$-sided die. Consequently, our expected payout is $\\dfrac{7+8}{8} + \\dfrac{3}{4} \\cdot \\dfrac{13}{2} = \\dfrac{27}{4}$ since we decide to roll the $12$-sided die with a probability of $\\dfrac{3}{4}$.",
+  "valid answer": "Valid Answers: $27/4$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "What is the expected value of the $12$-sided die? Considering this, when should a re-roll be considered?",
+  "problem firm": [
+    "Optiver"
+  ],
+  "question id": "72039152832853773404"
+}

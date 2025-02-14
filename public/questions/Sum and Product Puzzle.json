@@ -1,0 +1,15 @@
+{
+  "problem name": "Sum and Product Puzzle",
+  "problem text": "Let $x$ and $y$ be such that $x + y = 10$ and $xy = 20$. Determine $x^4 + y^4$.",
+  "problem solution": "Consider that $((x+y)^4 = x^4 + 4x^3y + 6x^2y^2 + 4xy^3 + y^4 = (x^4 + y^4) + 2xy[2x^2 + 3xy + 2y^2] = (x^4 + y^4) + 2xy[2(x+y)^2 - xy])$. Given the known values of $(x+y)$ and $(xy)$, we derive $x^4 + y^4 = (x+y)^4 - 2xy[2(x+y)^2 - xy]$ and substitute these values. Specifically, this results in $x^4 + y^4 = 10^4 - 2(20)(2 \\cdot 100 - 20) = 10000 - 7200 = 2800$.",
+  "valid answer": "Valid Answers: $2800$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Hard",
+  "problem hint": "Expand $(x+y)^4$ and express it using $xy$ and $x+y$.",
+  "problem firm": [
+    "Belvedere Trading"
+  ],
+  "question id": "92799356177845387188"
+}

@@ -1,0 +1,15 @@
+{
+  "problem name": "Factor Quandary",
+  "problem text": "Consider $4$ positive integers $a, b, c,$ and $d$ such that $ab = 21$, $bc = 15$, and $cd = 45$. All these integers are greater than $1$. Determine the value of $a^2 + b^2 + c^2 + d^2$.",
+  "problem solution": "We observe that $bc = 15 = 3 \\cdot 5$. Since $21$ cannot be divided by $5$, it follows that $b = 3$ and $c = 5$. Given $c = 5$, it results in $d = 9$. With $b = 3$, it leads to $a = 7$. Summing the squares, we find the result to be $3^2 + 5^2 + 7^2 + 9^2 = 164$.",
+  "valid answer": "Valid Answers: $164$",
+  "problem tags": [
+    "Brainteasers"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Begin by expressing $15$ as a product of prime factors.",
+  "problem firm": [
+    "Belvedere Trading"
+  ],
+  "question id": "40419513287113852820"
+}

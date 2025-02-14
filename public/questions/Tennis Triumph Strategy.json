@@ -1,0 +1,17 @@
+{
+  "problem name": "Tennis Triumph Strategy",
+  "problem text": "Suppose you must face two different tennis opponents, labeled A and B, in a sequence of three matches. Player A is stronger, meaning you have a smaller probability of beating A than beating B. You want to secure two consecutive wins. Which arrangement of opponents, ABA or BAB, maximizes your chance of earning two back-to-back victories?",
+  "problem solution": "Let $$p$$ be the probability you defeat A and $$q$$ be the probability you defeat B, with $$p\\lt q$$. First consider the sequence ABA. Define three events for winning each match: $$W(A_1), W(B_2), W(A_3).$$ The probability of two consecutive wins is the union of $$\\{W(A_1)\\cap W(B_2)\\}$$ and $$\\{W(B_2)\\cap W(A_3)\\}.$$ By the inclusion-exclusion principle, $$P(\\text{2 consecutive in ABA}) = P(W(A_1)\\cap W(B_2)) + P(W(B_2)\\cap W(A_3)) - P(W(A_1)\\cap W(B_2)\\cap W(A_3)) = p\\,q + q\\,p - p\\,q\\,p = p\\,q\\,(2 - p).$$ Next, consider BAB, with winning events $$W(B_1), W(A_2), W(B_3).$$ The same reasoning yields $$P(\\text{2 consecutive in BAB}) = q\\,p + p\\,q - q\\,p\\,q = p\\,q\\,(2 - q).$$ Because $$p\\lt q \\implies 2 - p \\gt 2 - q,$$ it follows that $$p\\,q\\,(2 - p) \\gt p\\,q\\,(2 - q),$$ so the sequence ABA delivers a greater probability of two consecutive wins.",
+  "valid answer": "ABA",
+  "problem tags": [
+    "Probability",
+    "Strategy",
+    "Sports"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Represent your probabilities of beating each opponent with variables, calculate the chance of consecutive wins for both orders, and compare.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "72458516494616021643"
+}

@@ -1,0 +1,16 @@
+{
+  "problem name": "Speedy Blocks",
+  "problem text": "A set of one hundred automobiles, each assigned a random speed from the continuous range [0,1], are arranged in a random sequence. We define a block to be an occurrence where a faster vehicle is placed directly behind a slower vehicle in the lineup. Determine the expected value of the total number of such blocks.",
+  "problem solution": "We assign labels to the cars in order of their positions, from 1 through 100, where car i is immediately in front of car i+1. Let $$I_i$$ be the indicator random variable such that $$I_i = 1$$ if the car in position i+1 has a higher speed than the car in position i, and $$0$$ otherwise. A block occurs precisely when a faster car is behind a slower one, so the expected number of blocks is the sum of the expectations of these indicator variables. Because the speeds are independently and uniformly distributed on [0,1], for any two distinct cars in adjacent positions, the probability that the trailing car is faster is $$\\dfrac{1}{2}$$. Hence, for each $$i$$ from 1 to 99, we have $$E[I_i] = \\dfrac{1}{2}$$. By linearity of expectation, the total expected number of blocks is $$E\\bigl[\\sum_{i=1}^{99} I_i\\bigr] = \\sum_{i=1}^{99} E[I_i] = 99 \\times \\dfrac{1}{2} = \\dfrac{99}{2} = 49.5.$$",
+  "valid answer": "Valid Answers: 49.5 or 99/2",
+  "problem tags": [
+    "Probability",
+    "Expected Value"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider an indicator variable for each consecutive pair of cars and use the linearity of expectation.",
+  "problem firm": [
+    "Squarepoint Capital"
+  ],
+  "question id": "52256173677939962443"
+}

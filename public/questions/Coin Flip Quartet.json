@@ -1,0 +1,16 @@
+{
+  "problem name": "Coin Flip Quartet",
+  "problem text": "We flip a fair coin 9 times and aim to find the probability of getting exactly 4 heads among all tosses.",
+  "problem solution": "Formal Proof: We model each coin toss as an independent Bernoulli trial with success probability $$\\frac{1}{2}$$. The total number of ways to choose which 4 out of the 9 tosses will come up heads is given by the binomial coefficient $$\\binom{9}{4}$$. Each specific arrangement of heads and tails has probability $$\\left(\\frac{1}{2}\\right)^9$$, since each toss contributes a factor of $$\\frac{1}{2}$$ to the probability. Therefore, the probability of exactly 4 heads is $$\\binom{9}{4} \\left(\\frac{1}{2}\\right)^9 = 126 \\times \\frac{1}{512} = \\frac{63}{256}$$.",
+  "valid answer": "Valid Answers: 63/256",
+  "problem tags": [
+    "Probability",
+    "Combinatorics"
+  ],
+  "problem difficulty": "Easy",
+  "problem hint": "Recall that the binomial distribution formula is $$\\binom{n}{k}\\,p^k\\,(1-p)^{n-k}$$. Here, n=9, k=4, and p=1/2.",
+  "problem firm": [
+    "Jane Street"
+  ],
+  "question id": "61020855469764099941"
+}

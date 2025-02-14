@@ -1,0 +1,16 @@
+{
+  "problem name": "Random Delivery Fate",
+  "problem text": "You've written $X$ letters intended for recruiters at $X$ different companies. Unfortunately, you've forgotten which recruiter belongs to which company, so you assign each letter to a company randomly, ensuring each company gets one letter. What is the expected count of letters that reach the correct company?",
+  "problem solution": "Define $E_{k}$ as the indicator variable for each $k$th letter, where it equals $1$ if the letter is delivered to the right company and $0$ otherwise. The total number of correctly delivered letters is $T = \\displaystyle \\sum_{i=1}^N E_i$. Using the linearity of expectation and the fact that the random variables are symmetric, $\\mathbb{E}[T] = N\\mathbb{E}[E_1]$. The chance of each letter being sent to the correct company is $\\dfrac{1}{N}$. Therefore, $\\mathbb{E}[T] = N\\cdot\\dfrac{1}{N} = 1$. You can verify this calculation works for small values of $N$, like $2$ and $3$.",
+  "valid answer": "Valid Answers: $1$",
+  "problem tags": [
+    "Expected Value",
+    "Probability"
+  ],
+  "problem difficulty": "Medium",
+  "problem hint": "Consider utilizing indicator variables.",
+  "problem firm": [
+    "Drw"
+  ],
+  "question id": "89283182443861343444"
+}
