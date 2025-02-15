@@ -22,6 +22,13 @@ Our code is open source for local deployment. Contact us to help improve and ref
     <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" width="20" height="20" style="vertical-align: middle; margin: 0px 5px;">
 </a>
 
+**Jacopo Boncompagni Ludovisi** - 
+<a href="mailto:jacopobl@uchicago.edu">jacopobl@uchicago.edu</a> | 
+<a href="https://www.linkedin.com/in/jacopo-boncompagni-ludovisi-uchicago">LinkedIn</a>
+<a href="https://www.linkedin.com/in/jacopo-boncompagni-ludovisi-uchicago">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" width="20" height="20" style="vertical-align: middle; margin: 0px 5px;">
+</a>
+
 
 ## Socials
 
