@@ -9,8 +9,6 @@ import WaveForm from '@/components/wave-form';
 import questionBank from '@/data/firm-questions.json';
 import clsx from 'clsx';
 import type { Metadata, ResolvingMetadata } from 'next';
-import { FaWandMagicSparkles } from "react-icons/fa6";
-
 
 // Helper function to create slugs from question names
 function slugify(text: string) {
@@ -228,44 +226,16 @@ export default async function Page({ params }: any) {
         </div>
 
         {/* Section with question and voice feature */}
-        <div className="flex flex-col sm:flex-row pb-6 sm:pb-10 w-full">
-   
-          {/* Answer key SVG */}
-          <div className="w-[700px] mx-auto p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-4 text-gray-800">Rubric Analysis</h2>
-
-      <div className="space-y-4">
-        <div>
-          <h3 className="text-lg font-semibold mb-2 text-gray-700">Hints Used</h3>
-          <div className="bg-blue-100 p-3 rounded-md">
-            <p className="text-blue-800">No hints used during this attempt.</p>
+        <div className="flex flex-col sm:flex-row pb-6 sm:pb-10">
+          {/* Text content (hints and answers) */}
+          <div className="w-full sm:w-[calc(100%-200px)] px-4 sm:px-10 mt-6 sm:mt-0 order-1 sm:order-2">
+            <HintAnswer urlQuestion={questionSlug} />
           </div>
-        </div>
 
-        <div>
-          <h3 className="text-lg font-semibold mb-2 text-gray-700">Questions Asked</h3>
-          <div className="bg-green-100 p-3 rounded-md">
-            <p className="text-green-800">No questions were asked during this session.</p>
+          {/* Waveform SVG */}
+          <div className="border-t-2 sm:border-t-0 sm:border-r-2 w-full lg:w-[200px] p-4 sm:p-8 sm:py-2 order-2 sm:order-1 mt-6 sm:mt-0 flex justify-center lg:block items-center">
+            <WaveForm />
           </div>
-        </div>
-
-        <div>
-          <h3 className="text-lg font-semibold mb-2 text-gray-700">Overall Understanding 4/5</h3>
-          <div className="bg-yellow-100 p-3 rounded-md">
-            <p className="text-yellow-800">Demonstrated good grasp of core concepts.</p>
-          </div>
-        </div>
-
-        <div>
-          <h3 className="text-lg font-semibold mb-2 text-gray-700">What could you have done differently?</h3>
-          <ul className="list-disc pl-5 space-y-2 text-gray-600">
-            <li>Explored alternative problem-solving approaches</li>
-            <li>Asked for clarification on ambiguous parts of the question</li>
-            <li>Practiced time management to complete all sections</li>
-          </ul>
-        </div>
-      </div>
-    </div>
         </div>
       </Card>
     </main>
