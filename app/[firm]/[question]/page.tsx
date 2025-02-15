@@ -228,7 +228,7 @@ export default async function Page({ params }: any) {
         {/* Section with question and voice feature */}
         <div className="flex flex-col sm:flex-row pb-6 sm:pb-10">
           {/* Text content (hints and answers) */}
-          <div className="w-full sm:w-[calc(100%-200px)] px-4 sm:px-10 mt-6 sm:mt-0 order-1 sm:order-2">
+          <div className="w-full sm:w-[calc(100%-200px)] px-4 sm:px-10 lg:mt-6 sm:mt-0 order-1 sm:order-2">
             <HintAnswer urlQuestion={questionSlug} />
           </div>
 
