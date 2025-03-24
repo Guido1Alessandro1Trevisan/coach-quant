@@ -1,0 +1,16 @@
+{
+  "id": "mig_cu78c28bn5466o07lf30",
+  "parentID": "mig_cu78bv8bn5466o07lf20",
+  "checksum": "1:eaf77f40db2e182eefc989f266327c6d8fb5f50428805de5fd72c124c81e137b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "downvote",
+          "type": "bool"
+        },
+        "table": "questions-completed"
+      }
+    }
+  ]
+}
